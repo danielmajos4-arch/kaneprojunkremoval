@@ -8,7 +8,7 @@ export default function AboutPage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
-            backgroundImage: `url('/hero-background-new.png')`
+            backgroundImage: `url('/hero-background-latest.png')`
           }}
         ></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
