@@ -63,6 +63,109 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* About Us Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-military text-navy mb-6">
+                About Kane's Junk Removal Louisiana
+              </h2>
+              
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  When Kane started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on. What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.
+                </p>
+                
+                <p>
+                  Kane takes pride in fast, affordable, and dependable junk removal services. Unlike big franchises, we're a local Louisiana business that understands our community's needs. We offer <strong>in-person estimates</strong> because we believe in transparent pricing and building trust with every customer.
+                </p>
+                
+                <p>
+                  Our commitment goes beyond just hauling junk away. We focus on keeping your property clean during and after the job, ensuring same-day service when possible, and treating every project with the professionalism you deserve. Whether it's residential cleanouts in Calhoun, commercial junk removal in Monroe, or construction debris hauling in Ruston, we handle it all with Christian values and community heart.
+                </p>
+                
+                <p>
+                  Customer satisfaction isn't just our goal—it's our guarantee. We're not satisfied until you are completely happy with our junk removal service. That's the Kane's difference in Louisiana.
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <a 
+                  href="tel:+13189141201" 
+                  className="inline-flex items-center gap-2 bg-louisiana-gold text-navy px-6 py-3 rounded-lg font-bold hover:bg-gold-dark transition-all shadow-lg"
+                >
+                  <i className="fas fa-phone"></i>
+                  Get Your Free In-Person Estimate
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:order-first">
+              <div className="bg-navy rounded-xl p-8 text-white">
+                <h3 className="text-2xl font-military text-louisiana-gold mb-6">
+                  Areas We Serve in Louisiana
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <div>
+                      <h4 className="font-semibold">Calhoun, LA</h4>
+                      <p className="text-gray-300 text-sm">Our home base - Same day service available</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <div>
+                      <h4 className="font-semibold">Ruston, LA</h4>
+                      <p className="text-gray-300 text-sm">University area cleanouts & residential services</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <div>
+                      <h4 className="font-semibold">Monroe, LA</h4>
+                      <p className="text-gray-300 text-sm">Full-service junk removal & debris cleanouts</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <div>
+                      <h4 className="font-semibold">Farmerville, LA</h4>
+                      <p className="text-gray-300 text-sm">Professional junk hauling services</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <div>
+                      <h4 className="font-semibold">West Monroe, LA</h4>
+                      <p className="text-gray-300 text-sm">Commercial & residential junk removal</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-louisiana-gold/10 rounded-lg border border-louisiana-gold/20">
+                  <div className="flex items-center gap-2 text-louisiana-gold mb-2">
+                    <i className="fas fa-clock"></i>
+                    <span className="font-semibold">Same Day Service Available</span>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Monday - Saturday, 7AM - 8PM<br/>
+                    <strong>Call (318) 914-1201</strong> for immediate service
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Work Gallery Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
