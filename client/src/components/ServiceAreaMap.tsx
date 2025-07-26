@@ -232,11 +232,7 @@ export default function ServiceAreaMap() {
             <div className="bg-white rounded-lg p-1 shadow-lg border border-gray-200 inline-flex">
               <button
                 onClick={() => setUseGoogleMaps(false)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                  !useGoogleMaps 
-                    ? 'bg-navy text-white shadow-sm' 
-                    : 'text-gray-600 hover:text-navy'
-                }`}
+                className="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 text-white shadow-sm bg-[#0000006e]"
               >
                 <i className="fas fa-map mr-2"></i>
                 Custom Map
@@ -258,43 +254,39 @@ export default function ServiceAreaMap() {
           {/* Map Container */}
           {useGoogleMaps ? (
             /* Google Maps Implementation */
-            !mapError ? (
-              <div className="relative w-full h-96 md:h-[500px] bg-gray-200">
-                <div 
-                  ref={mapRef} 
-                  className="absolute inset-0 w-full h-full"
-                  role="img"
-                  aria-label="Interactive map showing Kane's Junk Removal service areas in Louisiana"
-                  style={{ minHeight: '400px' }}
-                />
-                {!mapLoaded && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                    <div className="text-center">
-                      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy mx-auto mb-4"></div>
-                      <p className="text-navy font-semibold">Loading Google Maps...</p>
-                      <p className="text-gray-600 text-sm mt-2">Requires API key for full functionality</p>
-                    </div>
+            (!mapError ? (<div className="relative w-full h-96 md:h-[500px] bg-gray-200">
+              <div 
+                ref={mapRef} 
+                className="absolute inset-0 w-full h-full"
+                role="img"
+                aria-label="Interactive map showing Kane's Junk Removal service areas in Louisiana"
+                style={{ minHeight: '400px' }}
+              />
+              {!mapLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy mx-auto mb-4"></div>
+                    <p className="text-navy font-semibold">Loading Google Maps...</p>
+                    <p className="text-gray-600 text-sm mt-2">Requires API key for full functionality</p>
                   </div>
-                )}
-              </div>
-            ) : (
-              <div className="relative w-full h-96 md:h-[500px] bg-red-50 border-2 border-red-200 rounded-lg flex items-center justify-center">
-                <div className="text-center p-8">
-                  <i className="fas fa-exclamation-triangle text-red-500 text-4xl mb-4"></i>
-                  <h3 className="text-lg font-semibold text-red-700 mb-2">Google Maps API Key Required</h3>
-                  <p className="text-red-600 text-sm mb-4">To use Google Maps, you'll need to add your API key.</p>
-                  <button
-                    onClick={() => setUseGoogleMaps(false)}
-                    className="bg-navy text-white px-4 py-2 rounded-lg hover:bg-navy-dark transition-colors"
-                  >
-                    Switch to Custom Map
-                  </button>
                 </div>
+              )}
+            </div>) : (<div className="relative w-full h-96 md:h-[500px] bg-red-50 border-2 border-red-200 rounded-lg flex items-center justify-center">
+              <div className="text-center p-8">
+                <i className="fas fa-exclamation-triangle text-red-500 text-4xl mb-4"></i>
+                <h3 className="text-lg font-semibold text-red-700 mb-2">Google Maps API Key Required</h3>
+                <p className="text-red-600 text-sm mb-4">To use Google Maps, you'll need to add your API key.</p>
+                <button
+                  onClick={() => setUseGoogleMaps(false)}
+                  className="bg-navy text-white px-4 py-2 rounded-lg hover:bg-navy-dark transition-colors"
+                >
+                  Switch to Custom Map
+                </button>
               </div>
-            )
+            </div>))
           ) : (
             /* Custom Map Illustration */
-            <div className="relative w-full h-96 md:h-[500px] bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden rounded-lg shadow-lg">
+            (<div className="relative w-full h-96 md:h-[500px] bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden rounded-lg shadow-lg">
               {/* Louisiana Shape Background */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg 
@@ -306,7 +298,6 @@ export default function ServiceAreaMap() {
                   <path d="M100 200 Q150 120 200 140 Q250 130 300 160 Q350 150 400 200 Q390 250 350 270 Q300 290 250 280 Q200 300 150 270 Q110 250 100 200 Z"/>
                 </svg>
               </div>
-
               {/* Service Area Circle */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div 
@@ -317,7 +308,6 @@ export default function ServiceAreaMap() {
                   viewport={{ once: true }}
                 />
               </div>
-
               {/* City Markers */}
               {serviceAreas.map((area, index) => {
                 const positions = [
@@ -363,7 +353,6 @@ export default function ServiceAreaMap() {
                   </motion.div>
                 );
               })}
-
               {/* North Louisiana Label */}
               <motion.div 
                 className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-lg shadow-xl"
@@ -375,13 +364,12 @@ export default function ServiceAreaMap() {
                 <div className="text-base font-semibold text-navy">North Louisiana</div>
                 <div className="text-sm text-gray-600">50-mile service radius</div>
               </motion.div>
-
               {/* Custom Map Badge */}
               <div className="absolute bottom-4 right-4 bg-navy/90 text-white px-3 py-2 rounded-lg text-sm">
                 <i className="fas fa-map mr-2"></i>
                 Interactive Service Areas
               </div>
-            </div>
+            </div>)
           )}
           
           <div className="p-6 bg-navy text-white">
