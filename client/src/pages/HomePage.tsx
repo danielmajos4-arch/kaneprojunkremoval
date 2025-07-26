@@ -1,12 +1,6 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 
-import IMG_3876 from "@assets/IMG_3876.png";
-
-import IMG_3900 from "@assets/IMG_3900.png";
-
-import IMG_3878 from "@assets/IMG_3878.PNG";
-
 export default function HomePage() {
   return (
     <>
@@ -291,7 +285,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
               <img 
-                src={IMG_3876} 
+                src="/portfolio-1.png" 
                 alt="Residential junk removal service in Louisiana" 
                 className="w-full h-48 object-cover" 
               />
@@ -315,7 +309,7 @@ export default function HomePage() {
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
               <img 
-                src={IMG_3900} 
+                src="/portfolio-2.png" 
                 alt="Commercial junk removal service in Louisiana" 
                 className="w-full h-48 object-cover" 
               />
@@ -339,7 +333,7 @@ export default function HomePage() {
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
               <img 
-                src={IMG_3878} 
+                src="/portfolio-3.png" 
                 alt="Construction debris removal in Louisiana" 
                 className="w-full h-48 object-cover" 
               />
