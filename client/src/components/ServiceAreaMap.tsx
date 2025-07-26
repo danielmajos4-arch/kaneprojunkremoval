@@ -13,6 +13,7 @@ export default function ServiceAreaMap() {
   const mapInstanceRef = useRef<any>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [mapError, setMapError] = useState(false);
+  const [useGoogleMaps, setUseGoogleMaps] = useState(false); // Default to custom map
 
   const serviceAreas = [
     { 
@@ -48,6 +49,9 @@ export default function ServiceAreaMap() {
   ];
 
   useEffect(() => {
+    // Only load Google Maps if explicitly enabled
+    if (!useGoogleMaps) return;
+
     let timeoutId: NodeJS.Timeout;
     let initAttempted = false;
 
@@ -55,21 +59,14 @@ export default function ServiceAreaMap() {
       if (!mapRef.current || initAttempted) return;
       
       initAttempted = true;
-      console.log('Attempting to initialize Google Maps...');
 
       try {
         if (!window.google || !window.google.maps) {
-          console.log('Google Maps API not loaded yet');
           setMapError(true);
           return;
         }
 
-        // Center on North Louisiana
         const center = { lat: 32.5404, lng: -92.3385 }; // Calhoun, LA coordinates
-
-        console.log('Creating Google Maps instance...');
-        console.log('Map container element:', mapRef.current);
-        console.log('Container dimensions:', mapRef.current.offsetWidth, 'x', mapRef.current.offsetHeight);
         
         const map = new window.google.maps.Map(mapRef.current, {
           zoom: 9,
@@ -103,7 +100,6 @@ export default function ServiceAreaMap() {
           gestureHandling: 'cooperative'
         });
 
-        console.log('Google Maps created successfully');
         mapInstanceRef.current = map;
         setMapLoaded(true);
         clearTimeout(timeoutId);
@@ -149,7 +145,6 @@ export default function ServiceAreaMap() {
             infoWindow.open(map, marker);
           });
 
-          // Open first marker (Calhoun) by default
           if (index === 0) {
             setTimeout(() => {
               infoWindow.open(map, marker);
@@ -157,7 +152,6 @@ export default function ServiceAreaMap() {
           }
         });
 
-        // Add service area circle overlay
         new window.google.maps.Circle({
           strokeColor: '#1e3a5f',
           strokeOpacity: 0.6,
@@ -166,58 +160,37 @@ export default function ServiceAreaMap() {
           fillOpacity: 0.1,
           map: map,
           center: center,
-          radius: 50000, // 50km radius
+          radius: 50000,
         });
 
-        console.log('All map markers and features added successfully');
       } catch (error) {
-        console.error('Error initializing Google Maps:', error);
         setMapError(true);
       }
     };
 
     const loadGoogleMaps = () => {
-      console.log('Starting Google Maps load process...');
-      
-      // Check if Google Maps is already loaded
       if (window.google && window.google.maps) {
-        console.log('Google Maps already loaded, initializing...');
         initializeMap();
         return;
       }
 
-      // Set a timeout to show fallback if Google Maps fails to load
       timeoutId = setTimeout(() => {
-        console.log('Google Maps load timeout, showing fallback');
         if (!mapLoaded) {
           setMapError(true);
         }
-      }, 8000); // Increased timeout to 8 seconds
+      }, 5000);
 
-      // Create unique callback name to avoid conflicts
       const callbackName = `initMap_${Date.now()}`;
-      
-      // Load Google Maps API with proper error handling
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?callback=${callbackName}`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''}&callback=${callbackName}`;
       script.async = true;
       script.defer = true;
-      script.onerror = () => {
-        console.error('Google Maps script failed to load');
-        setMapError(true);
-      };
+      script.onerror = () => setMapError(true);
       
-      // Set the callback function on window
-      (window as any)[callbackName] = () => {
-        console.log('Google Maps callback triggered');
-        initializeMap();
-      };
-      
-      console.log('Adding Google Maps script to page...');
+      (window as any)[callbackName] = initializeMap;
       document.head.appendChild(script);
     };
 
-    // Small delay to ensure DOM is ready
     const loadTimer = setTimeout(loadGoogleMaps, 100);
 
     return () => {
@@ -227,7 +200,7 @@ export default function ServiceAreaMap() {
         mapInstanceRef.current = null;
       }
     };
-  }, []);
+  }, [useGoogleMaps]);
 
   return (
     <section className="py-16 bg-gray-50">
@@ -254,38 +227,83 @@ export default function ServiceAreaMap() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          {/* Google Maps Container */}
-          {!mapError ? (
-            <div className="relative w-full h-96 md:h-[500px] bg-gray-200">
-              <div 
-                ref={mapRef} 
-                className="absolute inset-0 w-full h-full"
-                role="img"
-                aria-label="Interactive map showing Kane's Junk Removal service areas in Louisiana"
-                style={{ minHeight: '400px' }}
-              />
-              {!mapLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                  <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy mx-auto mb-4"></div>
-                    <p className="text-navy font-semibold">Loading Interactive Map...</p>
-                    <p className="text-gray-600 text-sm mt-2">Showing Kane Pro service areas</p>
-                  </div>
-                </div>
-              )}
+          {/* Map Toggle Buttons */}
+          <div className="flex justify-center mb-6">
+            <div className="bg-white rounded-lg p-1 shadow-lg border border-gray-200 inline-flex">
+              <button
+                onClick={() => setUseGoogleMaps(false)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                  !useGoogleMaps 
+                    ? 'bg-navy text-white shadow-sm' 
+                    : 'text-gray-600 hover:text-navy'
+                }`}
+              >
+                <i className="fas fa-map mr-2"></i>
+                Custom Map
+              </button>
+              <button
+                onClick={() => setUseGoogleMaps(true)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                  useGoogleMaps 
+                    ? 'bg-navy text-white shadow-sm' 
+                    : 'text-gray-600 hover:text-navy'
+                }`}
+              >
+                <i className="fab fa-google mr-2"></i>
+                Google Maps
+              </button>
             </div>
+          </div>
+
+          {/* Map Container */}
+          {useGoogleMaps ? (
+            /* Google Maps Implementation */
+            !mapError ? (
+              <div className="relative w-full h-96 md:h-[500px] bg-gray-200">
+                <div 
+                  ref={mapRef} 
+                  className="absolute inset-0 w-full h-full"
+                  role="img"
+                  aria-label="Interactive map showing Kane's Junk Removal service areas in Louisiana"
+                  style={{ minHeight: '400px' }}
+                />
+                {!mapLoaded && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                    <div className="text-center">
+                      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy mx-auto mb-4"></div>
+                      <p className="text-navy font-semibold">Loading Google Maps...</p>
+                      <p className="text-gray-600 text-sm mt-2">Requires API key for full functionality</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="relative w-full h-96 md:h-[500px] bg-red-50 border-2 border-red-200 rounded-lg flex items-center justify-center">
+                <div className="text-center p-8">
+                  <i className="fas fa-exclamation-triangle text-red-500 text-4xl mb-4"></i>
+                  <h3 className="text-lg font-semibold text-red-700 mb-2">Google Maps API Key Required</h3>
+                  <p className="text-red-600 text-sm mb-4">To use Google Maps, you'll need to add your API key.</p>
+                  <button
+                    onClick={() => setUseGoogleMaps(false)}
+                    className="bg-navy text-white px-4 py-2 rounded-lg hover:bg-navy-dark transition-colors"
+                  >
+                    Switch to Custom Map
+                  </button>
+                </div>
+              </div>
+            )
           ) : (
-            /* Fallback Map Illustration */
-            <div className="relative w-full h-96 md:h-[500px] bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden">
+            /* Custom Map Illustration */
+            <div className="relative w-full h-96 md:h-[500px] bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden rounded-lg shadow-lg">
               {/* Louisiana Shape Background */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg 
-                  viewBox="0 0 400 300" 
-                  className="w-full h-full max-w-md opacity-10"
+                  viewBox="0 0 500 400" 
+                  className="w-full h-full max-w-lg opacity-15"
                   fill="currentColor"
                   style={{ color: '#1e3a5f' }}
                 >
-                  <path d="M50 150 Q100 80 150 100 Q200 90 250 120 Q300 110 350 150 Q340 200 300 220 Q250 240 200 230 Q150 250 100 220 Q60 200 50 150 Z"/>
+                  <path d="M100 200 Q150 120 200 140 Q250 130 300 160 Q350 150 400 200 Q390 250 350 270 Q300 290 250 280 Q200 300 150 270 Q110 250 100 200 Z"/>
                 </svg>
               </div>
 
@@ -300,61 +318,68 @@ export default function ServiceAreaMap() {
                 />
               </div>
 
-              {/* City Markers - Fallback */}
-              {serviceAreas.map((area, index) => (
-                <motion.div
-                  key={area.name}
-                  className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-                  style={{ 
-                    top: `${45 + (index * 5)}%`, 
-                    left: `${40 + (index * 10)}%` 
-                  }}
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: 0.5 + (index * 0.2),
-                    type: "spring",
-                    stiffness: 200 
-                  }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  {/* Marker Icon */}
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ${
-                    area.isBase ? 'bg-red-600' : 'bg-navy'
-                  }`}>
-                    <i className="fas fa-map-marker-alt"></i>
-                  </div>
-                  
-                  {/* City Label */}
-                  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 bg-white px-3 py-1 rounded-lg shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 whitespace-nowrap">
-                    <div className="text-sm font-semibold text-navy">{area.name}</div>
-                    <div className="text-xs text-gray-600">{area.description}</div>
-                    <div className="text-xs text-louisiana-gold font-semibold mt-1">
-                      <i className="fas fa-phone mr-1"></i>
-                      (318) 914-1201
+              {/* City Markers */}
+              {serviceAreas.map((area, index) => {
+                const positions = [
+                  { top: '45%', left: '50%' }, // Calhoun (center)
+                  { top: '30%', left: '55%' }, // Farmerville
+                  { top: '50%', left: '35%' }, // Ruston
+                  { top: '60%', left: '70%' }, // West Monroe
+                  { top: '65%', left: '75%' }, // Monroe
+                ];
+                
+                return (
+                  <motion.div
+                    key={area.name}
+                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
+                    style={positions[index]}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: 0.5 + (index * 0.2),
+                      type: "spring",
+                      stiffness: 200 
+                    }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    {/* Marker Icon */}
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-xl border-2 border-white ${
+                      area.isBase ? 'bg-red-600' : 'bg-navy'
+                    }`}>
+                      K
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                    
+                    {/* City Label */}
+                    <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white px-4 py-3 rounded-lg shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 whitespace-nowrap">
+                      <div className="text-base font-semibold text-navy">{area.name}</div>
+                      <div className="text-sm text-gray-600 mt-1">{area.description}</div>
+                      <div className="text-sm text-louisiana-gold font-semibold mt-2 flex items-center">
+                        <i className="fas fa-phone mr-2"></i>
+                        (318) 914-1201
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
 
               {/* North Louisiana Label */}
               <motion.div 
-                className="absolute top-8 left-8 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg"
+                className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-lg shadow-xl"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="text-sm font-semibold text-navy">North Louisiana</div>
-                <div className="text-xs text-gray-600">50-mile service radius</div>
+                <div className="text-base font-semibold text-navy">North Louisiana</div>
+                <div className="text-sm text-gray-600">50-mile service radius</div>
               </motion.div>
 
-              {/* Map Load Error Notice */}
-              <div className="absolute bottom-4 right-4 bg-yellow-100 border border-yellow-300 px-3 py-2 rounded-lg text-xs text-yellow-800">
-                <i className="fas fa-info-circle mr-1"></i>
-                Interactive map unavailable
+              {/* Custom Map Badge */}
+              <div className="absolute bottom-4 right-4 bg-navy/90 text-white px-3 py-2 rounded-lg text-sm">
+                <i className="fas fa-map mr-2"></i>
+                Interactive Service Areas
               </div>
             </div>
           )}
