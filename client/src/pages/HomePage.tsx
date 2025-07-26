@@ -57,7 +57,7 @@ export default function HomePage() {
             </div>
             
             <div className="mt-8 text-sm text-gray-300">
-              <p className="flex items-center justify-center gap-2 mb-2">
+              <p className="flex items-center justify-center gap-2 mb-2 text-[#010812]">
                 <i className="fas fa-clock text-louisiana-gold"></i>
                 Same Day Service Available
               </p>
