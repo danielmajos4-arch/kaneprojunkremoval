@@ -23,7 +23,7 @@ export default function HomePage() {
               <span className="text-louisiana-gold block">Junk Removal Shield</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-[#fcda4b]">
               Your Trusted Shield Against Junk Problems - Christian Values, Louisiana Heart
             </p>
             
@@ -297,7 +297,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Social Proof Section */}
       <section className="py-16 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
