@@ -138,7 +138,33 @@
   }
   
   .glass-text-shadow {
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    text-shadow: 
+      0 1px 2px rgba(255, 255, 255, 0.9),
+      0 2px 4px rgba(30, 58, 95, 0.1);
+  }
+  
+  .nav-text-enhanced {
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: hsl(211, 95%, 22%);
+    text-shadow: 
+      0 1px 2px rgba(255, 255, 255, 0.9),
+      0 1px 3px rgba(30, 58, 95, 0.1);
+  }
+  
+  .nav-text-enhanced:hover {
+    color: hsl(51, 100%, 45%);
+    text-shadow: 
+      0 1px 2px rgba(255, 255, 255, 0.9),
+      0 2px 6px rgba(255, 215, 0, 0.3);
+  }
+  
+  .nav-text-active {
+    color: hsl(51, 100%, 45%);
+    font-weight: 700;
+    text-shadow: 
+      0 1px 2px rgba(255, 255, 255, 0.9),
+      0 2px 8px rgba(255, 215, 0, 0.4);
   }
   
   .glass-logo-glow {

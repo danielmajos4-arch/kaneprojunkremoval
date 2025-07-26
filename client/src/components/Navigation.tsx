@@ -26,9 +26,9 @@ export default function Navigation() {
               alt="Kane Pro Junk Removal & Hauling Logo" 
               className="w-12 h-12 mr-3 glass-logo-glow"
             />
-            <div className="text-navy font-military glass-text-shadow">
-              <span className="text-lg font-bold">KANE PRO</span>
-              <div className="text-xs text-navy-light">Junk Removal</div>
+            <div className="font-military">
+              <span className="text-lg font-bold nav-text-enhanced tracking-wide">KANE PRO</span>
+              <div className="text-xs font-semibold" style={{ color: 'hsl(211, 80%, 35%)', textShadow: '0 1px 2px rgba(255, 255, 255, 0.8)' }}>Junk Removal</div>
             </div>
           </Link>
           
@@ -36,7 +36,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button 
               onClick={toggleMobileMenu}
-              className="text-navy hover:text-louisiana-gold p-2 btn-touch transition-colors"
+              className="nav-text-enhanced hover:scale-110 p-2 btn-touch transition-all duration-300"
               aria-label="Toggle mobile menu"
             >
               <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
@@ -47,40 +47,40 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className={`font-medium transition-colors glass-text-shadow ${
+              className={`transition-all duration-300 ${
                 isActive("/") 
-                  ? "text-louisiana-gold font-semibold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:scale-105"
               }`}
             >
               Home
             </Link>
             <Link 
               href="/services" 
-              className={`font-medium transition-colors glass-text-shadow ${
+              className={`transition-all duration-300 ${
                 isActive("/services") 
-                  ? "text-louisiana-gold font-semibold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:scale-105"
               }`}
             >
               Services
             </Link>
             <Link 
               href="/about" 
-              className={`font-medium transition-colors glass-text-shadow ${
+              className={`transition-all duration-300 ${
                 isActive("/about") 
-                  ? "text-louisiana-gold font-semibold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:scale-105"
               }`}
             >
               About
             </Link>
             <Link 
               href="/areas" 
-              className={`font-medium transition-colors glass-text-shadow ${
+              className={`transition-all duration-300 ${
                 isActive("/areas") 
-                  ? "text-louisiana-gold font-semibold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:scale-105"
               }`}
             >
               Service Areas
@@ -104,10 +104,10 @@ export default function Navigation() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link 
               href="/" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 btn-touch flex items-center transition-all duration-300 ${
                 isActive("/") 
-                  ? "text-louisiana-gold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:bg-white/10 hover:scale-105"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -115,10 +115,10 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/services" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 btn-touch flex items-center transition-all duration-300 ${
                 isActive("/services") 
-                  ? "text-louisiana-gold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:bg-white/10 hover:scale-105"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -126,10 +126,10 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/about" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 btn-touch flex items-center transition-all duration-300 ${
                 isActive("/about") 
-                  ? "text-louisiana-gold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:bg-white/10 hover:scale-105"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -137,10 +137,10 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/areas" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 btn-touch flex items-center transition-all duration-300 ${
                 isActive("/areas") 
-                  ? "text-louisiana-gold" 
-                  : "text-navy hover:text-louisiana-gold"
+                  ? "nav-text-active" 
+                  : "nav-text-enhanced hover:bg-white/10 hover:scale-105"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
