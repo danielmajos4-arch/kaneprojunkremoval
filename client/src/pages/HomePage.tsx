@@ -3,7 +3,7 @@ import QuoteForm from "@/components/QuoteForm";
 
 import IMG_3876 from "@assets/IMG_3876.png";
 
-import IMG_3900 from "@assets/IMG_3900.PNG";
+import IMG_3900 from "@assets/IMG_3900.png";
 
 export default function HomePage() {
   return (
