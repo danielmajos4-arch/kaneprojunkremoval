@@ -17,7 +17,7 @@ export default function Navigation() {
 
   return (
     <nav className="sticky top-0 z-40 header-glass">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#1058a387]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="flex justify-between items-center h-16">
           {/* Shield Logo */}
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
@@ -29,8 +29,8 @@ export default function Navigation() {
               height="48"
             />
             <div className="font-military">
-              <span className="text-lg font-bold text-white tracking-wide" style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(30, 58, 95, 0.3)' }}>KANE'S</span>
-              <div className="text-xs font-semibold text-white/90" style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.4)' }}>Junk Removal LA</div>
+              <span className="text-lg font-bold text-charcoal tracking-wide">KANE'S</span>
+              <div className="text-xs font-semibold text-charcoal/80">Junk Removal LA</div>
             </div>
           </Link>
           
@@ -89,7 +89,7 @@ export default function Navigation() {
             </Link>
             <a 
               href="tel:+13189141201" 
-              className="bg-louisiana-gold text-navy px-4 py-2 rounded-lg font-bold hover:bg-gold-dark transition-all btn-touch shadow-lg ring-2 ring-louisiana-gold/20 backdrop-blur-sm"
+              className="bg-louisiana-gold text-charcoal px-4 py-2 rounded-lg font-bold hover:bg-gold-dark transition-all btn-touch shadow-lg ring-2 ring-louisiana-gold/20 backdrop-blur-sm"
               style={{ 
                 textShadow: 'none', 
                 fontWeight: '800',
@@ -102,7 +102,7 @@ export default function Navigation() {
         </div>
         
         {/* Mobile Navigation Menu */}
-        <div className={`md:hidden border-t border-navy/10 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`md:hidden border-t border-gray-200 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link 
               href="/" 
@@ -150,7 +150,7 @@ export default function Navigation() {
             </Link>
             <a 
               href="tel:+13189141201" 
-              className="block mx-3 my-2 bg-louisiana-gold text-navy px-4 py-3 rounded-lg font-bold text-center hover:bg-gold-dark transition-all btn-touch shadow-lg ring-2 ring-louisiana-gold/20 backdrop-blur-sm"
+              className="block mx-3 my-2 bg-louisiana-gold text-charcoal px-4 py-3 rounded-lg font-bold text-center hover:bg-gold-dark transition-all btn-touch shadow-lg ring-2 ring-louisiana-gold/20 backdrop-blur-sm"
               style={{ 
                 textShadow: 'none', 
                 fontWeight: '800',

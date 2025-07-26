@@ -144,7 +144,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <h2 className="text-3xl md:text-4xl font-military text-navy mb-6">
+              <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-6">
                 About Kane's Junk Removal Louisiana
               </h2>
               
@@ -169,7 +169,7 @@ export default function HomePage() {
               <div className="mt-8">
                 <motion.a 
                   href="tel:+13189141201" 
-                  className="inline-flex items-center gap-2 bg-louisiana-gold text-navy px-6 py-3 rounded-lg font-bold hover:bg-gold-dark transition-all shadow-lg"
+                  className="inline-flex items-center gap-2 bg-louisiana-gold text-charcoal px-6 py-3 rounded-lg font-bold hover:bg-gold-dark transition-all shadow-lg"
                   whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(255, 215, 0, 0.3)" }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
@@ -187,7 +187,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="bg-navy rounded-xl p-8 text-white">
+              <div className="bg-charcoal rounded-xl p-8 text-white">
                 <motion.h3 
                   className="text-2xl font-military text-louisiana-gold mb-6"
                   initial={{ opacity: 0, y: 20 }}

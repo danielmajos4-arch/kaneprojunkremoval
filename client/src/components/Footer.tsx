@@ -2,7 +2,7 @@ import { Link } from "wouter";
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-dark text-white py-12">
+    <footer className="bg-charcoal text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -118,7 +118,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-navy-light mt-8 pt-8">
+        <div className="border-t border-gray-600 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">© 2025 Kane Pro Junk Removal & Hauling. Licensed & Insured in Louisiana.</p>
             <div className="flex items-center gap-4 mt-4 md:mt-0">

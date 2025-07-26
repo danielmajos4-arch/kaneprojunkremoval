@@ -5,7 +5,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy text-white">
+      <section className="relative py-20 bg-charcoal text-white">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
@@ -15,7 +15,7 @@ export default function ServicesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="shield-shape bg-louisiana-gold w-20 h-20 flex items-center justify-center shadow-xl">
-              <span className="text-navy font-bold text-sm">KANE</span>
+              <span className="text-charcoal font-bold text-sm">KANE</span>
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-military mb-4">
@@ -35,7 +35,7 @@ export default function ServicesPage() {
             {/* Residential Services */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-military text-navy mb-6">
+                <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i className="fas fa-home text-louisiana-gold mr-3" aria-hidden="true"></i>
                   Residential Junk Removal Calhoun, Ruston & Monroe LA
                 </h2>
@@ -45,7 +45,7 @@ export default function ServicesPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Furniture Removal</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Furniture Removal</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Sofas, chairs, mattresses</li>
                       <li>• Dining room sets</li>
@@ -54,7 +54,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Appliance Removal</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Appliance Removal</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Refrigerators & washers</li>
                       <li>• Stoves & dishwashers</li>
@@ -63,7 +63,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Cleanout Services</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Cleanout Services</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Garage cleanouts</li>
                       <li>• Basement cleanouts</li>
@@ -72,7 +72,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Specialty Items</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Specialty Items</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Electronics disposal</li>
                       <li>• Exercise equipment</li>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-navy mb-3">
+                  <h3 className="font-semibold text-charcoal mb-3">
                     <i className="fas fa-map-marker-alt text-louisiana-gold mr-2"></i>
                     Serving These Louisiana Communities:
                   </h3>
@@ -121,7 +121,7 @@ export default function ServicesPage() {
                 />
               </div>
               <div className="order-1 lg:order-2">
-                <h2 className="text-3xl font-military text-navy mb-6">
+                <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i className="fas fa-building text-louisiana-gold mr-3"></i>
                   Commercial Cleanouts Across Louisiana
                 </h2>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Office Cleanouts</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Office Cleanouts</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Furniture & equipment</li>
                       <li>• IT equipment disposal</li>
@@ -140,7 +140,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Retail Spaces</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Retail Spaces</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Store fixtures</li>
                       <li>• Inventory removal</li>
@@ -149,7 +149,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Restaurants</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Restaurants</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Kitchen equipment</li>
                       <li>• Dining furniture</li>
@@ -158,7 +158,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Warehouses</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Warehouses</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Industrial equipment</li>
                       <li>• Shelving systems</li>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="bg-louisiana-gold bg-opacity-10 p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-navy mb-3">
+                  <h3 className="font-semibold text-charcoal mb-3">
                     <i className="fas fa-handshake text-louisiana-gold mr-2"></i>
                     Commercial Partnership Benefits:
                   </h3>
@@ -192,7 +192,7 @@ export default function ServicesPage() {
             {/* Construction Services */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-military text-navy mb-6">
+                <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i className="fas fa-hard-hat text-louisiana-gold mr-3"></i>
                   Construction Debris - Louisiana Job Sites
                 </h2>
@@ -202,7 +202,7 @@ export default function ServicesPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Demolition Debris</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Demolition Debris</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Drywall & sheetrock</li>
                       <li>• Concrete & brick</li>
@@ -211,7 +211,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Renovation Cleanup</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Renovation Cleanup</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Lumber & wood waste</li>
                       <li>• Roofing materials</li>
@@ -220,7 +220,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Specialty Removal</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Specialty Removal</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Asbestos containment</li>
                       <li>• Lead paint disposal</li>
@@ -229,7 +229,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-3">Storm Damage</h3>
+                    <h3 className="font-semibold text-charcoal mb-3">Storm Damage</h3>
                     <ul className="text-gray-600 space-y-1">
                       <li>• Hurricane cleanup</li>
                       <li>• Tree & debris removal</li>
@@ -274,7 +274,7 @@ export default function ServicesPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
               Transparent Pricing, No Surprises
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">

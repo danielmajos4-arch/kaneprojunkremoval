@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy text-white">
+      <section className="relative py-20 bg-charcoal text-white">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-military text-navy mb-6">
+              <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-6">
                 Why Choose Kane's Louisiana Junk Removal Experts?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -43,37 +43,37 @@ export default function AboutPage() {
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-shield-alt text-navy"></i>
+                    <i className="fas fa-shield-alt text-charcoal"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy text-lg mb-2">Faith-Driven Excellence</h3>
+                    <h3 className="font-semibold text-charcoal text-lg mb-2">Faith-Driven Excellence</h3>
                     <p className="text-gray-600">Every job is executed with attention to detail, punctuality, and professional standards that reflect our Christian values and Louisiana work ethic.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
                   <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-heart text-navy"></i>
+                    <i className="fas fa-heart text-charcoal"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy text-lg mb-2">Louisiana Heart</h3>
+                    <h3 className="font-semibold text-charcoal text-lg mb-2">Louisiana Heart</h3>
                     <p className="text-gray-600">We're not just service providers - we're your neighbors. We understand Louisiana culture, weather challenges, and community needs because this is our home too.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
                   <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-leaf text-navy"></i>
+                    <i className="fas fa-leaf text-charcoal"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy text-lg mb-2">Environmental Responsibility</h3>
+                    <h3 className="font-semibold text-charcoal text-lg mb-2">Environmental Responsibility</h3>
                     <p className="text-gray-600">Protecting Louisiana's natural beauty through responsible disposal, recycling, and donation of reusable items to local Louisiana charities.</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-navy mb-3">
+                <h3 className="font-semibold text-charcoal mb-3">
                   <i className="fas fa-star text-louisiana-gold mr-2"></i>
                   Louisiana Business Certifications:
                 </h3>
@@ -116,7 +116,7 @@ export default function AboutPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
               Meet Your Louisiana Junk Removal Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -132,7 +132,7 @@ export default function AboutPage() {
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-2">Mike Kane</h3>
+                <h3 className="text-xl font-bold text-charcoal mb-2">Mike Kane</h3>
                 <p className="text-louisiana-gold font-semibold mb-3">Founder & Owner</p>
                 <p className="text-gray-600 text-sm mb-4">
                   Louisiana native, Christian family man, and community leader. Started Kane Pro to serve the community he loves with faith-driven values and integrity.
@@ -151,7 +151,7 @@ export default function AboutPage() {
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-2">James Thibodaux</h3>
+                <h3 className="text-xl font-bold text-charcoal mb-2">James Thibodaux</h3>
                 <p className="text-louisiana-gold font-semibold mb-3">Operations Manager</p>
                 <p className="text-gray-600 text-sm mb-4">
                   Cajun through and through, James brings Louisiana hospitality to every job. Expert in logistics and customer service with 15 years in the business.
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-2">Sarah Boudreaux</h3>
+                <h3 className="text-xl font-bold text-charcoal mb-2">Sarah Boudreaux</h3>
                 <p className="text-louisiana-gold font-semibold mb-3">Customer Relations</p>
                 <p className="text-gray-600 text-sm mb-4">
                   Louisiana State graduate who knows every parish like the back of her hand. Specializes in coordinating residential cleanouts and customer care.

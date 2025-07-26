@@ -5,7 +5,7 @@ export default function ServiceAreasPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy text-white">
+      <section className="relative py-20 bg-charcoal text-white">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
@@ -15,7 +15,7 @@ export default function ServiceAreasPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="shield-shape bg-louisiana-gold w-20 h-20 flex items-center justify-center shadow-xl">
-              <span className="text-navy font-bold text-sm">KANE</span>
+              <span className="text-charcoal font-bold text-sm">KANE</span>
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-military mb-4">
@@ -31,7 +31,7 @@ export default function ServiceAreasPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
               Louisiana Junk Removal Service Areas
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -48,12 +48,12 @@ export default function ServiceAreasPage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-home text-louisiana-gold mr-2"></i>
                   Calhoun Junk Removal
                 </h3>
                 <p className="text-gray-600 mb-4">Our home base! Same day service available for Calhoun residents and businesses.</p>
-                <ul className="text-sm text-navy space-y-1 mb-4">
+                <ul className="text-sm text-charcoal space-y-1 mb-4">
                   <li>• Residential & Commercial Cleanouts</li>
                   <li>• Construction Debris Removal</li>
                   <li>• Emergency Same Day Service</li>
@@ -72,12 +72,12 @@ export default function ServiceAreasPage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-tractor text-louisiana-gold mr-2"></i>
                   Farmerville Junk Removal
                 </h3>
                 <p className="text-gray-600 mb-4">Serving Union Parish with Louisiana pride and military precision.</p>
-                <ul className="text-sm text-navy space-y-1 mb-4">
+                <ul className="text-sm text-charcoal space-y-1 mb-4">
                   <li>• Farm & Ranch Cleanouts</li>
                   <li>• Residential Property Services</li>
                   <li>• Agricultural Equipment Removal</li>
@@ -96,12 +96,12 @@ export default function ServiceAreasPage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-graduation-cap text-louisiana-gold mr-2"></i>
                   Ruston Junk Removal
                 </h3>
                 <p className="text-gray-600 mb-4">Home of Louisiana Tech! Student housing and residential service specialists.</p>
-                <ul className="text-sm text-navy space-y-1 mb-4">
+                <ul className="text-sm text-charcoal space-y-1 mb-4">
                   <li>• Student Housing Cleanouts</li>
                   <li>• University Area Services</li>
                   <li>• Move-in/Move-out Assistance</li>
@@ -120,12 +120,12 @@ export default function ServiceAreasPage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-water text-louisiana-gold mr-2"></i>
                   West Monroe Junk Removal
                 </h3>
                 <p className="text-gray-600 mb-4">Serving the Ouachita Parish community with trusted junk removal services.</p>
-                <ul className="text-sm text-navy space-y-1 mb-4">
+                <ul className="text-sm text-charcoal space-y-1 mb-4">
                   <li>• Residential Cleanout Services</li>
                   <li>• Business Property Cleanouts</li>
                   <li>• Storm Damage Cleanup</li>
@@ -144,12 +144,12 @@ export default function ServiceAreasPage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-city text-louisiana-gold mr-2"></i>
                   Monroe Junk Removal
                 </h3>
                 <p className="text-gray-600 mb-4">North Louisiana's largest city - we're here to serve you with pride!</p>
-                <ul className="text-sm text-navy space-y-1 mb-4">
+                <ul className="text-sm text-charcoal space-y-1 mb-4">
                   <li>• Large-Scale Commercial Projects</li>
                   <li>• Multi-Family Housing Services</li>
                   <li>• Industrial Site Cleanup</li>
@@ -184,10 +184,10 @@ export default function ServiceAreasPage() {
             <div>
               <div className="flex items-center mb-6">
                 <div className="shield-shape bg-louisiana-gold w-16 h-16 flex items-center justify-center mr-4">
-                  <i className="fas fa-home text-navy text-xl"></i>
+                  <i className="fas fa-home text-charcoal text-xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-military text-navy">Calhoun, Louisiana</h2>
+                  <h2 className="text-3xl font-military text-charcoal">Calhoun, Louisiana</h2>
                   <p className="text-louisiana-gold font-semibold">Our Home Base - Union Parish</p>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function ServiceAreasPage() {
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="font-semibold text-navy mb-3">Local Calhoun Landmarks We Serve:</h3>
+                <h3 className="font-semibold text-charcoal mb-3">Local Calhoun Landmarks We Serve:</h3>
                 <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
                   <span>• Downtown Calhoun</span>
                   <span>• Calhoun City Hall</span>
@@ -208,7 +208,7 @@ export default function ServiceAreasPage() {
                 </div>
               </div>
 
-              <div className="bg-navy p-6 rounded-lg text-white mb-6">
+              <div className="bg-charcoal p-6 rounded-lg text-white mb-6">
                 <h3 className="font-semibold text-louisiana-gold mb-3">
                   <i className="fas fa-star text-louisiana-gold mr-2"></i>
                   Calhoun Customer Testimonial:
@@ -245,10 +245,10 @@ export default function ServiceAreasPage() {
             <div className="order-1 lg:order-2">
               <div className="flex items-center mb-6">
                 <div className="shield-shape bg-louisiana-gold w-16 h-16 flex items-center justify-center mr-4">
-                  <i className="fas fa-tractor text-navy text-xl"></i>
+                  <i className="fas fa-tractor text-charcoal text-xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-military text-navy">Farmerville, Louisiana</h2>
+                  <h2 className="text-3xl font-military text-charcoal">Farmerville, Louisiana</h2>
                   <p className="text-louisiana-gold font-semibold">Union Parish County Seat</p>
                 </div>
               </div>
@@ -258,7 +258,7 @@ export default function ServiceAreasPage() {
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="font-semibold text-navy mb-3">Farmerville Area Specialties:</h3>
+                <h3 className="font-semibold text-charcoal mb-3">Farmerville Area Specialties:</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Farm equipment and machinery removal</li>
                   <li>• Barn and outbuilding cleanouts</li>
@@ -268,7 +268,7 @@ export default function ServiceAreasPage() {
                 </ul>
               </div>
 
-              <div className="bg-navy p-6 rounded-lg text-white mb-6">
+              <div className="bg-charcoal p-6 rounded-lg text-white mb-6">
                 <h3 className="font-semibold text-louisiana-gold mb-3">
                   <i className="fas fa-star text-louisiana-gold mr-2"></i>
                   Farmerville Customer Testimonial:
@@ -291,10 +291,10 @@ export default function ServiceAreasPage() {
             <div>
               <div className="flex items-center mb-6">
                 <div className="shield-shape bg-louisiana-gold w-16 h-16 flex items-center justify-center mr-4">
-                  <i className="fas fa-graduation-cap text-navy text-xl"></i>
+                  <i className="fas fa-graduation-cap text-charcoal text-xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-military text-navy">Ruston, Louisiana</h2>
+                  <h2 className="text-3xl font-military text-charcoal">Ruston, Louisiana</h2>
                   <p className="text-louisiana-gold font-semibold">Home of Louisiana Tech University</p>
                 </div>
               </div>
@@ -304,7 +304,7 @@ export default function ServiceAreasPage() {
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="font-semibold text-navy mb-3">Ruston University Area Services:</h3>
+                <h3 className="font-semibold text-charcoal mb-3">Ruston University Area Services:</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Student housing move-out cleanouts</li>
                   <li>• Apartment complex services</li>
@@ -314,7 +314,7 @@ export default function ServiceAreasPage() {
                 </ul>
               </div>
 
-              <div className="bg-navy p-6 rounded-lg text-white mb-6">
+              <div className="bg-charcoal p-6 rounded-lg text-white mb-6">
                 <h3 className="font-semibold text-louisiana-gold mb-3">
                   <i className="fas fa-star text-louisiana-gold mr-2"></i>
                   Ruston Customer Testimonial:
@@ -351,10 +351,10 @@ export default function ServiceAreasPage() {
             <div className="order-1 lg:order-2">
               <div className="flex items-center mb-6">
                 <div className="shield-shape bg-louisiana-gold w-16 h-16 flex items-center justify-center mr-4">
-                  <i className="fas fa-water text-navy text-xl"></i>
+                  <i className="fas fa-water text-charcoal text-xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-military text-navy">West Monroe, Louisiana</h2>
+                  <h2 className="text-3xl font-military text-charcoal">West Monroe, Louisiana</h2>
                   <p className="text-louisiana-gold font-semibold">Ouachita Parish Community</p>
                 </div>
               </div>
@@ -364,7 +364,7 @@ export default function ServiceAreasPage() {
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="font-semibold text-navy mb-3">West Monroe Area Highlights:</h3>
+                <h3 className="font-semibold text-charcoal mb-3">West Monroe Area Highlights:</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Ouachita River area properties</li>
                   <li>• West Monroe business district</li>
@@ -374,7 +374,7 @@ export default function ServiceAreasPage() {
                 </ul>
               </div>
 
-              <div className="bg-navy p-6 rounded-lg text-white mb-6">
+              <div className="bg-charcoal p-6 rounded-lg text-white mb-6">
                 <h3 className="font-semibold text-louisiana-gold mb-3">
                   <i className="fas fa-star text-louisiana-gold mr-2"></i>
                   West Monroe Customer Testimonial:
@@ -397,10 +397,10 @@ export default function ServiceAreasPage() {
             <div>
               <div className="flex items-center mb-6">
                 <div className="shield-shape bg-louisiana-gold w-16 h-16 flex items-center justify-center mr-4">
-                  <i className="fas fa-city text-navy text-xl"></i>
+                  <i className="fas fa-city text-charcoal text-xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-military text-navy">Monroe, Louisiana</h2>
+                  <h2 className="text-3xl font-military text-charcoal">Monroe, Louisiana</h2>
                   <p className="text-louisiana-gold font-semibold">North Louisiana's Largest City</p>
                 </div>
               </div>
@@ -410,7 +410,7 @@ export default function ServiceAreasPage() {
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="font-semibold text-navy mb-3">Monroe Commercial Specialties:</h3>
+                <h3 className="font-semibold text-charcoal mb-3">Monroe Commercial Specialties:</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Downtown Monroe business district</li>
                   <li>• Large commercial cleanouts</li>
@@ -420,7 +420,7 @@ export default function ServiceAreasPage() {
                 </ul>
               </div>
 
-              <div className="bg-navy p-6 rounded-lg text-white mb-6">
+              <div className="bg-charcoal p-6 rounded-lg text-white mb-6">
                 <h3 className="font-semibold text-louisiana-gold mb-3">
                   <i className="fas fa-star text-louisiana-gold mr-2"></i>
                   Monroe Customer Testimonial:
@@ -449,7 +449,7 @@ export default function ServiceAreasPage() {
       </section>
 
       {/* Coverage Map Section */}
-      <section className="py-16 bg-navy text-white">
+      <section className="py-16 bg-charcoal text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military mb-4">
@@ -469,7 +469,7 @@ export default function ServiceAreasPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-map-marker-alt text-navy"></i>
+                    <i className="fas fa-map-marker-alt text-charcoal"></i>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-2">Local Knowledge</h4>
