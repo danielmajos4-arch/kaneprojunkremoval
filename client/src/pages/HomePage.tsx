@@ -63,7 +63,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Work Gallery Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
@@ -74,175 +74,100 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {/* Truck Full of Junk - Residential Cleanout */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-1.png" 
-                alt="Kane Pro truck full of junk from residential cleanout in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  e.currentTarget.src = "/kane-pro-logo.png";
-                  console.log("Failed to load portfolio-1.png");
-                }}
-                onLoad={() => console.log("Successfully loaded portfolio-1.png")}
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Residential Cleanouts</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Portfolio Item 1 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video">
+                <img 
+                  src="/portfolio-1.png" 
+                  alt="Residential junk removal - Kane Pro truck loaded with furniture and household items"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-navy mb-2">Residential Cleanouts</h3>
+                <p className="text-gray-600 text-sm">Complete home cleanouts including furniture, appliances, and household items across Louisiana.</p>
               </div>
             </div>
 
-            {/* Mixed Furniture & Items Load */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-2.png" 
-                alt="Mixed furniture and household items loaded for removal"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  e.currentTarget.src = "/kane-pro-logo.png";
-                  console.log("Failed to load portfolio-2.png");
-                }}
-                onLoad={() => console.log("Successfully loaded portfolio-2.png")}
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Furniture & Household Items</p>
+            {/* Portfolio Item 2 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video">
+                <img 
+                  src="/portfolio-2.png" 
+                  alt="Commercial junk removal - Office furniture and equipment removal"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-navy mb-2">Commercial Services</h3>
+                <p className="text-gray-600 text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Louisiana.</p>
               </div>
             </div>
 
-            {/* Team Member with Full Load */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/gallery-reference.png" 
-                alt="Kane Pro team member with fully loaded truck in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  e.currentTarget.src = "/kane-pro-logo.png";
-                  console.log("Failed to load gallery-reference.png");
-                }}
-                onLoad={() => console.log("Successfully loaded gallery-reference.png")}
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Professional Team Service</p>
+            {/* Portfolio Item 3 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video">
+                <img 
+                  src="/portfolio-3.png" 
+                  alt="Construction debris removal - Building materials and renovation cleanup"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-navy mb-2">Construction Debris</h3>
+                <p className="text-gray-600 text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors.</p>
               </div>
             </div>
 
-            {/* Yard Debris & Tires */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-4.png" 
-                alt="Yard debris and tire removal service in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Yard Waste & Tires</p>
+            {/* Portfolio Item 4 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video">
+                <img 
+                  src="/portfolio-4.png" 
+                  alt="Yard cleanup and outdoor debris removal services"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-navy mb-2">Yard & Outdoor Cleanup</h3>
+                <p className="text-gray-600 text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal.</p>
               </div>
             </div>
 
-            {/* Construction & Building Materials */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-5.png" 
-                alt="Construction debris and building materials removal"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Construction Debris</p>
+            {/* Portfolio Item 5 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video">
+                <img 
+                  src="/portfolio-5.png" 
+                  alt="Appliance removal and disposal services"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-navy mb-2">Appliance Removal</h3>
+                <p className="text-gray-600 text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances.</p>
               </div>
             </div>
 
-            {/* Appliance Removal */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-1.png" 
-                alt="Appliance and household item removal in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Appliance Removal</p>
+            {/* Portfolio Item 6 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video">
+                <img 
+                  src="/kane-pro-logo.png" 
+                  alt="Kane Pro Junk Removal - Professional Louisiana service"
+                  className="w-full h-full object-contain bg-navy p-8"
+                  loading="lazy"
+                />
               </div>
-            </div>
-
-            {/* Estate Cleanouts */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-2.png" 
-                alt="Estate cleanout services in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Estate Cleanouts</p>
-              </div>
-            </div>
-
-            {/* Commercial Services */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-3.png" 
-                alt="Commercial junk removal in Louisiana businesses"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Commercial Services</p>
-              </div>
-            </div>
-
-            {/* Outdoor Cleanups */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-4.png" 
-                alt="Outdoor cleanup and debris removal in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Outdoor Cleanups</p>
-              </div>
-            </div>
-
-            {/* Building Materials */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-5.png" 
-                alt="Building materials and renovation debris removal"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Building Materials</p>
-              </div>
-            </div>
-
-            {/* Complete Service Coverage */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-1.png" 
-                alt="Complete junk removal service coverage in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Complete Coverage</p>
-              </div>
-            </div>
-
-            {/* Professional Results */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-              <img 
-                src="/portfolio-2.png" 
-                alt="Professional junk removal results in Louisiana"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="p-3">
-                <p className="text-sm font-semibold text-navy">Professional Results</p>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-navy mb-2">Professional Service</h3>
+                <p className="text-gray-600 text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values.</p>
               </div>
             </div>
           </div>
