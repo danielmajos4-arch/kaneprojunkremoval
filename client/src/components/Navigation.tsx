@@ -16,15 +16,15 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-navy shadow-lg sticky top-0 z-40 border-b border-navy-light header-solid">
+    <nav className="sticky top-0 z-40 header-glass">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Shield Logo */}
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-            <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center mr-3">
+            <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center mr-3 glass-logo-glow">
               <span className="text-navy font-bold text-xs">KANE</span>
             </div>
-            <div className="text-white font-military">
+            <div className="text-white font-military glass-text-shadow">
               <span className="text-lg">KANE PRO</span>
               <div className="text-xs text-louisiana-gold">Junk Removal</div>
             </div>
@@ -34,7 +34,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button 
               onClick={toggleMobileMenu}
-              className="text-white hover:text-louisiana-gold p-2 btn-touch"
+              className="text-white hover:text-louisiana-gold p-2 btn-touch glass-text-shadow"
               aria-label="Toggle mobile menu"
             >
               <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
@@ -45,7 +45,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -55,7 +55,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/services" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/services") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -65,7 +65,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/about" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/about") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -75,7 +75,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/areas" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/areas") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -85,8 +85,12 @@ export default function Navigation() {
             </Link>
             <a 
               href="tel:+13189141201" 
-              className="bg-louisiana-gold text-navy px-4 py-2 rounded-lg font-bold hover:bg-gold-dark transition-colors btn-touch shadow-lg"
-              style={{ textShadow: 'none', fontWeight: '800' }}
+              className="bg-louisiana-gold text-navy px-4 py-2 rounded-lg font-bold hover:bg-gold-dark transition-all btn-touch shadow-lg ring-2 ring-louisiana-gold/20 backdrop-blur-sm"
+              style={{ 
+                textShadow: 'none', 
+                fontWeight: '800',
+                boxShadow: '0 4px 15px rgba(255, 215, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.1)'
+              }}
             >
               (318) 914-1201
             </a>
@@ -94,11 +98,11 @@ export default function Navigation() {
         </div>
         
         {/* Mobile Navigation Menu */}
-        <div className={`md:hidden border-t border-navy-light ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`md:hidden border-t border-white/10 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link 
               href="/" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
                 isActive("/") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -109,7 +113,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/services" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
                 isActive("/services") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -120,7 +124,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/about" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
                 isActive("/about") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -131,7 +135,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/areas" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
                 isActive("/areas") 
                   ? "text-louisiana-gold" 
                   : "text-white hover:text-louisiana-gold"
@@ -142,8 +146,12 @@ export default function Navigation() {
             </Link>
             <a 
               href="tel:+13189141201" 
-              className="block mx-3 my-2 bg-louisiana-gold text-navy px-4 py-3 rounded-lg font-bold text-center hover:bg-gold-dark transition-colors btn-touch shadow-lg"
-              style={{ textShadow: 'none', fontWeight: '800' }}
+              className="block mx-3 my-2 bg-louisiana-gold text-navy px-4 py-3 rounded-lg font-bold text-center hover:bg-gold-dark transition-all btn-touch shadow-lg ring-2 ring-louisiana-gold/20 backdrop-blur-sm"
+              style={{ 
+                textShadow: 'none', 
+                fontWeight: '800',
+                boxShadow: '0 4px 15px rgba(255, 215, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.1)'
+              }}
             >
               Call (318) 914-1201
             </a>
