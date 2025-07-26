@@ -10,7 +10,7 @@ export default function HomePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`
+            backgroundImage: `url('/hero-background.png')`
           }}
         >
           <div className="absolute inset-0 bg-navy bg-opacity-75"></div>
