@@ -111,9 +111,7 @@ export default function Footer() {
         
         <div className="border-t border-navy-light mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              © 2024 Kane Pro Junk Removal & Hauling. Licensed & Insured in Louisiana.
-            </p>
+            <p className="text-gray-300 text-sm">© 2025 Kane Pro Junk Removal & Hauling. Licensed & Insured in Louisiana.</p>
             <div className="flex items-center gap-4 mt-4 md:mt-0">
               <span className="text-sm text-gray-300">Geaux Kane Pro!</span>
               <div className="flex gap-2">
