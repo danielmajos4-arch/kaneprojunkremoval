@@ -17,7 +17,7 @@ export default function Navigation() {
 
   return (
     <nav className="sticky top-0 z-40 header-glass">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#1058a387]">
         <div className="flex justify-between items-center h-16">
           {/* Shield Logo */}
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
