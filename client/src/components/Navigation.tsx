@@ -47,11 +47,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className={`font-medium transition-colors glass-text-shadow ${
-                isActive("/") 
-                  ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
-              }`}
+              className="transition-colors glass-text-shadow text-louisiana-gold font-normal"
             >
               Home
             </Link>
