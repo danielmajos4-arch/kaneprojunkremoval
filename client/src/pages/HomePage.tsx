@@ -1,6 +1,8 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 
+import IMG_3876 from "@assets/IMG_3876.png";
+
 export default function HomePage() {
   return (
     <>
@@ -285,7 +287,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
               <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                src={IMG_3876} 
                 alt="Residential junk removal service in Louisiana" 
                 className="w-full h-48 object-cover" 
               />
