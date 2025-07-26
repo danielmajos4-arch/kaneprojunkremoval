@@ -16,7 +16,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-navy shadow-lg sticky top-0 z-40 glassmorphism-dark">
+    <nav className="bg-navy shadow-lg sticky top-0 z-40 border-b border-navy-light header-solid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Shield Logo */}
@@ -85,7 +85,8 @@ export default function Navigation() {
             </Link>
             <a 
               href="tel:+13189141201" 
-              className="bg-louisiana-gold text-navy px-4 py-2 rounded-lg font-bold hover:bg-gold-dark transition-colors btn-touch"
+              className="bg-louisiana-gold text-navy px-4 py-2 rounded-lg font-bold hover:bg-gold-dark transition-colors btn-touch shadow-lg"
+              style={{ textShadow: 'none', fontWeight: '800' }}
             >
               (318) 914-1201
             </a>
@@ -141,7 +142,8 @@ export default function Navigation() {
             </Link>
             <a 
               href="tel:+13189141201" 
-              className="block mx-3 my-2 bg-louisiana-gold text-navy px-4 py-3 rounded-lg font-bold text-center hover:bg-gold-dark transition-colors btn-touch"
+              className="block mx-3 my-2 bg-louisiana-gold text-navy px-4 py-3 rounded-lg font-bold text-center hover:bg-gold-dark transition-colors btn-touch shadow-lg"
+              style={{ textShadow: 'none', fontWeight: '800' }}
             >
               Call (318) 914-1201
             </a>

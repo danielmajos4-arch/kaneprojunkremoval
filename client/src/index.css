@@ -124,6 +124,13 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(30, 58, 95, 0.2);
   }
+  
+  /* Header visibility fix */
+  .header-solid {
+    background-color: hsl(211, 90%, 26%) !important;
+    backdrop-filter: none !important;
+    border: none !important;
+  }
 
   .shield-shape {
     clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 50% 100%, 0% 70%, 0% 35%, 20% 10%);

@@ -21,12 +21,13 @@ export default function FloatingCTA() {
     >
       <a 
         href="tel:+13189141201" 
-        className="bg-louisiana-gold hover:bg-gold-dark text-navy font-bold py-4 px-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 btn-touch animate-pulse-gold"
+        className="bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-7 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3 btn-touch ring-4 ring-red-600/20 animate-bounce"
         aria-label="Call Kane Pro Junk Removal now"
+        style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(220, 38, 38, 0.3)' }}
       >
-        <i className="fas fa-phone animate-pulse"></i>
-        <span className="hidden sm:inline">CALL NOW</span>
-        <span className="sm:hidden">CALL</span>
+        <i className="fas fa-phone text-xl animate-pulse"></i>
+        <span className="hidden sm:inline text-lg">CALL NOW</span>
+        <span className="sm:hidden text-lg">CALL</span>
       </a>
     </div>
   );
