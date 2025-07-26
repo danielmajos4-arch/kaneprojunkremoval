@@ -81,6 +81,11 @@ export default function HomePage() {
                 src="/portfolio-1.png" 
                 alt="Kane Pro truck full of junk from residential cleanout in Louisiana"
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = "/kane-pro-logo.png";
+                  console.log("Failed to load portfolio-1.png");
+                }}
+                onLoad={() => console.log("Successfully loaded portfolio-1.png")}
               />
               <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               <div className="p-3">
@@ -94,6 +99,11 @@ export default function HomePage() {
                 src="/portfolio-2.png" 
                 alt="Mixed furniture and household items loaded for removal"
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = "/kane-pro-logo.png";
+                  console.log("Failed to load portfolio-2.png");
+                }}
+                onLoad={() => console.log("Successfully loaded portfolio-2.png")}
               />
               <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               <div className="p-3">
@@ -104,9 +114,14 @@ export default function HomePage() {
             {/* Team Member with Full Load */}
             <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
               <img 
-                src="/portfolio-3.png" 
+                src="/gallery-reference.png" 
                 alt="Kane Pro team member with fully loaded truck in Louisiana"
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = "/kane-pro-logo.png";
+                  console.log("Failed to load gallery-reference.png");
+                }}
+                onLoad={() => console.log("Successfully loaded gallery-reference.png")}
               />
               <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               <div className="p-3">
