@@ -364,7 +364,7 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-4 text-xl">
               <span className="text-louisiana-gold font-bold">5.0 Stars</span>
               <span className="text-gray-300">|</span>
-              <span className="text-gray-300">500+ Happy Customers</span>
+              <span className="text-gray-300">50+ Happy Customers</span>
               <span className="text-gray-300">|</span>
               <span className="text-gray-300">Christian-Owned & Operated</span>
             </div>
