@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 
-import IMG_3893 from "@assets/IMG_3893.PNG";
+// Using direct path reference for IMG_3893.PNG
 
 export default function HomePage() {
   return (
@@ -315,7 +315,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative">
                 <img 
-                  src={IMG_3893} 
+                  src="/IMG_3893.PNG" 
                   alt="Before junk removal - cluttered Louisiana garage" 
                   className="w-full h-64 object-cover" 
                 />
