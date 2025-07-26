@@ -26,9 +26,9 @@ export default function Navigation() {
               alt="Kane Pro Junk Removal & Hauling Logo" 
               className="w-12 h-12 mr-3 glass-logo-glow"
             />
-            <div className="text-white font-military glass-text-shadow">
+            <div className="text-navy font-military">
               <span className="text-lg">KANE PRO</span>
-              <div className="text-xs text-louisiana-gold">Junk Removal</div>
+              <div className="text-xs text-navy-light">Junk Removal</div>
             </div>
           </Link>
           
@@ -36,7 +36,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button 
               onClick={toggleMobileMenu}
-              className="text-white hover:text-louisiana-gold p-2 btn-touch glass-text-shadow"
+              className="text-navy hover:text-louisiana-gold p-2 btn-touch transition-colors"
               aria-label="Toggle mobile menu"
             >
               <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
@@ -47,36 +47,40 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className="transition-colors glass-text-shadow font-normal text-[#140701] bg-[#e5dcdc00]"
+              className={`font-medium transition-colors ${
+                isActive("/") 
+                  ? "text-louisiana-gold" 
+                  : "text-navy hover:text-louisiana-gold"
+              }`}
             >
               Home
             </Link>
             <Link 
               href="/services" 
-              className={`font-medium transition-colors glass-text-shadow ${
+              className={`font-medium transition-colors ${
                 isActive("/services") 
                   ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
+                  : "text-navy hover:text-louisiana-gold"
               }`}
             >
               Services
             </Link>
             <Link 
               href="/about" 
-              className={`font-medium transition-colors glass-text-shadow ${
+              className={`font-medium transition-colors ${
                 isActive("/about") 
                   ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
+                  : "text-navy hover:text-louisiana-gold"
               }`}
             >
               About
             </Link>
             <Link 
               href="/areas" 
-              className={`font-medium transition-colors glass-text-shadow ${
+              className={`font-medium transition-colors ${
                 isActive("/areas") 
                   ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
+                  : "text-navy hover:text-louisiana-gold"
               }`}
             >
               Service Areas
@@ -96,14 +100,14 @@ export default function Navigation() {
         </div>
         
         {/* Mobile Navigation Menu */}
-        <div className={`md:hidden border-t border-white/10 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`md:hidden border-t border-navy/10 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link 
               href="/" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
                 isActive("/") 
                   ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
+                  : "text-navy hover:text-louisiana-gold"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -111,10 +115,10 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/services" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
                 isActive("/services") 
                   ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
+                  : "text-navy hover:text-louisiana-gold"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -122,10 +126,10 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/about" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
                 isActive("/about") 
                   ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
+                  : "text-navy hover:text-louisiana-gold"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -133,10 +137,10 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/areas" 
-              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors glass-text-shadow ${
+              className={`block px-3 py-2 font-medium btn-touch flex items-center transition-colors ${
                 isActive("/areas") 
                   ? "text-louisiana-gold" 
-                  : "text-white hover:text-louisiana-gold"
+                  : "text-navy hover:text-louisiana-gold"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
