@@ -45,7 +45,7 @@ export default function HomePage() {
               </a>
             </div>
             
-            <div className="mt-6 text-sm text-louisiana-gold font-semibold">
+            <div className="mt-6 font-semibold text-[#f5efeb] text-[16px]">
               Faith-Driven, Family-Focused Junk Removal
             </div>
             
