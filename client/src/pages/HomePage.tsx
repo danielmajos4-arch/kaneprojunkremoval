@@ -16,14 +16,7 @@ export default function HomePage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            {/* Large Business Logo */}
-            <div className="flex justify-center mb-8">
-              <img 
-                src="/kane-pro-logo.png" 
-                alt="Kane Pro Junk Removal & Hauling Logo" 
-                className="w-32 h-32 shadow-2xl animate-float"
-              />
-            </div>
+
             
             <h1 className="text-4xl md:text-6xl font-military text-white mb-6 animate-slide-up">
               Louisiana's Most Trusted
