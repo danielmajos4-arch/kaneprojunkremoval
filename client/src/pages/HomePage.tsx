@@ -159,9 +159,9 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="aspect-video">
                 <img 
-                  src="/kane-pro-logo.png" 
-                  alt="Kane Pro Junk Removal - Professional Louisiana service"
-                  className="w-full h-full object-contain bg-navy p-8"
+                  src="/Kane.jpeg" 
+                  alt="Kane Pro team member - Professional Louisiana junk removal service"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
