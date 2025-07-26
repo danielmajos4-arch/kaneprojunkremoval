@@ -61,7 +61,7 @@ export default function HomePage() {
                 <i className="fas fa-clock text-louisiana-gold"></i>
                 Same Day Service Available
               </p>
-              <p className="flex items-center justify-center gap-2">
+              <p className="flex items-center justify-center gap-2 text-[#020914]">
                 <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
                 Serving Calhoun, Farmerville, Ruston, West Monroe & Monroe
               </p>
@@ -69,7 +69,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Work Gallery Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -255,7 +254,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Trust Badges */}
       <section className="bg-gray-100 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -279,7 +277,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Services Preview */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -367,7 +364,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Before/After Gallery */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -431,7 +427,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Social Proof Section */}
       <section className="py-16 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -508,7 +503,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Quote Form */}
       <QuoteForm />
     </>
