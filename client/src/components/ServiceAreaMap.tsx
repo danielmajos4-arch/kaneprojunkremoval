@@ -239,11 +239,7 @@ export default function ServiceAreaMap() {
               </button>
               <button
                 onClick={() => setUseGoogleMaps(true)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                  useGoogleMaps 
-                    ? 'bg-navy text-white shadow-sm' 
-                    : 'text-gray-600 hover:text-navy'
-                }`}
+                className="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 text-white shadow-sm bg-[#00000075]"
               >
                 <i className="fab fa-google mr-2"></i>
                 Google Maps
