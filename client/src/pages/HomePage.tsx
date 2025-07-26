@@ -72,6 +72,192 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Work Gallery Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
+              See Kane Pro in Action Across Louisiana
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Real work, real results for Louisiana families
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* Kane Pro Truck */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Kane Pro junk removal truck serving Louisiana communities"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Our Professional Fleet</p>
+              </div>
+            </div>
+
+            {/* Team Loading Junk */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Kane Pro team loading junk removal items in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Professional Team at Work</p>
+              </div>
+            </div>
+
+            {/* Furniture Removal */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Furniture junk removal service in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Furniture Removal</p>
+              </div>
+            </div>
+
+            {/* Appliance Removal */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Appliance junk removal and hauling in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Appliance Hauling</p>
+              </div>
+            </div>
+
+            {/* Before/After Cleanout */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Home cleanout before and after Kane Pro service"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Complete Home Cleanouts</p>
+              </div>
+            </div>
+
+            {/* Construction Debris */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Construction debris removal in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Construction Debris</p>
+              </div>
+            </div>
+
+            {/* Garage Cleanout */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Garage cleanout service by Kane Pro in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Garage Cleanouts</p>
+              </div>
+            </div>
+
+            {/* Estate Cleanouts */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Estate cleanout services in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Estate Cleanouts</p>
+              </div>
+            </div>
+
+            {/* Commercial Services */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Commercial junk removal in Louisiana businesses"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Commercial Services</p>
+              </div>
+            </div>
+
+            {/* Yard Waste */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Yard waste and debris removal in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Yard Waste Removal</p>
+              </div>
+            </div>
+
+            {/* Electronic Waste */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1573784628906-4646200a8e9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Electronic waste recycling and removal in Louisiana"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Electronic Recycling</p>
+              </div>
+            </div>
+
+            {/* Louisiana Locations */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400" 
+                alt="Kane Pro serving Louisiana communities"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-navy">Serving Louisiana</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a 
+              href="#quote-form" 
+              className="btn-cta text-lg"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <i className="fas fa-shield-alt mr-2"></i>
+              GET YOUR FREE ESTIMATE TODAY
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Badges */}
       <section className="bg-gray-100 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
