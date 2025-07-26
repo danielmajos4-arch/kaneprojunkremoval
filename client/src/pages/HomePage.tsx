@@ -1,7 +1,43 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+// Animation variants for different elements
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const staggerContainer = {
+  visible: { transition: { staggerChildren: 0.2 } }
+};
+
+const scaleOnHover = {
+  rest: { scale: 1 },
+  hover: { scale: 1.05, transition: { duration: 0.3, ease: "easeOut" } }
+};
+
+const iconFloat = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: index * 0.1,
+      ease: "easeOut"
+    }
+  })
+};
 
 export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -17,40 +53,74 @@ export default function HomePage() {
         ></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
+          <motion.div 
+            className="text-center"
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+            variants={staggerContainer}
+          >
             
-            <h1 className="text-4xl md:text-6xl font-military text-white mb-6 animate-slide-up">
+            <motion.h1 
+              className="text-4xl md:text-6xl font-military text-white mb-6"
+              variants={fadeInUp}
+            >
               Kane's Junk Removal Calhoun LA
-              <span className="text-louisiana-gold block">Same Day Service in Ruston, Monroe & West Monroe</span>
-            </h1>
+              <motion.span 
+                className="text-louisiana-gold block"
+                variants={fadeInUp}
+              >
+                Same Day Service in Ruston, Monroe & West Monroe
+              </motion.span>
+            </motion.h1>
             
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto font-bold pt-[-10px] pb-[-10px] ml-[0px] mr-[0px] pl-[0px] pr-[0px] mt-[10px] mb-[10px] text-[#f2f1ed] text-center bg-[#08142454]">
+            <motion.p 
+              className="text-xl md:text-2xl max-w-3xl mx-auto font-bold pt-[-10px] pb-[-10px] ml-[0px] mr-[0px] pl-[0px] pr-[0px] mt-[10px] mb-[10px] text-[#f2f1ed] text-center bg-[#08142454]"
+              variants={fadeInUp}
+            >
               Professional junk hauling, debris removal & cleanouts serving Louisiana with Christian values
-            </p>
+            </motion.p>
             
-            <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-              <a 
+            <motion.div 
+              className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center"
+              variants={fadeInUp}
+            >
+              <motion.a 
                 href="#quote-form" 
                 className="block md:inline-block btn-cta text-lg"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
               >
                 <i className="fas fa-shield-alt mr-2"></i>
                 GET FREE ESTIMATE
-              </a>
-              <a href="tel:+13189141201" className="block md:inline-block btn-outline text-lg">
+              </motion.a>
+              <motion.a 
+                href="tel:+13189141201" 
+                className="block md:inline-block btn-outline text-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
                 <i className="fas fa-phone mr-2"></i>
                 CALL (318) 914-1201
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
             
-            <div className="mt-6 font-semibold text-[#f5efeb] text-[16px]">
+            <motion.div 
+              className="mt-6 font-semibold text-[#f5efeb] text-[16px]"
+              variants={fadeInUp}
+            >
               Faith-Driven, Family-Focused Junk Removal
-            </div>
+            </motion.div>
             
-            <div className="mt-8 text-sm text-gray-300">
+            <motion.div 
+              className="mt-8 text-sm text-gray-300"
+              variants={fadeInUp}
+            >
               <p className="flex items-center justify-center gap-2 mb-2 text-[#010812]">
                 <i className="fas fa-clock text-louisiana-gold" aria-hidden="true"></i>
                 Same Day Junk Removal Service Available
@@ -59,8 +129,8 @@ export default function HomePage() {
                 <i className="fas fa-map-marker-alt text-louisiana-gold" aria-hidden="true"></i>
                 Serving Calhoun, Farmerville, Ruston, West Monroe & Monroe Louisiana
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -68,7 +138,12 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <h2 className="text-3xl md:text-4xl font-military text-navy mb-6">
                 About Kane's Junk Removal Louisiana
               </h2>
@@ -92,65 +167,121 @@ export default function HomePage() {
               </div>
 
               <div className="mt-8">
-                <a 
+                <motion.a 
                   href="tel:+13189141201" 
                   className="inline-flex items-center gap-2 bg-louisiana-gold text-navy px-6 py-3 rounded-lg font-bold hover:bg-gold-dark transition-all shadow-lg"
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(255, 215, 0, 0.3)" }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <i className="fas fa-phone"></i>
                   Get Your Free In-Person Estimate
-                </a>
+                </motion.a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="lg:order-first">
+            <motion.div 
+              className="lg:order-first"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <div className="bg-navy rounded-xl p-8 text-white">
-                <h3 className="text-2xl font-military text-louisiana-gold mb-6">
+                <motion.h3 
+                  className="text-2xl font-military text-louisiana-gold mb-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
                   Areas We Serve in Louisiana
-                </h3>
+                </motion.h3>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3">
+                  <motion.div 
+                    className="flex items-center gap-3"
+                    custom={0}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={iconFloat}
+                    viewport={{ once: true }}
+                  >
                     <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
                     <div>
                       <h4 className="font-semibold">Calhoun, LA</h4>
                       <p className="text-gray-300 text-sm">Our home base - Same day service available</p>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-center gap-3">
+                  <motion.div 
+                    className="flex items-center gap-3"
+                    custom={1}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={iconFloat}
+                    viewport={{ once: true }}
+                  >
                     <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
                     <div>
                       <h4 className="font-semibold">Ruston, LA</h4>
                       <p className="text-gray-300 text-sm">University area cleanouts & residential services</p>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-center gap-3">
+                  <motion.div 
+                    className="flex items-center gap-3"
+                    custom={2}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={iconFloat}
+                    viewport={{ once: true }}
+                  >
                     <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
                     <div>
                       <h4 className="font-semibold">Monroe, LA</h4>
                       <p className="text-gray-300 text-sm">Full-service junk removal & debris cleanouts</p>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-center gap-3">
+                  <motion.div 
+                    className="flex items-center gap-3"
+                    custom={3}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={iconFloat}
+                    viewport={{ once: true }}
+                  >
                     <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
                     <div>
                       <h4 className="font-semibold">Farmerville, LA</h4>
                       <p className="text-gray-300 text-sm">Professional junk hauling services</p>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-center gap-3">
+                  <motion.div 
+                    className="flex items-center gap-3"
+                    custom={4}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={iconFloat}
+                    viewport={{ once: true }}
+                  >
                     <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
                     <div>
                       <h4 className="font-semibold">West Monroe, LA</h4>
                       <p className="text-gray-300 text-sm">Commercial & residential junk removal</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
 
-                <div className="mt-6 p-4 bg-louisiana-gold/10 rounded-lg border border-louisiana-gold/20">
+                <motion.div 
+                  className="mt-6 p-4 bg-louisiana-gold/10 rounded-lg border border-louisiana-gold/20"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  viewport={{ once: true }}
+                >
                   <div className="flex items-center gap-2 text-louisiana-gold mb-2">
                     <i className="fas fa-clock"></i>
                     <span className="font-semibold">Same Day Service Available</span>
@@ -159,9 +290,9 @@ export default function HomePage() {
                     Monday - Saturday, 7AM - 8PM<br/>
                     <strong>Call (318) 914-1201</strong> for immediate service
                   </p>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -180,112 +311,190 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Portfolio Item 1 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video">
-                <img 
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
+              <div className="aspect-video overflow-hidden">
+                <motion.img 
                   src="/portfolio-1.png" 
                   alt="Kane's junk removal truck in Calhoun LA loaded with residential furniture and household items"
                   className="w-full h-full object-cover"
                   width="400"
                   height="225"
                   style={{ imageRendering: 'auto', filter: 'none' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">Residential Junk Removal Calhoun LA</h3>
                 <p className="text-gray-600 text-sm">Complete home cleanouts including furniture, appliances, and household items across Calhoun, Ruston, and Monroe Louisiana.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Portfolio Item 2 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video">
-                <img 
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
+              <div className="aspect-video overflow-hidden">
+                <motion.img 
                   src="/portfolio-2.png" 
                   alt="Commercial junk hauling Monroe LA - Kane's removing office furniture and equipment"
                   className="w-full h-full object-cover"
                   width="400"
                   height="225"
                   style={{ imageRendering: 'auto', filter: 'none' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">Commercial Junk Hauling Monroe LA</h3>
                 <p className="text-gray-600 text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Monroe, West Monroe, and surrounding Louisiana areas.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Portfolio Item 3 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video">
-                <img 
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
+              <div className="aspect-video overflow-hidden">
+                <motion.img 
                   src="/portfolio-3.png" 
                   alt="Construction debris removal Ruston LA - Kane's hauling building materials and renovation cleanup"
                   className="w-full h-full object-cover"
                   width="400"
                   height="225"
                   style={{ imageRendering: 'auto', filter: 'none' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">Construction Debris Removal Ruston LA</h3>
                 <p className="text-gray-600 text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors in Ruston, Farmerville, and North Louisiana.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Portfolio Item 4 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video">
-                <img 
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
+              <div className="aspect-video overflow-hidden">
+                <motion.img 
                   src="/portfolio-4.png" 
                   alt="Yard cleanup and outdoor debris removal Farmerville LA - Kane's hauling tree branches and landscaping materials"
                   className="w-full h-full object-cover"
                   width="400"
                   height="225"
                   style={{ imageRendering: 'auto', filter: 'none' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">Yard Cleanup Farmerville LA</h3>
                 <p className="text-gray-600 text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal in Farmerville and surrounding Louisiana areas.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Portfolio Item 5 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video">
-                <img 
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
+              <div className="aspect-video overflow-hidden">
+                <motion.img 
                   src="/portfolio-5.png" 
                   alt="Appliance removal West Monroe LA - Kane's safely disposing refrigerators washers and large appliances"
                   className="w-full h-full object-cover"
                   width="400"
                   height="225"
                   style={{ imageRendering: 'auto', filter: 'none' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">Appliance Removal West Monroe LA</h3>
                 <p className="text-gray-600 text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances in West Monroe and throughout Louisiana.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Portfolio Item 6 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video">
-                <img 
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
+              <div className="aspect-video overflow-hidden">
+                <motion.img 
                   src="/Kane.jpeg" 
                   alt="Kane's Junk Removal team owner - Professional licensed Louisiana junk hauling service provider"
                   className="w-full h-full object-cover"
                   width="400"
                   height="225"
                   style={{ imageRendering: 'auto', filter: 'none' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">Professional Louisiana Junk Removal</h3>
                 <p className="text-gray-600 text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values throughout Calhoun, Ruston, Monroe, and surrounding areas.</p>
               </div>
-            </div>
+            </motion.div>
           </div>
           
           <div className="text-center mt-12">
@@ -307,22 +516,46 @@ export default function HomePage() {
       <section className="bg-gray-100 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="flex flex-col items-center">
+            <motion.div 
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
               <i className="fas fa-shield-alt text-3xl text-navy mb-2"></i>
               <span className="text-sm font-semibold text-navy">Licensed & Insured</span>
-            </div>
-            <div className="flex flex-col items-center">
+            </motion.div>
+            <motion.div 
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <i className="fas fa-heart text-3xl text-navy mb-2"></i>
               <span className="text-sm font-semibold text-navy">Louisiana Born & Raised</span>
-            </div>
-            <div className="flex flex-col items-center">
+            </motion.div>
+            <motion.div 
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <i className="fas fa-clock text-3xl text-navy mb-2"></i>
               <span className="text-sm font-semibold text-navy">Same Day Service</span>
-            </div>
-            <div className="flex flex-col items-center">
+            </motion.div>
+            <motion.div 
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               <i className="fas fa-leaf text-3xl text-navy mb-2"></i>
               <span className="text-sm font-semibold text-navy">Eco-Friendly</span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -339,7 +572,18 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden glassmorphism"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
               <img 
                 src="/portfolio-1.png" 
                 alt="Residential junk removal service in Louisiana" 
@@ -361,9 +605,20 @@ export default function HomePage() {
                   Learn More
                 </Link>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden glassmorphism"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
               <img 
                 src="/portfolio-2.png" 
                 alt="Commercial junk removal service in Louisiana" 
@@ -385,9 +640,20 @@ export default function HomePage() {
                   Learn More
                 </Link>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden glassmorphism"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
               <img 
                 src="/portfolio-3.png" 
                 alt="Construction debris removal in Louisiana" 
@@ -409,7 +675,7 @@ export default function HomePage() {
                   Learn More
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -426,53 +692,182 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="glassmorphism rounded-xl p-6 text-center">
-              <div className="flex justify-center mb-4">
+            <motion.div 
+              className="glassmorphism rounded-xl p-6 text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+            >
+              <motion.div 
+                className="flex justify-center mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <div className="flex text-louisiana-gold text-xl">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.4 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.5 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.6 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.7 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.8 }}
+                    viewport={{ once: true }}
+                  />
                 </div>
-              </div>
+              </motion.div>
               <p className="text-gray-200 mb-4 italic">
                 "Kane Pro came out same day and cleared our whole garage after Hurricane damage. True Christian professionals who understand what we've been through. Highly recommend!"
               </p>
               <p className="font-semibold text-louisiana-gold">- Sarah M., Calhoun LA</p>
-            </div>
+            </motion.div>
             
-            <div className="glassmorphism rounded-xl p-6 text-center">
-              <div className="flex justify-center mb-4">
+            <motion.div 
+              className="glassmorphism rounded-xl p-6 text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+            >
+              <motion.div 
+                className="flex justify-center mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
                 <div className="flex text-louisiana-gold text-xl">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.5 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.6 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.7 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.8 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.9 }}
+                    viewport={{ once: true }}
+                  />
                 </div>
-              </div>
+              </motion.div>
               <p className="text-gray-200 mb-4 italic">
                 "Faith-driven service is right! They showed up on time, worked efficiently, and left our property cleaner than when they arrived. Louisiana born and it shows in their work ethic."
               </p>
               <p className="font-semibold text-louisiana-gold">- Mike T., Monroe LA</p>
-            </div>
+            </motion.div>
             
-            <div className="glassmorphism rounded-xl p-6 text-center">
-              <div className="flex justify-center mb-4">
+            <motion.div 
+              className="glassmorphism rounded-xl p-6 text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+            >
+              <motion.div 
+                className="flex justify-center mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
                 <div className="flex text-louisiana-gold text-xl">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.6 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.7 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.8 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.9 }}
+                    viewport={{ once: true }}
+                  />
+                  <motion.i 
+                    className="fas fa-star" 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: 1.0 }}
+                    viewport={{ once: true }}
+                  />
                 </div>
-              </div>
+              </motion.div>
               <p className="text-gray-200 mb-4 italic">
                 "Fair pricing, professional service, and they donated items that were still good. These folks understand Louisiana values. Will definitely use Kane Pro again!"
               </p>
               <p className="font-semibold text-louisiana-gold">- Jennifer L., Ruston LA</p>
-            </div>
+            </motion.div>
           </div>
           
           <div className="text-center mt-12">
