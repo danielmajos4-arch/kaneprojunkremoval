@@ -1,0 +1,162 @@
+Create a mobile-first, high-converting 4-page website for "Kane Pro Junk Removal & Hauling" serving Calhoun, Farmerville, Ruston, West Monroe, and Monroe, Louisiana. This must CRUSH outdated competitors with modern design and Louisiana local pride.
+BRAND IDENTITY:
+
+Company: Kane Pro Junk Removal & Hauling
+Logo: Shield design with "KANE PRO" prominently displayed
+Theme: Military precision meets Louisiana heart
+Tagline: "Your Trusted Shield Against Junk Problems"
+Colors: Navy blue (#1e3a5f), Louisiana gold (#ffd700), crisp white (#ffffff)
+Phone: +1 (318) 914-1201
+Address: 493 JB Cyrus Rd Calhoun, LA 71225
+
+DESIGN REQUIREMENTS:
+
+Mobile-first responsive design (prioritize mobile over desktop)
+Count Junkula's memorable branding approach with shield theme
+Jack's professional look with staff photo placeholders
+Jedi's sticky CTA approach - floating "CALL NOW" button always visible
+Louisiana flag colors and local pride elements
+Modern glassmorphism effects and subtle animations
+Fast loading, optimized for mobile conversions
+Smooth scroll navigation between sections
+
+4-PAGE STRUCTURE:
+PAGE 1: Homepage (index.html)
+
+Hero section: "Louisiana's Most Trusted Junk Removal Shield" with shield logo
+Sticky floating "CALL (318) 914-1201" button (always visible)
+Services preview with Louisiana city targeting
+Social proof section with testimonial placeholders
+"Same Day Service in Calhoun, Farmerville, Ruston, West Monroe & Monroe"
+Trust badges: Licensed, Insured, Louisiana Born & Raised
+Before/after photo gallery placeholder
+Local landmarks background (Louisiana themed)
+
+PAGE 2: Services (/services.html)
+
+Detailed service descriptions with city-specific targeting
+"Residential Junk Removal in [City Name], Louisiana"
+"Commercial Cleanouts Across Louisiana"
+"Construction Debris - Louisiana Job Sites"
+Pricing transparency section
+Service area map highlighting all 5 cities
+Emergency/same-day service callouts
+
+PAGE 3: About/Contact (/about.html)
+
+"Louisiana Born, Louisiana Proud" story section
+Team member placeholders with Louisiana backgrounds
+Multiple contact methods (phone, email, text, chat)
+Service hours: 7am-8pm Mon-Saturday, Closed Sunday
+Interactive contact form with city dropdown
+Louisiana business certifications display
+"Why Choose Local Louisiana Experts" section
+
+PAGE 4: Service Areas (/areas.html)
+
+Individual sections for each city:
+
+Calhoun Junk Removal
+Farmerville Junk Removal
+Ruston Junk Removal (mention Louisiana Tech University)
+West Monroe Junk Removal
+Monroe Junk Removal
+
+
+Local landmarks and references for each city
+City-specific testimonial placeholders
+Local phone number emphasis
+"Proudly Serving [City] Families" messaging
+
+MOBILE OPTIMIZATION REQUIREMENTS:
+
+Touch-friendly buttons (44px minimum)
+One-thumb navigation
+Swipeable image galleries
+Collapsible mobile menu with shield logo
+Fast-loading, compressed images
+Click-to-call phone numbers everywhere
+Thumb-friendly form inputs
+Sticky CTA button that doesn't block content
+
+CONVERSION ELEMENTS (CRITICAL):
+
+Multiple CTAs per page: "Get Free Estimate", "Call Now", "Text Us"
+Urgency messaging: "Same Day Service Available"
+Trust signals: "Licensed & Insured in Louisiana"
+Social proof sections throughout
+Easy quote request forms (3 fields max)
+Click-to-call phone numbers
+Live chat widget placeholder
+"Free Estimate" emphasis
+
+SEO ON-PAGE OPTIMIZATION:
+
+Title tags: "Kane Pro Junk Removal [City], LA - Same Day Service"
+Meta descriptions with Louisiana city keywords
+H1 tags: "Professional Junk Removal in [City], Louisiana"
+H2 tags with service + city combinations
+Alt tags: "Kane Pro junk removal truck in [city] Louisiana"
+Local business schema markup ready
+Clean URL structure: /services, /about, /areas
+Internal linking between city pages
+
+LOUISIANA LOCAL ELEMENTS:
+
+Louisiana flag colors throughout design
+"Geaux Kane Pro!" messaging (Louisiana slang)
+References to Louisiana culture, food, lifestyle
+"Born and raised in Louisiana" team bios
+Louisiana business pride messaging
+Local weather considerations (hurricane cleanup services)
+Mardi Gras, Saints, LSU subtle references where appropriate
+
+TECHNICAL REQUIREMENTS:
+
+HTML5 semantic structure
+CSS Grid and Flexbox for responsive layout
+Vanilla JavaScript for interactions
+Optimized images with WebP format
+Smooth scrolling and transitions
+CSS animations for engagement
+Form validation
+Accessible design (WCAG compliant)
+
+UNIQUE DIFFERENTIATORS:
+
+Shield protection messaging throughout
+Military precision branding
+"Louisiana's Junk Removal Shield" positioning
+Family-owned, locally operated emphasis
+Environmental responsibility messaging
+Veteran-owned business angle (if applicable)
+
+CRITICAL SUCCESS METRICS TO BUILD FOR:
+
+Sub-3 second mobile load time
+High click-through rate on CTAs
+Easy thumb navigation
+Professional appearance that builds trust
+Local Louisiana connection that competitors lack
+Conversion-focused design, not just pretty
+
+DO NOT CREATE:
+
+Generic stock photo layouts
+Cookie-cutter junk removal designs
+Desktop-first responsive design
+Slow-loading elements
+Complicated navigation
+Generic "about us" content
+Non-Louisiana specific messaging
+
+CREATE SOMETHING THAT:
+
+Makes Louisiana residents say "These are OUR people"
+Converts mobile visitors into phone calls
+Looks more professional than any local competitor
+Loads faster than any competitor site
+Feels trustworthy and locally connected
+Drives immediate action (calls, forms, bookings)
+
+Build this as a complete, functional website with realistic placeholder content that reflects the Louisiana market and Kane Pro's shield branding. Make it conversion-focused, mobile-optimized, and ready to dominate local search results.
