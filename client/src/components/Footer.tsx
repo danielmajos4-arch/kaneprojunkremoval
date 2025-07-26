@@ -8,9 +8,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center mr-3">
-                <span className="text-navy font-bold text-xs">KANE</span>
-              </div>
+              <img 
+                src="/kane-pro-logo.png" 
+                alt="Kane Pro Junk Removal & Hauling Logo" 
+                className="w-12 h-12 mr-3"
+              />
               <div>
                 <h3 className="text-xl font-military">KANE PRO</h3>
                 <p className="text-sm text-louisiana-gold">Junk Removal & Hauling</p>

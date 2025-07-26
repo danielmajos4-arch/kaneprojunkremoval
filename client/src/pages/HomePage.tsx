@@ -18,14 +18,13 @@ export default function HomePage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            {/* Large Shield Logo */}
+            {/* Large Business Logo */}
             <div className="flex justify-center mb-8">
-              <div className="shield-shape bg-louisiana-gold w-32 h-32 flex items-center justify-center shadow-2xl animate-float">
-                <div className="text-navy font-military text-center">
-                  <div className="text-2xl">KANE</div>
-                  <div className="text-lg">PRO</div>
-                </div>
-              </div>
+              <img 
+                src="/kane-pro-logo.png" 
+                alt="Kane Pro Junk Removal & Hauling Logo" 
+                className="w-32 h-32 shadow-2xl animate-float"
+              />
             </div>
             
             <h1 className="text-4xl md:text-6xl font-military text-white mb-6 animate-slide-up">

@@ -21,9 +21,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Shield Logo */}
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-            <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center mr-3 glass-logo-glow">
-              <span className="text-navy font-bold text-xs">KANE</span>
-            </div>
+            <img 
+              src="/kane-pro-logo.png" 
+              alt="Kane Pro Junk Removal & Hauling Logo" 
+              className="w-12 h-12 mr-3 glass-logo-glow"
+            />
             <div className="text-white font-military glass-text-shadow">
               <span className="text-lg">KANE PRO</span>
               <div className="text-xs text-louisiana-gold">Junk Removal</div>

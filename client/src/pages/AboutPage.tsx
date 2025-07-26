@@ -13,9 +13,11 @@ export default function AboutPage() {
         ></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
-            <div className="shield-shape bg-louisiana-gold w-20 h-20 flex items-center justify-center shadow-xl">
-              <span className="text-navy font-bold text-sm">KANE</span>
-            </div>
+            <img 
+              src="/kane-pro-logo.png" 
+              alt="Kane Pro Junk Removal & Hauling Logo" 
+              className="w-20 h-20 shadow-xl"
+            />
           </div>
           <h1 className="text-4xl md:text-5xl font-military mb-4">
             Louisiana Born, Louisiana Proud
