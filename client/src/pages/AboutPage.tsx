@@ -21,7 +21,7 @@ export default function AboutPage() {
             Louisiana Born, Louisiana Proud
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Your trusted shield against junk problems - Military precision meets Louisiana heart
+            Your trusted shield against junk problems - Christian values meet Louisiana heart
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function AboutPage() {
                 Why Choose Local Louisiana Experts?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Kane Pro Junk Removal & Hauling was born from Louisiana values - hard work, community pride, and military precision. We understand what it means to be Louisiana strong because we are Louisiana born and raised.
+                Kane Pro Junk Removal & Hauling was born from Louisiana values - hard work, community pride, and Christian integrity. We understand what it means to be Louisiana strong because we are Louisiana born and raised.
               </p>
               
               <div className="space-y-6 mb-8">
@@ -44,8 +44,8 @@ export default function AboutPage() {
                     <i className="fas fa-shield-alt text-navy"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy text-lg mb-2">Military Precision</h3>
-                    <p className="text-gray-600">Every job is executed with attention to detail, punctuality, and professional standards that reflect our military training and Louisiana work ethic.</p>
+                    <h3 className="font-semibold text-navy text-lg mb-2">Faith-Driven Excellence</h3>
+                    <p className="text-gray-600">Every job is executed with attention to detail, punctuality, and professional standards that reflect our Christian values and Louisiana work ethic.</p>
                   </div>
                 </div>
                 
@@ -81,7 +81,7 @@ export default function AboutPage() {
                   <span>• EPA Certified Disposal</span>
                   <span>• Better Business Bureau</span>
                   <span>• Louisiana Chamber Member</span>
-                  <span>• Veteran Owned Business</span>
+                  <span>• Christian Owned Business</span>
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
               Meet Your Louisiana Junk Removal Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Born and raised in Louisiana, trained in military precision, dedicated to serving our community
+              Born and raised in Louisiana, guided by faith-driven values, dedicated to serving our community
             </p>
           </div>
 
@@ -133,7 +133,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-navy mb-2">Mike Kane</h3>
                 <p className="text-louisiana-gold font-semibold mb-3">Founder & Owner</p>
                 <p className="text-gray-600 text-sm mb-4">
-                  Louisiana native, military veteran, and family man. Started Kane Pro to serve the community he loves with the precision and integrity he learned in service.
+                  Louisiana native, Christian family man, and community leader. Started Kane Pro to serve the community he loves with faith-driven values and integrity.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
                   <i className="fas fa-map-marker-alt text-louisiana-gold"></i>

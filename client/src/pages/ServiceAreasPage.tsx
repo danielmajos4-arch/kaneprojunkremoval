@@ -22,7 +22,7 @@ export default function ServiceAreasPage() {
             Proudly Serving Louisiana Communities
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Kane Pro's trusted shield protects families and businesses across North Louisiana
+            Kane Pro's trusted shield protects families and businesses across North Louisiana with Christian values and integrity
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function ServiceAreasPage() {
               Louisiana Communities We Serve
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From our home base in Calhoun to the bustling city of Monroe, we bring military precision and Louisiana heart to every community we serve.
+              From our home base in Calhoun to the bustling city of Monroe, we bring Christian values and Louisiana heart to every community we serve.
             </p>
           </div>
 
@@ -193,7 +193,7 @@ export default function ServiceAreasPage() {
               </div>
               
               <p className="text-lg text-gray-600 mb-6">
-                Proudly serving Calhoun families since day one. As our home base, Calhoun receives priority scheduling and same-day service. We know every street, every neighborhood, and every local business because this is where Kane Pro was born.
+                Proudly serving Calhoun families since day one with Christian values and integrity. As our home base, Calhoun receives priority scheduling and same-day service. We know every street, every neighborhood, and every local business because this is where Kane Pro was born.
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">

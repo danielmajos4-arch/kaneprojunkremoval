@@ -1,7 +1,7 @@
 # Kane Pro Junk Removal Website
 
 ## Overview
-A mobile-first, high-converting website for Kane Pro Junk Removal & Hauling, a Louisiana-based junk removal service. The application features a React frontend with Express backend, focused on lead generation through quote requests and contact forms.
+A mobile-first, high-converting website for Kane Pro Junk Removal & Hauling, a Louisiana-based Christian-owned junk removal service. The application features a React frontend with Express backend, focused on lead generation through quote requests and contact forms. Updated to emphasize Christian business values and faith-driven service.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
@@ -26,9 +26,10 @@ Preferred communication style: Simple, everyday language.
 ### Design System
 - **Component Library**: Radix UI primitives with shadcn/ui
 - **Theme**: Custom Louisiana-inspired theme (navy blue, gold, white)
-- **Typography**: Military-inspired fonts and styling
+- **Typography**: Professional fonts with Christian business messaging
 - **Responsive**: Mobile-first design approach
 - **Icons**: Font Awesome for consistent iconography
+- **Branding**: Faith-driven professional branding with shield symbolizing protection and integrity
 
 ## Key Components
 

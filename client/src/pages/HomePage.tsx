@@ -34,7 +34,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Your Trusted Shield Against Junk Problems - Military Precision, Louisiana Heart
+              Your Trusted Shield Against Junk Problems - Christian Values, Louisiana Heart
             </p>
             
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
@@ -53,6 +53,10 @@ export default function HomePage() {
                 <i className="fas fa-phone mr-2"></i>
                 CALL (318) 914-1201
               </a>
+            </div>
+            
+            <div className="mt-6 text-sm text-louisiana-gold font-semibold">
+              Faith-Driven, Family-Focused Junk Removal
             </div>
             
             <div className="mt-8 text-sm text-gray-300">
@@ -101,7 +105,7 @@ export default function HomePage() {
               Our Louisiana Junk Removal Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From Calhoun to Monroe, we're your trusted shield against junk problems with military precision and Louisiana heart.
+              From Calhoun to Monroe, we're your trusted shield against junk problems with Christian values and Louisiana heart.
             </p>
           </div>
           
@@ -269,7 +273,7 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-gray-200 mb-4 italic">
-                "Kane Pro came out same day and cleared our whole garage after Hurricane damage. True Louisiana professionals who understand what we've been through. Highly recommend!"
+                "Kane Pro came out same day and cleared our whole garage after Hurricane damage. True Christian professionals who understand what we've been through. Highly recommend!"
               </p>
               <p className="font-semibold text-louisiana-gold">- Sarah M., Calhoun LA</p>
             </div>
@@ -285,7 +289,7 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-gray-200 mb-4 italic">
-                "Military precision is right! They showed up on time, worked efficiently, and left our property cleaner than when they arrived. Louisiana born and it shows in their work ethic."
+                "Faith-driven service is right! They showed up on time, worked efficiently, and left our property cleaner than when they arrived. Louisiana born and it shows in their work ethic."
               </p>
               <p className="font-semibold text-louisiana-gold">- Mike T., Monroe LA</p>
             </div>
@@ -313,7 +317,10 @@ export default function HomePage() {
               <span className="text-gray-300">|</span>
               <span className="text-gray-300">500+ Happy Customers</span>
               <span className="text-gray-300">|</span>
-              <span className="text-gray-300">Louisiana Licensed & Insured</span>
+              <span className="text-gray-300">Christian-Owned & Operated</span>
+            </div>
+            <div className="mt-4 text-gray-300">
+              Your Trusted Christian Neighbors in Louisiana
             </div>
           </div>
         </div>

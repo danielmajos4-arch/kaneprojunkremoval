@@ -67,7 +67,7 @@ export default function ContactForm() {
         <h3 className="text-xl md:text-2xl font-military mb-2">
           Contact Kane Pro Today
         </h3>
-        <p className="text-gray-300">Get in touch with Louisiana's trusted junk removal experts</p>
+        <p className="text-gray-300">Get in touch with Louisiana's trusted Christian junk removal experts</p>
       </div>
       
       <Form {...form}>

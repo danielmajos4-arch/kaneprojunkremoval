@@ -72,7 +72,7 @@ export default function QuoteForm() {
             <h2 className="text-2xl md:text-3xl font-military mb-2">
               Get Your Free Louisiana Estimate
             </h2>
-            <p className="text-gray-300">Your trusted shield against junk problems - Military precision, Louisiana heart</p>
+            <p className="text-gray-300">Your trusted shield against junk problems - Christian values, Louisiana heart</p>
           </div>
           
           <Form {...form}>

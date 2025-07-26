@@ -22,7 +22,7 @@ export default function ServicesPage() {
             Professional Junk Removal Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Serving Louisiana with military precision and community heart - your trusted shield against junk problems
+            Serving Louisiana with Christian values and community heart - your trusted shield against junk problems
           </p>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function ServicesPage() {
                   Residential Junk Removal in Louisiana
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  From single items to complete home cleanouts, Kane Pro handles all your residential junk removal needs across Louisiana parishes. Our military-trained team treats your home with respect while efficiently removing unwanted items.
+                  From single items to complete home cleanouts, Kane Pro handles all your residential junk removal needs across Louisiana parishes. Our faith-driven team treats your home with respect while efficiently removing unwanted items.
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                   Construction Debris - Louisiana Job Sites
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  Louisiana contractors trust Kane Pro for efficient construction debris removal. We understand job site safety and timeline requirements, keeping your projects on schedule and compliant.
+                  Louisiana contractors trust Kane Pro for efficient construction debris removal. We understand job site safety and timeline requirements with integrity, keeping your projects on schedule and compliant.
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">

@@ -17,7 +17,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              Your Trusted Shield Against Junk Problems. Serving Louisiana with military precision and community heart since day one.
+              Your Trusted Shield Against Junk Problems. Serving Louisiana with Christian values and community heart since day one.
             </p>
             <div className="space-y-2">
               <p className="flex items-center gap-2">
