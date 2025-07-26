@@ -3,6 +3,8 @@ import QuoteForm from "@/components/QuoteForm";
 
 import IMG_3876 from "@assets/IMG_3876.png";
 
+import IMG_3900 from "@assets/IMG_3900.PNG";
+
 export default function HomePage() {
   return (
     <>
@@ -311,7 +313,7 @@ export default function HomePage() {
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
               <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                src={IMG_3900} 
                 alt="Commercial junk removal service in Louisiana" 
                 className="w-full h-48 object-cover" 
               />
