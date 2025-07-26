@@ -49,61 +49,32 @@ export default function ServiceAreaMap() {
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
-
-    const loadGoogleMaps = () => {
-      // Check if Google Maps is already loaded
-      if (window.google && window.google.maps) {
-        initializeMap();
-        return;
-      }
-
-      // Set a timeout to show fallback if Google Maps fails to load
-      timeoutId = setTimeout(() => {
-        if (!mapLoaded) {
-          setMapError(true);
-        }
-      }, 5000);
-
-      // Load Google Maps API with proper error handling
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap&loading=async`;
-      script.async = true;
-      script.defer = true;
-      script.onerror = () => {
-        console.log('Google Maps failed to load, showing fallback');
-        setMapError(true);
-      };
-      
-      window.initMap = initializeMap;
-      document.head.appendChild(script);
-    };
+    let initAttempted = false;
 
     const initializeMap = () => {
-      if (!mapRef.current) return;
+      if (!mapRef.current || initAttempted) return;
+      
+      initAttempted = true;
+      console.log('Attempting to initialize Google Maps...');
 
       try {
+        if (!window.google || !window.google.maps) {
+          console.log('Google Maps API not loaded yet');
+          setMapError(true);
+          return;
+        }
+
         // Center on North Louisiana
         const center = { lat: 32.5404, lng: -92.3385 }; // Calhoun, LA coordinates
 
+        console.log('Creating Google Maps instance...');
+        console.log('Map container element:', mapRef.current);
+        console.log('Container dimensions:', mapRef.current.offsetWidth, 'x', mapRef.current.offsetHeight);
+        
         const map = new window.google.maps.Map(mapRef.current, {
           zoom: 9,
           center: center,
           styles: [
-            {
-              "featureType": "all",
-              "elementType": "geometry.fill",
-              "stylers": [{ "weight": "2.00" }]
-            },
-            {
-              "featureType": "all",
-              "elementType": "geometry.stroke",
-              "stylers": [{ "color": "#9c9c9c" }]
-            },
-            {
-              "featureType": "landscape",
-              "elementType": "geometry.fill",
-              "stylers": [{ "color": "#ffffff" }]
-            },
             {
               "featureType": "poi",
               "elementType": "all",
@@ -113,21 +84,6 @@ export default function ServiceAreaMap() {
               "featureType": "road",
               "elementType": "all",
               "stylers": [{ "saturation": -100 }, { "lightness": 45 }]
-            },
-            {
-              "featureType": "road",
-              "elementType": "geometry.fill",
-              "stylers": [{ "color": "#eeeeee" }]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.text.fill",
-              "stylers": [{ "color": "#7b7b7b" }]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.text.stroke",
-              "stylers": [{ "color": "#ffffff" }]
             },
             {
               "featureType": "transit",
@@ -147,6 +103,7 @@ export default function ServiceAreaMap() {
           gestureHandling: 'cooperative'
         });
 
+        console.log('Google Maps created successfully');
         mapInstanceRef.current = map;
         setMapLoaded(true);
         clearTimeout(timeoutId);
@@ -211,16 +168,61 @@ export default function ServiceAreaMap() {
           center: center,
           radius: 50000, // 50km radius
         });
+
+        console.log('All map markers and features added successfully');
       } catch (error) {
-        console.log('Error initializing Google Maps:', error);
+        console.error('Error initializing Google Maps:', error);
         setMapError(true);
       }
     };
 
-    loadGoogleMaps();
+    const loadGoogleMaps = () => {
+      console.log('Starting Google Maps load process...');
+      
+      // Check if Google Maps is already loaded
+      if (window.google && window.google.maps) {
+        console.log('Google Maps already loaded, initializing...');
+        initializeMap();
+        return;
+      }
+
+      // Set a timeout to show fallback if Google Maps fails to load
+      timeoutId = setTimeout(() => {
+        console.log('Google Maps load timeout, showing fallback');
+        if (!mapLoaded) {
+          setMapError(true);
+        }
+      }, 8000); // Increased timeout to 8 seconds
+
+      // Create unique callback name to avoid conflicts
+      const callbackName = `initMap_${Date.now()}`;
+      
+      // Load Google Maps API with proper error handling
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?callback=${callbackName}`;
+      script.async = true;
+      script.defer = true;
+      script.onerror = () => {
+        console.error('Google Maps script failed to load');
+        setMapError(true);
+      };
+      
+      // Set the callback function on window
+      (window as any)[callbackName] = () => {
+        console.log('Google Maps callback triggered');
+        initializeMap();
+      };
+      
+      console.log('Adding Google Maps script to page...');
+      document.head.appendChild(script);
+    };
+
+    // Small delay to ensure DOM is ready
+    const loadTimer = setTimeout(loadGoogleMaps, 100);
 
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
+      if (loadTimer) clearTimeout(loadTimer);
       if (mapInstanceRef.current) {
         mapInstanceRef.current = null;
       }
@@ -254,12 +256,24 @@ export default function ServiceAreaMap() {
         >
           {/* Google Maps Container */}
           {!mapError ? (
-            <div 
-              ref={mapRef} 
-              className="w-full h-96 md:h-[500px]"
-              role="img"
-              aria-label="Interactive map showing Kane's Junk Removal service areas in Louisiana"
-            />
+            <div className="relative w-full h-96 md:h-[500px] bg-gray-200">
+              <div 
+                ref={mapRef} 
+                className="absolute inset-0 w-full h-full"
+                role="img"
+                aria-label="Interactive map showing Kane's Junk Removal service areas in Louisiana"
+                style={{ minHeight: '400px' }}
+              />
+              {!mapLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy mx-auto mb-4"></div>
+                    <p className="text-navy font-semibold">Loading Interactive Map...</p>
+                    <p className="text-gray-600 text-sm mt-2">Showing Kane Pro service areas</p>
+                  </div>
+                </div>
+              )}
+            </div>
           ) : (
             /* Fallback Map Illustration */
             <div className="relative w-full h-96 md:h-[500px] bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden">
