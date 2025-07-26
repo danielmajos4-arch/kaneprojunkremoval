@@ -5,6 +5,8 @@ import IMG_3876 from "@assets/IMG_3876.png";
 
 import IMG_3900 from "@assets/IMG_3900.png";
 
+import IMG_3878 from "@assets/IMG_3878.PNG";
+
 export default function HomePage() {
   return (
     <>
@@ -337,7 +339,7 @@ export default function HomePage() {
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 glassmorphism">
               <img 
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                src={IMG_3878} 
                 alt="Construction debris removal in Louisiana" 
                 className="w-full h-48 object-cover" 
               />
