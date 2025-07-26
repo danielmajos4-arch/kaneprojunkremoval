@@ -125,16 +125,16 @@
     border: 1px solid rgba(30, 58, 95, 0.2);
   }
   
-  /* Modern glassmorphic header - Apple style */
+  /* Modern glassmorphic header with blue tones */
   .header-glass {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: rgba(30, 58, 95, 0.2) !important;
     backdrop-filter: blur(40px) saturate(200%) !important;
     -webkit-backdrop-filter: blur(40px) saturate(200%) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
     box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.1) !important;
+      0 8px 32px rgba(30, 58, 95, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 rgba(30, 58, 95, 0.1) !important;
   }
   
   .glass-text-shadow {
@@ -146,25 +146,25 @@
   .nav-text-enhanced {
     font-weight: 600;
     letter-spacing: 0.025em;
-    color: hsl(211, 95%, 22%);
+    color: rgba(255, 255, 255, 0.95);
     text-shadow: 
-      0 1px 2px rgba(255, 255, 255, 0.9),
-      0 1px 3px rgba(30, 58, 95, 0.1);
+      0 1px 2px rgba(0, 0, 0, 0.5),
+      0 1px 4px rgba(30, 58, 95, 0.3);
   }
   
   .nav-text-enhanced:hover {
-    color: hsl(51, 100%, 45%);
+    color: hsl(51, 100%, 50%);
     text-shadow: 
-      0 1px 2px rgba(255, 255, 255, 0.9),
-      0 2px 6px rgba(255, 215, 0, 0.3);
+      0 1px 2px rgba(0, 0, 0, 0.5),
+      0 2px 8px rgba(255, 215, 0, 0.4);
   }
   
   .nav-text-active {
-    color: hsl(51, 100%, 45%);
+    color: hsl(51, 100%, 50%);
     font-weight: 700;
     text-shadow: 
-      0 1px 2px rgba(255, 255, 255, 0.9),
-      0 2px 8px rgba(255, 215, 0, 0.4);
+      0 1px 2px rgba(0, 0, 0, 0.5),
+      0 2px 10px rgba(255, 215, 0, 0.5);
   }
   
   .glass-logo-glow {

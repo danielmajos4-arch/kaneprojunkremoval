@@ -27,8 +27,8 @@ export default function Navigation() {
               className="w-12 h-12 mr-3 glass-logo-glow"
             />
             <div className="font-military">
-              <span className="text-lg font-bold nav-text-enhanced tracking-wide">KANE PRO</span>
-              <div className="text-xs font-semibold" style={{ color: 'hsl(211, 80%, 35%)', textShadow: '0 1px 2px rgba(255, 255, 255, 0.8)' }}>Junk Removal</div>
+              <span className="text-lg font-bold text-white tracking-wide" style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(30, 58, 95, 0.3)' }}>KANE PRO</span>
+              <div className="text-xs font-semibold text-white/90" style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.4)' }}>Junk Removal</div>
             </div>
           </Link>
           
