@@ -47,7 +47,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className="transition-colors glass-text-shadow text-louisiana-gold font-normal"
+              className="transition-colors glass-text-shadow font-normal text-[#140701] bg-[#e5dcdc00]"
             >
               Home
             </Link>
