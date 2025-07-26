@@ -127,14 +127,18 @@
   
   /* Modern glassmorphic header with blue tones */
   .header-glass {
-    background: rgba(30, 58, 95, 0.2) !important;
-    backdrop-filter: blur(40px) saturate(200%) !important;
-    -webkit-backdrop-filter: blur(40px) saturate(200%) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: linear-gradient(135deg, 
+      rgba(30, 58, 95, 0.35) 0%, 
+      rgba(59, 130, 246, 0.25) 50%, 
+      rgba(30, 58, 95, 0.3) 100%) !important;
+    backdrop-filter: blur(40px) saturate(200%) brightness(1.1) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
     box-shadow: 
-      0 8px 32px rgba(30, 58, 95, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3),
-      inset 0 -1px 0 rgba(30, 58, 95, 0.1) !important;
+      0 8px 32px rgba(30, 58, 95, 0.2),
+      0 4px 16px rgba(59, 130, 246, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(30, 58, 95, 0.15) !important;
   }
   
   .glass-text-shadow {
