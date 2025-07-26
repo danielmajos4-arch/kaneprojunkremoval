@@ -83,9 +83,9 @@ export default function HomePage() {
                   src="/portfolio-1.png" 
                   alt="Kane's junk removal truck in Calhoun LA loaded with residential furniture and household items"
                   className="w-full h-full object-cover"
-                  loading="lazy"
                   width="400"
                   height="225"
+                  style={{ imageRendering: 'auto', filter: 'none' }}
                 />
               </div>
               <div className="p-6">
@@ -101,9 +101,9 @@ export default function HomePage() {
                   src="/portfolio-2.png" 
                   alt="Commercial junk hauling Monroe LA - Kane's removing office furniture and equipment"
                   className="w-full h-full object-cover"
-                  loading="lazy"
                   width="400"
                   height="225"
+                  style={{ imageRendering: 'auto', filter: 'none' }}
                 />
               </div>
               <div className="p-6">
@@ -119,9 +119,9 @@ export default function HomePage() {
                   src="/portfolio-3.png" 
                   alt="Construction debris removal Ruston LA - Kane's hauling building materials and renovation cleanup"
                   className="w-full h-full object-cover"
-                  loading="lazy"
                   width="400"
                   height="225"
+                  style={{ imageRendering: 'auto', filter: 'none' }}
                 />
               </div>
               <div className="p-6">
@@ -137,9 +137,9 @@ export default function HomePage() {
                   src="/portfolio-4.png" 
                   alt="Yard cleanup and outdoor debris removal Farmerville LA - Kane's hauling tree branches and landscaping materials"
                   className="w-full h-full object-cover"
-                  loading="lazy"
                   width="400"
                   height="225"
+                  style={{ imageRendering: 'auto', filter: 'none' }}
                 />
               </div>
               <div className="p-6">
@@ -155,9 +155,9 @@ export default function HomePage() {
                   src="/portfolio-5.png" 
                   alt="Appliance removal West Monroe LA - Kane's safely disposing refrigerators washers and large appliances"
                   className="w-full h-full object-cover"
-                  loading="lazy"
                   width="400"
                   height="225"
+                  style={{ imageRendering: 'auto', filter: 'none' }}
                 />
               </div>
               <div className="p-6">
@@ -173,9 +173,9 @@ export default function HomePage() {
                   src="/Kane.jpeg" 
                   alt="Kane's Junk Removal team owner - Professional licensed Louisiana junk hauling service provider"
                   className="w-full h-full object-cover"
-                  loading="lazy"
                   width="400"
                   height="225"
+                  style={{ imageRendering: 'auto', filter: 'none' }}
                 />
               </div>
               <div className="p-6">

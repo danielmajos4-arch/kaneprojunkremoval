@@ -14,7 +14,7 @@ export default function Footer() {
                 className="w-12 h-12 mr-3"
                 width="48"
                 height="48"
-                loading="lazy"
+                style={{ imageRendering: 'auto', filter: 'none' }}
               />
               <div>
                 <h3 className="text-xl font-military">KANE'S</h3>

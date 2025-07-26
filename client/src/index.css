@@ -71,11 +71,12 @@
     scroll-behavior: smooth;
   }
 
-  /* Performance optimizations */
+  /* Performance optimizations - ensure crisp images */
   img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    image-rendering: auto;
     object-fit: cover;
+    max-width: 100%;
+    height: auto;
   }
 
   /* Critical above-the-fold styles */
@@ -90,14 +91,12 @@
     src: local('Inter');
   }
 
-  /* Reduce layout shifts */
-  [loading="lazy"] {
-    filter: blur(5px);
-    transition: filter 0.3s;
-  }
-
-  [loading="lazy"].loaded {
-    filter: none;
+  /* Ensure crisp images */
+  img {
+    image-rendering: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 }
 

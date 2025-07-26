@@ -184,22 +184,16 @@
         });
       }
       
-      // Critical CSS inline for above-the-fold content
+      // Ensure crisp image loading
       document.addEventListener('DOMContentLoaded', function() {
-        // Optimize images loading
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        if ('IntersectionObserver' in window) {
-          const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                img.style.filter = 'none';
-                observer.unobserve(img);
-              }
-            });
-          });
-          images.forEach(img => imageObserver.observe(img));
-        }
+        // Optimize images for clarity
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          img.style.imageRendering = 'auto';
+          img.style.filter = 'none';
+          img.style.backfaceVisibility = 'hidden';
+          img.style.transform = 'translateZ(0)';
+        });
       });
     </script>
   </head>
