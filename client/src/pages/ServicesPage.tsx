@@ -19,10 +19,10 @@ export default function ServicesPage() {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-military mb-4">
-            Professional Junk Removal Services
+            Junk Removal Services Louisiana | Kane's Hauling Calhoun
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Serving Louisiana with Christian values and community heart - your trusted shield against junk problems
+            Professional junk hauling & debris removal serving Calhoun, Ruston, Monroe, Farmerville & West Monroe LA
           </p>
         </div>
       </section>
@@ -36,11 +36,11 @@ export default function ServicesPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-military text-navy mb-6">
-                  <i className="fas fa-home text-louisiana-gold mr-3"></i>
-                  Residential Junk Removal in Louisiana
+                  <i className="fas fa-home text-louisiana-gold mr-3" aria-hidden="true"></i>
+                  Residential Junk Removal Calhoun, Ruston & Monroe LA
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  From single items to complete home cleanouts, Kane Pro handles all your residential junk removal needs across Louisiana parishes. Our faith-driven team treats your home with respect while efficiently removing unwanted items.
+                  From single items to complete home cleanouts, Kane's handles all your residential junk hauling needs across Calhoun, Farmerville, Ruston, West Monroe, and Monroe Louisiana. Our faith-driven team treats your home with respect while efficiently removing unwanted items.
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">

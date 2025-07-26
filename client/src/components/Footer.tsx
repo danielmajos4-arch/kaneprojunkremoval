@@ -10,16 +10,19 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <img 
                 src="/kane-pro-logo.png" 
-                alt="Kane Pro Junk Removal & Hauling Logo" 
+                alt="Kane's Junk Removal Louisiana Logo" 
                 className="w-12 h-12 mr-3"
+                width="48"
+                height="48"
+                loading="lazy"
               />
               <div>
-                <h3 className="text-xl font-military">KANE PRO</h3>
-                <p className="text-sm text-louisiana-gold">Junk Removal & Hauling</p>
+                <h3 className="text-xl font-military">KANE'S</h3>
+                <p className="text-sm text-louisiana-gold">Junk Removal Louisiana</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              Your Trusted Shield Against Junk Problems. Serving Louisiana with Christian values and community heart since day one.
+              Professional junk removal serving Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana with Christian values and community heart since day one.
             </p>
             <div className="space-y-2">
               <p className="flex items-center gap-2">

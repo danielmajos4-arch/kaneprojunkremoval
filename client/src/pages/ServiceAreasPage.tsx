@@ -19,10 +19,10 @@ export default function ServiceAreasPage() {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-military mb-4">
-            Proudly Serving Louisiana Communities
+            Kane's Junk Removal Service Areas | Calhoun Ruston Monroe LA
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Kane Pro's trusted shield protects families and businesses across North Louisiana with Christian values and integrity
+            Professional junk hauling & debris removal serving Calhoun, Farmerville, Ruston, West Monroe & Monroe Louisiana with Christian values
           </p>
         </div>
       </section>
@@ -32,10 +32,10 @@ export default function ServiceAreasPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
-              Louisiana Communities We Serve
+              Louisiana Junk Removal Service Areas
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From our home base in Calhoun to the bustling city of Monroe, we bring Christian values and Louisiana heart to every community we serve.
+              Same-day junk hauling and debris removal from our home base in Calhoun to Monroe, covering all of North Louisiana with professional service.
             </p>
           </div>
 

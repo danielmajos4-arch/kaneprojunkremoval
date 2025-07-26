@@ -1,0 +1,28 @@
+{
+  "name": "Kane's Junk Removal Louisiana",
+  "short_name": "Kane's Junk Removal",
+  "description": "Professional junk removal, hauling, debris cleanouts, and trash hauling services in Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a5f",
+  "theme_color": "#ffcb00",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png", 
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "lifestyle", "utilities"],
+  "lang": "en-US"
+}

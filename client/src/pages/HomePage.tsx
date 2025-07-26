@@ -5,26 +5,27 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-screen flex items-center hero-section">
         {/* Louisiana landmark background with overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/hero-background-latest.png')`
           }}
+          role="img"
+          aria-label="Louisiana junk removal service area background"
         ></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-
             
             <h1 className="text-4xl md:text-6xl font-military text-white mb-6 animate-slide-up">
-              Louisiana's Most Trusted
-              <span className="text-louisiana-gold block">Junk Removal Shield</span>
+              Kane's Junk Removal Calhoun LA
+              <span className="text-louisiana-gold block">Same Day Service in Ruston, Monroe & West Monroe</span>
             </h1>
             
             <p className="text-xl md:text-2xl max-w-3xl mx-auto font-bold pt-[-10px] pb-[-10px] ml-[0px] mr-[0px] pl-[0px] pr-[0px] mt-[10px] mb-[10px] text-[#f2f1ed] text-center bg-[#08142454]">
-              Your Trusted Shield Against Junk Problems - Christian Values, Louisiana Heart
+              Professional junk hauling, debris removal & cleanouts serving Louisiana with Christian values
             </p>
             
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
@@ -51,12 +52,12 @@ export default function HomePage() {
             
             <div className="mt-8 text-sm text-gray-300">
               <p className="flex items-center justify-center gap-2 mb-2 text-[#010812]">
-                <i className="fas fa-clock text-louisiana-gold"></i>
-                Same Day Service Available
+                <i className="fas fa-clock text-louisiana-gold" aria-hidden="true"></i>
+                Same Day Junk Removal Service Available
               </p>
               <p className="flex items-center justify-center gap-2 text-[#020914]">
-                <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
-                Serving Calhoun, Farmerville, Ruston, West Monroe & Monroe
+                <i className="fas fa-map-marker-alt text-louisiana-gold" aria-hidden="true"></i>
+                Serving Calhoun, Farmerville, Ruston, West Monroe & Monroe Louisiana
               </p>
             </div>
           </div>
@@ -67,10 +68,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
-              See Kane Pro in Action Across Louisiana
+              Kane's Junk Removal Work Gallery - Louisiana Projects
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Real work, real results for Louisiana families
+              Real junk removal projects in Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana
             </p>
           </div>
           
@@ -80,14 +81,16 @@ export default function HomePage() {
               <div className="aspect-video">
                 <img 
                   src="/portfolio-1.png" 
-                  alt="Residential junk removal - Kane Pro truck loaded with furniture and household items"
+                  alt="Kane's junk removal truck in Calhoun LA loaded with residential furniture and household items"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width="400"
+                  height="225"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Residential Cleanouts</h3>
-                <p className="text-gray-600 text-sm">Complete home cleanouts including furniture, appliances, and household items across Louisiana.</p>
+                <h3 className="text-lg font-bold text-navy mb-2">Residential Junk Removal Calhoun LA</h3>
+                <p className="text-gray-600 text-sm">Complete home cleanouts including furniture, appliances, and household items across Calhoun, Ruston, and Monroe Louisiana.</p>
               </div>
             </div>
 
@@ -96,14 +99,16 @@ export default function HomePage() {
               <div className="aspect-video">
                 <img 
                   src="/portfolio-2.png" 
-                  alt="Commercial junk removal - Office furniture and equipment removal"
+                  alt="Commercial junk hauling Monroe LA - Kane's removing office furniture and equipment"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width="400"
+                  height="225"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Commercial Services</h3>
-                <p className="text-gray-600 text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Louisiana.</p>
+                <h3 className="text-lg font-bold text-navy mb-2">Commercial Junk Hauling Monroe LA</h3>
+                <p className="text-gray-600 text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Monroe, West Monroe, and surrounding Louisiana areas.</p>
               </div>
             </div>
 
@@ -112,14 +117,16 @@ export default function HomePage() {
               <div className="aspect-video">
                 <img 
                   src="/portfolio-3.png" 
-                  alt="Construction debris removal - Building materials and renovation cleanup"
+                  alt="Construction debris removal Ruston LA - Kane's hauling building materials and renovation cleanup"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width="400"
+                  height="225"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Construction Debris</h3>
-                <p className="text-gray-600 text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors.</p>
+                <h3 className="text-lg font-bold text-navy mb-2">Construction Debris Removal Ruston LA</h3>
+                <p className="text-gray-600 text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors in Ruston, Farmerville, and North Louisiana.</p>
               </div>
             </div>
 
@@ -128,14 +135,16 @@ export default function HomePage() {
               <div className="aspect-video">
                 <img 
                   src="/portfolio-4.png" 
-                  alt="Yard cleanup and outdoor debris removal services"
+                  alt="Yard cleanup and outdoor debris removal Farmerville LA - Kane's hauling tree branches and landscaping materials"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width="400"
+                  height="225"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Yard & Outdoor Cleanup</h3>
-                <p className="text-gray-600 text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal.</p>
+                <h3 className="text-lg font-bold text-navy mb-2">Yard Cleanup Farmerville LA</h3>
+                <p className="text-gray-600 text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal in Farmerville and surrounding Louisiana areas.</p>
               </div>
             </div>
 
@@ -144,14 +153,16 @@ export default function HomePage() {
               <div className="aspect-video">
                 <img 
                   src="/portfolio-5.png" 
-                  alt="Appliance removal and disposal services"
+                  alt="Appliance removal West Monroe LA - Kane's safely disposing refrigerators washers and large appliances"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width="400"
+                  height="225"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Appliance Removal</h3>
-                <p className="text-gray-600 text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances.</p>
+                <h3 className="text-lg font-bold text-navy mb-2">Appliance Removal West Monroe LA</h3>
+                <p className="text-gray-600 text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances in West Monroe and throughout Louisiana.</p>
               </div>
             </div>
 
@@ -160,14 +171,16 @@ export default function HomePage() {
               <div className="aspect-video">
                 <img 
                   src="/Kane.jpeg" 
-                  alt="Kane Pro team member - Professional Louisiana junk removal service"
+                  alt="Kane's Junk Removal team owner - Professional licensed Louisiana junk hauling service provider"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width="400"
+                  height="225"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Professional Service</h3>
-                <p className="text-gray-600 text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values.</p>
+                <h3 className="text-lg font-bold text-navy mb-2">Professional Louisiana Junk Removal</h3>
+                <p className="text-gray-600 text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values throughout Calhoun, Ruston, Monroe, and surrounding areas.</p>
               </div>
             </div>
           </div>
@@ -215,10 +228,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
-              Our Louisiana Junk Removal Services
+              Kane's Junk Hauling Services Louisiana
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From Calhoun to Monroe, we're your trusted shield against junk problems with Christian values and Louisiana heart.
+              Comprehensive junk removal solutions for homes and businesses in Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana
             </p>
           </div>
           

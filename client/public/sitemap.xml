@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://kanejunkremoval.com/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kanejunkremoval.com/og-image.jpg</image:loc>
+      <image:title>Kane's Junk Removal Louisiana Homepage</image:title>
+      <image:caption>Professional junk removal serving Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://kanejunkremoval.com/services</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kanejunkremoval.com/portfolio-1.png</image:loc>
+      <image:title>Junk Removal Services Louisiana</image:title>
+      <image:caption>Residential and commercial junk hauling services in Louisiana</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://kanejunkremoval.com/about</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kanejunkremoval.com/kane-pro-logo.png</image:loc>
+      <image:title>About Kane's Junk Removal Louisiana</image:title>
+      <image:caption>Family-owned junk removal business serving Louisiana with Christian values</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Service Areas Page -->
+  <url>
+    <loc>https://kanejunkremoval.com/areas</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kanejunkremoval.com/portfolio-2.png</image:loc>
+      <image:title>Kane's Junk Removal Service Areas Louisiana</image:title>
+      <image:caption>Serving Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>

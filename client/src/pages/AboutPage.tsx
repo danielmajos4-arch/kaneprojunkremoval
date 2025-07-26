@@ -20,10 +20,10 @@ export default function AboutPage() {
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-military mb-4">
-            Louisiana Born, Louisiana Proud
+            About Kane's Junk Removal | Louisiana Family Business
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Your trusted shield against junk problems - Christian values meet Louisiana heart
+            Local family-owned junk hauling business serving Calhoun, Ruston, Monroe, Farmerville & West Monroe with Christian values since day one
           </p>
         </div>
       </section>
@@ -34,10 +34,10 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-military text-navy mb-6">
-                Why Choose Local Louisiana Experts?
+                Why Choose Kane's Louisiana Junk Removal Experts?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Kane Pro Junk Removal & Hauling was born from Louisiana values - hard work, community pride, and Christian integrity. We understand what it means to be Louisiana strong because we are Louisiana born and raised.
+                Kane's Junk Removal was born from Louisiana values - hard work, community pride, and Christian integrity. We understand North Louisiana communities because we are Louisiana born and raised, serving Calhoun, Ruston, Monroe, Farmerville & West Monroe.
               </p>
               
               <div className="space-y-6 mb-8">
