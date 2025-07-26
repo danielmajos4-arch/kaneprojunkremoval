@@ -26,8 +26,8 @@ export default function Navigation() {
               alt="Kane Pro Junk Removal & Hauling Logo" 
               className="w-12 h-12 mr-3 glass-logo-glow"
             />
-            <div className="text-navy font-military">
-              <span className="text-lg">KANE PRO</span>
+            <div className="text-navy font-military glass-text-shadow">
+              <span className="text-lg font-bold">KANE PRO</span>
               <div className="text-xs text-navy-light">Junk Removal</div>
             </div>
           </Link>
@@ -47,9 +47,9 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/") 
-                  ? "text-louisiana-gold" 
+                  ? "text-louisiana-gold font-semibold" 
                   : "text-navy hover:text-louisiana-gold"
               }`}
             >
@@ -57,9 +57,9 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/services" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/services") 
-                  ? "text-louisiana-gold" 
+                  ? "text-louisiana-gold font-semibold" 
                   : "text-navy hover:text-louisiana-gold"
               }`}
             >
@@ -67,9 +67,9 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/about" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/about") 
-                  ? "text-louisiana-gold" 
+                  ? "text-louisiana-gold font-semibold" 
                   : "text-navy hover:text-louisiana-gold"
               }`}
             >
@@ -77,9 +77,9 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/areas" 
-              className={`font-medium transition-colors ${
+              className={`font-medium transition-colors glass-text-shadow ${
                 isActive("/areas") 
-                  ? "text-louisiana-gold" 
+                  ? "text-louisiana-gold font-semibold" 
                   : "text-navy hover:text-louisiana-gold"
               }`}
             >
