@@ -427,10 +427,16 @@ export default function ServicesPage() {
           </div>
 
           <div className="text-center mt-12">
-            <a href="tel:+13189141201" className="btn-cta text-lg">
-              <i className="fas fa-phone mr-2"></i>
-              Call (318) 914-1201 for Service
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="tel:+13189141201" className="btn-cta text-lg">
+                <i className="fas fa-phone mr-2"></i>
+                Call (318) 914-1201
+              </a>
+              <a href="mailto:kaneprojunkremoval@gmail.com" className="btn-outline text-lg">
+                <i className="fas fa-envelope mr-2"></i>
+                Email Us Today
+              </a>
+            </div>
           </div>
         </div>
       </section>

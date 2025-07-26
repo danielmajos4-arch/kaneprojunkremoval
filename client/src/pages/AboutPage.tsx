@@ -240,8 +240,8 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email</h3>
-                    <a href="mailto:info@kaneproremoval.com" className="text-louisiana-gold hover:text-white">
-                      info@kaneproremoval.com
+                    <a href="mailto:kaneprojunkremoval@gmail.com" className="text-louisiana-gold hover:text-white">
+                      kaneprojunkremoval@gmail.com
                     </a>
                     <p className="text-gray-300 text-sm">We respond within 2 hours</p>
                   </div>

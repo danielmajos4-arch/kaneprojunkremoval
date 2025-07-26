@@ -36,6 +36,12 @@ export default function Footer() {
                 <i className="fas fa-clock text-louisiana-gold"></i>
                 7am-8pm Mon-Sat, Closed Sunday
               </p>
+              <p className="flex items-center gap-2">
+                <i className="fas fa-envelope text-louisiana-gold"></i>
+                <a href="mailto:kaneprojunkremoval@gmail.com" className="hover:text-louisiana-gold transition-colors">
+                  kaneprojunkremoval@gmail.com
+                </a>
+              </p>
             </div>
           </div>
           

@@ -537,10 +537,14 @@ export default function ServiceAreasPage() {
                 </div>
               </div>
 
-              <div className="mt-6 text-center">
+              <div className="mt-6 text-center space-y-3">
                 <a href="tel:+13189141201" className="btn-cta w-full">
                   <i className="fas fa-phone mr-2"></i>
                   Call (318) 914-1201
+                </a>
+                <a href="mailto:kaneprojunkremoval@gmail.com" className="btn-outline w-full">
+                  <i className="fas fa-envelope mr-2"></i>
+                  Email Us Today
                 </a>
               </div>
             </div>
@@ -581,10 +585,16 @@ export default function ServiceAreasPage() {
             </div>
           </div>
 
-          <a href="tel:+13189141201" className="btn-secondary text-lg">
-            <i className="fas fa-phone mr-2"></i>
-            Call Your Local Louisiana Team
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="tel:+13189141201" className="btn-secondary text-lg">
+              <i className="fas fa-phone mr-2"></i>
+              Call Your Louisiana Team
+            </a>
+            <a href="mailto:kaneprojunkremoval@gmail.com" className="btn-outline text-lg">
+              <i className="fas fa-envelope mr-2"></i>
+              Email Kane Pro
+            </a>
+          </div>
         </div>
       </section>
 
