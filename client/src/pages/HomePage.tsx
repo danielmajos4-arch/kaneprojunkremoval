@@ -23,7 +23,7 @@ export default function HomePage() {
               <span className="text-louisiana-gold block">Junk Removal Shield</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-[#fcda4b]">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-[#fcda4b] font-bold">
               Your Trusted Shield Against Junk Problems - Christian Values, Louisiana Heart
             </p>
             
