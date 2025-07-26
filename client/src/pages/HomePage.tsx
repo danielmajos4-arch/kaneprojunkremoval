@@ -12,9 +12,7 @@ export default function HomePage() {
           style={{
             backgroundImage: `url('/hero-background.png')`
           }}
-        >
-          <div className="absolute inset-0 bg-navy bg-opacity-75"></div>
-        </div>
+        ></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
