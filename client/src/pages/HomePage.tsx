@@ -297,55 +297,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Before/After Gallery */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
-              Louisiana Transformations We're Proud Of
-            </h2>
-            <p className="text-lg text-gray-600">
-              See how Kane Pro transforms Louisiana homes and businesses with military precision
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="relative">
-                <img 
-                  src="/portfolio-1.png" 
-                  alt="Before junk removal - cluttered Louisiana garage" 
-                  className="w-full h-64 object-cover" 
-                />
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  BEFORE
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-navy">Garage Cleanout - Calhoun, LA</h3>
-              </div>
-            </div>
-            
-            
-            
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                  alt="Before office cleanout in Louisiana business" 
-                  className="w-full h-64 object-cover" 
-                />
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  BEFORE
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-navy">Office Space - Ruston, LA</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
       {/* Social Proof Section */}
       <section className="py-16 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
