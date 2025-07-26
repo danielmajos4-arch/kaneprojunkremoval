@@ -479,7 +479,7 @@ export default function ServiceAreasPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-clock text-navy"></i>
+                    <i className="fas fa-clock text-charcoal"></i>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-2">Faster Response</h4>
@@ -489,7 +489,7 @@ export default function ServiceAreasPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-handshake text-navy"></i>
+                    <i className="fas fa-handshake text-charcoal"></i>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-2">Community Connections</h4>
@@ -499,7 +499,7 @@ export default function ServiceAreasPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="shield-shape bg-louisiana-gold w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-dollar-sign text-navy"></i>
+                    <i className="fas fa-dollar-sign text-charcoal"></i>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-2">No Travel Charges</h4>

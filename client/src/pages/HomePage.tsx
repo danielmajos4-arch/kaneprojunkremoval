@@ -301,7 +301,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
               Kane's Junk Removal Work Gallery - Louisiana Projects
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -336,7 +336,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Residential Junk Removal Calhoun LA</h3>
+                <h3 className="text-lg font-bold text-charcoal mb-2">Residential Junk Removal Calhoun LA</h3>
                 <p className="text-gray-600 text-sm">Complete home cleanouts including furniture, appliances, and household items across Calhoun, Ruston, and Monroe Louisiana.</p>
               </div>
             </motion.div>
@@ -367,7 +367,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Commercial Junk Hauling Monroe LA</h3>
+                <h3 className="text-lg font-bold text-charcoal mb-2">Commercial Junk Hauling Monroe LA</h3>
                 <p className="text-gray-600 text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Monroe, West Monroe, and surrounding Louisiana areas.</p>
               </div>
             </motion.div>
@@ -398,7 +398,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Construction Debris Removal Ruston LA</h3>
+                <h3 className="text-lg font-bold text-charcoal mb-2">Construction Debris Removal Ruston LA</h3>
                 <p className="text-gray-600 text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors in Ruston, Farmerville, and North Louisiana.</p>
               </div>
             </motion.div>
@@ -429,7 +429,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Yard Cleanup Farmerville LA</h3>
+                <h3 className="text-lg font-bold text-charcoal mb-2">Yard Cleanup Farmerville LA</h3>
                 <p className="text-gray-600 text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal in Farmerville and surrounding Louisiana areas.</p>
               </div>
             </motion.div>
@@ -460,7 +460,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Appliance Removal West Monroe LA</h3>
+                <h3 className="text-lg font-bold text-charcoal mb-2">Appliance Removal West Monroe LA</h3>
                 <p className="text-gray-600 text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances in West Monroe and throughout Louisiana.</p>
               </div>
             </motion.div>
@@ -491,7 +491,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">Professional Louisiana Junk Removal</h3>
+                <h3 className="text-lg font-bold text-charcoal mb-2">Professional Louisiana Junk Removal</h3>
                 <p className="text-gray-600 text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values throughout Calhoun, Ruston, Monroe, and surrounding areas.</p>
               </div>
             </motion.div>
@@ -523,8 +523,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-shield-alt text-3xl text-navy mb-2"></i>
-              <span className="text-sm font-semibold text-navy">Licensed & Insured</span>
+              <i className="fas fa-shield-alt text-3xl text-charcoal mb-2"></i>
+              <span className="text-sm font-semibold text-charcoal">Licensed & Insured</span>
             </motion.div>
             <motion.div 
               className="flex flex-col items-center"
@@ -533,8 +533,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-heart text-3xl text-navy mb-2"></i>
-              <span className="text-sm font-semibold text-navy">Louisiana Born & Raised</span>
+              <i className="fas fa-heart text-3xl text-charcoal mb-2"></i>
+              <span className="text-sm font-semibold text-charcoal">Louisiana Born & Raised</span>
             </motion.div>
             <motion.div 
               className="flex flex-col items-center"
@@ -543,8 +543,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-clock text-3xl text-navy mb-2"></i>
-              <span className="text-sm font-semibold text-navy">Same Day Service</span>
+              <i className="fas fa-clock text-3xl text-charcoal mb-2"></i>
+              <span className="text-sm font-semibold text-charcoal">Same Day Service</span>
             </motion.div>
             <motion.div 
               className="flex flex-col items-center"
@@ -553,8 +553,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-leaf text-3xl text-navy mb-2"></i>
-              <span className="text-sm font-semibold text-navy">Eco-Friendly</span>
+              <i className="fas fa-leaf text-3xl text-charcoal mb-2"></i>
+              <span className="text-sm font-semibold text-charcoal">Eco-Friendly</span>
             </motion.div>
           </div>
         </div>
@@ -563,7 +563,7 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
               Kane's Junk Hauling Services Louisiana
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -590,7 +590,7 @@ export default function HomePage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-home text-louisiana-gold mr-2"></i>
                   Residential Cleanouts
                 </h3>
@@ -625,7 +625,7 @@ export default function HomePage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-building text-louisiana-gold mr-2"></i>
                   Commercial Cleanouts
                 </h3>
@@ -660,7 +660,7 @@ export default function HomePage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-hard-hat text-louisiana-gold mr-2"></i>
                   Construction Debris
                 </h3>
@@ -680,7 +680,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Social Proof Section */}
-      <section className="py-16 bg-navy text-white">
+      <section className="py-16 bg-charcoal text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military mb-4">
