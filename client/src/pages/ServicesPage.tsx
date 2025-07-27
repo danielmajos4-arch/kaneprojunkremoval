@@ -130,11 +130,11 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* Service Details */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+          <div className="space-y-12 sm:space-y-16">
             {/* Residential Services */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i
@@ -143,17 +143,19 @@ export default function ServicesPage() {
                   ></i>
                   Residential Junk Removal in Ruston, LA
                 </h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
                   From single items to complete home cleanouts, Kane Pro handles
                   all your residential junk hauling needs across Calhoun,
                   Farmerville, Ruston (including Louisiana Tech area), West
-                  Monroe, and Monroe Louisiana. Our faith-driven team treats
-                  your home with respect while efficiently removing unwanted
+                  Monroe, and Monroe Louisiana. 
+                </p>
+                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
+                  Our faith-driven team treats your home with respect while efficiently removing unwanted
                   items. Serving Lincoln Parish, Union Parish, and Ouachita
                   Parish with same-day service available.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                   <div>
                     <h3 className="font-semibold text-charcoal mb-3">
                       Furniture Removal Near Me
@@ -200,18 +202,18 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-charcoal mb-3">
-                    <i className="fas fa-map-marker-alt text-louisiana-gold mr-2"></i>
-                    Residential Service Areas & Drive Times:
+                <div className="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6">
+                  <h3 className="font-semibold text-charcoal mb-4 flex items-center">
+                    <i className="fas fa-map-marker-alt text-louisiana-gold mr-1"></i>
+                    <span>Residential Service Areas & Drive Times:</span>
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600">
-                    <span>• Calhoun, LA - 0-10 minutes from base</span>
-                    <span>• Farmerville, LA - 10-15 minutes</span>
-                    <span>• Ruston, LA (Louisiana Tech) - 15-20 minutes</span>
-                    <span>• West Monroe, LA - 20-25 minutes</span>
-                    <span>• Monroe, LA (ULM area) - 25-30 minutes</span>
-                    <span>• Grambling State University - 20 minutes</span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600">
+                    <div className="py-1">• Calhoun, LA - 0-10 minutes from base</div>
+                    <div className="py-1">• Farmerville, LA - 10-15 minutes</div>
+                    <div className="py-1">• Ruston, LA (Louisiana Tech) - 15-20 minutes</div>
+                    <div className="py-1">• West Monroe, LA - 20-25 minutes</div>
+                    <div className="py-1">• Monroe, LA (ULM area) - 25-30 minutes</div>
+                    <div className="py-1">• Grambling State University - 20 minutes</div>
                   </div>
                 </div>
 
@@ -230,7 +232,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Commercial Services */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <img
                   src={WhatsApp_Image_2025_07_26_at_21_22_48__2_}
@@ -243,16 +245,18 @@ export default function ServicesPage() {
                   <i className="fas fa-building text-louisiana-gold mr-3"></i>
                   Commercial Junk Removal in Monroe, LA
                 </h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
                   Keep your Louisiana business running smoothly with
                   professional commercial junk removal. We work around your
                   schedule to minimize disruption while maximizing efficiency.
+                </p>
+                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
                   Serving downtown Monroe, West Monroe business district, Ruston
                   commercial areas near Louisiana Tech, and Farmerville business
                   zones.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                   <div>
                     <h3 className="font-semibold text-charcoal mb-3">
                       Office Cleanouts
@@ -299,12 +303,12 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="bg-louisiana-gold bg-opacity-10 p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-charcoal mb-3">
-                    <i className="fas fa-handshake text-louisiana-gold mr-2"></i>
-                    Commercial Partnership Benefits:
+                <div className="bg-louisiana-gold bg-opacity-10 p-4 sm:p-6 rounded-lg mb-6">
+                  <h3 className="font-semibold text-charcoal mb-4 flex items-center">
+                    <i className="fas fa-handshake text-louisiana-gold mr-1"></i>
+                    <span>Commercial Partnership Benefits:</span>
                   </h3>
-                  <ul className="text-gray-600 space-y-1">
+                  <ul className="text-gray-600 space-y-2">
                     <li>• Scheduled regular service</li>
                     <li>• Volume discounts available</li>
                     <li>• 24/7 emergency response</li>
@@ -324,21 +328,24 @@ export default function ServicesPage() {
             </div>
 
             {/* Construction Services */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i className="fas fa-hard-hat text-louisiana-gold mr-3"></i>
                   Construction Debris Removal in North Louisiana
                 </h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
                   Louisiana contractors trust Kane Pro for efficient
                   construction debris removal. We understand job site safety and
                   timeline requirements with integrity, keeping your projects on
-                  schedule and compliant. Serving construction sites throughout
+                  schedule and compliant.
+                </p>
+                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
+                  Serving construction sites throughout
                   Lincoln Parish, Union Parish, and Ouachita Parish.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                   <div>
                     <h3 className="font-semibold text-charcoal mb-3">
                       Demolition Debris
