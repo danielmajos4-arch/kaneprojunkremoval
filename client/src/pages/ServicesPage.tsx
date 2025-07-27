@@ -338,7 +338,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold mb-2 text-[#e97137]">Calhoun</h3>
-              <p className="text-gray-300 text-sm mb-4">Our home base - serving Union Parish with pride</p>
+              <p className="text-sm mb-4 text-[#020e21ba]">Our home base - serving Union Parish with pride</p>
               <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
