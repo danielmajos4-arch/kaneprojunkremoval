@@ -429,12 +429,9 @@ export default function ServiceAreaMap() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {serviceAreas.map((area, index) => (
-              <span 
-                key={area.name}
-                className="px-3 py-1 rounded-full text-white bg-[#a6292900]"
-              >
+              <div key={area.name}>
                 {area.name} LA
-              </span>
+              </div>
             ))}
           </div>
         </motion.div>
