@@ -270,102 +270,54 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      {/* Pricing Transparency */}
+      {/* Free Estimate Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
-              Transparent Pricing, No Surprises
+              Free In-Person Estimates
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Fair pricing that reflects the value we bring to Louisiana families and businesses
+              Fair, transparent pricing with no surprises. We come to you for accurate estimates on all junk removal projects.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="shield-shape bg-navy w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-home text-louisiana-gold text-xl"></i>
+          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-charcoal mb-4">
+                  <i className="fas fa-handshake text-louisiana-gold mr-2"></i>
+                  Our Estimate Process
+                </h3>
+                <ul className="text-gray-600 space-y-3 mb-6">
+                  <li className="flex items-start gap-3">
+                    <i className="fas fa-phone text-louisiana-gold mt-1 flex-shrink-0"></i>
+                    <span><strong>Call Us:</strong> Schedule your free estimate by phone</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <i className="fas fa-home text-louisiana-gold mt-1 flex-shrink-0"></i>
+                    <span><strong>We Visit:</strong> Our team comes to your location</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <i className="fas fa-calculator text-louisiana-gold mt-1 flex-shrink-0"></i>
+                    <span><strong>Fair Quote:</strong> Accurate pricing based on actual volume</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <i className="fas fa-check text-louisiana-gold mt-1 flex-shrink-0"></i>
+                    <span><strong>No Pressure:</strong> Take time to decide - estimates valid 30 days</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-navy mb-4">Residential Service</h3>
-              <div className="text-3xl font-bold text-louisiana-gold mb-2">$150+</div>
-              <p className="text-gray-600 mb-6">Minimum service charge covers pickup truck load of household items</p>
-              <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>• Free on-site estimates</li>
-                <li>• Same day service available</li>
-                <li>• All labor included</li>
-                <li>• Proper disposal & recycling</li>
-                <li>• Clean-up after removal</li>
-              </ul>
-              <a href="tel:+13189141201" className="btn-outline w-full">
-                Get Free Estimate
-              </a>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center border-2 border-louisiana-gold relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-louisiana-gold text-navy px-4 py-1 rounded-full text-sm font-bold">
-                MOST POPULAR
-              </div>
-              <div className="shield-shape bg-louisiana-gold w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-building text-navy text-xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-navy mb-4">Commercial Service</h3>
-              <div className="text-3xl font-bold text-louisiana-gold mb-2">$300+</div>
-              <p className="text-gray-600 mb-6">Based on volume and frequency - great bulk discounts available</p>
-              <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>• Volume pricing discounts</li>
-                <li>• Scheduled regular service</li>
-                <li>• After-hours availability</li>
-                <li>• Proper disposal certificates</li>
-                <li>• Partner contractor rates</li>
-              </ul>
-              <a href="tel:+13189141201" className="btn-cta w-full">
-                Get Commercial Quote
-              </a>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="shield-shape bg-red-600 w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-hard-hat text-white text-xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-navy mb-4">Construction Debris</h3>
-              <div className="text-3xl font-bold text-louisiana-gold mb-2">Custom</div>
-              <p className="text-gray-600 mb-6">Project-based pricing for construction and demolition debris</p>
-              <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>• Dumpster rental alternative</li>
-                <li>• Hazmat certified disposal</li>
-                <li>• Emergency response available</li>
-                <li>• Storm damage specialists</li>
-                <li>• Contractor partnerships</li>
-              </ul>
-              <a href="tel:+13189141201" className="btn-secondary w-full">
-                Get Project Quote
-              </a>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-navy mb-4">
-                <i className="fas fa-shield-alt text-louisiana-gold mr-2"></i>
-                Kane Pro Price Promise
-              </h3>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <i className="fas fa-eye text-louisiana-gold text-2xl mb-2"></i>
-                  <h4 className="font-semibold text-navy mb-2">No Hidden Fees</h4>
-                  <p className="text-gray-600 text-sm">What we quote is what you pay. No surprises or extra charges.</p>
+              <div className="text-center">
+                <div className="bg-vibrant-orange text-white rounded-xl p-6 mb-4">
+                  <h4 className="text-xl font-bold mb-2">100% FREE</h4>
+                  <p className="text-lg">In-Person Estimates</p>
                 </div>
-                <div>
-                  <i className="fas fa-dollar-sign text-louisiana-gold text-2xl mb-2"></i>
-                  <h4 className="font-semibold text-navy mb-2">Price Match Guarantee</h4>
-                  <p className="text-gray-600 text-sm">We'll match any legitimate competitor's written estimate.</p>
-                </div>
-                <div>
-                  <i className="fas fa-handshake text-louisiana-gold text-2xl mb-2"></i>
-                  <h4 className="font-semibold text-navy mb-2">Satisfaction Guaranteed</h4>
-                  <p className="text-gray-600 text-sm">Not happy? We'll make it right or refund your money.</p>
-                </div>
+                <a href="tel:+13189141201" className="btn-cta text-lg w-full block">
+                  <i className="fas fa-phone mr-2"></i>
+                  Call (318) 914-1201
+                </a>
+                <p className="text-sm text-gray-500 mt-2">Available 7am-8pm Mon-Sat</p>
               </div>
             </div>
           </div>

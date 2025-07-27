@@ -160,10 +160,11 @@ The application is designed for deployment on platforms like Replit, with config
 ✓ Implemented modern off-canvas drawer navigation that slides from right
 ✓ Added smooth 0.3s ease transitions for drawer slide-in animation
 ✓ Created semi-transparent dark overlay with backdrop blur for modern premium feel
-✓ Positioned drawer at 80% screen width with rounded left corners and shadow
+✓ Positioned drawer at 75% screen width with solid white background
 ✓ Added clear close button (X) at top-right of drawer with hover effects
 ✓ Implemented body scroll lock when menu is open for better UX
-✓ Enhanced mobile menu items with icons, active states, and smooth hover animations
-✓ Added contact information display within mobile drawer
+✓ Enhanced mobile menu items with clean styling and smooth hover animations
 ✓ Maintained all existing menu functionality while modernizing visual experience
 ✓ Ensured accessibility with proper focus management and overlay click-to-close
+✓ Removed shield logo elements from hero sections across Services and Service Areas pages
+✓ Replaced pricing section with "Free In-Person Estimates" section to reflect actual business model
