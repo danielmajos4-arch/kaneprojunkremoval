@@ -118,7 +118,7 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* Service Area Quick Info */}
-      <section className="py-8 bg-louisiana-gold bg-opacity-10">
+      <section className="py-8 bg-opacity-10 pt-[1px] pb-[1px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-charcoal">
             <strong>Serving North Louisiana:</strong> Calhoun 71225 • Ruston
