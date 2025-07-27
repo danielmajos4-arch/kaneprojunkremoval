@@ -380,7 +380,7 @@ export default function ServiceAreaMap() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-louisiana-gold rounded-full mb-3">
                   <i className="fas fa-map-marker-alt text-navy"></i>
                 </div>
-                <h3 className="font-semibold mb-2">5 Cities Served</h3>
+                <h3 className="font-semibold mb-2 text-[#f07439]">5 Cities Served</h3>
                 <p className="text-gray-300 text-sm">Calhoun, Farmerville, Ruston, West Monroe & Monroe</p>
               </motion.div>
               
