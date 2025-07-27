@@ -64,7 +64,7 @@ export default function HomePage() {
               className="text-4xl md:text-6xl font-military text-white mb-6"
               variants={fadeInUp}
             >
-              Kane's Junk Removal Calhoun LA
+              Fast, Affordable Junk Removal in Calhoun, LA
               <motion.span 
                 className="text-louisiana-gold block"
                 variants={fadeInUp}
@@ -76,9 +76,8 @@ export default function HomePage() {
             <motion.p 
               className="text-xl md:text-2xl max-w-3xl mx-auto font-bold pt-[-10px] pb-[-10px] ml-[0px] mr-[0px] pl-[0px] pr-[0px] mt-[10px] mb-[10px] text-[#f2f1ed] text-center bg-[#08142454]"
               variants={fadeInUp}
-            >
-              Professional junk hauling, debris removal & cleanouts serving Louisiana with Christian values
-            </motion.p>
+            >Same-day junk hauling, cleanouts & debris removal. Serving Calhoun, Monroe, West Monroe & beyond.
+</motion.p>
             
             <motion.div 
               className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center"
@@ -133,7 +132,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* About Us Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -296,7 +294,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
       {/* Work Gallery Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
