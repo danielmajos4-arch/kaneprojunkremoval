@@ -51,127 +51,50 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
     
-    <!-- Enhanced JSON-LD Schema.org Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kane Pro Junk Removal",
+  "image": "https://example.com/logo.jpg",
+  "url": "https://example.com",
+  "telephone": "+1-318-914-1201",
+  "priceRange": "$$",
+  "description": "Professional junk removal and hauling services in Calhoun, LA. We handle residential cleanouts, commercial debris removal, storm cleanup, shed demolition, and more. Family-owned and fully insured.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "493 JB Cyrus Rd",
+    "addressLocality": "Calhoun",
+    "addressRegion": "LA",
+    "postalCode": "71225",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 32.5143,
+    "longitude": -92.4204
+  },
+  "openingHoursSpecification": [
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Kane's Junk Removal",
-      "alternateName": "Kane Pro Junk Removal & Hauling",
-      "description": "Professional junk removal, hauling, debris cleanouts, and trash hauling services in Louisiana. Same-day service available in Calhoun, Farmerville, Ruston, West Monroe, and Monroe.",
-      "url": "https://kanejunkremoval.com",
-      "logo": "https://kanejunkremoval.com/kane-pro-logo.png",
-      "image": [
-        "https://kanejunkremoval.com/og-image.jpg",
-        "https://kanejunkremoval.com/portfolio-1.png",
-        "https://kanejunkremoval.com/portfolio-2.png"
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
       ],
-      "telephone": "+1-318-914-1201",
-      "email": "kaneprojunkremoval@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "493 JB Cyrus Rd",
-        "addressLocality": "Calhoun",
-        "addressRegion": "LA",
-        "postalCode": "71225",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 32.5404,
-        "longitude": -92.3385
-      },
-      "openingHours": [
-        "Mo 07:00-20:00",
-        "Tu 07:00-20:00", 
-        "We 07:00-20:00",
-        "Th 07:00-20:00",
-        "Fr 07:00-20:00",
-        "Sa 07:00-20:00"
-      ],
-      "priceRange": "$$",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Junk Removal Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Residential Junk Removal"
-            }
-          },
-          {
-            "@type": "Offer", 
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercial Junk Removal"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Construction Debris Removal"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Appliance Removal"
-            }
-          }
-        ]
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Calhoun",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Louisiana"
-          }
-        },
-        {
-          "@type": "City", 
-          "name": "Farmerville",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Louisiana"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Ruston", 
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Louisiana"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "West Monroe",
-          "containedInPlace": {
-            "@type": "State", 
-            "name": "Louisiana"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Monroe",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Louisiana"
-          }
-        }
-      ],
-      "sameAs": [
-        "https://facebook.com/kanejunkremoval",
-        "https://instagram.com/kanejunkremoval"
-      ]
+      "opens": "00:00",
+      "closes": "23:59"
     }
-    </script>
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": ["Calhoun LA", "West Monroe LA", "Ruston LA", "Ouachita Parish"]
+  }
+}
+</script>
     
     <!-- Performance optimization script -->
     <script>
