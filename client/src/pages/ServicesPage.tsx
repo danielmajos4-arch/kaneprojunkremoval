@@ -324,54 +324,54 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* Service Area Map */}
-      <section className="py-16 bg-navy text-white">
+      <section className="py-16 bg-deep-green text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military mb-4 text-[#e87036]">
+            <h2 className="text-3xl md:text-4xl font-military mb-4 text-white">
               Proudly Serving North Louisiana
             </h2>
-            <p className="text-lg text-[#0209129e]">
+            <p className="text-lg text-gray-300">
               Same day service available across our Louisiana service area
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold mb-2 text-[#e97137]">Calhoun</h3>
-              <p className="text-sm mb-4 text-[#020e21ba]">Our home base - serving Union Parish with pride</p>
-              <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
+              <h3 className="text-xl font-bold text-vibrant-orange mb-2">Calhoun</h3>
+              <p className="text-gray-300 text-sm mb-4">Our home base - serving Union Parish with pride</p>
+              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
             </div>
             
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold mb-2 text-[#e66f36]">Farmerville</h3>
-              <p className="text-sm mb-4 text-[#020c1cd4]">Rural & farm property specialists</p>
-              <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
+              <h3 className="text-xl font-bold text-vibrant-orange mb-2">Farmerville</h3>
+              <p className="text-gray-300 text-sm mb-4">Rural & farm property specialists</p>
+              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
             </div>
             
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold mb-2 text-[#e77036]">Ruston</h3>
-              <p className="text-sm mb-4 text-[#030a14c4]">Louisiana Tech University area service</p>
-              <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
+              <h3 className="text-xl font-bold text-vibrant-orange mb-2">Ruston</h3>
+              <p className="text-gray-300 text-sm mb-4">Louisiana Tech University area service</p>
+              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
             </div>
             
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold mb-2 text-[#e77036]">West Monroe</h3>
-              <p className="text-sm mb-4 text-[#0a0400bf]">Ouachita Parish commercial specialists</p>
-              <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
+              <h3 className="text-xl font-bold text-vibrant-orange mb-2">West Monroe</h3>
+              <p className="text-gray-300 text-sm mb-4">Ouachita Parish commercial specialists</p>
+              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
             </div>
             
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold mb-2 text-[#f07439]">Monroe</h3>
-              <p className="text-sm mb-4 text-[#020914c2]">North Louisiana's largest city coverage</p>
-              <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
+              <h3 className="text-xl font-bold text-vibrant-orange mb-2">Monroe</h3>
+              <p className="text-gray-300 text-sm mb-4">North Louisiana's largest city coverage</p>
+              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
             </div>
