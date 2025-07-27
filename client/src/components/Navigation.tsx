@@ -48,7 +48,7 @@ export default function Navigation() {
                 height="48"
               />
               <div className="font-military">
-                <span className="text-lg font-bold text-white tracking-wide">KANE'S</span>
+                <span className="text-lg font-bold text-white tracking-wide">KANE PRO'S</span>
                 <div className="text-xs font-semibold text-vibrant-orange">Junk Removal LA</div>
               </div>
             </Link>
@@ -114,7 +114,6 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu Overlay */}
       <div 
         className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300 ease-in-out ${
@@ -123,7 +122,6 @@ export default function Navigation() {
         onClick={closeMobileMenu}
         aria-hidden="true"
       />
-
       {/* Mobile Off-Canvas Drawer */}
       <div 
         className={`fixed top-0 right-0 h-full w-3/4 max-w-sm bg-white z-50 md:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${
