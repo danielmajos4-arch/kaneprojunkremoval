@@ -203,8 +203,8 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-charcoal mb-4 flex items-center">
-                    <i className="fas fa-map-marker-alt text-louisiana-gold mr-1"></i>
+                  <h3 className="font-semibold text-charcoal mb-4 flex items-center gap-1">
+                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
                     <span>Residential Service Areas & Drive Times:</span>
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600">

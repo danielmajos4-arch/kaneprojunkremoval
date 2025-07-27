@@ -136,7 +136,7 @@ export default function HomePage() {
                 <i className="fas fa-clock text-vibrant-orange" aria-hidden="true"></i>
                 Same Day Junk Removal Service Available
               </p>
-              <p className="flex items-center justify-center gap-2">
+              <p className="flex items-center justify-center gap-1">
                 <i className="fas fa-map-marker-alt text-vibrant-orange" aria-hidden="true"></i>
                 Serving Calhoun, Farmerville, Ruston, West Monroe & Monroe Louisiana
               </p>
@@ -204,7 +204,7 @@ export default function HomePage() {
                 
                 <div className="space-y-4">
                   <motion.div 
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     custom={0}
                     initial="hidden"
                     whileInView="visible"
@@ -219,7 +219,7 @@ export default function HomePage() {
                   </motion.div>
                   
                   <motion.div 
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     custom={1}
                     initial="hidden"
                     whileInView="visible"
@@ -234,7 +234,7 @@ export default function HomePage() {
                   </motion.div>
                   
                   <motion.div 
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     custom={2}
                     initial="hidden"
                     whileInView="visible"
@@ -249,7 +249,7 @@ export default function HomePage() {
                   </motion.div>
                   
                   <motion.div 
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     custom={3}
                     initial="hidden"
                     whileInView="visible"
@@ -264,7 +264,7 @@ export default function HomePage() {
                   </motion.div>
                   
                   <motion.div 
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     custom={4}
                     initial="hidden"
                     whileInView="visible"
