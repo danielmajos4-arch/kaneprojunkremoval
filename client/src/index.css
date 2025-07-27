@@ -18,51 +18,51 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
+  --foreground: hsl(0, 0%, 10%);
+  --muted: hsl(210, 20%, 97%);
   --muted-foreground: hsl(25, 5.3%, 44.7%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(0, 0%, 10%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --card-foreground: hsl(0, 0%, 10%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(0, 76%, 57%);
+  --primary: hsl(120, 40%, 25%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(213, 27%, 31%);
-  --accent: hsl(51, 100%, 50%);
-  --accent-foreground: hsl(213, 27%, 31%);
+  --secondary: hsl(210, 20%, 97%);
+  --secondary-foreground: hsl(120, 40%, 25%);
+  --accent: hsl(25, 95%, 53%);
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(213, 27%, 31%);
+  --ring: hsl(120, 40%, 25%);
   --radius: 0.5rem;
 
-  /* Kane Pro Louisiana Colors - Updated to Red, White, Gold */
-  --bright-red: hsl(0, 76%, 57%);
-  --louisiana-gold: hsl(51, 100%, 50%);
-  --gold-dark: hsl(48, 100%, 45%);
-  --charcoal: hsl(213, 27%, 31%);
-  --light-gray: hsl(210, 40%, 98%);
+  /* Kane Pro Modern Color Palette */
+  --deep-green: hsl(120, 40%, 25%);
+  --vibrant-orange: hsl(25, 95%, 53%);
+  --neutral-bg: hsl(210, 20%, 97%);
+  --text-dark: hsl(0, 0%, 10%);
+  --white: hsl(0, 0%, 100%);
 }
 
 .dark {
-  --background: hsl(240, 10%, 3.9%);
+  --background: hsl(0, 0%, 10%);
   --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
+  --muted: hsl(0, 0%, 15%);
   --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
+  --popover: hsl(0, 0%, 10%);
   --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 10%);
   --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(0, 76%, 57%);
+  --border: hsl(0, 0%, 20%);
+  --input: hsl(0, 0%, 20%);
+  --primary: hsl(120, 40%, 25%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary: hsl(0, 0%, 15%);
   --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(51, 100%, 50%);
-  --accent-foreground: hsl(213, 27%, 31%);
+  --accent: hsl(25, 95%, 53%);
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(0, 0%, 98%);
   --ring: hsl(240, 4.9%, 83.9%);
@@ -115,48 +115,77 @@
 }
 
 @layer components {
+  /* Modern Kane Pro Color Palette */
+  .deep-green {
+    color: hsl(120, 40%, 25%);
+  }
+  .bg-deep-green {
+    background-color: hsl(120, 40%, 25%);
+  }
+  .border-deep-green {
+    border-color: hsl(120, 40%, 25%);
+  }
+  
+  .vibrant-orange {
+    color: hsl(25, 95%, 53%);
+  }
+  .bg-vibrant-orange {
+    background-color: hsl(25, 95%, 53%);
+  }
+  .border-vibrant-orange {
+    border-color: hsl(25, 95%, 53%);
+  }
+  
+  .neutral-bg {
+    color: hsl(210, 20%, 97%);
+  }
+  .bg-neutral-bg {
+    background-color: hsl(210, 20%, 97%);
+  }
+  
+  .text-dark {
+    color: hsl(0, 0%, 10%);
+  }
+  .bg-text-dark {
+    background-color: hsl(0, 0%, 10%);
+  }
+  
+  /* Legacy color classes for backwards compatibility */
   .bright-red {
-    color: hsl(0, 76%, 57%);
+    color: hsl(25, 95%, 53%);
   }
   .bg-bright-red {
-    background-color: hsl(0, 76%, 57%);
+    background-color: hsl(25, 95%, 53%);
   }
   .border-bright-red {
-    border-color: hsl(0, 76%, 57%);
+    border-color: hsl(25, 95%, 53%);
   }
   
   .louisiana-gold {
-    color: hsl(51, 100%, 50%);
+    color: hsl(25, 95%, 53%);
   }
   .bg-louisiana-gold {
-    background-color: hsl(51, 100%, 50%);
+    background-color: hsl(25, 95%, 53%);
   }
   .border-louisiana-gold {
-    border-color: hsl(51, 100%, 50%);
-  }
-  
-  .gold-dark {
-    color: hsl(48, 100%, 45%);
-  }
-  .bg-gold-dark {
-    background-color: hsl(48, 100%, 45%);
+    border-color: hsl(25, 95%, 53%);
   }
   
   .charcoal {
-    color: hsl(213, 27%, 31%);
+    color: hsl(120, 40%, 25%);
   }
   .bg-charcoal {
-    background-color: hsl(213, 27%, 31%);
+    background-color: hsl(120, 40%, 25%);
   }
   .border-charcoal {
-    border-color: hsl(213, 27%, 31%);
+    border-color: hsl(120, 40%, 25%);
   }
   
   .light-gray {
-    color: hsl(210, 40%, 98%);
+    color: hsl(210, 20%, 97%);
   }
   .bg-light-gray {
-    background-color: hsl(210, 40%, 98%);
+    background-color: hsl(210, 20%, 97%);
   }
 
   .glassmorphism {
@@ -171,35 +200,36 @@
     border: 1px solid rgba(30, 58, 95, 0.2);
   }
   
-  /* Modern glassmorphic header with clean white */
+  /* Modern glassmorphic header with clean styling */
   .header-glass {
     background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(30, 86, 49, 0.1) !important;
     box-shadow: 
-      0 2px 12px rgba(0, 0, 0, 0.1),
-      0 1px 3px rgba(0, 0, 0, 0.05) !important;
+      0 2px 16px rgba(0, 0, 0, 0.08),
+      0 1px 4px rgba(0, 0, 0, 0.04) !important;
   }
   
   .glass-text-shadow {
     text-shadow: 
       0 1px 2px rgba(255, 255, 255, 0.9),
-      0 2px 4px rgba(30, 58, 95, 0.1);
+      0 2px 4px rgba(30, 86, 49, 0.1);
   }
   
   .nav-text-enhanced {
     font-weight: 600;
     letter-spacing: 0.025em;
-    color: hsl(213, 27%, 31%);
+    color: hsl(0, 0%, 10%); /* Dark charcoal text */
+    transition: color 0.2s ease;
   }
   
   .nav-text-enhanced:hover {
-    color: hsl(0, 76%, 57%);
+    color: hsl(25, 95%, 53%); /* Vibrant orange on hover */
   }
   
   .nav-text-active {
-    color: hsl(0, 76%, 57%);
+    color: hsl(120, 40%, 25%); /* Deep green for active state */
     font-weight: 700;
   }
   
@@ -370,21 +400,20 @@
   }
 }
 
-/* Touch-friendly button sizes - Optimized with Enhanced Animations */
+/* Modern Button Styles with High-Converting Orange CTA */
 .btn-cta {
-  background-color: hsl(0, 76%, 57%);
-  color: white;
+  background-color: hsl(25, 95%, 53%); /* Vibrant orange */
+  color: hsl(0, 0%, 100%); /* White text */
   font-weight: 700;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 
-    0 10px 15px -3px rgba(0, 0, 0, 0.1), 
-    0 4px 6px -2px rgba(0, 0, 0, 0.05),
-    0 0 0 0 rgba(229, 62, 62, 0);
+    0 4px 14px 0 rgba(255, 127, 17, 0.25),
+    0 2px 4px 0 rgba(0, 0, 0, 0.1);
   transition: 
-    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
   transform: scale(1);
   min-height: 44px;
   min-width: 44px;
@@ -393,7 +422,8 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  will-change: transform, box-shadow;
+  border: none;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
 }
@@ -405,17 +435,16 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.4s ease;
 }
 
 .btn-cta:hover {
-  background-color: hsl(0, 76%, 47%);
-  transform: scale(1.05) translateY(-2px);
+  background-color: hsl(25, 95%, 48%); /* Slightly darker orange */
+  transform: scale(1.02) translateY(-1px);
   box-shadow: 
-    0 20px 25px -5px rgba(0, 0, 0, 0.15), 
-    0 10px 10px -5px rgba(0, 0, 0, 0.04),
-    0 0 20px 5px rgba(229, 62, 62, 0.3);
+    0 6px 20px 0 rgba(255, 127, 17, 0.35),
+    0 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 .btn-cta:hover::before {
@@ -423,18 +452,19 @@
 }
 
 .btn-cta:active {
-  transform: scale(0.98) translateY(1px);
+  transform: scale(0.98) translateY(0px);
   transition-duration: 0.1s;
 }
 
 .btn-secondary {
-  background-color: hsl(213, 27%, 31%);
-  color: white;
+  border: 2px solid hsl(120, 40%, 25%); /* Deep green border */
+  background-color: hsl(0, 0%, 100%); /* White background */
+  color: hsl(120, 40%, 25%); /* Deep green text */
   font-weight: 700;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
   min-height: 44px;
   min-width: 44px;
   font-family: 'Inter', system-ui, sans-serif;
@@ -442,20 +472,24 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background-color: hsl(213, 27%, 25%);
+  background-color: hsl(120, 40%, 25%); /* Deep green background */
+  color: hsl(0, 0%, 100%); /* White text */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px 0 rgba(30, 86, 49, 0.2);
 }
 
 .btn-outline {
-  border: 2px solid white;
-  color: white;
+  border: 2px solid hsl(0, 0%, 100%); /* White border */
+  color: hsl(0, 0%, 100%); /* White text */
   background-color: transparent;
   font-weight: 700;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   min-height: 44px;
   min-width: 44px;
   font-family: 'Inter', system-ui, sans-serif;
@@ -463,9 +497,12 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-outline:hover {
-  background-color: white;
-  color: hsl(213, 27%, 31%);
+  background-color: hsl(0, 0%, 100%); /* White background */
+  color: hsl(0, 0%, 10%); /* Dark text */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
 }

@@ -2,7 +2,7 @@ import { Link } from "wouter";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-white py-12">
+    <footer className="bg-deep-green text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -18,7 +18,7 @@ export default function Footer() {
               />
               <div>
                 <h3 className="text-xl font-military">KANE'S</h3>
-                <p className="text-sm text-louisiana-gold">Junk Removal Louisiana</p>
+                <p className="text-sm text-vibrant-orange">Junk Removal Louisiana</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4">
@@ -26,22 +26,22 @@ export default function Footer() {
             </p>
             <div className="space-y-2">
               <p className="flex items-center gap-2">
-                <i className="fas fa-phone text-louisiana-gold"></i>
-                <a href="tel:+13189141201" className="hover:text-louisiana-gold transition-colors">
+                <i className="fas fa-phone text-vibrant-orange"></i>
+                <a href="tel:+13189141201" className="hover:text-vibrant-orange transition-colors">
                   (318) 914-1201
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
                 493 JB Cyrus Rd, Calhoun, LA 71225
               </p>
               <p className="flex items-center gap-2">
-                <i className="fas fa-clock text-louisiana-gold"></i>
+                <i className="fas fa-clock text-vibrant-orange"></i>
                 7am-8pm Mon-Sat, Closed Sunday
               </p>
               <p className="flex items-center gap-2">
-                <i className="fas fa-envelope text-louisiana-gold"></i>
-                <a href="mailto:kaneprojunkremoval@gmail.com" className="hover:text-louisiana-gold transition-colors">
+                <i className="fas fa-envelope text-vibrant-orange"></i>
+                <a href="mailto:kaneprojunkremoval@gmail.com" className="hover:text-vibrant-orange transition-colors">
                   kaneprojunkremoval@gmail.com
                 </a>
               </p>
@@ -50,35 +50,35 @@ export default function Footer() {
           
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-louisiana-gold">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-vibrant-orange">Our Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/services" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
                   Residential Cleanouts
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
                   Commercial Cleanouts
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
                   Construction Debris
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
                   Furniture Removal
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
                   Appliance Removal
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
                   Emergency Cleanup
                 </Link>
               </li>
@@ -87,30 +87,30 @@ export default function Footer() {
           
           {/* Service Areas */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-louisiana-gold">Service Areas</h4>
+            <h4 className="text-lg font-semibold mb-4 text-vibrant-orange">Service Areas</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/areas" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
                   Calhoun, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
                   Farmerville, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
                   Ruston, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
                   West Monroe, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-louisiana-gold transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
                   Monroe, LA
                 </Link>
               </li>

@@ -51,6 +51,8 @@ export default function HomePage() {
           role="img"
           aria-label="Louisiana junk removal service area background"
         ></div>
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div 
@@ -66,7 +68,7 @@ export default function HomePage() {
             >
               Fast, Affordable Junk Removal in Calhoun, LA
               <motion.span 
-                className="text-louisiana-gold block"
+                className="text-vibrant-orange block"
                 variants={fadeInUp}
               >
                 Same Day Service in Ruston, Monroe & West Monroe
@@ -74,7 +76,7 @@ export default function HomePage() {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl max-w-3xl mx-auto font-bold pt-[-10px] pb-[-10px] ml-[0px] mr-[0px] pl-[0px] pr-[0px] mt-[10px] mb-[10px] text-[#f2f1ed] text-center bg-[#08142454]"
+              className="text-xl md:text-2xl max-w-3xl mx-auto font-medium text-white text-center bg-black/20 rounded-lg px-6 py-4"
               variants={fadeInUp}
             >Same-day junk hauling, cleanouts & debris removal. Serving Calhoun, Monroe, West Monroe & beyond.
 </motion.p>
@@ -110,22 +112,22 @@ export default function HomePage() {
             </motion.div>
             
             <motion.div 
-              className="mt-6 font-semibold text-[#f5efeb] text-[16px]"
+              className="mt-6 font-semibold text-white text-lg"
               variants={fadeInUp}
             >
               Faith-Driven, Family-Focused Junk Removal
             </motion.div>
             
             <motion.div 
-              className="mt-8 text-sm text-gray-300"
+              className="mt-8 text-base text-white"
               variants={fadeInUp}
             >
-              <p className="flex items-center justify-center gap-2 mb-2 text-[#010812]">
-                <i className="fas fa-clock text-louisiana-gold" aria-hidden="true"></i>
+              <p className="flex items-center justify-center gap-2 mb-2">
+                <i className="fas fa-clock text-vibrant-orange" aria-hidden="true"></i>
                 Same Day Junk Removal Service Available
               </p>
-              <p className="flex items-center justify-center gap-2 text-[#020914]">
-                <i className="fas fa-map-marker-alt text-louisiana-gold" aria-hidden="true"></i>
+              <p className="flex items-center justify-center gap-2">
+                <i className="fas fa-map-marker-alt text-vibrant-orange" aria-hidden="true"></i>
                 Serving Calhoun, Farmerville, Ruston, West Monroe & Monroe Louisiana
               </p>
             </motion.div>
@@ -142,11 +144,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-6">
+              <h2 className="text-3xl md:text-4xl font-military text-deep-green mb-6">
                 About Kane's Junk Removal Louisiana
               </h2>
               
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-text-dark leading-relaxed">
                 <p>
                   When Kane started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on. What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.
                 </p>
@@ -167,8 +169,8 @@ export default function HomePage() {
               <div className="mt-8">
                 <motion.a 
                   href="tel:+13189141201" 
-                  className="inline-flex items-center gap-2 bg-louisiana-gold text-charcoal px-6 py-3 rounded-lg font-bold hover:bg-gold-dark transition-all shadow-lg"
-                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(255, 215, 0, 0.3)" }}
+                  className="inline-flex items-center gap-2 btn-cta text-lg"
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -185,9 +187,9 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="bg-charcoal rounded-xl p-8 text-white">
+              <div className="bg-deep-green rounded-xl p-8 text-white">
                 <motion.h3 
-                  className="text-2xl font-military text-louisiana-gold mb-6"
+                  className="text-2xl font-military text-vibrant-orange mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
@@ -205,7 +207,7 @@ export default function HomePage() {
                     variants={iconFloat}
                     viewport={{ once: true }}
                   >
-                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
                     <div>
                       <h4 className="font-semibold">Calhoun, LA</h4>
                       <p className="text-gray-300 text-sm">Our home base - Same day service available</p>
@@ -220,7 +222,7 @@ export default function HomePage() {
                     variants={iconFloat}
                     viewport={{ once: true }}
                   >
-                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
                     <div>
                       <h4 className="font-semibold">Ruston, LA</h4>
                       <p className="text-gray-300 text-sm">University area cleanouts & residential services</p>
@@ -235,7 +237,7 @@ export default function HomePage() {
                     variants={iconFloat}
                     viewport={{ once: true }}
                   >
-                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
                     <div>
                       <h4 className="font-semibold">Monroe, LA</h4>
                       <p className="text-gray-300 text-sm">Full-service junk removal & debris cleanouts</p>
@@ -250,7 +252,7 @@ export default function HomePage() {
                     variants={iconFloat}
                     viewport={{ once: true }}
                   >
-                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
                     <div>
                       <h4 className="font-semibold">Farmerville, LA</h4>
                       <p className="text-gray-300 text-sm">Professional junk hauling services</p>
@@ -265,7 +267,7 @@ export default function HomePage() {
                     variants={iconFloat}
                     viewport={{ once: true }}
                   >
-                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
+                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
                     <div>
                       <h4 className="font-semibold">West Monroe, LA</h4>
                       <p className="text-gray-300 text-sm">Commercial & residential junk removal</p>
@@ -274,13 +276,13 @@ export default function HomePage() {
                 </div>
 
                 <motion.div 
-                  className="mt-6 p-4 bg-louisiana-gold/10 rounded-lg border border-louisiana-gold/20"
+                  className="mt-6 p-4 bg-vibrant-orange/10 rounded-lg border border-vibrant-orange/30"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <div className="flex items-center gap-2 text-louisiana-gold mb-2">
+                  <div className="flex items-center gap-2 text-vibrant-orange mb-2">
                     <i className="fas fa-clock"></i>
                     <span className="font-semibold">Same Day Service Available</span>
                   </div>
@@ -295,13 +297,13 @@ export default function HomePage() {
         </div>
       </section>
       {/* Work Gallery Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-neutral-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
               Kane's Junk Removal Work Gallery - Louisiana Projects
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-text-dark max-w-2xl mx-auto">
               Real junk removal projects in Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana
             </p>
           </div>
@@ -333,8 +335,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-charcoal mb-2">Residential Junk Removal Calhoun LA</h3>
-                <p className="text-gray-600 text-sm">Complete home cleanouts including furniture, appliances, and household items across Calhoun, Ruston, and Monroe Louisiana.</p>
+                <h3 className="text-lg font-bold text-deep-green mb-2">Residential Junk Removal Calhoun LA</h3>
+                <p className="text-text-dark text-sm">Complete home cleanouts including furniture, appliances, and household items across Calhoun, Ruston, and Monroe Louisiana.</p>
               </div>
             </motion.div>
 
@@ -364,8 +366,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-charcoal mb-2">Commercial Junk Hauling Monroe LA</h3>
-                <p className="text-gray-600 text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Monroe, West Monroe, and surrounding Louisiana areas.</p>
+                <h3 className="text-lg font-bold text-deep-green mb-2">Commercial Junk Hauling Monroe LA</h3>
+                <p className="text-text-dark text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Monroe, West Monroe, and surrounding Louisiana areas.</p>
               </div>
             </motion.div>
 
@@ -395,8 +397,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-charcoal mb-2">Construction Debris Removal Ruston LA</h3>
-                <p className="text-gray-600 text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors in Ruston, Farmerville, and North Louisiana.</p>
+                <h3 className="text-lg font-bold text-deep-green mb-2">Construction Debris Removal Ruston LA</h3>
+                <p className="text-text-dark text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors in Ruston, Farmerville, and North Louisiana.</p>
               </div>
             </motion.div>
 
@@ -426,8 +428,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-charcoal mb-2">Yard Cleanup Farmerville LA</h3>
-                <p className="text-gray-600 text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal in Farmerville and surrounding Louisiana areas.</p>
+                <h3 className="text-lg font-bold text-deep-green mb-2">Yard Cleanup Farmerville LA</h3>
+                <p className="text-text-dark text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal in Farmerville and surrounding Louisiana areas.</p>
               </div>
             </motion.div>
 
@@ -457,8 +459,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-charcoal mb-2">Appliance Removal West Monroe LA</h3>
-                <p className="text-gray-600 text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances in West Monroe and throughout Louisiana.</p>
+                <h3 className="text-lg font-bold text-deep-green mb-2">Appliance Removal West Monroe LA</h3>
+                <p className="text-text-dark text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances in West Monroe and throughout Louisiana.</p>
               </div>
             </motion.div>
 
@@ -488,8 +490,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-charcoal mb-2">Professional Louisiana Junk Removal</h3>
-                <p className="text-gray-600 text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values throughout Calhoun, Ruston, Monroe, and surrounding areas.</p>
+                <h3 className="text-lg font-bold text-deep-green mb-2">Professional Louisiana Junk Removal</h3>
+                <p className="text-text-dark text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values throughout Calhoun, Ruston, Monroe, and surrounding areas.</p>
               </div>
             </motion.div>
           </div>
@@ -510,7 +512,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Trust Badges */}
-      <section className="bg-gray-100 py-8">
+      <section className="bg-neutral-bg py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <motion.div 
@@ -520,8 +522,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-shield-alt text-3xl text-charcoal mb-2"></i>
-              <span className="text-sm font-semibold text-charcoal">Licensed & Insured</span>
+              <i className="fas fa-shield-alt text-3xl text-deep-green mb-2"></i>
+              <span className="text-sm font-semibold text-text-dark">Licensed & Insured</span>
             </motion.div>
             <motion.div 
               className="flex flex-col items-center"
@@ -530,8 +532,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-heart text-3xl text-charcoal mb-2"></i>
-              <span className="text-sm font-semibold text-charcoal">Louisiana Born & Raised</span>
+              <i className="fas fa-heart text-3xl text-vibrant-orange mb-2"></i>
+              <span className="text-sm font-semibold text-text-dark">Louisiana Born & Raised</span>
             </motion.div>
             <motion.div 
               className="flex flex-col items-center"
@@ -540,8 +542,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-clock text-3xl text-charcoal mb-2"></i>
-              <span className="text-sm font-semibold text-charcoal">Same Day Service</span>
+              <i className="fas fa-clock text-3xl text-deep-green mb-2"></i>
+              <span className="text-sm font-semibold text-text-dark">Same Day Service</span>
             </motion.div>
             <motion.div 
               className="flex flex-col items-center"
@@ -550,8 +552,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <i className="fas fa-leaf text-3xl text-charcoal mb-2"></i>
-              <span className="text-sm font-semibold text-charcoal">Eco-Friendly</span>
+              <i className="fas fa-leaf text-3xl text-vibrant-orange mb-2"></i>
+              <span className="text-sm font-semibold text-text-dark">Eco-Friendly</span>
             </motion.div>
           </div>
         </div>
@@ -560,10 +562,10 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
               Kane's Junk Hauling Services Louisiana
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-text-dark max-w-2xl mx-auto">
               Comprehensive junk removal solutions for homes and businesses in Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana
             </p>
           </div>
@@ -587,12 +589,12 @@ export default function HomePage() {
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-home text-louisiana-gold mr-2"></i>
+                <h3 className="text-xl font-bold text-deep-green mb-3">
+                  <i className="fas fa-home text-vibrant-orange mr-2"></i>
                   Residential Cleanouts
                 </h3>
-                <p className="text-gray-600 mb-4">Home cleanouts, furniture removal, appliances, and household junk removal across Louisiana parishes.</p>
-                <ul className="text-sm text-gray-500 mb-6 space-y-1">
+                <p className="text-text-dark mb-4">Home cleanouts, furniture removal, appliances, and household junk removal across Louisiana parishes.</p>
+                <ul className="text-sm text-text-dark/70 mb-6 space-y-1">
                   <li>• Furniture & Appliances</li>
                   <li>• Garage & Basement Cleanouts</li>
                   <li>• Estate Cleanouts</li>
