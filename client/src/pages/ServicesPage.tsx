@@ -86,6 +86,18 @@ export default function ServicesPage() {
         </div>
       </nav>
 
+      {/* Page Header */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
+            Professional Junk Removal Services
+          </h1>
+          <p className="text-lg text-text-dark max-w-2xl mx-auto">
+            Comprehensive junk hauling solutions for homes and businesses across Northeast Louisiana
+          </p>
+        </div>
+      </section>
+
       {/* Service Area Quick Info */}
       <section className="py-8 bg-opacity-10 pt-[1px] pb-[1px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
