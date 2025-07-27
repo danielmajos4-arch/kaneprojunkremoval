@@ -408,7 +408,7 @@ export default function ServiceAreaMap() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-louisiana-gold rounded-full mb-3">
                   <i className="fas fa-phone text-navy"></i>
                 </div>
-                <h3 className="font-semibold mb-2">Call for Service</h3>
+                <h3 className="font-semibold mb-2 text-[#f07439]">Call for Service</h3>
                 <a href="tel:+13189141201" className="text-louisiana-gold hover:text-white transition-colors font-bold">
                   (318) 914-1201
                 </a>
