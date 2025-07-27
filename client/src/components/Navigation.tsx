@@ -35,20 +35,20 @@ export default function Navigation() {
   return (
     <>
       {/* Main Navigation Header */}
-      <nav className="sticky top-0 z-40 header-glass">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white/95 backdrop-blur-sm shadow-sm">
+      <nav className="sticky top-0 z-40 bg-[#1E5631] shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
               <img 
                 src="/kane-pro-logo.png" 
                 alt="Kane's Junk Removal Louisiana Logo" 
-                className="w-12 h-12 mr-3 glass-logo-glow"
+                className="w-12 h-12 mr-3 filter drop-shadow-md"
                 width="48"
                 height="48"
               />
               <div className="font-military">
-                <span className="text-lg font-bold text-deep-green tracking-wide">KANE'S</span>
+                <span className="text-lg font-bold text-white tracking-wide">KANE'S</span>
                 <div className="text-xs font-semibold text-vibrant-orange">Junk Removal LA</div>
               </div>
             </Link>
@@ -57,56 +57,56 @@ export default function Navigation() {
             <div className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/" 
-                className={`transition-all duration-300 ${
+                className={`transition-all duration-300 font-medium ${
                   isActive("/") 
                     ? "text-vibrant-orange font-semibold" 
-                    : "text-deep-green hover:text-vibrant-orange hover:scale-105"
+                    : "text-white hover:text-vibrant-orange hover:scale-105"
                 }`}
               >
                 Home
               </Link>
               <Link 
                 href="/services" 
-                className={`transition-all duration-300 ${
+                className={`transition-all duration-300 font-medium ${
                   isActive("/services") 
                     ? "text-vibrant-orange font-semibold" 
-                    : "text-deep-green hover:text-vibrant-orange hover:scale-105"
+                    : "text-white hover:text-vibrant-orange hover:scale-105"
                 }`}
               >
                 Services
               </Link>
               <Link 
                 href="/about" 
-                className={`transition-all duration-300 ${
+                className={`transition-all duration-300 font-medium ${
                   isActive("/about") 
                     ? "text-vibrant-orange font-semibold" 
-                    : "text-deep-green hover:text-vibrant-orange hover:scale-105"
+                    : "text-white hover:text-vibrant-orange hover:scale-105"
                 }`}
               >
                 About
               </Link>
               <Link 
                 href="/areas" 
-                className={`transition-all duration-300 ${
+                className={`transition-all duration-300 font-medium ${
                   isActive("/areas") 
                     ? "text-vibrant-orange font-semibold" 
-                    : "text-deep-green hover:text-vibrant-orange hover:scale-105"
+                    : "text-white hover:text-vibrant-orange hover:scale-105"
                 }`}
               >
                 Service Areas
               </Link>
               <a 
                 href="tel:+13189141201" 
-                className="bg-vibrant-orange text-white px-4 py-2 rounded-lg font-bold hover:bg-vibrant-orange/90 hover:scale-105 transition-all btn-touch shadow-lg"
+                className="bg-[#FF7F11] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#E6720F] hover:scale-105 transition-all duration-300 btn-touch shadow-lg text-sm uppercase tracking-wide"
               >
-                (318) 914-1201
+                Get Estimate
               </a>
             </div>
 
             {/* Mobile Hamburger Button */}
             <button 
               onClick={toggleMobileMenu}
-              className="md:hidden text-deep-green hover:text-vibrant-orange p-2 transition-colors duration-200"
+              className="md:hidden text-white hover:text-vibrant-orange p-2 transition-colors duration-200"
               aria-label="Toggle mobile menu"
             >
               <i className="fas fa-bars text-xl"></i>
@@ -191,14 +191,14 @@ export default function Navigation() {
             Service Areas
           </Link>
 
-          {/* Call Button */}
+          {/* CTA Button */}
           <div className="pt-6">
             <a 
               href="tel:+13189141201" 
-              className="block w-full bg-vibrant-orange text-white px-6 py-4 rounded-lg font-bold text-center hover:bg-vibrant-orange/90 transition-colors duration-200 shadow-lg text-lg"
+              className="block w-full bg-[#FF7F11] text-white px-6 py-4 rounded-lg font-bold text-center hover:bg-[#E6720F] transition-all duration-300 shadow-lg text-lg uppercase tracking-wide"
               onClick={closeMobileMenu}
             >
-              Call (318) 914-1201
+              Get Estimate
             </a>
           </div>
         </div>
