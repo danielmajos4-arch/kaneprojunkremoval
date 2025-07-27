@@ -339,7 +339,7 @@ export default function ServicesPage() {
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold text-vibrant-orange mb-2">Calhoun</h3>
               <p className="text-gray-300 text-sm mb-4">Our home base - serving Union Parish with pride</p>
-              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
+              <Link href="/areas" className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -347,7 +347,7 @@ export default function ServicesPage() {
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold text-vibrant-orange mb-2">Farmerville</h3>
               <p className="text-gray-300 text-sm mb-4">Rural & farm property specialists</p>
-              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
+              <Link href="/areas" className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -355,7 +355,7 @@ export default function ServicesPage() {
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold text-vibrant-orange mb-2">Ruston</h3>
               <p className="text-gray-300 text-sm mb-4">Louisiana Tech University area service</p>
-              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
+              <Link href="/areas" className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -363,7 +363,7 @@ export default function ServicesPage() {
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold text-vibrant-orange mb-2">West Monroe</h3>
               <p className="text-gray-300 text-sm mb-4">Ouachita Parish commercial specialists</p>
-              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
+              <Link href="/areas" className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -371,7 +371,7 @@ export default function ServicesPage() {
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold text-vibrant-orange mb-2">Monroe</h3>
               <p className="text-gray-300 text-sm mb-4">North Louisiana's largest city coverage</p>
-              <Link href="/areas" className="text-vibrant-orange hover:text-white text-sm font-semibold">
+              <Link href="/areas" className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors">
                 Learn More →
               </Link>
             </div>
