@@ -126,7 +126,7 @@ export default function Navigation() {
 
       {/* Off-Canvas Mobile Navigation Drawer */}
       <div 
-        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{
@@ -148,13 +148,13 @@ export default function Navigation() {
         </div>
 
         {/* Navigation Items */}
-        <div className="px-6 py-8 space-y-6 bg-white h-full">
+        <div className="px-6 py-8 space-y-6 h-full" style={{ backgroundColor: '#ffffff' }}>
           <Link 
             href="/" 
-            className={`block py-3 text-lg font-medium transition-all duration-200 ${
+            className={`block py-3 px-3 text-lg font-medium transition-all duration-200 rounded-lg ${
               isActive("/") 
-                ? "text-vibrant-orange border-l-4 border-vibrant-orange pl-4 bg-vibrant-orange/5" 
-                : "text-deep-green hover:text-vibrant-orange hover:pl-4"
+                ? "text-vibrant-orange bg-vibrant-orange/10 border-l-4 border-vibrant-orange" 
+                : "text-deep-green hover:text-vibrant-orange hover:bg-gray-50"
             }`}
             onClick={closeMobileMenu}
           >
@@ -164,10 +164,10 @@ export default function Navigation() {
           
           <Link 
             href="/services" 
-            className={`block py-3 text-lg font-medium transition-all duration-200 ${
+            className={`block py-3 px-3 text-lg font-medium transition-all duration-200 rounded-lg ${
               isActive("/services") 
-                ? "text-vibrant-orange border-l-4 border-vibrant-orange pl-4 bg-vibrant-orange/5" 
-                : "text-deep-green hover:text-vibrant-orange hover:pl-4"
+                ? "text-vibrant-orange bg-vibrant-orange/10 border-l-4 border-vibrant-orange" 
+                : "text-deep-green hover:text-vibrant-orange hover:bg-gray-50"
             }`}
             onClick={closeMobileMenu}
           >
@@ -177,10 +177,10 @@ export default function Navigation() {
           
           <Link 
             href="/about" 
-            className={`block py-3 text-lg font-medium transition-all duration-200 ${
+            className={`block py-3 px-3 text-lg font-medium transition-all duration-200 rounded-lg ${
               isActive("/about") 
-                ? "text-vibrant-orange border-l-4 border-vibrant-orange pl-4 bg-vibrant-orange/5" 
-                : "text-deep-green hover:text-vibrant-orange hover:pl-4"
+                ? "text-vibrant-orange bg-vibrant-orange/10 border-l-4 border-vibrant-orange" 
+                : "text-deep-green hover:text-vibrant-orange hover:bg-gray-50"
             }`}
             onClick={closeMobileMenu}
           >
@@ -190,10 +190,10 @@ export default function Navigation() {
           
           <Link 
             href="/areas" 
-            className={`block py-3 text-lg font-medium transition-all duration-200 ${
+            className={`block py-3 px-3 text-lg font-medium transition-all duration-200 rounded-lg ${
               isActive("/areas") 
-                ? "text-vibrant-orange border-l-4 border-vibrant-orange pl-4 bg-vibrant-orange/5" 
-                : "text-deep-green hover:text-vibrant-orange hover:pl-4"
+                ? "text-vibrant-orange bg-vibrant-orange/10 border-l-4 border-vibrant-orange" 
+                : "text-deep-green hover:text-vibrant-orange hover:bg-gray-50"
             }`}
             onClick={closeMobileMenu}
           >
@@ -202,7 +202,7 @@ export default function Navigation() {
           </Link>
 
           {/* Call Button */}
-          <div className="pt-6 border-t border-gray-100">
+          <div className="pt-6 border-t border-gray-100" style={{ backgroundColor: '#ffffff' }}>
             <a 
               href="tel:+13189141201" 
               className="block w-full bg-vibrant-orange text-white px-6 py-4 rounded-xl font-bold text-center hover:bg-vibrant-orange/90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 text-lg"
@@ -214,7 +214,7 @@ export default function Navigation() {
           </div>
 
           {/* Contact Info */}
-          <div className="pt-4 text-sm text-gray-600 bg-white">
+          <div className="pt-4 text-sm text-gray-600" style={{ backgroundColor: '#ffffff' }}>
             <p className="flex items-center mb-2">
               <i className="fas fa-envelope text-vibrant-orange w-5 mr-2"></i>
               kaneprojunkremoval@gmail.com
