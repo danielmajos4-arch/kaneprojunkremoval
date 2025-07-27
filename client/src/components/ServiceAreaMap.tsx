@@ -429,17 +429,12 @@ export default function ServiceAreaMap() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {serviceAreas.map((area, index) => (
-              <motion.span 
+              <span 
                 key={area.name}
                 className={`px-3 py-1 rounded-full ${area.isBase ? 'bg-red-600 text-white' : 'bg-navy text-white'}`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.6 + (index * 0.1) }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
               >
                 {area.name} LA
-              </motion.span>
+              </span>
             ))}
           </div>
         </motion.div>
