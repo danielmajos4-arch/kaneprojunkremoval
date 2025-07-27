@@ -20,7 +20,7 @@ export default function FloatingCTA() {
       }`}
     >
       <div className="text-center mb-3 px-3 py-2 bg-black/70 backdrop-blur-sm rounded-lg border border-white/20 animate-pulse">
-        <div className="text-white font-bold text-lg sm:text-xl mb-1">
+        <div className="text-white font-bold sm:text-xl mb-1 text-[18px]">
           Need a quote fast?
         </div>
         <div className="text-white text-sm sm:text-base opacity-90">
