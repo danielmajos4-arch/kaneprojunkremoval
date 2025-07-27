@@ -395,7 +395,7 @@ export default function ServiceAreaMap() {
                   <i className="fas fa-clock text-navy"></i>
                 </div>
                 <h3 className="font-semibold mb-2 text-[#f07439]">Same Day Service</h3>
-                <p className="text-gray-300 text-sm">Available Monday - Saturday, 7AM - 8PM</p>
+                <p className="text-sm text-[#010914ba]">Available Monday - Saturday, 7AM - 8PM</p>
               </motion.div>
               
               <motion.div 
