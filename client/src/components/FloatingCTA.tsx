@@ -21,7 +21,7 @@ export default function FloatingCTA() {
     >
       <a 
         href="tel:+13189141201" 
-        className="bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-7 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3 btn-touch ring-4 ring-red-600/20 animate-bounce"
+        className="bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-7 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3 btn-touch ring-4 ring-red-600/20 animate-bounce pl-[26px] pr-[26px] pt-[16px] pb-[16px]"
         aria-label="Call Kane Pro Junk Removal now"
         style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(220, 38, 38, 0.3)' }}
       >
