@@ -381,7 +381,7 @@ export default function ServiceAreaMap() {
                   <i className="fas fa-map-marker-alt text-navy"></i>
                 </div>
                 <h3 className="font-semibold mb-2 text-[#f07439]">5 Cities Served</h3>
-                <p className="text-gray-300 text-sm">Calhoun, Farmerville, Ruston, West Monroe & Monroe</p>
+                <p className="text-sm text-[#020812d1]">Calhoun, Farmerville, Ruston, West Monroe & Monroe</p>
               </motion.div>
               
               <motion.div 
