@@ -89,8 +89,7 @@ export default function HomePage() {
             <motion.p 
               className="text-xl md:text-2xl max-w-3xl mx-auto font-medium text-white text-center bg-black/20 rounded-lg px-6 py-4"
               variants={fadeInUp}
-            >Same-day junk hauling, cleanouts & debris removal. We proudly serve Calhoun, LA, offering fast junk removal around Highway 80, near Calhoun Middle School, and throughout surrounding neighborhoods in Monroe, West Monroe, Ruston, and Farmerville.
-</motion.p>
+            >Same-day junk hauling, cleanouts & debris removal. We proudly serve Calhoun, LA, offering fast junk removal, near Calhoun Middle School, and throughout surrounding neighborhoods in Monroe, West Monroe, Ruston, and Farmerville.</motion.p>
             
             <motion.div 
               className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center"
@@ -163,7 +162,7 @@ export default function HomePage() {
                 <p>When Kaleb started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on. What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.</p>
                 
                 <p>
-                  Kane takes pride in fast, affordable, and dependable junk removal services. Unlike big franchises, we're a local Louisiana business that understands our community's needs. We offer <strong>in-person estimates</strong> because we believe in transparent pricing and building trust with every customer.
+                  Kaleb takes pride in fast, affordable, and dependable junk removal services. Unlike big franchises, we're a local Louisiana business that understands our community's needs. We offer <strong>in-person estimates</strong> because we believe in transparent pricing and building trust with every customer.
                 </p>
                 
                 <p>
