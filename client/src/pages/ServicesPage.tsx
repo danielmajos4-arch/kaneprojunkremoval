@@ -97,11 +97,35 @@ export default function ServicesPage() {
 
       {/* Service Area Quick Info */}
       <section className="py-8 bg-opacity-10 pt-[1px] pb-[1px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block px-6 py-3 rounded-full text-white text-lg font-semibold" style={{ backgroundColor: '#ef6706' }}>
-            <strong>Serving North Louisiana:</strong> Calhoun 71225 • Ruston
-            71270 • Monroe 71201 • West Monroe 71291 • Farmerville 71241 •
-            Grambling • Choudrant • Downsville
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-4">
+            <span className="text-lg font-semibold text-deep-green">Serving North Louisiana:</span>
+          </div>
+          <div className="flex flex-wrap justify-center gap-2">
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              Calhoun 71225
+            </span>
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              Ruston 71270
+            </span>
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              Monroe 71201
+            </span>
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              West Monroe 71291
+            </span>
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              Farmerville 71241
+            </span>
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              Grambling
+            </span>
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              Choudrant
+            </span>
+            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
+              Downsville
+            </span>
           </div>
         </div>
       </section>
