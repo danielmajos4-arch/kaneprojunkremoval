@@ -4,32 +4,19 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 
-// Animation variants for different elements
+// Optimized animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
 const staggerContainer = {
-  visible: { transition: { staggerChildren: 0.2 } }
+  visible: { transition: { staggerChildren: 0.1 } },
 };
 
 const scaleOnHover = {
   rest: { scale: 1 },
-  hover: { scale: 1.05, transition: { duration: 0.3, ease: "easeOut" } }
-};
-
-const iconFloat = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: index * 0.1,
-      ease: "easeOut"
-    }
-  })
+  hover: { scale: 1.02, transition: { duration: 0.2, ease: "easeOut" } },
 };
 
 export default function HomePage() {
@@ -41,852 +28,411 @@ export default function HomePage() {
 
   return (
     <>
-      <SEO 
-        title="Junk Removal in Calhoun, Louisiana | Kane Pro Junk Removal & Hauling"
-        description="Fast and affordable junk removal in Calhoun, Ruston, Monroe, Farmerville & West Monroe LA. Same-day service, licensed & insured. Call (318) 914-1201 for free estimates!"
-        keywords="junk removal Calhoun LA, junk removal Ruston LA, junk removal Monroe LA, junk removal Farmerville LA, junk removal West Monroe LA, debris removal Louisiana, Kane junk removal"
+      <SEO
+        title="Junk Removal Monroe LA | Same-Day Service | Kane Pro (318) 914-1201"
+        description="Professional junk removal in Monroe, West Monroe, Ruston & Northeast Louisiana. Same-day service available. Licensed, insured, family-owned. Free estimates!"
+        keywords="junk removal Monroe LA, junk removal West Monroe LA, junk removal Ruston LA, same day junk pickup Louisiana, licensed junk removal Monroe"
         canonicalUrl="https://kanejunkremoval.com/"
-        ogTitle="Professional Junk Removal in Calhoun, Louisiana | Kane Pro"
-        ogDescription="Same-day junk removal serving Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana. Family-owned Christian business. Free estimates!"
+        ogTitle="Monroe LA Junk Removal | Same-Day Service | Kane Pro"
+        ogDescription="Fast, reliable junk removal serving Monroe, West Monroe, Ruston & Northeast Louisiana. Family-owned Christian business with same-day service."
         structuredData={generateLocalBusinessSchema("Northeast Louisiana")}
-        city="Calhoun"
+        city="Monroe"
       />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center hero-section">
-        {/* Louisiana landmark background with overlay */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/hero-background-latest.png')`
-          }}
+          style={{ backgroundImage: `url('/hero-background-latest.png')` }}
           role="img"
-          aria-label="Louisiana junk removal service area background"
+          aria-label="Louisiana junk removal service area"
         ></div>
-        {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div 
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <motion.div
             className="text-center"
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={staggerContainer}
           >
-            
-            <motion.h1 
-              className="md:text-6xl font-military text-white text-[30px] mt-[1px] mb-[1px]"
+            <motion.h1
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
               variants={fadeInUp}
             >
-              Professional Junk Removal in Calhoun, Louisiana
-              <motion.span 
-                className="text-vibrant-orange block"
+              Monroe Louisiana Junk Removal
+              <motion.span
+                className="text-vibrant-orange block text-2xl sm:text-3xl md:text-4xl mt-2"
                 variants={fadeInUp}
               >
-                Same Day Service in Ruston, Monroe & West Monroe
+                Same-Day Service Available
               </motion.span>
             </motion.h1>
-            
-            <motion.p 
-              className="text-xl md:text-2xl max-w-3xl mx-auto font-medium text-white text-center bg-black/20 rounded-lg px-6 py-4"
-              variants={fadeInUp}
-            >Same-day junk hauling, cleanouts & debris removal in Calhoun and nearby Northeast Louisiana cities.</motion.p>
-            
-            <motion.div 
-              className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center"
+
+            <motion.p
+              className="text-lg sm:text-xl max-w-3xl mx-auto font-medium text-white text-center bg-black/20 rounded-lg px-4 py-3 mb-6"
               variants={fadeInUp}
             >
-              <motion.a 
-                href="#quote-form" 
-                className="block md:inline-block btn-cta text-lg"
+              Fast, reliable junk hauling in Monroe, West Monroe, Ruston &
+              Northeast Louisiana
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-3 justify-center mb-6"
+              variants={fadeInUp}
+            >
+              <motion.a
+                href="#quote-form"
+                className="btn-cta text-lg px-6 py-3"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .getElementById("quote-form")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <i className="fas fa-shield-alt mr-2"></i>
-                GET FREE ESTIMATE
+                <i className="fas fa-calculator mr-2"></i>
+                FREE ESTIMATE
               </motion.a>
-              <motion.a 
-                href="tel:+13189141201" 
-                className="block md:inline-block btn-outline text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
+              <motion.a
+                href="tel:+13189141201"
+                className="btn-outline text-lg px-6 py-3"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <i className="fas fa-phone mr-2"></i>
-                CALL (318) 914-1201
+                (318) 914-1201
               </motion.a>
             </motion.div>
-            
-            <motion.div 
-              className="mt-6 font-semibold text-white text-lg"
+
+            <motion.div
+              className="text-white text-center space-y-2"
               variants={fadeInUp}
             >
-              Faith-Driven, Family-Focused Junk Removal
-            </motion.div>
-            
-            <motion.div 
-              className="mt-8 text-base text-white"
-              variants={fadeInUp}
-            >
-              <p className="flex items-center justify-center gap-2 mb-2">
-                <i className="fas fa-clock text-vibrant-orange" aria-hidden="true"></i>
-                Same Day Junk Removal Service Available
+              <p className="flex items-center justify-center gap-2 text-base">
+                <i className="fas fa-clock text-vibrant-orange"></i>
+                Same-Day Service • Licensed & Insured
               </p>
-              <p className="flex items-center justify-center gap-1">
-                <i className="fas fa-map-marker-alt text-vibrant-orange" aria-hidden="true"></i>
-                Serving Calhoun, Farmerville, Ruston, West Monroe & Monroe Louisiana
+              <p className="flex items-center justify-center gap-2 text-sm">
+                <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
+                Serving Monroe, West Monroe, Ruston, Calhoun & Northeast LA
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
-      {/* About Us Section */}
+
+      {/* About Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
             >
-              <h2 className="text-3xl md:text-4xl font-military text-deep-green mb-6">
-                About Kane's Junk Removal Louisiana
+              <h2 className="text-2xl sm:text-3xl font-bold text-deep-green mb-4">
+                Louisiana's Trusted Junk Removal Experts
               </h2>
-              
-              <div className="space-y-4 text-base sm:text-lg text-text-dark leading-relaxed">
-                <p>When Kaleb started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on.</p>
-                
-                <p>What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.</p>
 
-                <p>As a <strong>local Louisiana business</strong>, we understand our community. We offer in-person estimates for transparent pricing and treat every job with Christian values and professionalism.</p>
+              <div className="space-y-3 text-base text-text-dark leading-relaxed">
+                <p>
+                  <strong>Kane Pro Junk Removal</strong> serves Monroe and
+                  Northeast Louisiana with reliable, same-day junk hauling
+                  services. As a local, family-owned Christian business, we
+                  treat your property with respect and care.
+                </p>
 
-                <p>Whether it's residential cleanouts, commercial junk removal, or construction debris, we handle it all. Same-day service when possible, and we keep your property clean throughout the process.</p>
+                <p>
+                  From furniture and appliances to construction debris, we
+                  handle residential and commercial cleanouts throughout Monroe,
+                  West Monroe, Ruston, and surrounding areas.
+                </p>
 
-                <p><strong>Your satisfaction is our guarantee.</strong> We're not done until you're completely happy. That's the Kane Pro difference.</p>
+                <p>
+                  <strong>
+                    Licensed, insured, and committed to your satisfaction.
+                  </strong>{" "}
+                  We're not done until you're completely happy.
+                </p>
               </div>
 
-              <div className="mt-8">
-                <motion.a 
-                  href="tel:+13189141201" 
-                  className="inline-flex items-center gap-2 btn-cta text-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
+              <div className="mt-6">
+                <motion.a
+                  href="tel:+13189141201"
+                  className="inline-flex items-center gap-2 btn-cta"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   <i className="fas fa-phone"></i>
-                  Get Your Free In-Person Estimate
+                  Schedule Free Estimate
                 </motion.a>
               </div>
             </motion.div>
 
-            <motion.div 
-              className="lg:order-first"
-              initial={{ opacity: 0, x: 50 }}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
             >
-              <div className="bg-deep-green rounded-xl p-6 sm:p-8 text-white">
-                <motion.h3 
-                  className="text-2xl font-military text-vibrant-orange mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Areas We Serve in Louisiana
-                </motion.h3>
-                
-                <div className="space-y-4">
-                  <motion.div 
-                    className="flex items-center gap-2"
-                    custom={0}
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={iconFloat}
-                    viewport={{ once: true }}
-                  >
-                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
-                    <div>
-                      <h4 className="font-semibold">Calhoun, LA</h4>
-                      <p className="text-gray-300 text-sm">Our home base - Same day service available</p>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="flex items-center gap-2"
-                    custom={1}
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={iconFloat}
-                    viewport={{ once: true }}
-                  >
-                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
-                    <div>
-                      <h4 className="font-semibold">Ruston, LA</h4>
-                      <p className="text-gray-300 text-sm">University area cleanouts & residential services</p>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="flex items-center gap-2"
-                    custom={2}
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={iconFloat}
-                    viewport={{ once: true }}
-                  >
-                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
-                    <div>
-                      <h4 className="font-semibold">Monroe, LA</h4>
-                      <p className="text-gray-300 text-sm">Full-service junk removal & debris cleanouts</p>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="flex items-center gap-2"
-                    custom={3}
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={iconFloat}
-                    viewport={{ once: true }}
-                  >
-                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
-                    <div>
-                      <h4 className="font-semibold">Farmerville, LA</h4>
-                      <p className="text-gray-300 text-sm">Professional junk hauling services</p>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="flex items-center gap-2"
-                    custom={4}
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={iconFloat}
-                    viewport={{ once: true }}
-                  >
-                    <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
-                    <div>
-                      <h4 className="font-semibold">West Monroe, LA</h4>
-                      <p className="text-gray-300 text-sm">Commercial & residential junk removal</p>
-                    </div>
-                  </motion.div>
+              <div className="bg-deep-green rounded-xl p-6 text-white">
+                <h3 className="text-xl font-bold text-vibrant-orange mb-4">
+                  Service Areas
+                </h3>
+
+                <div className="grid grid-cols-1 gap-3">
+                  {[
+                    { city: "Monroe, LA", desc: "Full-service junk removal" },
+                    {
+                      city: "West Monroe, LA",
+                      desc: "Residential & commercial",
+                    },
+                    { city: "Ruston, LA", desc: "University area cleanouts" },
+                    { city: "Calhoun, LA", desc: "Same-day service available" },
+                    {
+                      city: "Farmerville, LA",
+                      desc: "Professional junk hauling",
+                    },
+                  ].map((area, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center gap-2"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <i className="fas fa-map-marker-alt text-vibrant-orange"></i>
+                      <div>
+                        <h4 className="font-semibold text-sm">{area.city}</h4>
+                        <p className="text-gray-300 text-xs">{area.desc}</p>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
 
-                <motion.div 
-                  className="mt-6 p-4 bg-vibrant-orange/10 rounded-lg border border-vibrant-orange/30"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-center gap-2 text-vibrant-orange mb-2">
+                <div className="mt-4 p-3 bg-vibrant-orange/10 rounded-lg border border-vibrant-orange/30">
+                  <div className="flex items-center gap-2 text-vibrant-orange text-sm">
                     <i className="fas fa-clock"></i>
-                    <span className="font-semibold">Same Day Service Available</span>
+                    <span className="font-semibold">Mon-Sat: 7AM-8PM</span>
                   </div>
-                  <p className="text-gray-300 text-sm">
-                    Monday - Saturday, 7AM - 8PM<br/>
-                    <strong>Call (318) 914-1201</strong> for immediate service
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-10 sm:py-12 bg-neutral-bg">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-deep-green mb-3">
+              Our Junk Removal Services
+            </h2>
+            <p className="text-base text-text-dark max-w-2xl mx-auto">
+              Complete junk hauling solutions for homes and businesses in
+              Northeast Louisiana
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                image: "/portfolio-1.png",
+                title: "Residential Cleanouts",
+                description:
+                  "Home cleanouts, furniture, appliances & household items",
+                features: [
+                  "Furniture & Appliances",
+                  "Garage Cleanouts",
+                  "Estate Sales",
+                  "Same-Day Service",
+                ],
+              },
+              {
+                image: "/portfolio-2.png",
+                title: "Commercial Removal",
+                description:
+                  "Office cleanouts, retail spaces & commercial properties",
+                features: [
+                  "Office Furniture",
+                  "Retail Cleanouts",
+                  "Equipment Removal",
+                  "Scheduled Service",
+                ],
+              },
+              {
+                image: "/portfolio-3.png",
+                title: "Construction Debris",
+                description: "Renovation cleanup & building materials removal",
+                features: [
+                  "Drywall & Wood",
+                  "Roofing Materials",
+                  "Renovation Cleanup",
+                  "Contractor Ready",
+                ],
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                whileHover={{ y: -3, transition: { duration: 0.2 } }}
+              >
+                <img
+                  src={service.image}
+                  alt={`${service.title} service in Louisiana`}
+                  className="w-full h-40 object-cover"
+                  loading="lazy"
+                  width="300"
+                  height="160"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-deep-green mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-text-dark mb-3">
+                    {service.description}
                   </p>
-                </motion.div>
-              </div>
-            </motion.div>
+                  <ul className="text-xs text-gray-600 mb-4 space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>• {feature}</li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/services"
+                    className="text-sm btn-secondary block text-center"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-      {/* Work Gallery Section */}
-      <section className="py-16 bg-neutral-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
-              Kane's Junk Removal Work Gallery - Louisiana Projects
-            </h2>
-            <p className="text-lg text-text-dark max-w-2xl mx-auto">
-              Real junk removal projects in Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Portfolio Item 1 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <div className="aspect-video overflow-hidden">
-                <motion.img 
-                  src="/portfolio-1.png" 
-                  alt="Kane's junk removal truck in Calhoun LA loaded with residential furniture and household items"
-                  className="w-full h-full object-cover"
-                  width="400"
-                  height="225"
-                  style={{ imageRendering: 'auto', filter: 'none' }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-deep-green mb-2">Residential Junk Removal Calhoun LA</h3>
-                <p className="text-text-dark text-sm">Complete home cleanouts including furniture, appliances, and household items across Calhoun, Ruston, and Monroe Louisiana.</p>
-              </div>
-            </motion.div>
 
-            {/* Portfolio Item 2 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <div className="aspect-video overflow-hidden">
-                <motion.img 
-                  src="/portfolio-2.png" 
-                  alt="Commercial junk hauling Monroe LA - Kane's removing office furniture and equipment"
-                  className="w-full h-full object-cover"
-                  width="400"
-                  height="225"
-                  style={{ imageRendering: 'auto', filter: 'none' }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-deep-green mb-2">Commercial Junk Hauling Monroe LA</h3>
-                <p className="text-text-dark text-sm">Office cleanouts, retail spaces, and commercial property junk removal throughout Monroe, West Monroe, and surrounding Louisiana areas.</p>
-              </div>
-            </motion.div>
-
-            {/* Portfolio Item 3 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <div className="aspect-video overflow-hidden">
-                <motion.img 
-                  src="/portfolio-3.png" 
-                  alt="Construction debris removal Ruston LA - Kane's hauling building materials and renovation cleanup"
-                  className="w-full h-full object-cover"
-                  width="400"
-                  height="225"
-                  style={{ imageRendering: 'auto', filter: 'none' }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-deep-green mb-2">Construction Debris Removal Ruston LA</h3>
-                <p className="text-text-dark text-sm">Safe removal of construction materials, drywall, and renovation debris for contractors in Ruston, Farmerville, and North Louisiana.</p>
-              </div>
-            </motion.div>
-
-            {/* Portfolio Item 4 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <div className="aspect-video overflow-hidden">
-                <motion.img 
-                  src="/portfolio-4.png" 
-                  alt="Yard cleanup and outdoor debris removal Farmerville LA - Kane's hauling tree branches and landscaping materials"
-                  className="w-full h-full object-cover"
-                  width="400"
-                  height="225"
-                  style={{ imageRendering: 'auto', filter: 'none' }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-deep-green mb-2">Yard Cleanup Farmerville LA</h3>
-                <p className="text-text-dark text-sm">Tree branches, lawn debris, outdoor furniture, and landscaping material removal in Farmerville and surrounding Louisiana areas.</p>
-              </div>
-            </motion.div>
-
-            {/* Portfolio Item 5 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <div className="aspect-video overflow-hidden">
-                <motion.img 
-                  src="/portfolio-5.png" 
-                  alt="Appliance removal West Monroe LA - Kane's safely disposing refrigerators washers and large appliances"
-                  className="w-full h-full object-cover"
-                  width="400"
-                  height="225"
-                  style={{ imageRendering: 'auto', filter: 'none' }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-deep-green mb-2">Appliance Removal West Monroe LA</h3>
-                <p className="text-text-dark text-sm">Safe disposal of refrigerators, washers, dryers, and other large appliances in West Monroe and throughout Louisiana.</p>
-              </div>
-            </motion.div>
-
-            {/* Portfolio Item 6 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <div className="aspect-video overflow-hidden">
-                <motion.img 
-                  src="/Kane.jpeg" 
-                  alt="Kane's Junk Removal team owner - Professional licensed Louisiana junk hauling service provider"
-                  className="w-full h-full object-cover"
-                  width="400"
-                  height="225"
-                  style={{ imageRendering: 'auto', filter: 'none' }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-deep-green mb-2">Professional Louisiana Junk Removal</h3>
-                <p className="text-text-dark text-sm">Licensed, insured, and committed to serving Louisiana families with Christian values throughout Calhoun, Ruston, Monroe, and surrounding areas.</p>
-              </div>
-            </motion.div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <a 
-              href="#quote-form" 
-              className="btn-cta text-lg"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <i className="fas fa-shield-alt mr-2"></i>
-              GET YOUR FREE ESTIMATE TODAY
-            </a>
-          </div>
-        </div>
-      </section>
       {/* Trust Badges */}
-      <section className="bg-neutral-bg py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <motion.div 
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <i className="fas fa-shield-alt text-3xl text-deep-green mb-2"></i>
-              <span className="text-sm font-semibold text-text-dark">Licensed & Insured</span>
-            </motion.div>
-            <motion.div 
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <i className="fas fa-heart text-3xl text-vibrant-orange mb-2"></i>
-              <span className="text-sm font-semibold text-text-dark">Louisiana Born & Raised</span>
-            </motion.div>
-            <motion.div 
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <i className="fas fa-clock text-3xl text-deep-green mb-2"></i>
-              <span className="text-sm font-semibold text-text-dark">Same Day Service</span>
-            </motion.div>
-            <motion.div 
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <i className="fas fa-leaf text-3xl text-vibrant-orange mb-2"></i>
-              <span className="text-sm font-semibold text-text-dark">Eco-Friendly</span>
-            </motion.div>
+            {[
+              {
+                icon: "fas fa-shield-alt",
+                text: "Licensed & Insured",
+                color: "text-deep-green",
+              },
+              {
+                icon: "fas fa-heart",
+                text: "Christian Values",
+                color: "text-vibrant-orange",
+              },
+              {
+                icon: "fas fa-clock",
+                text: "Same-Day Service",
+                color: "text-deep-green",
+              },
+              {
+                icon: "fas fa-leaf",
+                text: "Eco-Friendly",
+                color: "text-vibrant-orange",
+              },
+            ].map((badge, index) => (
+              <motion.div
+                key={index}
+                className="flex flex-col items-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <i className={`${badge.icon} text-2xl ${badge.color} mb-2`}></i>
+                <span className="text-xs font-semibold text-text-dark">
+                  {badge.text}
+                </span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-      {/* Services Preview */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
-              Kane's Junk Hauling Services Louisiana
+
+      {/* Testimonials */}
+      <section className="py-10 sm:py-12 bg-charcoal text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
+              What Louisiana Customers Say
             </h2>
-            <p className="text-base sm:text-lg text-text-dark max-w-2xl mx-auto leading-relaxed">
-              Comprehensive junk removal solutions for homes and businesses in Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana
+            <p className="text-base text-gray-300">
+              Trusted by families and businesses across Northeast Louisiana
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden glassmorphism"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -8, 
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <img 
-                src="/portfolio-1.png" 
-                alt="Residential junk removal service in Louisiana" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-deep-green mb-3 flex items-center">
-                  <i className="fas fa-home text-vibrant-orange mr-1"></i>
-                  <span>Residential Cleanouts</span>
-                </h3>
-                <p className="text-sm sm:text-base text-text-dark mb-4 leading-relaxed">Home cleanouts, furniture removal, appliances, and household junk removal across Louisiana parishes.</p>
-                <ul className="text-sm text-text-dark/70 mb-6 space-y-2">
-                  <li>• Furniture & Appliances</li>
-                  <li>• Garage & Basement Cleanouts</li>
-                  <li>• Estate Cleanouts</li>
-                  <li>• Same Day Service Available</li>
-                </ul>
-                <Link href="/services" className="block w-full btn-secondary text-center">
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden glassmorphism"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -8, 
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <img 
-                src="/portfolio-2.png" 
-                alt="Commercial junk removal service in Louisiana" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-charcoal mb-3 flex items-center">
-                  <i className="fas fa-building text-louisiana-gold mr-1"></i>
-                  <span>Commercial Cleanouts</span>
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Office cleanouts, retail spaces, restaurants, and commercial property junk removal throughout Louisiana.</p>
-                <ul className="text-sm text-gray-500 mb-6 space-y-2">
-                  <li>• Office Furniture & Equipment</li>
-                  <li>• Retail Store Cleanouts</li>
-                  <li>• Restaurant Equipment</li>
-                  <li>• Scheduled Service Available</li>
-                </ul>
-                <Link href="/services" className="block w-full btn-secondary text-center">
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden glassmorphism"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -8, 
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <img 
-                src="/portfolio-3.png" 
-                alt="Construction debris removal in Louisiana" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-charcoal mb-3 flex items-center">
-                  <i className="fas fa-hard-hat text-louisiana-gold mr-1"></i>
-                  <span>Construction Debris</span>
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Construction cleanup, renovation debris, and building materials removal for Louisiana contractors.</p>
-                <ul className="text-sm text-gray-500 mb-6 space-y-2">
-                  <li>• Drywall & Wood Debris</li>
-                  <li>• Roofing Materials</li>
-                  <li>• Renovation Cleanup</li>
-                  <li>• Contractor Partnerships</li>
-                </ul>
-                <Link href="/services" className="block w-full btn-secondary text-center">
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      {/* Social Proof Section */}
-      <section className="py-12 sm:py-16 bg-charcoal text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military mb-4">
-              What Louisiana Families Say About Kane Pro
-            </h2>
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Geaux Kane Pro! Trusted by thousands of Louisiana residents and businesses
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <motion.div 
-              className="glassmorphism rounded-xl p-4 sm:p-6 text-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-            >
-              <motion.div 
-                className="flex justify-center mb-4"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                text: "Kane Pro came same day after hurricane damage. True professionals who understand Louisiana values. Highly recommend!",
+                author: "Sarah M., Monroe LA",
+                rating: 5,
+              },
+              {
+                text: "Faith-driven service shows in their work ethic. On time, efficient, and left our property cleaner than before.",
+                author: "Mike T., West Monroe LA",
+                rating: 5,
+              },
+              {
+                text: "Fair pricing and they donated items that were still good. These folks understand Louisiana communities.",
+                author: "Jennifer L., Ruston LA",
+                rating: 5,
+              },
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/10 rounded-lg p-4 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
               >
-                <div className="flex text-louisiana-gold text-xl">
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.4 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.5 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.6 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.7 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.8 }}
-                    viewport={{ once: true }}
-                  />
+                <div className="flex justify-center mb-3">
+                  <div className="flex text-yellow-400 text-sm">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <i key={i} className="fas fa-star"></i>
+                    ))}
+                  </div>
                 </div>
+                <p className="text-sm text-gray-200 mb-3 italic">
+                  "{testimonial.text}"
+                </p>
+                <p className="text-xs font-semibold text-vibrant-orange">
+                  {testimonial.author}
+                </p>
               </motion.div>
-              <p className="text-sm sm:text-base text-gray-200 mb-4 italic leading-relaxed">
-                "Kane Pro came out same day and cleared our whole garage after Hurricane damage. True Christian professionals who understand what we've been through. Highly recommend!"
-              </p>
-              <p className="text-sm font-semibold text-louisiana-gold">- Sarah M., Calhoun LA</p>
-            </motion.div>
-            
-            <motion.div 
-              className="glassmorphism rounded-xl p-4 sm:p-6 text-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-            >
-              <motion.div 
-                className="flex justify-center mb-4"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex text-louisiana-gold text-xl">
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.5 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.6 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.7 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.8 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.9 }}
-                    viewport={{ once: true }}
-                  />
-                </div>
-              </motion.div>
-              <p className="text-sm sm:text-base text-gray-200 mb-4 italic leading-relaxed">
-                "Faith-driven service is right! They showed up on time, worked efficiently, and left our property cleaner than when they arrived. Louisiana born and it shows in their work ethic."
-              </p>
-              <p className="text-sm font-semibold text-louisiana-gold">- Mike T., Monroe LA</p>
-            </motion.div>
-            
-            <motion.div 
-              className="glassmorphism rounded-xl p-4 sm:p-6 text-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-            >
-              <motion.div 
-                className="flex justify-center mb-4"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex text-louisiana-gold text-xl">
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.6 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.7 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.8 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.9 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.i 
-                    className="fas fa-star" 
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.3, delay: 1.0 }}
-                    viewport={{ once: true }}
-                  />
-                </div>
-              </motion.div>
-              <p className="text-sm sm:text-base text-gray-200 mb-4 italic leading-relaxed">
-                "Fair pricing, professional service, and they donated items that were still good. These folks understand Louisiana values. Will definitely use Kane Pro again!"
-              </p>
-              <p className="text-sm font-semibold text-louisiana-gold">- Jennifer L., Ruston LA</p>
-            </motion.div>
+            ))}
           </div>
-          
-          <div className="text-center mt-12">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-base sm:text-xl">
-              <span className="text-louisiana-gold font-bold">5.0 Stars</span>
+
+          <div className="text-center mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
+              <span className="text-yellow-400 font-bold">5.0 Stars</span>
               <span className="hidden sm:inline text-gray-300">|</span>
               <span className="text-gray-300">50+ Happy Customers</span>
               <span className="hidden sm:inline text-gray-300">|</span>
-              <span className="text-gray-300">Christian-Owned & Operated</span>
-            </div>
-            <div className="mt-4 text-sm sm:text-base text-gray-300">
-              Your Trusted Christian Neighbors in Louisiana
+              <span className="text-gray-300">
+                Family-Owned Christian Business
+              </span>
             </div>
           </div>
         </div>
       </section>
+
       {/* Quote Form */}
       <QuoteForm />
     </>

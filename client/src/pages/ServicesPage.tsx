@@ -1,48 +1,29 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
+import { motion } from "framer-motion";
 
 import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
 import WhatsApp_Image_2025_07_26_at_21_22_48__2_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2).jpeg";
 import WhatsApp_Image_2025_07_26_at_21_22_48 from "@assets/WhatsApp Image 2025-07-26 at 21.22.48.jpeg";
 
-// Enhanced structured data for better local SEO
+// Optimized structured data
 const generateServicesSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Kane Pro Junk Removal",
     description:
-      "Professional junk removal services in Ruston, Monroe, Calhoun, Farmerville & West Monroe Louisiana",
+      "Professional junk removal services in Monroe, West Monroe, Ruston & Northeast Louisiana",
     telephone: "+13189141201",
     email: "kaneprojunkremoval@gmail.com",
     url: "https://kaneprojunkremoval.com/services",
     areaServed: [
-      {
-        "@type": "City",
-        name: "Ruston",
-        addressRegion: "LA",
-      },
-      {
-        "@type": "City",
-        name: "Monroe",
-        addressRegion: "LA",
-      },
-      {
-        "@type": "City",
-        name: "Calhoun",
-        addressRegion: "LA",
-      },
-      {
-        "@type": "City",
-        name: "Farmerville",
-        addressRegion: "LA",
-      },
-      {
-        "@type": "City",
-        name: "West Monroe",
-        addressRegion: "LA",
-      },
+      { "@type": "City", name: "Monroe", addressRegion: "LA" },
+      { "@type": "City", name: "West Monroe", addressRegion: "LA" },
+      { "@type": "City", name: "Ruston", addressRegion: "LA" },
+      { "@type": "City", name: "Calhoun", addressRegion: "LA" },
+      { "@type": "City", name: "Farmerville", addressRegion: "LA" },
     ],
     serviceType: [
       "Residential Junk Removal",
@@ -56,718 +37,448 @@ const generateServicesSchema = () => {
   };
 };
 
+// Animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
+
 export default function ServicesPage() {
   return (
     <>
       <SEO
-        title="Junk Removal Calhoun, Ruston & Monroe LA | Kane Pro Hauling"
-        description="Professional junk removal services in Ruston, Monroe, Calhoun, Farmerville & West Monroe LA. Free estimates, same-day service. Call (318) 914-1201 today!"
-        keywords="junk removal near me, junk removal Calhoun LA 71225, commercial junk removal Monroe LA 71201, residential cleanouts Ruston LA 71270, appliance removal West Monroe LA 71291, debris removal Farmerville LA 71241, Louisiana Tech junk removal"
+        title="Junk Removal Services Monroe LA | Residential & Commercial | Kane Pro"
+        description="Professional junk removal in Monroe, West Monroe, Ruston & Northeast Louisiana. Residential cleanouts, commercial services, construction debris. Call (318) 914-1201!"
+        keywords="junk removal Monroe LA, residential junk removal Louisiana, commercial junk removal Monroe, construction debris removal Louisiana, appliance removal Monroe LA"
         canonicalUrl="https://kaneprojunkremoval.com/services"
-        ogTitle="#1 Junk Removal Services in Northeast Louisiana | Kane Pro"
-        ogDescription="Same-day junk removal in Ruston, Monroe, Calhoun & surrounding areas. Licensed & insured. Free estimates available!"
+        ogTitle="Monroe LA Junk Removal Services | Kane Pro Professional Hauling"
+        ogDescription="Complete junk removal services in Monroe & Northeast Louisiana. Same-day service available for residential, commercial & construction needs."
         structuredData={generateServicesSchema()}
-        city="Northeast Louisiana"
+        city="Monroe"
       />
-      {/* Breadcrumbs for better navigation */}
+
+      {/* Breadcrumbs */}
       <nav className="bg-gray-50 py-3" aria-label="Breadcrumb">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex items-center space-x-2 text-sm text-gray-600">
             <li>
-              <Link href="/" className="hover:text-louisiana-gold">
+              <Link href="/" className="hover:text-vibrant-orange">
                 Home
               </Link>
             </li>
             <li>
               <span className="mx-2">/</span>
             </li>
-            <li className="text-charcoal font-medium">Junk Removal Services</li>
+            <li className="text-charcoal font-medium">Services</li>
           </ol>
         </div>
       </nav>
 
-      {/* Page Header */}
-      <section className="pt-6 pb-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
-            Professional Junk Removal Services
-          </h1>
+      {/* Header */}
+      <section className="pt-8 pb-6 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h1
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-deep-green mb-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Monroe Louisiana Junk Removal Services
+          </motion.h1>
+          <motion.p
+            className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Professional junk hauling for homes and businesses across Northeast
+            Louisiana
+          </motion.p>
         </div>
       </section>
 
-      {/* Service Area Quick Info */}
-      <section className="py-8 bg-opacity-10 pt-[1px] pb-[1px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Service Areas */}
+      <section className="py-6 bg-neutral-bg">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4">
-            <span className="text-lg font-semibold text-deep-green">Serving North Louisiana:</span>
+            <span className="text-base font-semibold text-deep-green">
+              Serving:
+            </span>
           </div>
           <div className="flex flex-wrap justify-center gap-2">
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              Calhoun 71225
-            </span>
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              Ruston 71270
-            </span>
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              Monroe 71201
-            </span>
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              West Monroe 71291
-            </span>
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              Farmerville 71241
-            </span>
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              Grambling
-            </span>
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              Choudrant
-            </span>
-            <span className="inline-block px-4 py-2 rounded-full text-white text-sm font-semibold" style={{ backgroundColor: '#ef6706' }}>
-              Downsville
-            </span>
+            {[
+              "Monroe 71201",
+              "West Monroe 71291",
+              "Ruston 71270",
+              "Calhoun 71225",
+              "Farmerville 71241",
+              "Grambling",
+            ].map((area, index) => (
+              <span
+                key={index}
+                className="inline-block px-3 py-1 rounded-full bg-vibrant-orange text-white text-xs font-semibold"
+              >
+                {area}
+              </span>
+            ))}
           </div>
         </div>
       </section>
-      {/* Service Details */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12 sm:space-y-16">
+
+      {/* Services */}
+      <section className="py-10 sm:py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-12">
             {/* Residential Services */}
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <motion.div
+              className="grid lg:grid-cols-2 gap-8 items-center"
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInUp}
+              viewport={{ once: true, margin: "-50px" }}
+            >
               <div>
-                <h2 className="text-3xl font-military text-charcoal mb-6">
-                  <i
-                    className="fas fa-home text-louisiana-gold mr-3"
-                    aria-hidden="true"
-                  ></i>
-                  Residential Junk Removal in Ruston, LA
+                <h2 className="text-xl sm:text-2xl font-bold text-charcoal mb-4 flex items-center">
+                  <i className="fas fa-home text-vibrant-orange mr-2"></i>
+                  Residential Junk Removal
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                  From single items to complete home cleanouts, Kane Pro handles
-                  all your residential junk hauling needs across Calhoun,
-                  Farmerville, Ruston (including Louisiana Tech area), West
-                  Monroe, and Monroe Louisiana. 
-                </p>
-                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                  Our faith-driven team treats your home with respect while efficiently removing unwanted
-                  items. Serving Lincoln Parish, Union Parish, and Ouachita
-                  Parish with same-day service available.
+
+                <p className="text-base text-gray-600 mb-4 leading-relaxed">
+                  Complete home cleanouts and junk hauling throughout Monroe,
+                  West Monroe, Ruston, and Northeast Louisiana. We handle
+                  everything from single items to full estate cleanouts.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Furniture Removal Near Me
+                    <h3 className="font-semibold text-sm text-charcoal mb-2">
+                      What We Remove
                     </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Sofas, chairs, mattresses</li>
-                      <li>• Dining room sets</li>
-                      <li>• Bedroom furniture</li>
-                      <li>• Office furniture</li>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Furniture & mattresses</li>
+                      <li>• Appliances & electronics</li>
+                      <li>• Garage & basement cleanouts</li>
+                      <li>• Estate & moving cleanouts</li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Appliance Removal Service
+                    <h3 className="font-semibold text-sm text-charcoal mb-2">
+                      Service Areas
                     </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Refrigerators & washers</li>
-                      <li>• Stoves & dishwashers</li>
-                      <li>• Water heaters</li>
-                      <li>• HVAC units</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Complete Cleanout Services
-                    </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Garage cleanouts</li>
-                      <li>• Basement cleanouts</li>
-                      <li>• Attic cleanouts</li>
-                      <li>• Estate cleanouts</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Specialty Items
-                    </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Electronics disposal</li>
-                      <li>• Exercise equipment</li>
-                      <li>• Hot tubs & spas</li>
-                      <li>• Pianos & organs</li>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Monroe & West Monroe</li>
+                      <li>• Ruston (Louisiana Tech area)</li>
+                      <li>• Calhoun & Farmerville</li>
+                      <li>• Same-day service available</li>
                     </ul>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-charcoal mb-4 flex items-center gap-1">
-                    <i className="fas fa-map-marker-alt text-louisiana-gold"></i>
-                    <span>Residential Service Areas & Drive Times:</span>
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600">
-                    <div className="py-1">• Calhoun, LA - 0-10 minutes from base</div>
-                    <div className="py-1">• Farmerville, LA - 10-15 minutes</div>
-                    <div className="py-1">• Ruston, LA (Louisiana Tech) - 15-20 minutes</div>
-                    <div className="py-1">• West Monroe, LA - 20-25 minutes</div>
-                    <div className="py-1">• Monroe, LA (ULM area) - 25-30 minutes</div>
-                    <div className="py-1">• Grambling State University - 20 minutes</div>
-                  </div>
-                </div>
-
-                <a href="tel:+13189141201" className="btn-cta inline-block">
-                  <i className="fas fa-phone mr-2"></i>
-                  Call for Residential Service
+                <a
+                  href="tel:+13189141201"
+                  className="btn-cta inline-block text-sm px-4 py-2"
+                >
+                  <i className="fas fa-phone mr-1"></i>
+                  Get Free Estimate
                 </a>
               </div>
+
               <div>
                 <img
                   src={WhatsApp_Image_2025_07_26_at_21_22_48__3_}
-                  alt="Professional residential junk removal team loading furniture in Ruston Louisiana near Louisiana Tech University"
-                  className="w-full rounded-xl shadow-lg"
+                  alt="Residential junk removal team in Monroe Louisiana"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                  width="400"
+                  height="300"
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Commercial Services */}
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <motion.div
+              className="grid lg:grid-cols-2 gap-8 items-center"
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInUp}
+              viewport={{ once: true, margin: "-50px" }}
+            >
               <div className="order-2 lg:order-1">
                 <img
                   src={WhatsApp_Image_2025_07_26_at_21_22_48__2_}
-                  alt="Commercial junk removal services for businesses in Monroe Louisiana including office cleanouts and retail space clearing"
-                  className="w-full rounded-xl shadow-lg"
+                  alt="Commercial junk removal services in Monroe Louisiana"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                  width="400"
+                  height="300"
                 />
               </div>
+
               <div className="order-1 lg:order-2">
-                <h2 className="text-3xl font-military text-charcoal mb-6">
-                  <i className="fas fa-building text-louisiana-gold mr-3"></i>
-                  Commercial Junk Removal in Monroe, LA
+                <h2 className="text-xl sm:text-2xl font-bold text-charcoal mb-4 flex items-center">
+                  <i className="fas fa-building text-vibrant-orange mr-2"></i>
+                  Commercial Junk Removal
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                  Keep your Louisiana business running smoothly with
-                  professional commercial junk removal. We work around your
-                  schedule to minimize disruption while maximizing efficiency.
-                </p>
-                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                  Serving downtown Monroe, West Monroe business district, Ruston
-                  commercial areas near Louisiana Tech, and Farmerville business
-                  zones.
+
+                <p className="text-base text-gray-600 mb-4 leading-relaxed">
+                  Professional commercial cleanouts for businesses in Monroe,
+                  West Monroe, and Northeast Louisiana. We work around your
+                  schedule to minimize disruption.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Office Cleanouts
+                    <h3 className="font-semibold text-sm text-charcoal mb-2">
+                      Business Types
                     </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Furniture & equipment</li>
-                      <li>• IT equipment disposal</li>
-                      <li>• Document shredding</li>
-                      <li>• Cubicle removal</li>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Office buildings</li>
+                      <li>• Retail stores</li>
+                      <li>• Restaurants & cafes</li>
+                      <li>• Warehouses</li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Retail Spaces
+                    <h3 className="font-semibold text-sm text-charcoal mb-2">
+                      Services
                     </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Store fixtures</li>
-                      <li>• Inventory removal</li>
-                      <li>• Display cases</li>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Equipment removal</li>
                       <li>• Renovation cleanup</li>
+                      <li>• Scheduled service</li>
+                      <li>• Volume discounts</li>
                     </ul>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Restaurants
-                    </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Kitchen equipment</li>
-                      <li>• Dining furniture</li>
-                      <li>• Grease trap cleaning</li>
-                      <li>• Deep fryer removal</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Warehouses
-                    </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Industrial equipment</li>
-                      <li>• Shelving systems</li>
-                      <li>• Pallet removal</li>
-                      <li>• Machinery disposal</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="bg-louisiana-gold bg-opacity-10 p-4 sm:p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-charcoal mb-4 flex items-center">
-                    <i className="fas fa-handshake text-louisiana-gold mr-1"></i>
-                    <span>Commercial Partnership Benefits:</span>
-                  </h3>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• Scheduled regular service</li>
-                    <li>• Volume discounts available</li>
-                    <li>• 24/7 emergency response</li>
-                    <li>• Proper disposal certificates</li>
-                    <li>• Louisiana licensed & insured</li>
-                  </ul>
                 </div>
 
                 <a
                   href="tel:+13189141201"
-                  className="btn-secondary inline-block"
+                  className="btn-secondary inline-block text-sm px-4 py-2"
                 >
-                  <i className="fas fa-briefcase mr-2"></i>
-                  Get Commercial Quote
+                  <i className="fas fa-briefcase mr-1"></i>
+                  Commercial Quote
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Construction Services */}
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <motion.div
+              className="grid lg:grid-cols-2 gap-8 items-center"
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInUp}
+              viewport={{ once: true, margin: "-50px" }}
+            >
               <div>
-                <h2 className="text-3xl font-military text-charcoal mb-6">
-                  <i className="fas fa-hard-hat text-louisiana-gold mr-3"></i>
-                  Construction Debris Removal in North Louisiana
+                <h2 className="text-xl sm:text-2xl font-bold text-charcoal mb-4 flex items-center">
+                  <i className="fas fa-hard-hat text-vibrant-orange mr-2"></i>
+                  Construction Debris Removal
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                  Louisiana contractors trust Kane Pro for efficient
-                  construction debris removal. We understand job site safety and
-                  timeline requirements with integrity, keeping your projects on
-                  schedule and compliant.
-                </p>
-                <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                  Serving construction sites throughout
-                  Lincoln Parish, Union Parish, and Ouachita Parish.
+
+                <p className="text-base text-gray-600 mb-4 leading-relaxed">
+                  Safe, efficient construction debris removal for Louisiana
+                  contractors. We understand job site requirements and keep
+                  projects on schedule.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Demolition Debris
+                    <h3 className="font-semibold text-sm text-charcoal mb-2">
+                      Materials
                     </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Drywall & sheetrock</li>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Drywall & lumber</li>
                       <li>• Concrete & brick</li>
-                      <li>• Metal & steel</li>
-                      <li>• Tile & flooring</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Renovation Cleanup
-                    </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Lumber & wood waste</li>
                       <li>• Roofing materials</li>
-                      <li>• Insulation removal</li>
-                      <li>• Window & door removal</li>
+                      <li>• Renovation debris</li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Specialty Removal
+                    <h3 className="font-semibold text-sm text-charcoal mb-2">
+                      Specialties
                     </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Asbestos containment</li>
-                      <li>• Lead paint disposal</li>
-                      <li>• Hazmat certified team</li>
-                      <li>• EPA compliant disposal</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal mb-3">
-                      Storm Damage
-                    </h3>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Hurricane cleanup</li>
-                      <li>• Tree & debris removal</li>
-                      <li>• Flood damage cleanup</li>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Storm damage cleanup</li>
                       <li>• Emergency response</li>
+                      <li>• EPA compliant disposal</li>
+                      <li>• Licensed & insured</li>
                     </ul>
                   </div>
                 </div>
 
-                <div className="bg-red-50 p-6 rounded-lg mb-6">
-                  <h3 className="font-semibold text-red-700 mb-3">
-                    <i className="fas fa-exclamation-triangle text-red-500 mr-2"></i>
-                    Emergency Construction Cleanup:
-                  </h3>
-                  <p className="text-red-600 mb-3">
-                    Storm damage? Site accident? We provide 24/7 emergency
-                    construction debris removal across Louisiana.
-                  </p>
-                  <a
-                    href="tel:+13189141201"
-                    className="text-red-700 font-semibold hover:text-red-800"
-                  >
-                    Call Emergency Line: (318) 914-1201
-                  </a>
-                </div>
-
-                <a href="tel:+13189141201" className="btn-cta inline-block">
-                  <i className="fas fa-tools mr-2"></i>
-                  Get Construction Quote
+                <a
+                  href="tel:+13189141201"
+                  className="btn-cta inline-block text-sm px-4 py-2"
+                >
+                  <i className="fas fa-tools mr-1"></i>
+                  Construction Quote
                 </a>
               </div>
+
               <div>
                 <img
                   src={WhatsApp_Image_2025_07_26_at_21_22_48}
-                  alt="Construction debris removal and demolition cleanup at Louisiana job sites including drywall concrete and renovation waste"
-                  className="w-full rounded-xl shadow-lg"
+                  alt="Construction debris removal in Louisiana"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                  width="400"
+                  height="300"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
-      {/* FAQ Section for Enhanced SEO */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
+
+      {/* FAQ Section */}
+      <section className="py-10 sm:py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-3">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Common questions about junk removal services in North Louisiana
+            <p className="text-base text-gray-600">
+              Common questions about Louisiana junk removal
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-charcoal mb-3">
-                How much does junk removal cost in Ruston, LA?
-              </h3>
-              <p className="text-gray-600">
-                Junk removal costs in Ruston typically range from $150-$600
-                depending on the volume of items. We provide free in-person
-                estimates for accurate pricing based on your specific needs.
-                Factors include item size, weight, and disposal requirements.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-charcoal mb-3">
-                Do you offer same-day junk removal service?
-              </h3>
-              <p className="text-gray-600">
-                Yes! We offer same-day junk removal service throughout Monroe,
-                Calhoun, Farmerville, Ruston, and West Monroe when you call
-                before 2 PM. Emergency services are available 24/7 for urgent
-                situations.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-charcoal mb-3">
-                What items can you remove from my home?
-              </h3>
-              <p className="text-gray-600">
-                We remove furniture, appliances, electronics, construction
-                debris, yard waste, and most household items. We cannot remove
-                hazardous materials, paint, chemicals, or items containing
-                asbestos without proper certification.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-charcoal mb-3">
-                Are you licensed and insured in Louisiana?
-              </h3>
-              <p className="text-gray-600">
-                Yes, Kane Pro Junk Removal is fully licensed and insured to
-                operate in Louisiana. We carry general liability insurance and
-                workers compensation to protect your property and our team
-                during service.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-charcoal mb-3">
-                How far do you travel for junk removal?
-              </h3>
-              <p className="text-gray-600">
-                We serve a 30-mile radius from our Calhoun base, including
-                Ruston (Louisiana Tech area), Monroe, West Monroe, Farmerville,
-                Grambling, Choudrant, and surrounding Union Parish, Lincoln
-                Parish, and Ouachita Parish communities.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-charcoal mb-3">
-                Do you recycle or donate items?
-              </h3>
-              <p className="text-gray-600">
-                Absolutely! We prioritize eco-friendly disposal by donating
-                usable items to local Louisiana charities and recycling
-                materials whenever possible. We're committed to keeping items
-                out of landfills when appropriate.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Customer Reviews Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
-              What Our Louisiana Customers Say
-            </h2>
-            <div className="flex justify-center items-center space-x-1 mb-4">
-              <i className="fas fa-star text-louisiana-gold text-xl"></i>
-              <i className="fas fa-star text-louisiana-gold text-xl"></i>
-              <i className="fas fa-star text-louisiana-gold text-xl"></i>
-              <i className="fas fa-star text-louisiana-gold text-xl"></i>
-              <i className="fas fa-star text-louisiana-gold text-xl"></i>
-              <span className="ml-2 text-lg text-gray-600">
-                5.0 stars from local customers
-              </span>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <div className="flex items-center mb-4">
-                <div className="flex space-x-1">
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                "Kane Pro removed all our old furniture when we moved to Ruston.
-                Professional, on-time, and fair pricing. Highly recommend for
-                junk removal in North Louisiana!"
-              </p>
-              <div className="text-sm text-gray-500">- Sarah M., Ruston LA</div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <div className="flex items-center mb-4">
-                <div className="flex space-x-1">
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                "Excellent commercial cleanout service for our Monroe office
-                renovation. They worked around our schedule and handled
-                everything professionally."
-              </p>
-              <div className="text-sm text-gray-500">- Mike T., Monroe LA</div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <div className="flex items-center mb-4">
-                <div className="flex space-x-1">
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                  <i className="fas fa-star text-louisiana-gold"></i>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                "Fast same-day service in Calhoun! They removed our old
-                appliances and donated what they could. Great local company with
-                integrity."
-              </p>
-              <div className="text-sm text-gray-500">
-                - Jennifer L., Calhoun LA
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Free Estimate Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
-              Free In-Person Estimates
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Fair, transparent pricing with no surprises. We come to you for
-              accurate estimates on all junk removal projects throughout North
-              Louisiana.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-charcoal mb-4">
-                  <i className="fas fa-handshake text-louisiana-gold mr-2"></i>
-                  Our Estimate Process
+          <div className="space-y-4">
+            {[
+              {
+                q: "How much does junk removal cost in Monroe, LA?",
+                a: "Costs typically range from $150-$600 depending on volume. We provide free in-person estimates for accurate pricing based on your specific needs.",
+              },
+              {
+                q: "Do you offer same-day service?",
+                a: "Yes! Same-day service available in Monroe, West Monroe, Ruston, and surrounding areas when you call before 2 PM.",
+              },
+              {
+                q: "What items can you remove?",
+                a: "We remove furniture, appliances, electronics, construction debris, and most household items. We cannot remove hazardous materials without proper certification.",
+              },
+              {
+                q: "Are you licensed and insured?",
+                a: "Yes, Kane Pro is fully licensed and insured to operate in Louisiana with general liability and workers compensation coverage.",
+              },
+              {
+                q: "Do you recycle or donate items?",
+                a: "Absolutely! We donate usable items to local Louisiana charities and recycle materials when possible to keep items out of landfills.",
+              },
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-lg shadow-sm p-4"
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInUp}
+                viewport={{ once: true, margin: "-50px" }}
+              >
+                <h3 className="text-base font-semibold text-charcoal mb-2">
+                  {faq.q}
                 </h3>
-                <ul className="text-gray-600 space-y-3 mb-6">
-                  <li className="flex items-start gap-3">
-                    <i className="fas fa-phone text-louisiana-gold mt-1 flex-shrink-0"></i>
-                    <span>
-                      <strong>Call Us:</strong> Schedule your free estimate by
-                      phone
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <i className="fas fa-home text-louisiana-gold mt-1 flex-shrink-0"></i>
-                    <span>
-                      <strong>We Visit:</strong> Our team comes to your location
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <i className="fas fa-calculator text-louisiana-gold mt-1 flex-shrink-0"></i>
-                    <span>
-                      <strong>Fair Quote:</strong> Accurate pricing based on
-                      actual volume
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <i className="fas fa-check text-louisiana-gold mt-1 flex-shrink-0"></i>
-                    <span>
-                      <strong>No Pressure:</strong> Take time to decide -
-                      estimates valid 30 days
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="bg-vibrant-orange text-white rounded-xl p-6 mb-4">
-                  <h4 className="text-xl font-bold mb-2">100% FREE</h4>
-                  <p className="text-lg">In-Person Estimates</p>
-                </div>
-                <a
-                  href="tel:+13189141201"
-                  className="btn-cta text-lg w-full block"
-                >
-                  <i className="fas fa-phone mr-2"></i>
-                  Call (318) 914-1201
-                </a>
-                <p className="text-sm text-gray-500 mt-2">
-                  Available 7am-8pm Mon-Sat
-                </p>
-              </div>
-            </div>
+                <p className="text-sm text-gray-600">{faq.a}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-      {/* Service Area Map */}
-      <section className="py-16 bg-deep-green text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military mb-4 text-white">
-              Proudly Serving North Louisiana
+
+      {/* Testimonials */}
+      <section className="py-10 sm:py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-3">
+              Louisiana Customer Reviews
             </h2>
-            <p className="text-lg text-gray-300">
-              Same day service available across our Louisiana service area -
-              within 30 miles of Calhoun
+            <div className="flex justify-center items-center gap-1 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <i key={i} className="fas fa-star text-yellow-400 text-lg"></i>
+              ))}
+              <span className="ml-2 text-base text-gray-600">5.0 stars</span>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                text: "Professional junk removal in Ruston. On-time, fair pricing, highly recommend!",
+                author: "Sarah M., Ruston LA",
+              },
+              {
+                text: "Excellent commercial cleanout for our Monroe office renovation. Very professional.",
+                author: "Mike T., Monroe LA",
+              },
+              {
+                text: "Fast same-day service in Calhoun! Great local company with integrity.",
+                author: "Jennifer L., Calhoun LA",
+              },
+            ].map((review, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-50 rounded-lg p-4 text-center"
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInUp}
+                viewport={{ once: true, margin: "-50px" }}
+              >
+                <div className="flex justify-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <i
+                      key={i}
+                      className="fas fa-star text-yellow-400 text-sm"
+                    ></i>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-600 mb-2 italic">
+                  "{review.text}"
+                </p>
+                <p className="text-xs text-vibrant-orange font-semibold">
+                  {review.author}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-10 sm:py-12 bg-deep-green text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
+              Ready for Professional Junk Removal?
+            </h2>
+            <p className="text-base text-gray-300 mb-6 max-w-2xl mx-auto">
+              Serving Monroe, West Monroe, Ruston & Northeast Louisiana with
+              same-day service available
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold text-vibrant-orange mb-2">
-                Calhoun
-              </h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Our home base - serving Union Parish with pride
-              </p>
-              <Link
-                href="/areas"
-                className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13189141201"
+                className="btn-cta text-base px-6 py-3"
               >
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold text-vibrant-orange mb-2">
-                Farmerville
-              </h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Rural & farm property specialists
-              </p>
-              <Link
-                href="/areas"
-                className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors"
-              >
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold text-vibrant-orange mb-2">
-                Ruston
-              </h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Louisiana Tech University area service
-              </p>
-              <Link
-                href="/areas"
-                className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors"
-              >
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold text-vibrant-orange mb-2">
-                West Monroe
-              </h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Ouachita Parish commercial specialists
-              </p>
-              <Link
-                href="/areas"
-                className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors"
-              >
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
-              <h3 className="text-xl font-bold text-vibrant-orange mb-2">
-                Monroe
-              </h3>
-              <p className="text-gray-300 text-sm mb-4">
-                North Louisiana's largest city coverage
-              </p>
-              <Link
-                href="/areas"
-                className="inline-block bg-vibrant-orange text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-vibrant-orange/90 transition-colors"
-              >
-                Learn More →
-              </Link>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="tel:+13189141201" className="btn-cta text-lg">
                 <i className="fas fa-phone mr-2"></i>
                 Call (318) 914-1201
               </a>
-              <a
-                href="mailto:kaneprojunkremoval@gmail.com"
-                className="btn-outline text-lg"
-              >
-                <i className="fas fa-envelope mr-2"></i>
-                Email Us Today
+              <a href="#quote-form" className="btn-outline text-base px-6 py-3">
+                <i className="fas fa-calculator mr-2"></i>
+                Get Free Quote
               </a>
             </div>
-          </div>
+
+            <p className="text-sm text-gray-300 mt-4">
+              Licensed & Insured • Same-Day Service Available
+            </p>
+          </motion.div>
         </div>
       </section>
+
       {/* Quote Form */}
       <QuoteForm />
     </>

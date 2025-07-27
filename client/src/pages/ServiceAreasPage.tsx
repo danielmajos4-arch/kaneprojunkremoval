@@ -15,9 +15,6 @@ export default function ServiceAreasPage() {
         structuredData={generateLocalBusinessSchema("West Monroe")}
         city="West Monroe"
       />
-      
-
-
       {/* Service Areas Overview */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,9 +31,9 @@ export default function ServiceAreasPage() {
             {/* Calhoun */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                src="attached_assets/WhatsApp Image 2025-07-26 at 21.22.48 (1).jpeg" 
                 alt="Calhoun Louisiana junk removal service area" 
-                className="w-full h-48 object-cover" 
+                className="w-full h-48 object-cover pt-[-17px] pb-[-17px]" 
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-charcoal mb-3">
@@ -165,7 +162,6 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       </section>
-
       {/* Detailed City Sections */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
@@ -438,7 +434,6 @@ export default function ServiceAreasPage() {
 
         </div>
       </section>
-
       {/* Coverage Map Section */}
       <section className="py-16 bg-charcoal text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -542,7 +537,6 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       </section>
-
       {/* Local Louisiana Pride */}
       <section className="py-16 bg-louisiana-gold">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -588,7 +582,6 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       </section>
-
       {/* Quote Form */}
       <QuoteForm />
     </>
