@@ -5,6 +5,8 @@ import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 20
 
 import WhatsApp_Image_2025_07_26_at_21_22_48__2_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2).jpeg";
 
+import WhatsApp_Image_2025_07_26_at_21_22_48 from "@assets/WhatsApp Image 2025-07-26 at 21.22.48.jpeg";
+
 export default function ServicesPage() {
   return (
     <>
@@ -258,7 +260,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  src={WhatsApp_Image_2025_07_26_at_21_22_48} 
                   alt="Construction debris removal at Louisiana job site"
                   className="w-full rounded-xl shadow-lg"
                 />
