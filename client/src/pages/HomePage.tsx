@@ -161,7 +161,7 @@ export default function HomePage() {
               <div className="space-y-4 text-text-dark leading-relaxed">
                 <p>When Kaleb started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on. What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.</p>
                 
-                <p>Kaleb started Kane Pro with one goal: provide honest, reliable junk removal that Louisiana families can trust. From Calhoun to Monroe, we've become the local choice for fast, affordable junk hauling.</p>
+                
 
                 <p>As a <strong>local Louisiana business</strong>, we understand our community. We offer in-person estimates for transparent pricing and treat every job with Christian values and professionalism.</p>
 
