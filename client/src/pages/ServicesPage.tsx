@@ -330,7 +330,7 @@ export default function ServicesPage() {
             <h2 className="text-3xl md:text-4xl font-military mb-4 text-[#e87036]">
               Proudly Serving North Louisiana
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-[#0209129e]">
               Same day service available across our Louisiana service area
             </p>
           </div>
