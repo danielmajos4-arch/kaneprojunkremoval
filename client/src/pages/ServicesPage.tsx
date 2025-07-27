@@ -12,14 +12,14 @@ export default function ServicesPage() {
   return (
     <>
       <SEO 
-        title="Junk Removal Services in Ruston, Louisiana | Kane Pro Hauling"
+        title="Junk Removal Services in Calhoun,Ruston, Louisiana | Kane Pro Hauling"
         description="Professional junk removal services in Ruston, Monroe, Calhoun, Farmerville & West Monroe LA. Residential & commercial cleanouts, appliance removal. Call today for free estimates!"
-        keywords="junk removal services Ruston LA, commercial junk removal Monroe LA, residential cleanouts Calhoun LA, appliance removal West Monroe LA, debris removal Farmerville LA"
-        canonicalUrl="https://kanejunkremoval.com/services"
+        keywords="junk removal services Calhoun LA, commercial junk removal Monroe LA, residential cleanouts Calhoun LA, Ruston LA, appliance removal West Monroe LA, debris removal Farmerville LA"
+        canonicalUrl="https://kaneprojunkremoval.com/services"
         ogTitle="Complete Junk Removal Services in Northeast Louisiana | Kane Pro"
         ogDescription="Full-service junk removal in Ruston, Monroe, Calhoun, Farmerville & West Monroe. Residential & commercial services. Licensed & insured."
-        structuredData={generateLocalBusinessSchema("Ruston")}
-        city="Ruston"
+        structuredData={generateLocalBusinessSchema("Calhoun")}
+        city="Calhoun"
       />
       
       {/* Hero Section */}
