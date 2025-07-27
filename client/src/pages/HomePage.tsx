@@ -161,15 +161,13 @@ export default function HomePage() {
               <div className="space-y-4 text-text-dark leading-relaxed">
                 <p>When Kaleb started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on. What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.</p>
                 
-                <p>
-                  Kaleb takes pride in fast, affordable, and dependable junk removal services. Unlike big franchises, we're a local Louisiana business that understands our community's needs. We offer <strong>in-person estimates</strong> because we believe in transparent pricing and building trust with every customer.
-                </p>
-                
-                <p>
-                  Our commitment goes beyond just hauling junk away. We focus on keeping your property clean during and after the job, ensuring same-day service when possible, and treating every project with the professionalism you deserve. Whether it's residential cleanouts in Calhoun, commercial junk removal in Monroe, or construction debris hauling in Ruston, we handle it all with Christian values and community heart.
-                </p>
-                
-                <p>Customer satisfaction isn't just our goal, it's our guarantee. We're not satisfied until you are completely happy with our junk removal service. That's the Kane's difference in Louisiana.</p>
+                <p>Kaleb started Kane Pro with one goal: provide honest, reliable junk removal that Louisiana families can trust. From Calhoun to Monroe, we've become the local choice for fast, affordable junk hauling.</p>
+
+                <p>As a <strong>local Louisiana business</strong>, we understand our community. We offer in-person estimates for transparent pricing and treat every job with Christian values and professionalism.</p>
+
+                <p>Whether it's residential cleanouts, commercial junk removal, or construction debris, we handle it all. Same-day service when possible, and we keep your property clean throughout the process.</p>
+
+                <p><strong>Your satisfaction is our guarantee.</strong> We're not done until you're completely happy. That's the Kane Pro difference.</p>
               </div>
 
               <div className="mt-8">
