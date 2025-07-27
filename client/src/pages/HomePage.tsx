@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 
 // Animation variants for different elements
 const fadeInUp = {
@@ -40,6 +41,17 @@ export default function HomePage() {
 
   return (
     <>
+      <SEO 
+        title="Junk Removal in Calhoun, Louisiana | Kane Pro Junk Removal & Hauling"
+        description="Fast and affordable junk removal in Calhoun, Ruston, Monroe, Farmerville & West Monroe LA. Same-day service, licensed & insured. Call (318) 914-1201 for free estimates!"
+        keywords="junk removal Calhoun LA, junk removal Ruston LA, junk removal Monroe LA, junk removal Farmerville LA, junk removal West Monroe LA, debris removal Louisiana, Kane junk removal"
+        canonicalUrl="https://kanejunkremoval.com/"
+        ogTitle="Professional Junk Removal in Calhoun, Louisiana | Kane Pro"
+        ogDescription="Same-day junk removal serving Calhoun, Ruston, Monroe, Farmerville & West Monroe Louisiana. Family-owned Christian business. Free estimates!"
+        structuredData={generateLocalBusinessSchema("Northeast Louisiana")}
+        city="Calhoun"
+      />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center hero-section">
         {/* Louisiana landmark background with overlay */}
@@ -66,7 +78,7 @@ export default function HomePage() {
               className="text-4xl md:text-6xl font-military text-white mb-6"
               variants={fadeInUp}
             >
-              Fast, Affordable Junk Removal in Calhoun, LA
+              Professional Junk Removal in Calhoun, Louisiana
               <motion.span 
                 className="text-vibrant-orange block"
                 variants={fadeInUp}
@@ -78,7 +90,7 @@ export default function HomePage() {
             <motion.p 
               className="text-xl md:text-2xl max-w-3xl mx-auto font-medium text-white text-center bg-black/20 rounded-lg px-6 py-4"
               variants={fadeInUp}
-            >Same-day junk hauling, cleanouts & debris removal. Serving Calhoun, Monroe, West Monroe & beyond.
+            >Same-day junk hauling, cleanouts & debris removal. We proudly serve Calhoun, LA, offering fast junk removal around Highway 80, near Calhoun Middle School, and throughout surrounding neighborhoods in Monroe, West Monroe, Ruston, and Farmerville.
 </motion.p>
             
             <motion.div 

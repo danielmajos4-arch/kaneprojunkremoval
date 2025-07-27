@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
+import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 
 import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
 
@@ -10,6 +11,17 @@ import WhatsApp_Image_2025_07_26_at_21_22_48 from "@assets/WhatsApp Image 2025-0
 export default function ServicesPage() {
   return (
     <>
+      <SEO 
+        title="Junk Removal Services in Ruston, Louisiana | Kane Pro Hauling"
+        description="Professional junk removal services in Ruston, Monroe, Calhoun, Farmerville & West Monroe LA. Residential & commercial cleanouts, appliance removal. Call today for free estimates!"
+        keywords="junk removal services Ruston LA, commercial junk removal Monroe LA, residential cleanouts Calhoun LA, appliance removal West Monroe LA, debris removal Farmerville LA"
+        canonicalUrl="https://kanejunkremoval.com/services"
+        ogTitle="Complete Junk Removal Services in Northeast Louisiana | Kane Pro"
+        ogDescription="Full-service junk removal in Ruston, Monroe, Calhoun, Farmerville & West Monroe. Residential & commercial services. Licensed & insured."
+        structuredData={generateLocalBusinessSchema("Ruston")}
+        city="Ruston"
+      />
+      
       {/* Hero Section */}
       <section className="relative py-20 text-white">
         <div 
@@ -23,10 +35,10 @@ export default function ServicesPage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-military mb-4 text-shadow-lg">
-            Junk Removal Services Louisiana | Kane's Hauling Calhoun
+            Professional Junk Removal Services in Ruston, Louisiana
           </h1>
           <p className="text-xl max-w-3xl mx-auto text-shadow-md">
-            Professional junk hauling & debris removal serving Calhoun, Ruston, Monroe, Farmerville & West Monroe LA
+            Comprehensive junk hauling & debris removal serving Ruston near Louisiana Tech University, and throughout Monroe, Calhoun, Farmerville & West Monroe LA
           </p>
         </div>
       </section>
@@ -40,7 +52,7 @@ export default function ServicesPage() {
               <div>
                 <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i className="fas fa-home text-louisiana-gold mr-3" aria-hidden="true"></i>
-                  Residential Junk Removal Calhoun, Ruston & Monroe LA
+                  Residential Junk Removal in Ruston, LA
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
                   From single items to complete home cleanouts, Kane's handles all your residential junk hauling needs across Calhoun, Farmerville, Ruston, West Monroe, and Monroe Louisiana. Our faith-driven team treats your home with respect while efficiently removing unwanted items.
@@ -126,7 +138,7 @@ export default function ServicesPage() {
               <div className="order-1 lg:order-2">
                 <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i className="fas fa-building text-louisiana-gold mr-3"></i>
-                  Commercial Cleanouts Across Louisiana
+                  Commercial Junk Removal in Monroe, LA
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
                   Keep your Louisiana business running smoothly with professional commercial junk removal. We work around your schedule to minimize disruption while maximizing efficiency.
@@ -197,7 +209,7 @@ export default function ServicesPage() {
               <div>
                 <h2 className="text-3xl font-military text-charcoal mb-6">
                   <i className="fas fa-hard-hat text-louisiana-gold mr-3"></i>
-                  Construction Debris - Louisiana Job Sites
+                  Construction Debris Removal in Calhoun, LA
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
                   Louisiana contractors trust Kane Pro for efficient construction debris removal. We understand job site safety and timeline requirements with integrity, keeping your projects on schedule and compliant.

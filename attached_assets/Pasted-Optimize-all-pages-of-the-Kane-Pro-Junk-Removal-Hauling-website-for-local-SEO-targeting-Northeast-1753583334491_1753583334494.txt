@@ -1,0 +1,41 @@
+Optimize all pages of the Kane Pro Junk Removal & Hauling website for local SEO, targeting Northeast Louisiana with a focus on these cities:
+Calhoun, Farmerville, Ruston, West Monroe, and Monroe.
+
+Apply these improvements to every relevant page:
+
+1. META TAGS:
+   - Add unique meta titles and meta descriptions for each city page.
+   - Titles: “Junk Removal in [City], Louisiana | Kane Pro Junk Removal & Hauling”
+   - Descriptions: Mention junk removal, hauling, the city name, and include a call to action (e.g., “Fast and affordable junk removal in Calhoun, LA. Call today for a free estimate!”).
+
+2. HEADINGS:
+   - For each city-specific page, the H1 tag must be:
+     “Professional Junk Removal in [City], Louisiana”
+   - Add H2 tags for services:
+     “[Service Name] in [City], LA”
+     Replace [City] with Calhoun, Farmerville, Ruston, West Monroe, or Monroe as appropriate.
+
+3. STRUCTURED DATA:
+   - Add LocalBusiness schema (JSON-LD) to every page, including:
+     • Business name: Kane Pro Junk Removal & Hauling
+     • Address: 493 JB Cyrus Rd, Calhoun, LA 71225
+     • Phone: (use the correct business phone)
+     • Service areas: Calhoun, Farmerville, Ruston, West Monroe, Monroe
+     • Website URL
+     • Opening hours
+     • Business type: Junk Removal Service
+
+4. LOCAL CONTENT:
+   - Add 2–3 sentences of content specific to each city, referencing local landmarks, neighborhoods, or highways. Example for Calhoun:
+     “We proudly serve Calhoun, LA, offering fast junk removal around Highway 80, Calhoun Middle School, and nearby neighborhoods.”
+   - Do similar localized text for Farmerville, Ruston, West Monroe, and Monroe.
+
+5. INTERNAL LINKING:
+   - Add internal links connecting city-specific pages and main service pages so search engines and visitors can navigate easily.
+
+6. PERFORMANCE & MOBILE:
+   - Ensure that all pages remain mobile-friendly, fast-loading, and accessible.
+
+Goal:
+Make the website rank for searches like “junk removal Calhoun LA”, “junk removal Ruston LA”, and other Northeast Louisiana cities by optimizing on-page SEO, headings, meta tags, schema, and local content.
+Replace [City] with the exact city name on each page. Do not leave [City] in brackets.

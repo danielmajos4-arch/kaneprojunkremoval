@@ -1,8 +1,20 @@
 import ContactForm from "@/components/ContactForm";
+import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 
 export default function AboutPage() {
   return (
     <>
+      <SEO 
+        title="About Kane Pro Junk Removal in Monroe, Louisiana | Our Story"
+        description="Learn about Kane Pro Junk Removal, a family-owned Christian business serving Monroe, West Monroe, Calhoun, Ruston & Farmerville LA since our founding. Call (318) 914-1201!"
+        keywords="about Kane junk removal Monroe LA, family owned junk removal Monroe LA, Christian junk removal Louisiana, Monroe junk removal company"
+        canonicalUrl="https://kanejunkremoval.com/about"
+        ogTitle="About Kane Pro Junk Removal | Faith-Driven Family Business in Monroe, LA"
+        ogDescription="Discover our story as a family-owned Christian junk removal business serving Monroe, West Monroe, and Northeast Louisiana with integrity."
+        structuredData={generateLocalBusinessSchema("Monroe")}
+        city="Monroe"
+      />
+      
       {/* Hero Section */}
       <section className="relative py-20 bg-charcoal text-white">
         <div 
@@ -20,10 +32,10 @@ export default function AboutPage() {
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-military mb-4">
-            About Kane's Junk Removal | Louisiana Family Business
+            Professional Junk Removal in Monroe, Louisiana
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Local family-owned junk hauling business serving Calhoun, Ruston, Monroe, Farmerville & West Monroe with Christian values since day one
+            Family-owned Christian junk hauling business serving Monroe near Downtown Monroe, Ouachita River, and throughout West Monroe, Calhoun, Ruston & Farmerville with integrity since day one
           </p>
         </div>
       </section>

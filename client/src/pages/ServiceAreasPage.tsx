@@ -1,9 +1,21 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
+import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 
 export default function ServiceAreasPage() {
   return (
     <>
+      <SEO 
+        title="Junk Removal Service Areas in West Monroe, Louisiana | Kane Pro Coverage"
+        description="Kane Pro Junk Removal serves West Monroe, Monroe, Calhoun, Ruston & Farmerville LA. Check our service area coverage map. Call (318) 914-1201 for same-day service!"
+        keywords="junk removal West Monroe LA, junk removal service areas Louisiana, West Monroe junk hauling, Monroe service area, Northeast Louisiana junk removal"
+        canonicalUrl="https://kanejunkremoval.com/areas"
+        ogTitle="Service Areas: West Monroe, Monroe, Calhoun, Ruston & Farmerville LA | Kane Pro"
+        ogDescription="Complete service area coverage for junk removal in West Monroe, Monroe, and all of Northeast Louisiana. Check if we serve your area!"
+        structuredData={generateLocalBusinessSchema("West Monroe")}
+        city="West Monroe"
+      />
+      
       {/* Hero Section */}
       <section className="relative py-20 bg-charcoal text-white">
         <div 
@@ -15,10 +27,10 @@ export default function ServiceAreasPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           
           <h1 className="text-4xl md:text-5xl font-military mb-4">
-            Kane's Junk Removal Service Areas | Calhoun Ruston Monroe LA
+            Professional Junk Removal in West Monroe, Louisiana
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional junk hauling & debris removal serving Calhoun, Farmerville, Ruston, West Monroe & Monroe Louisiana with Christian values
+            Professional junk hauling & debris removal serving West Monroe near Antique Alley and Thomas Road, plus Calhoun, Farmerville, Ruston & Monroe Louisiana with Christian values
           </p>
         </div>
       </section>
