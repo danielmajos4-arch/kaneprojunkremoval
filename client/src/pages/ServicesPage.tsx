@@ -87,7 +87,7 @@ export default function ServicesPage() {
       </nav>
 
       {/* Page Header */}
-      <section className="py-12 bg-white">
+      <section className="pt-6 pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
             Professional Junk Removal Services
