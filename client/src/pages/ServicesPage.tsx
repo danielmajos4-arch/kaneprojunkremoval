@@ -1,6 +1,8 @@
 import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 
+import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
+
 export default function ServicesPage() {
   return (
     <>
@@ -22,7 +24,6 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
-
       {/* Service Details */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,7 +101,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  src={WhatsApp_Image_2025_07_26_at_21_22_48__3_} 
                   alt="Professional residential junk removal team in Louisiana"
                   className="w-full rounded-xl shadow-lg"
                 />
@@ -265,7 +266,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Transparency */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -367,7 +367,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Service Area Map */}
       <section className="py-16 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -436,7 +435,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Quote Form */}
       <QuoteForm />
     </>
