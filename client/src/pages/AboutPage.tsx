@@ -3,6 +3,8 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
 import kaneProBackground from "@assets/IMG_3900.png";
 
+import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
+
 export default function AboutPage() {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -30,7 +32,6 @@ export default function AboutPage() {
         structuredData={generateLocalBusinessSchema("Monroe")}
         city="Monroe"
       />
-      
       {/* Hero Section */}
       <section 
         className="relative py-20 sm:py-32 bg-cover bg-center bg-no-repeat"
@@ -57,7 +58,6 @@ export default function AboutPage() {
           </motion.p>
         </div>
       </section>
-
       {/* Our Story Section */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,7 +124,7 @@ export default function AboutPage() {
             >
               <div className="bg-gray-100 rounded-2xl p-8 shadow-xl">
                 <img 
-                  src={kaneProBackground}
+                  src={WhatsApp_Image_2025_07_26_at_21_22_48__3_}
                   alt="Kane Pro Junk Removal team at work in Louisiana"
                   className="w-full rounded-xl shadow-lg mb-6"
                 />
@@ -143,7 +143,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us Section */}
       <section className="py-16 sm:py-24 bg-neutral-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -255,7 +254,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
