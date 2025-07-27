@@ -89,7 +89,7 @@ export default function HomePage() {
             <motion.p 
               className="text-xl md:text-2xl max-w-3xl mx-auto font-medium text-white text-center bg-black/20 rounded-lg px-6 py-4"
               variants={fadeInUp}
-            >Same-day junk hauling, cleanouts & debris removal. We proudly serve Calhoun, LA, offering fast junk removal, near Calhoun Middle School, and throughout surrounding neighborhoods in Monroe, West Monroe, Ruston, and Farmerville.</motion.p>
+            >Same-day junk hauling, cleanouts & debris removal in Calhoun and nearby Northeast Louisiana cities.</motion.p>
             
             <motion.div 
               className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center"
