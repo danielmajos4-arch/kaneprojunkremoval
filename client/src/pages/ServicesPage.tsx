@@ -3,6 +3,8 @@ import QuoteForm from "@/components/QuoteForm";
 
 import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
 
+import WhatsApp_Image_2025_07_26_at_21_22_48__2_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2).jpeg";
+
 export default function ServicesPage() {
   return (
     <>
@@ -112,7 +114,7 @@ export default function ServicesPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  src={WhatsApp_Image_2025_07_26_at_21_22_48__2_} 
                   alt="Commercial junk removal services in Louisiana"
                   className="w-full rounded-xl shadow-lg"
                 />
