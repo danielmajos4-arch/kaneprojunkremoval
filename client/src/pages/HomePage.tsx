@@ -170,9 +170,7 @@ export default function HomePage() {
                   Our commitment goes beyond just hauling junk away. We focus on keeping your property clean during and after the job, ensuring same-day service when possible, and treating every project with the professionalism you deserve. Whether it's residential cleanouts in Calhoun, commercial junk removal in Monroe, or construction debris hauling in Ruston, we handle it all with Christian values and community heart.
                 </p>
                 
-                <p>
-                  Customer satisfaction isn't just our goal—it's our guarantee. We're not satisfied until you are completely happy with our junk removal service. That's the Kane's difference in Louisiana.
-                </p>
+                <p>Customer satisfaction isn't just our goal, it's our guarantee. We're not satisfied until you are completely happy with our junk removal service. That's the Kane's difference in Louisiana.</p>
               </div>
 
               <div className="mt-8">
