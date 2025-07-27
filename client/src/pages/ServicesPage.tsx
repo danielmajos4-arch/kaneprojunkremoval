@@ -92,9 +92,6 @@ export default function ServicesPage() {
           <h1 className="text-3xl md:text-4xl font-military text-deep-green mb-4">
             Professional Junk Removal Services
           </h1>
-          <p className="text-lg text-text-dark max-w-2xl mx-auto">
-            Comprehensive junk hauling solutions for homes and businesses across Northeast Louisiana
-          </p>
         </div>
       </section>
 
