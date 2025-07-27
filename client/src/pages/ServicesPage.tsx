@@ -346,7 +346,7 @@ export default function ServicesPage() {
             
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold mb-2 text-[#e66f36]">Farmerville</h3>
-              <p className="text-gray-300 text-sm mb-4">Rural & farm property specialists</p>
+              <p className="text-sm mb-4 text-[#020c1cd4]">Rural & farm property specialists</p>
               <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
