@@ -74,7 +74,7 @@ export default function HomePage() {
           >
             
             <motion.h1 
-              className="md:text-6xl font-military text-white mb-6 text-[30px]"
+              className="md:text-6xl font-military text-white text-[30px] mt-[1px] mb-[1px]"
               variants={fadeInUp}
             >
               Professional Junk Removal in Calhoun, Louisiana
