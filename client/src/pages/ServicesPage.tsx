@@ -69,7 +69,6 @@ export default function ServicesPage() {
         structuredData={generateServicesSchema()}
         city="Northeast Louisiana"
       />
-
       {/* Breadcrumbs for better navigation */}
       <nav className="bg-gray-50 py-3" aria-label="Breadcrumb">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +85,6 @@ export default function ServicesPage() {
           </ol>
         </div>
       </nav>
-
       {/* Hero Section */}
       <section className="relative py-20 text-white">
         <div
@@ -108,7 +106,7 @@ export default function ServicesPage() {
             Farmerville & West Monroe LA within 30 miles
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:+13189141201" className="btn-cta text-lg">
+            <a href="tel:+13189141201" className="btn-cta text-lg pt-[8px] pb-[8px]">
               <i className="fas fa-phone mr-2"></i>
               Call (318) 914-1201 - Free Estimate
             </a>
@@ -119,7 +117,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Service Area Quick Info */}
       <section className="py-8 bg-louisiana-gold bg-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -130,7 +127,6 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
-
       {/* Service Details */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -420,7 +416,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* FAQ Section for Enhanced SEO */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -508,7 +503,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Customer Reviews Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -587,7 +581,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Free Estimate Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -659,7 +652,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Service Area Map */}
       <section className="py-16 bg-deep-green text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -767,7 +759,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Quote Form */}
       <QuoteForm />
     </>
