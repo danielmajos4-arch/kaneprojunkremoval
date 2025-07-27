@@ -98,16 +98,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service Area Quick Info */}
-      <section className="py-8 bg-opacity-10 pt-[1px] pb-[1px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-charcoal">
-            <strong>Serving North Louisiana:</strong> Calhoun 71225 • Ruston
-            71270 • Monroe 71201 • West Monroe 71291 • Farmerville 71241 •
-            Grambling • Choudrant • Downsville
-          </p>
-        </div>
-      </section>
+      
       {/* Service Details */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
