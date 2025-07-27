@@ -362,7 +362,7 @@ export default function ServicesPage() {
             
             <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center glassmorphism">
               <h3 className="text-xl font-bold mb-2 text-[#e77036]">West Monroe</h3>
-              <p className="text-gray-300 text-sm mb-4">Ouachita Parish commercial specialists</p>
+              <p className="text-sm mb-4 text-[#0a0400bf]">Ouachita Parish commercial specialists</p>
               <Link href="/areas" className="text-louisiana-gold hover:text-white text-sm font-semibold">
                 Learn More →
               </Link>
