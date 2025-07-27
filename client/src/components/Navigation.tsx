@@ -132,11 +132,12 @@ export default function Navigation() {
         style={{
           borderTopLeftRadius: '1rem',
           borderBottomLeftRadius: '1rem',
-          boxShadow: '-10px 0 25px rgba(0, 0, 0, 0.15)'
+          boxShadow: '-10px 0 25px rgba(0, 0, 0, 0.15)',
+          backgroundColor: '#ffffff'
         }}
       >
         {/* Close Button */}
-        <div className="flex justify-end p-4 border-b border-gray-100">
+        <div className="flex justify-end p-4 border-b border-gray-100 bg-white">
           <button 
             onClick={closeMobileMenu}
             className="text-deep-green hover:text-vibrant-orange p-2 hover:scale-110 transition-all duration-200 rounded-full hover:bg-gray-50"
@@ -147,7 +148,7 @@ export default function Navigation() {
         </div>
 
         {/* Navigation Items */}
-        <div className="px-6 py-8 space-y-6">
+        <div className="px-6 py-8 space-y-6 bg-white h-full">
           <Link 
             href="/" 
             className={`block py-3 text-lg font-medium transition-all duration-200 ${
@@ -213,7 +214,7 @@ export default function Navigation() {
           </div>
 
           {/* Contact Info */}
-          <div className="pt-4 text-sm text-text-dark/70">
+          <div className="pt-4 text-sm text-gray-600 bg-white">
             <p className="flex items-center mb-2">
               <i className="fas fa-envelope text-vibrant-orange w-5 mr-2"></i>
               kaneprojunkremoval@gmail.com
