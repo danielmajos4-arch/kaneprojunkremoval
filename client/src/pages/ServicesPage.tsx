@@ -11,19 +11,21 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 bg-charcoal text-white">
+      <section className="relative py-20 text-white">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/hero-background-latest.png')`
           }}
         ></div>
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          
-          <h1 className="text-4xl md:text-5xl font-military mb-4">
+          <h1 className="text-4xl md:text-5xl font-military mb-4 text-shadow-lg">
             Junk Removal Services Louisiana | Kane's Hauling Calhoun
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto text-shadow-md">
             Professional junk hauling & debris removal serving Calhoun, Ruston, Monroe, Farmerville & West Monroe LA
           </p>
         </div>
