@@ -27,10 +27,9 @@ export default function FloatingCTA() {
           Call now for same-day estimates & pickup.
         </div>
       </div>
-      
       <a 
         href="tel:+13189141201" 
-        className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 sm:py-5 sm:px-7 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 btn-touch ring-4 ring-red-600/20 mx-auto w-full sm:w-auto"
+        className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 sm:py-5 sm:px-7 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 btn-touch ring-4 ring-red-600/20 mx-auto w-full sm:w-auto pt-[10px] pb-[10px]"
         aria-label="Call Kane Pro Junk Removal now"
         style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(220, 38, 38, 0.3)' }}
       >
