@@ -431,7 +431,7 @@ export default function ServiceAreaMap() {
             {serviceAreas.map((area, index) => (
               <span 
                 key={area.name}
-                className={`px-3 py-1 rounded-full ${area.isBase ? 'bg-red-600 text-white' : 'bg-navy text-white'}`}
+                className="px-3 py-1 rounded-full text-white bg-[#a6292900]"
               >
                 {area.name} LA
               </span>
