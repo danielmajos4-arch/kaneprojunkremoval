@@ -15,24 +15,7 @@ export default function AboutPage() {
         city="Monroe"
       />
       
-      {/* Hero Section */}
-      <section className="relative py-20 bg-charcoal text-white">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{
-            backgroundImage: `url('/hero-background-latest.png')`
-          }}
-        ></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          
-          <h1 className="text-4xl md:text-5xl font-military mb-4">
-            Professional Junk Removal in Monroe, Louisiana
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Family-owned Christian junk hauling business serving Monroe near Downtown Monroe, Ouachita River, and throughout West Monroe, Calhoun, Ruston & Farmerville with integrity since day one
-          </p>
-        </div>
-      </section>
+
 
       {/* Our Story */}
       <section className="py-16 bg-white">

@@ -85,38 +85,7 @@ export default function ServicesPage() {
           </ol>
         </div>
       </nav>
-      {/* Hero Section */}
-      <section className="relative py-20 text-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/hero-background-latest.png')`,
-          }}
-        ></div>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-military mb-4 text-shadow-lg">
-            Professional Junk Removal Services in Ruston, Louisiana
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto text-shadow-md mb-6">
-            Comprehensive junk hauling & debris removal serving Ruston near
-            Louisiana Tech University, and throughout Monroe, Calhoun,
-            Farmerville & West Monroe LA within 30 miles
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:+13189141201" className="btn-cta text-lg pt-[8px] pb-[8px]">
-              <i className="fas fa-phone mr-2"></i>
-              Call (318) 914-1201 - Free Estimate
-            </a>
-            <div className="text-sm text-gray-200">
-              <i className="fas fa-clock mr-1"></i>
-              Same-day service available Mon-Sat 7am-8pm
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Service Area Quick Info */}
       <section className="py-8 bg-opacity-10 pt-[1px] pb-[1px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
