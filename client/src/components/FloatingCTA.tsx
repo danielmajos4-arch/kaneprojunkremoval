@@ -23,7 +23,7 @@ export default function FloatingCTA() {
         <div className="text-white font-bold sm:text-xl mb-1 text-[18px]">
           Need a quote fast?
         </div>
-        <div className="text-white text-sm sm:text-base opacity-90">
+        <div className="text-white sm:text-base opacity-90 text-[14px]">
           Call now for same-day estimates & pickup.
         </div>
       </div>
