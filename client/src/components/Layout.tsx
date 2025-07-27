@@ -1,7 +1,6 @@
 import Navigation from "./Navigation";
 import FloatingCTA from "./FloatingCTA";
 import Footer from "./Footer";
-import ServiceAreaMap from "./ServiceAreaMap";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -14,7 +13,6 @@ export default function Layout({ children }: LayoutProps) {
       <main className="flex-1">
         {children}
       </main>
-      <ServiceAreaMap />
       <FloatingCTA />
       <Footer />
     </div>
