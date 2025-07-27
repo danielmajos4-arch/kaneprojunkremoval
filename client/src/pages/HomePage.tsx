@@ -51,7 +51,6 @@ export default function HomePage() {
         structuredData={generateLocalBusinessSchema("Northeast Louisiana")}
         city="Calhoun"
       />
-      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center hero-section">
         {/* Louisiana landmark background with overlay */}
@@ -161,9 +160,7 @@ export default function HomePage() {
               </h2>
               
               <div className="space-y-4 text-text-dark leading-relaxed">
-                <p>
-                  When Kane started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on. What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.
-                </p>
+                <p>When Kaleb started this business in Louisiana, he had one simple goal: provide honest, reliable junk removal services that Calhoun families and businesses could depend on. What began as a local solution has grown into the trusted choice for junk hauling across Ruston, Monroe, Farmerville, and West Monroe.</p>
                 
                 <p>
                   Kane takes pride in fast, affordable, and dependable junk removal services. Unlike big franchises, we're a local Louisiana business that understands our community's needs. We offer <strong>in-person estimates</strong> because we believe in transparent pricing and building trust with every customer.
