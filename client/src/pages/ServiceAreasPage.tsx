@@ -426,7 +426,7 @@ export default function ServiceAreasPage() {
           </div>
 
           {/* Gallery Stats - Mobile Optimized */}
-          <div className="bg-white bg-opacity-10 rounded-2xl p-6 md:p-8 text-white glassmorphism">
+          <div className="bg-opacity-10 rounded-2xl p-6 md:p-8 glassmorphism text-[#235631]">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-louisiana-gold mb-2">
