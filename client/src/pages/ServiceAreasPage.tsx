@@ -8,6 +8,7 @@ import WhatsApp_Image_2025_07_27_at_21_55_19__3_ from "@assets/WhatsApp Image 20
 import WhatsApp_Image_2025_07_27_at_21_55_19__2_ from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (2).jpeg";
 import WhatsApp_Image_2025_07_27_at_22_09_53__2_ from "@assets/WhatsApp Image 2025-07-27 at 22.09.53 (2).jpeg";
 import WhatsApp_Image_2025_07_27_at_22_09_53_New from "@assets/WhatsApp Image 2025-07-27 at 22.09.53_1753670732901.jpeg";
+import WhatsApp_Image_Storm_Cleanup from "@assets/WhatsApp Image 2025-07-27 at 22.09.53 (2)_1753670917830.jpeg";
 
 export default function ServiceAreasPage() {
   return (
@@ -395,7 +396,7 @@ export default function ServiceAreasPage() {
             <div className="relative group cursor-pointer">
               <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]">
                 <img
-                  src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                  src={WhatsApp_Image_Storm_Cleanup}
                   alt="Monroe LA storm damage cleanup Ouachita Parish emergency junk removal hurricane debris tree removal"
                   className="w-full h-48 md:h-64 object-cover"
                 />
