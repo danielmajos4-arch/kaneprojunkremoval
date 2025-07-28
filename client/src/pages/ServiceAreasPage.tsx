@@ -2,6 +2,8 @@ import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 
+import Junk_removal from "@assets/Junk removal.jpeg";
+
 export default function ServiceAreasPage() {
   return (
     <>
@@ -130,7 +132,7 @@ export default function ServiceAreasPage() {
             {/* Calhoun - Our Home Base */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="attached_assets/WhatsApp Image 2025-07-26 at 21.22.48 (1).jpeg" 
+                src={Junk_removal} 
                 alt="Calhoun Louisiana junk removal service area" 
                 className="w-full h-48 object-cover pt-[-17px] pb-[-17px]" 
               />
