@@ -6,6 +6,7 @@ import Junk_removal from "@assets/Junk removal.jpeg";
 import WhatsApp_Image_2025_07_27_at_21_55_19 from "@assets/WhatsApp Image 2025-07-27 at 21.55.19.jpeg";
 import WhatsApp_Image_2025_07_27_at_21_55_19__3_ from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3).jpeg";
 import WhatsApp_Image_2025_07_27_at_21_55_19__2_ from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (2).jpeg";
+import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
 import WhatsApp_Image_2025_07_27_at_22_09_53__2_ from "@assets/WhatsApp Image 2025-07-27 at 22.09.53 (2).jpeg";
 import WhatsApp_Image_2025_07_27_at_22_09_53_New from "@assets/WhatsApp Image 2025-07-27 at 22.09.53_1753670732901.jpeg";
 import WhatsApp_Image_Storm_Cleanup from "@assets/WhatsApp Image 2025-07-27 at 22.09.53 (2)_1753670917830.jpeg";
@@ -43,7 +44,7 @@ export default function ServiceAreasPage() {
                 <i className="fas fa-star mr-1"></i> PRIMARY SERVICE AREA
               </div>
               <img
-                src={WhatsApp_Image_2025_07_27_at_22_09_53__2_}
+                src={WhatsApp_Image_2025_07_27_at_21_55_20}
                 alt="Monroe LA junk removal service - Ouachita Parish same day pickup"
                 className="w-full h-40 md:h-48 object-cover"
               />
