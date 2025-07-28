@@ -448,7 +448,7 @@ export default function ServiceAreasPage() {
                 <div className="text-2xl md:text-3xl font-bold text-louisiana-gold mb-2">
                   24/7
                 </div>
-                <div className="text-gray-300 text-xs md:text-sm">
+                <div className="text-xs md:text-sm text-[#010914d4]">
                   Northeast LA Coverage
                 </div>
               </div>
