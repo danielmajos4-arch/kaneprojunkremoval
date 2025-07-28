@@ -10,6 +10,8 @@ import WhatsApp_Image_2025_07_27_at_21_55_19__3_ from "@assets/WhatsApp Image 20
 
 import WhatsApp_Image_2025_07_27_at_21_55_19__2_ from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (2).jpeg";
 
+import WhatsApp_Image_2025_07_27_at_22_09_53__2_ from "@assets/WhatsApp Image 2025-07-27 at 22.09.53 (2).jpeg";
+
 export default function ServiceAreasPage() {
   return (
     <>
@@ -42,9 +44,9 @@ export default function ServiceAreasPage() {
                 <i className="fas fa-star mr-1"></i> PRIMARY SERVICE AREA
               </div>
               <img 
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                src={WhatsApp_Image_2025_07_27_at_22_09_53__2_} 
                 alt="Monroe LA junk removal service - Ouachita Parish" 
-                className="w-full h-48 object-cover" 
+                className="w-full h-48 object-cover pt-[0px] pb-[0px]" 
               />
               <div className="p-6">
                 <h2 className="text-xl font-bold text-charcoal mb-3">
