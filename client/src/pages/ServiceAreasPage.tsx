@@ -6,6 +6,8 @@ import Junk_removal from "@assets/Junk removal.jpeg";
 
 import WhatsApp_Image_2025_07_27_at_21_55_19 from "@assets/WhatsApp Image 2025-07-27 at 21.55.19.jpeg";
 
+import WhatsApp_Image_2025_07_27_at_21_55_19__3_ from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3).jpeg";
+
 export default function ServiceAreasPage() {
   return (
     <>
@@ -110,7 +112,7 @@ export default function ServiceAreasPage() {
             {/* West Monroe - Connected to Monroe LA */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                src={WhatsApp_Image_2025_07_27_at_21_55_19__3_} 
                 alt="West Monroe LA junk removal near Monroe - Ouachita Parish" 
                 className="w-full h-48 object-cover" 
               />
