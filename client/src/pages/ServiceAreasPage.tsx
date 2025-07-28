@@ -6,48 +6,51 @@ export default function ServiceAreasPage() {
   return (
     <>
       <SEO 
-        title="Junk Removal Service Areas in West Monroe, Louisiana | Kane Pro Coverage"
-        description="Kane Pro Junk Removal serves West Monroe, Monroe, Calhoun, Ruston & Farmerville LA. Check our service area coverage map. Call (318) 914-1201 for same-day service!"
-        keywords="junk removal West Monroe LA, junk removal service areas Louisiana, West Monroe junk hauling, Monroe service area, Northeast Louisiana junk removal"
+        title="Monroe LA Junk Removal | Kane Pro | Ouachita Parish"
+        description="Monroe LA junk removal, same-day service, free quote. Kane Pro serves Monroe, West Monroe & Ouachita Parish. Call (318) 914-1201 for fast junk hauling!"
+        keywords="Monroe LA junk removal, Ouachita Parish junk hauling, Northeast Louisiana junk removal, Monroe Louisiana debris removal, West Monroe junk service"
         canonicalUrl="https://kanejunkremoval.com/areas"
-        ogTitle="Service Areas: West Monroe, Monroe, Calhoun, Ruston & Farmerville LA | Kane Pro"
-        ogDescription="Complete service area coverage for junk removal in West Monroe, Monroe, and all of Northeast Louisiana. Check if we serve your area!"
-        structuredData={generateLocalBusinessSchema("West Monroe")}
-        city="West Monroe"
+        ogTitle="Monroe LA Junk Removal | Same-Day Service | Kane Pro Ouachita Parish"
+        ogDescription="Professional junk removal in Monroe LA and Ouachita Parish. Same-day service, free quotes. Call (318) 914-1201 for fast, reliable junk hauling!"
+        structuredData={generateLocalBusinessSchema("Monroe")}
+        city="Monroe"
       />
       {/* Service Areas Overview */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
-              Louisiana Junk Removal Service Areas
-            </h2>
+            <h1 className="text-3xl md:text-4xl font-military text-charcoal mb-4">
+              Monroe LA Junk Removal & Northeast Louisiana Coverage
+            </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Same-day junk hauling and debris removal from our home base in Calhoun to Monroe, covering all of North Louisiana with professional service.
+              Same-day junk hauling and debris removal serving Monroe LA, Ouachita Parish, and all of Northeast Louisiana with professional service. Free quotes available!
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Calhoun */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            {/* Monroe LA - Primary Focus */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ring-2 ring-louisiana-gold">
+              <div className="bg-louisiana-gold text-white px-4 py-2 text-center font-semibold">
+                <i className="fas fa-star mr-1"></i> PRIMARY SERVICE AREA
+              </div>
               <img 
-                src="attached_assets/WhatsApp Image 2025-07-26 at 21.22.48 (1).jpeg" 
-                alt="Calhoun Louisiana junk removal service area" 
-                className="w-full h-48 object-cover pt-[-17px] pb-[-17px]" 
+                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                alt="Monroe LA junk removal service - Ouachita Parish" 
+                className="w-full h-48 object-cover" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-home text-louisiana-gold mr-2"></i>
-                  Calhoun Junk Removal
-                </h3>
-                <p className="text-gray-600 mb-4">Our home base! Same day service available for Calhoun residents and businesses.</p>
+                <h2 className="text-xl font-bold text-charcoal mb-3">
+                  <i className="fas fa-city text-louisiana-gold mr-2"></i>
+                  Monroe LA Junk Removal
+                </h2>
+                <p className="text-gray-600 mb-4">Ouachita Parish's premier junk removal service! Same-day pickup, free quotes for Monroe LA residents.</p>
                 <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Residential & Commercial Cleanouts</li>
-                  <li>• Construction Debris Removal</li>
-                  <li>• Emergency Same Day Service</li>
+                  <li>• Monroe LA Commercial Projects</li>
+                  <li>• Ouachita Parish Residential Service</li>
+                  <li>• Northeast Louisiana Coverage</li>
                 </ul>
                 <a href="tel:+13189141201" className="block w-full btn-cta text-center">
-                  Call for Calhoun Service
+                  Call for Monroe LA Service
                 </a>
               </div>
             </div>
@@ -100,62 +103,63 @@ export default function ServiceAreasPage() {
               </div>
             </div>
             
-            {/* West Monroe */}
+            {/* West Monroe - Connected to Monroe LA */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
                 src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="West Monroe Louisiana junk removal service area" 
+                alt="West Monroe LA junk removal near Monroe - Ouachita Parish" 
                 className="w-full h-48 object-cover" 
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-charcoal mb-3">
                   <i className="fas fa-water text-louisiana-gold mr-2"></i>
-                  West Monroe Junk Removal
+                  West Monroe LA Junk Removal
                 </h3>
-                <p className="text-gray-600 mb-4">Serving the Ouachita Parish community with trusted junk removal services.</p>
+                <p className="text-gray-600 mb-4">Twin city to Monroe LA! Same Ouachita Parish quality service, just across the river.</p>
                 <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Residential Cleanout Services</li>
-                  <li>• Business Property Cleanouts</li>
-                  <li>• Storm Damage Cleanup</li>
+                  <li>• Ouachita Parish Residential Service</li>
+                  <li>• Monroe LA Area Commercial</li>
+                  <li>• Northeast Louisiana Storm Cleanup</li>
                 </ul>
                 <a href="tel:+13189141201" className="block w-full btn-secondary text-center">
-                  Call for West Monroe Service
+                  Call for West Monroe LA Service
                 </a>
               </div>
             </div>
             
-            {/* Monroe */}
+            {/* Calhoun - Our Home Base */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="Monroe Louisiana junk removal service area" 
-                className="w-full h-48 object-cover" 
+                src="attached_assets/WhatsApp Image 2025-07-26 at 21.22.48 (1).jpeg" 
+                alt="Calhoun Louisiana junk removal service area" 
+                className="w-full h-48 object-cover pt-[-17px] pb-[-17px]" 
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-city text-louisiana-gold mr-2"></i>
-                  Monroe Junk Removal
+                  <i className="fas fa-home text-louisiana-gold mr-2"></i>
+                  Calhoun Junk Removal
                 </h3>
-                <p className="text-gray-600 mb-4">North Louisiana's largest city - we're here to serve you with pride!</p>
+                <p className="text-gray-600 mb-4">Our home base in Northeast Louisiana! Same day service available for Calhoun residents.</p>
                 <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Large-Scale Commercial Projects</li>
-                  <li>• Multi-Family Housing Services</li>
-                  <li>• Industrial Site Cleanup</li>
+                  <li>• Northeast Louisiana Coverage</li>
+                  <li>• Construction Debris Removal</li>
+                  <li>• Emergency Same Day Service</li>
                 </ul>
                 <a href="tel:+13189141201" className="block w-full btn-cta text-center">
-                  Call for Monroe Service
+                  Call for Calhoun Service
                 </a>
               </div>
             </div>
             
+
             {/* Emergency Service Box */}
             <div className="bg-red-600 text-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-6 h-full flex flex-col justify-center text-center">
                 <i className="fas fa-exclamation-triangle text-4xl mb-4"></i>
-                <h3 className="text-xl font-bold mb-3">Emergency Service</h3>
-                <p className="mb-4">Storm damage? Hurricane cleanup? We're here to help Louisiana recover quickly.</p>
+                <h3 className="text-xl font-bold mb-3">Monroe LA Emergency Service</h3>
+                <p className="mb-4">Storm damage in Ouachita Parish? Hurricane cleanup in Northeast Louisiana? We're here to help Monroe LA recover quickly.</p>
                 <a href="tel:+13189141201" className="block w-full bg-white text-red-600 text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors btn-touch">
-                  Emergency: (318) 914-1201
+                  Emergency Monroe LA: (318) 914-1201
                 </a>
               </div>
             </div>
@@ -387,40 +391,40 @@ export default function ServiceAreasPage() {
                   <i className="fas fa-city text-charcoal text-xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-military text-charcoal">Monroe, Louisiana</h2>
-                  <p className="text-louisiana-gold font-semibold">North Louisiana's Largest City</p>
+                  <h2 className="text-3xl font-military text-charcoal">Monroe LA - Ouachita Parish Hub</h2>
+                  <p className="text-louisiana-gold font-semibold">Northeast Louisiana's Premier Junk Removal Service</p>
                 </div>
               </div>
               
               <p className="text-lg text-gray-600 mb-6">
-                Monroe is North Louisiana's hub, and Kane Pro is proud to serve this vibrant community. From downtown commercial buildings to suburban neighborhoods, we handle large-scale projects with the efficiency Monroe businesses demand.
+                Monroe LA is Northeast Louisiana's commercial hub, and Kane Pro is the premier junk removal service for Ouachita Parish. From downtown Monroe LA commercial buildings to suburban neighborhoods, we provide same-day service with free quotes for all Monroe LA residents and businesses.
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="font-semibold text-charcoal mb-3">Monroe Commercial Specialties:</h3>
+                <h3 className="font-semibold text-charcoal mb-3">Monroe LA Junk Removal Specialties:</h3>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Downtown Monroe business district</li>
-                  <li>• Large commercial cleanouts</li>
-                  <li>• Multi-family housing complexes</li>
-                  <li>• Industrial facility cleanup</li>
-                  <li>• Medical facility services</li>
+                  <li>• Downtown Monroe LA business district</li>
+                  <li>• Ouachita Parish commercial cleanouts</li>
+                  <li>• Northeast Louisiana multi-family housing</li>
+                  <li>• Monroe LA industrial facility cleanup</li>
+                  <li>• Ouachita Parish medical facility services</li>
                 </ul>
               </div>
 
               <div className="bg-charcoal p-6 rounded-lg text-white mb-6">
                 <h3 className="font-semibold text-louisiana-gold mb-3">
                   <i className="fas fa-star text-louisiana-gold mr-2"></i>
-                  Monroe Customer Testimonial:
+                  Monroe LA Customer Testimonial:
                 </h3>
                 <p className="italic mb-3">
-                  "We manage several office buildings in Monroe and Kane Pro is our go-to for tenant turnovers and cleanouts. They're professional, efficient, and understand the fast pace of commercial real estate."
+                  "We manage several office buildings in Monroe LA and Kane Pro is our go-to for tenant turnovers and cleanouts. They're professional, efficient, and understand the fast pace of Ouachita Parish commercial real estate. Best junk removal in Northeast Louisiana!"
                 </p>
-                <p className="text-louisiana-gold font-semibold">- Patricia S., Monroe Property Manager</p>
+                <p className="text-louisiana-gold font-semibold">- Patricia S., Monroe LA Property Manager</p>
               </div>
 
               <a href="tel:+13189141201" className="btn-cta inline-block">
                 <i className="fas fa-phone mr-2"></i>
-                Call for Monroe Commercial Service
+                Call for Monroe LA Junk Removal
               </a>
             </div>
             <div>
@@ -439,17 +443,17 @@ export default function ServiceAreasPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-military mb-4">
-              Complete North Louisiana Coverage
+              Monroe LA & Northeast Louisiana Coverage
             </h2>
             <p className="text-lg text-gray-300">
-              One call covers it all - from Union Parish to Ouachita Parish
+              One call covers it all - from Ouachita Parish to Union Parish. Specializing in Monroe LA junk removal!
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-military text-louisiana-gold mb-6">
-                Why Choose Local Louisiana Coverage?
+                Why Choose Kane Pro for Monroe LA Junk Removal?
               </h3>
               
               <div className="space-y-6">
@@ -458,8 +462,8 @@ export default function ServiceAreasPage() {
                     <i className="fas fa-map-marker-alt text-charcoal"></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Local Knowledge</h4>
-                    <p className="text-gray-300">We know every back road, every neighborhood, and every local dump and recycling center across all five cities.</p>
+                    <h4 className="font-semibold text-lg mb-2">Monroe LA Local Knowledge</h4>
+                    <p className="text-gray-300">We know every back road in Ouachita Parish, every Monroe LA neighborhood, and every local dump and recycling center in Northeast Louisiana.</p>
                   </div>
                 </div>
 
@@ -468,8 +472,8 @@ export default function ServiceAreasPage() {
                     <i className="fas fa-clock text-charcoal"></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Faster Response</h4>
-                    <p className="text-gray-300">With local coverage, we can provide same-day service across our entire Louisiana service area.</p>
+                    <h4 className="font-semibold text-lg mb-2">Faster Monroe LA Response</h4>
+                    <p className="text-gray-300">With local Ouachita Parish coverage, we provide same-day junk removal service across Monroe LA and Northeast Louisiana.</p>
                   </div>
                 </div>
 
