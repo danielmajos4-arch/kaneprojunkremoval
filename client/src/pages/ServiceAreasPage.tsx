@@ -440,7 +440,7 @@ export default function ServiceAreasPage() {
                 <div className="text-2xl md:text-3xl font-bold text-louisiana-gold mb-2">
                   50+
                 </div>
-                <div className="text-gray-300 text-xs md:text-sm">
+                <div className="text-xs md:text-sm text-[#01070fcf]">
                   Ouachita Parish Businesses
                 </div>
               </div>
