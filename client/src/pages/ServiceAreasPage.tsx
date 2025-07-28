@@ -7,6 +7,7 @@ import WhatsApp_Image_2025_07_27_at_21_55_19 from "@assets/WhatsApp Image 2025-0
 import WhatsApp_Image_2025_07_27_at_21_55_19__3_ from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3).jpeg";
 import WhatsApp_Image_2025_07_27_at_21_55_19__2_ from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (2).jpeg";
 import WhatsApp_Image_2025_07_27_at_22_09_53__2_ from "@assets/WhatsApp Image 2025-07-27 at 22.09.53 (2).jpeg";
+import WhatsApp_Image_2025_07_27_at_22_09_53_New from "@assets/WhatsApp Image 2025-07-27 at 22.09.53_1753670732901.jpeg";
 
 export default function ServiceAreasPage() {
   return (
@@ -221,7 +222,7 @@ export default function ServiceAreasPage() {
             <div className="relative group cursor-pointer">
               <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]">
                 <img
-                  src={WhatsApp_Image_2025_07_27_at_22_09_53__2_}
+                  src={WhatsApp_Image_2025_07_27_at_22_09_53_New}
                   alt="Monroe LA commercial junk removal project downtown Ouachita Parish office building cleanup before after"
                   className="w-full h-48 md:h-64 object-cover"
                 />
