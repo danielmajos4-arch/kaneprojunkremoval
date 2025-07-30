@@ -8,6 +8,13 @@ import Website_demolition from "@assets/Website demolition.jpg";
 import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
 import Website_demolition_1 from "@assets/Website demolition (1)_1753836740875.jpg";
 import Website_demolition_new from "@assets/Website demolition_1753836740879.jpg";
+import WhatsApp_Image_1_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837567906.jpeg";
+import WhatsApp_Image_2_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2)_1753837567909.jpeg";
+import Website_demolition_1_New from "@assets/Website demolition (1)_1753837579354.jpg";
+import Website_demolition_2_New from "@assets/Website demolition_1753837579366.jpg";
+import Junk_removal_Project from "@assets/Junk removal_1753837631446.jpeg";
+import WhatsApp_Image_1_Junk from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837660614.jpeg";
+import WhatsApp_Image_Storm_Project from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3)_1753837691478.jpeg";
 
 // Animation variants
 const fadeInUp = {
@@ -36,43 +43,48 @@ export default function ServiceAreasPage() {
     },
     {
       id: 3,
-      src: Website_demolition,
-      alt: "Construction cleanup and demolition Ruston LA",
+      src: Website_demolition_1_New,
+      alt: "Commercial barn demolition Monroe LA - Construction debris removal",
     },
     {
       id: 4,
-      src: WhatsApp_Image_2025_07_27_at_21_55_20,
-      alt: "Junk removal project Monroe Louisiana",
+      src: Website_demolition_2_New,
+      alt: "Residential patio demolition Northeast Louisiana - Complete cleanup service",
     },
     {
       id: 5,
-      src: Website_demolition_1,
-      alt: "Interior demolition Monroe LA - Commercial building cleanup",
+      src: WhatsApp_Image_1_Demolition,
+      alt: "Demolition project Monroe LA - Professional structure removal",
     },
     {
       id: 6,
-      src: Website_demolition_new,
-      alt: "Commercial junk removal Monroe LA - Before and after results",
+      src: WhatsApp_Image_2_Demolition,
+      alt: "Junk removal and cleanup West Monroe LA - Same day service",
     },
     {
       id: 7,
-      src: Website_demolition,
-      alt: "Residential demolition West Monroe LA - Complete property cleanup",
+      src: Junk_removal_Project,
+      alt: "Commercial junk removal Monroe Louisiana - Large scale cleanout",
     },
     {
       id: 8,
-      src: WhatsApp_Image_2025_07_27_at_21_55_20,
-      alt: "Emergency demolition Monroe LA - Same day service",
+      src: WhatsApp_Image_1_Junk,
+      alt: "Residential junk hauling Ruston LA - Complete property cleanup",
     },
     {
       id: 9,
-      src: Website_demolition_1,
-      alt: "Junk hauling Northeast Louisiana - Construction debris removal",
+      src: WhatsApp_Image_Storm_Project,
+      alt: "Storm cleanup and junk removal Northeast Louisiana - Emergency service",
     },
     {
       id: 10,
-      src: Website_demolition_new,
-      alt: "Demolition services Monroe area - Professional cleanup crew",
+      src: WhatsApp_Image_2025_07_27_at_21_55_20,
+      alt: "Professional demolition Monroe area - Construction site cleanup",
+    },
+    {
+      id: 11,
+      src: Website_demolition,
+      alt: "Construction cleanup and demolition Ruston LA - Complete debris removal",
     },
   ];
 
