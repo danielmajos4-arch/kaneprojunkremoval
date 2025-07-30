@@ -64,11 +64,12 @@ export default function ContactForm() {
   return (
     <div className="bg-white rounded-xl shadow-xl overflow-hidden">
       <div className="bg-navy text-white p-6 text-center">
-        <h3 className="text-xl md:text-2xl font-military mb-2 text-[#265a26]">
+        <h3 className="text-xl md:text-2xl font-military mb-2">
           Contact Kane Pro Today
         </h3>
-        <p className="bg-[#265a26] text-[#e6eaf0] text-[16px] pt-[-1px] pb-[-1px]">Get in touch with Louisiana's trusted Christian junk removal experts</p>
+        <p className="text-gray-300">Get in touch with Louisiana's trusted Christian junk removal experts</p>
       </div>
+      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 space-y-4">
           <div className="grid md:grid-cols-2 gap-4">
