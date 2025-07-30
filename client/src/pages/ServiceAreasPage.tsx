@@ -17,8 +17,7 @@ import Website_demolition_2_New from "@assets/Website demolition_1753837579366.j
 import Junk_removal_Project from "@assets/Junk removal_1753837631446.jpeg";
 import WhatsApp_Image_1_Junk from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837660614.jpeg";
 import WhatsApp_Image_Storm_Project from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3)_1753837691478.jpeg";
-import Screen_Shot_Truck_Load_1 from "@assets/Screen Shot 2025-07-29 at 9.17.50 PM_1753838411149.png";
-import Screen_Shot_Truck_Load_2 from "@assets/Screen Shot 2025-07-29 at 9.18.35 PM_1753838411150.png";
+
 import WhatsApp_Image_Truck_Project_1 from "@assets/WhatsApp Image 2025-07-29 at 21.40.44 (2)_1753838436591.jpeg";
 import WhatsApp_Image_Truck_Project_2 from "@assets/WhatsApp Image 2025-07-29 at 22.01.08 (1)_1753838451889.jpeg";
 import WhatsApp_Image_New_1 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (1)_1753839452505.jpeg";
@@ -89,16 +88,6 @@ export default function ServiceAreasPage() {
     },
     {
       id: 10,
-      src: Screen_Shot_Truck_Load_1,
-      alt: "Truck loaded with construction debris Monroe LA - Professional hauling service",
-    },
-    {
-      id: 11,
-      src: Screen_Shot_Truck_Load_2,
-      alt: "Full truck load junk removal West Monroe LA - Residential cleanout service",
-    },
-    {
-      id: 12,
       src: WhatsApp_Image_Truck_Project_2,
       alt: "Professional junk hauling Monroe area - Complete property cleanup",
     },
