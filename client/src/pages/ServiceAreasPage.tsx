@@ -38,7 +38,7 @@ const staggerContainer = {
 export default function ServiceAreasPage() {
   const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string } | null>(null);
 
-  // Gallery with authentic Kane Pro demolition projects - updated with latest images
+  // Gallery with authentic Kane Pro demolition projects - duplicates removed
   const galleryImages = [
     {
       id: 1,
@@ -52,61 +52,51 @@ export default function ServiceAreasPage() {
     },
     {
       id: 3,
-      src: Website_demolition_1_New,
-      alt: "Commercial barn demolition Monroe LA - Construction debris removal",
-    },
-    {
-      id: 4,
       src: Website_demolition_2_New,
       alt: "Residential patio demolition Northeast Louisiana - Complete cleanup service",
     },
     {
-      id: 5,
+      id: 4,
       src: WhatsApp_Image_New_1,
       alt: "Professional junk removal Monroe LA - Complete cleanout service",
     },
     {
-      id: 6,
+      id: 5,
       src: WhatsApp_Image_New_2,
       alt: "Construction debris removal West Monroe LA - Site cleanup",
     },
     {
-      id: 7,
+      id: 6,
       src: WhatsApp_Image_New_3,
       alt: "Residential junk hauling Northeast Louisiana - Same day pickup",
     },
     {
-      id: 8,
+      id: 7,
       src: WhatsApp_Image_New_4,
       alt: "Commercial demolition Monroe area - Professional service",
     },
     {
-      id: 9,
+      id: 8,
       src: WhatsApp_Image_New_5,
       alt: "Large scale junk removal Ruston LA - Complete property cleanup",
     },
     {
-      id: 10,
+      id: 9,
       src: Junk_removal_Project,
       alt: "Commercial junk removal Monroe Louisiana - Large scale cleanout",
     },
     {
-      id: 11,
+      id: 10,
       src: Screen_Shot_Truck_Load_1,
       alt: "Truck loaded with construction debris Monroe LA - Professional hauling service",
     },
     {
-      id: 12,
+      id: 11,
       src: Screen_Shot_Truck_Load_2,
       alt: "Full truck load junk removal West Monroe LA - Residential cleanout service",
     },
     {
-      id: 13,
-      src: WhatsApp_Image_Truck_Project_1,
-      alt: "Junk removal truck loaded Northeast Louisiana - Same day pickup service",
-    },
-    {
-      id: 14,
+      id: 12,
       src: WhatsApp_Image_Truck_Project_2,
       alt: "Professional junk hauling Monroe area - Complete property cleanup",
     },
