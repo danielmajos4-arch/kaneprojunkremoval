@@ -1,6 +1,8 @@
 import ContactForm from "@/components/ContactForm";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
+import LazyImage from "@/components/LazyImage";
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import kaneProBackground from "@assets/IMG_3900.png";
 import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
 
@@ -22,6 +24,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <PerformanceOptimizer />
       <SEO
         title="About Kane Pro Junk Removal - Family-Owned Business | Monroe, LA"
         description="Family-owned Christian junk removal serving Monroe, West Monroe, Ruston & Northeast Louisiana. Licensed, insured, eco-friendly. Same-day service available. Call (318) 914-1201!"

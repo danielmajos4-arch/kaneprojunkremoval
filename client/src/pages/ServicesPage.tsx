@@ -2,6 +2,8 @@ import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 import SEO from "@/components/SEO";
 import { useState } from "react";
+import LazyImage from "@/components/LazyImage";
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 
 import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
 import WhatsApp_Image_2025_07_26_at_21_22_48__2_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2).jpeg";
@@ -85,7 +87,7 @@ const serviceAreas = [
 ];
 
 // Optimized FAQ Component
-const FAQItem = ({ faq, isOpen, onToggle }) => (
+const FAQItem = ({ faq, isOpen, onToggle }: { faq: any; isOpen: boolean; onToggle: () => void }) => (
   <div className="bg-white rounded-lg shadow-sm border border-gray-100">
     <button
       className="w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-vibrant-orange"
@@ -110,14 +112,15 @@ const FAQItem = ({ faq, isOpen, onToggle }) => (
 );
 
 export default function ServicesPage() {
-  const [openFAQ, setOpenFAQ] = useState(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
   return (
     <>
+      <PerformanceOptimizer />
       <SEO
         title="Junk Removal & Demolition Services Monroe LA | Residential & Commercial | Kane Pro"
         description="Professional junk removal and demolition services in Monroe, West Monroe, Ruston & Northeast Louisiana. Residential cleanouts, commercial demolition, construction debris. Call (318) 914-1201!"
