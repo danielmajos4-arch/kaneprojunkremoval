@@ -4,6 +4,8 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+import Website_demolition from "@assets/Website demolition.jpg";
+
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -111,7 +113,6 @@ export default function ServiceAreasPage() {
         structuredData={generateLocalBusinessSchema("Northeast Louisiana")}
         city="Monroe"
       />
-
       {/* Breadcrumbs */}
       <nav className="bg-gray-50 py-3" aria-label="Breadcrumb">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,7 +129,6 @@ export default function ServiceAreasPage() {
           </ol>
         </div>
       </nav>
-
       {/* Header */}
       <section className="pt-8 pb-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -151,7 +151,6 @@ export default function ServiceAreasPage() {
           </motion.p>
         </div>
       </section>
-
       {/* Service Areas Map */}
       <section className="py-10 sm:py-12 bg-neutral-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -284,7 +283,6 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       </section>
-
       {/* Project Gallery */}
       <section className="py-10 sm:py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -353,7 +351,6 @@ export default function ServiceAreasPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Image Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
@@ -365,7 +362,7 @@ export default function ServiceAreasPage() {
               <i className="fas fa-times"></i>
             </button>
             <img
-              src={selectedImage.src}
+              src={Website_demolition}
               alt={selectedImage.alt}
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
             />
@@ -376,7 +373,6 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       )}
-
       {/* Service Highlights */}
       <section className="py-10 sm:py-12 bg-neutral-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -433,7 +429,6 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-10 sm:py-12 bg-deep-green text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -471,7 +466,6 @@ export default function ServiceAreasPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Quote Form */}
       <QuoteForm />
     </>
