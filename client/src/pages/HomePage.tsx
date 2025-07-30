@@ -3,7 +3,7 @@ import QuoteForm from "@/components/QuoteForm";
 import { useState, useEffect } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import LazyImage from "@/components/LazyImage";
-import PerformanceOptimizer from "@/components/PerformanceOptimizer";
+
 import { preloadImages } from "@/utils/performance";
 
 // Static data moved outside component to prevent re-renders
@@ -114,7 +114,7 @@ export default function HomePage() {
 
   return (
     <>
-      <PerformanceOptimizer />
+
       <SEO
         title="Junk Removal & Demolition Monroe LA | Same-Day Service | Kane Pro (318) 914-1201"
         description="Professional junk removal and demolition services in Monroe, West Monroe, Ruston & Northeast Louisiana. Same-day service available. Licensed, insured, family-owned. Free estimates!"

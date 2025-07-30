@@ -4,7 +4,7 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import LazyImage from "@/components/LazyImage";
-import PerformanceOptimizer from "@/components/PerformanceOptimizer";
+
 
 import Website_demolition from "@assets/Website demolition.jpg";
 import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
@@ -95,7 +95,7 @@ export default function ServiceAreasPage() {
 
   return (
     <>
-      <PerformanceOptimizer />
+
       <SEO
         title="Monroe LA Junk Removal & Demolition Service Areas | Kane Pro"
         description="Kane Pro serves Monroe, West Monroe, Ruston & Northeast Louisiana with professional junk removal and demolition. Same-day service available."

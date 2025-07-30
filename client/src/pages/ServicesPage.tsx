@@ -3,7 +3,7 @@ import QuoteForm from "@/components/QuoteForm";
 import SEO from "@/components/SEO";
 import { useState } from "react";
 import LazyImage from "@/components/LazyImage";
-import PerformanceOptimizer from "@/components/PerformanceOptimizer";
+
 
 import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
 import WhatsApp_Image_2025_07_26_at_21_22_48__2_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2).jpeg";
@@ -120,7 +120,7 @@ export default function ServicesPage() {
 
   return (
     <>
-      <PerformanceOptimizer />
+
       <SEO
         title="Junk Removal & Demolition Services Monroe LA | Residential & Commercial | Kane Pro"
         description="Professional junk removal and demolition services in Monroe, West Monroe, Ruston & Northeast Louisiana. Residential cleanouts, commercial demolition, construction debris. Call (318) 914-1201!"
