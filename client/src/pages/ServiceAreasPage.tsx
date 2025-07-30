@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import Website_demolition from "@assets/Website demolition.jpg";
+import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
+import Website_demolition_1 from "@assets/Website demolition (1)_1753836740875.jpg";
+import Website_demolition_new from "@assets/Website demolition_1753836740879.jpg";
 
 // Animation variants
 const fadeInUp = {
@@ -19,57 +22,57 @@ const staggerContainer = {
 export default function ServiceAreasPage() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Simplified gallery with 10 plain images for easy editing
+  // Gallery with authentic Kane Pro demolition projects
   const galleryImages = [
     {
       id: 1,
-      src: "/portfolio-1.png",
-      alt: "Junk removal project Monroe LA",
+      src: Website_demolition_1,
+      alt: "Barn demolition and cleanup Monroe LA - Butter & Eggs building removal",
     },
     {
       id: 2,
-      src: "/portfolio-2.png",
-      alt: "Demolition project West Monroe LA",
+      src: Website_demolition_new,
+      alt: "Residential demolition West Monroe LA - Complete structure removal and cleanup",
     },
     {
       id: 3,
-      src: "/portfolio-3.png",
-      alt: "Construction cleanup Ruston LA",
+      src: Website_demolition,
+      alt: "Construction cleanup and demolition Ruston LA",
     },
     {
       id: 4,
-      src: "/hero-background-latest.png",
-      alt: "Demolition Monroe Louisiana",
+      src: WhatsApp_Image_2025_07_27_at_21_55_20,
+      alt: "Junk removal project Monroe Louisiana",
     },
     {
       id: 5,
-      src: "/portfolio-1.png",
-      alt: "Interior demolition Monroe LA",
+      src: Website_demolition_1,
+      alt: "Interior demolition Monroe LA - Commercial building cleanup",
     },
     {
       id: 6,
-      src: "/portfolio-2.png",
-      alt: "Commercial junk removal Monroe LA",
+      src: Website_demolition_new,
+      alt: "Commercial junk removal Monroe LA - Before and after results",
     },
     {
       id: 7,
-      src: "/portfolio-3.png",
-      alt: "Residential demolition West Monroe LA",
+      src: Website_demolition,
+      alt: "Residential demolition West Monroe LA - Complete property cleanup",
     },
     {
       id: 8,
-      src: "/hero-background-latest.png",
-      alt: "Emergency demolition Monroe LA",
+      src: WhatsApp_Image_2025_07_27_at_21_55_20,
+      alt: "Emergency demolition Monroe LA - Same day service",
     },
     {
       id: 9,
-      src: "/portfolio-1.png",
-      alt: "Junk hauling Northeast Louisiana",
+      src: Website_demolition_1,
+      alt: "Junk hauling Northeast Louisiana - Construction debris removal",
     },
     {
       id: 10,
-      src: "/portfolio-2.png",
-      alt: "Demolition services Monroe area",
+      src: Website_demolition_new,
+      alt: "Demolition services Monroe area - Professional cleanup crew",
     },
   ];
 
@@ -254,7 +257,7 @@ export default function ServiceAreasPage() {
               <i className="fas fa-times"></i>
             </button>
             <img
-              src={Website_demolition}
+              src={selectedImage.src}
               alt={selectedImage.alt}
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
             />
