@@ -2,7 +2,6 @@ import Navigation from "./Navigation";
 import FloatingCTA from "./FloatingCTA";
 import Footer from "./Footer";
 import OptimizedAssets from "./OptimizedAssets";
-import PerformanceReport from "./PerformanceReport";
 import { memo } from "react";
 
 interface LayoutProps {
@@ -19,7 +18,6 @@ const Layout = memo(function Layout({ children }: LayoutProps) {
       </main>
       <FloatingCTA />
       <Footer />
-      <PerformanceReport />
     </div>
   );
 });
