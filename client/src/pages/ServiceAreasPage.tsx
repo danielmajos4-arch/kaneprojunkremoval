@@ -31,9 +31,9 @@ const staggerContainer = {
 };
 
 export default function ServiceAreasPage() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string } | null>(null);
 
-  // Gallery with authentic Kane Pro demolition projects
+  // Gallery with authentic Kane Pro demolition projects - duplicates removed
   const galleryImages = [
     {
       id: 1,
@@ -72,41 +72,36 @@ export default function ServiceAreasPage() {
     },
     {
       id: 8,
-      src: WhatsApp_Image_1_Junk,
-      alt: "Residential junk hauling Ruston LA - Complete property cleanup",
-    },
-    {
-      id: 9,
       src: WhatsApp_Image_Storm_Project,
       alt: "Storm cleanup and junk removal Northeast Louisiana - Emergency service",
     },
     {
-      id: 10,
+      id: 9,
       src: WhatsApp_Image_2025_07_27_at_21_55_20,
       alt: "Professional demolition Monroe area - Construction site cleanup",
     },
     {
-      id: 11,
+      id: 10,
       src: Website_demolition,
       alt: "Construction cleanup and demolition Ruston LA - Complete debris removal",
     },
     {
-      id: 12,
+      id: 11,
       src: Screen_Shot_Truck_Load_1,
       alt: "Truck loaded with construction debris Monroe LA - Professional hauling service",
     },
     {
-      id: 13,
+      id: 12,
       src: Screen_Shot_Truck_Load_2,
       alt: "Full truck load junk removal West Monroe LA - Residential cleanout service",
     },
     {
-      id: 14,
+      id: 13,
       src: WhatsApp_Image_Truck_Project_1,
       alt: "Junk removal truck loaded Northeast Louisiana - Same day pickup service",
     },
     {
-      id: 15,
+      id: 14,
       src: WhatsApp_Image_Truck_Project_2,
       alt: "Professional junk hauling Monroe area - Complete property cleanup",
     },
