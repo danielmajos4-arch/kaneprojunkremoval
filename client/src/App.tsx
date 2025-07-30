@@ -4,21 +4,18 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "./components/Layout";
-import HomePage from "./pages/HomePage";
-import ServicesPage from "./pages/ServicesPage";
-import AboutPage from "./pages/AboutPage";
-import ServiceAreasPage from "./pages/ServiceAreasPage";
-import NotFound from "@/pages/not-found";
+
+// Simple test component to check if the basic structure works
+function TestComponent() {
+  return <div>Test Page Working</div>;
+}
 
 function Router() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" component={HomePage} />
-        <Route path="/services" component={ServicesPage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/areas" component={ServiceAreasPage} />
-        <Route component={NotFound} />
+        <Route path="/" component={TestComponent} />
+        <Route component={TestComponent} />
       </Switch>
     </Layout>
   );
