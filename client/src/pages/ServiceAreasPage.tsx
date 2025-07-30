@@ -17,7 +17,7 @@ const staggerContainer = {
 };
 
 export default function ServiceAreasPage() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string } | null>(null);
 
   // Simplified gallery with 10 plain images for easy editing
   const galleryImages = [

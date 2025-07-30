@@ -91,7 +91,7 @@ export default function HomePage() {
     setMounted(true);
   }, []);
 
-  const scrollToQuote = (e) => {
+  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     document
       .getElementById("quote-form")
