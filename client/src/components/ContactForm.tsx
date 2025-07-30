@@ -196,7 +196,7 @@ export default function ContactForm() {
             </Button>
             <a 
               href="tel:+13189141201" 
-              className="flex-1 btn-outline flex items-center justify-center bg-[#265a26]"
+              className="flex-1 btn-outline flex items-center justify-center"
             >
               <i className="fas fa-phone mr-2"></i>
               CALL (318) 914-1201

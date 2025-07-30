@@ -5,25 +5,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import Website_demolition from "@assets/Website demolition.jpg";
-import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
-import Website_demolition_1 from "@assets/Website demolition (1)_1753836740875.jpg";
-import Website_demolition_new from "@assets/Website demolition_1753836740879.jpg";
-import WhatsApp_Image_1_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837567906.jpeg";
-import WhatsApp_Image_2_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2)_1753837567909.jpeg";
-import Website_demolition_1_New from "@assets/Website demolition (1)_1753837579354.jpg";
-import Website_demolition_2_New from "@assets/Website demolition_1753837579366.jpg";
-import Junk_removal_Project from "@assets/Junk removal_1753837631446.jpeg";
-import WhatsApp_Image_1_Junk from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837660614.jpeg";
-import WhatsApp_Image_Storm_Project from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3)_1753837691478.jpeg";
-import Screen_Shot_Truck_Load_1 from "@assets/Screen Shot 2025-07-29 at 9.17.50 PM_1753838411149.png";
-import Screen_Shot_Truck_Load_2 from "@assets/Screen Shot 2025-07-29 at 9.18.35 PM_1753838411150.png";
-import WhatsApp_Image_Truck_Project_1 from "@assets/WhatsApp Image 2025-07-29 at 21.40.44 (2)_1753838436591.jpeg";
-import WhatsApp_Image_Truck_Project_2 from "@assets/WhatsApp Image 2025-07-29 at 22.01.08 (1)_1753838451889.jpeg";
-import WhatsApp_Image_New_1 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (1)_1753839452505.jpeg";
-import WhatsApp_Image_New_2 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (2)_1753839452506.jpeg";
-import WhatsApp_Image_New_3 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59_1753839452506.jpeg";
-import WhatsApp_Image_New_4 from "@assets/WhatsApp Image 2025-07-29 at 23.31.00 (1)_1753839452507.jpeg";
-import WhatsApp_Image_New_5 from "@assets/WhatsApp Image 2025-07-29 at 23.31.00_1753839452507.jpeg";
 
 // Animation variants
 const fadeInUp = {
@@ -36,69 +17,59 @@ const staggerContainer = {
 };
 
 export default function ServiceAreasPage() {
-  const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string } | null>(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  // Gallery with authentic Kane Pro demolition projects - duplicates removed
+  // Simplified gallery with 10 plain images for easy editing
   const galleryImages = [
     {
       id: 1,
-      src: Website_demolition_1,
-      alt: "Barn demolition and cleanup Monroe LA - Butter & Eggs building removal",
+      src: "/portfolio-1.png",
+      alt: "Junk removal project Monroe LA",
     },
     {
       id: 2,
-      src: Website_demolition_new,
-      alt: "Residential demolition West Monroe LA - Complete structure removal and cleanup",
+      src: "/portfolio-2.png",
+      alt: "Demolition project West Monroe LA",
     },
     {
       id: 3,
-      src: Website_demolition_2_New,
-      alt: "Residential patio demolition Northeast Louisiana - Complete cleanup service",
+      src: "/portfolio-3.png",
+      alt: "Construction cleanup Ruston LA",
     },
     {
       id: 4,
-      src: WhatsApp_Image_New_1,
-      alt: "Professional junk removal Monroe LA - Complete cleanout service",
+      src: "/hero-background-latest.png",
+      alt: "Demolition Monroe Louisiana",
     },
     {
       id: 5,
-      src: WhatsApp_Image_New_2,
-      alt: "Construction debris removal West Monroe LA - Site cleanup",
+      src: "/portfolio-1.png",
+      alt: "Interior demolition Monroe LA",
     },
     {
       id: 6,
-      src: WhatsApp_Image_New_3,
-      alt: "Residential junk hauling Northeast Louisiana - Same day pickup",
+      src: "/portfolio-2.png",
+      alt: "Commercial junk removal Monroe LA",
     },
     {
       id: 7,
-      src: WhatsApp_Image_New_4,
-      alt: "Commercial demolition Monroe area - Professional service",
+      src: "/portfolio-3.png",
+      alt: "Residential demolition West Monroe LA",
     },
     {
       id: 8,
-      src: WhatsApp_Image_New_5,
-      alt: "Large scale junk removal Ruston LA - Complete property cleanup",
+      src: "/hero-background-latest.png",
+      alt: "Emergency demolition Monroe LA",
     },
     {
       id: 9,
-      src: Junk_removal_Project,
-      alt: "Commercial junk removal Monroe Louisiana - Large scale cleanout",
+      src: "/portfolio-1.png",
+      alt: "Junk hauling Northeast Louisiana",
     },
     {
       id: 10,
-      src: Screen_Shot_Truck_Load_1,
-      alt: "Truck loaded with construction debris Monroe LA - Professional hauling service",
-    },
-    {
-      id: 11,
-      src: Screen_Shot_Truck_Load_2,
-      alt: "Full truck load junk removal West Monroe LA - Residential cleanout service",
-    },
-    {
-      id: 12,
-      src: WhatsApp_Image_Truck_Project_2,
-      alt: "Professional junk hauling Monroe area - Complete property cleanup",
+      src: "/portfolio-2.png",
+      alt: "Demolition services Monroe area",
     },
   ];
 
@@ -283,7 +254,7 @@ export default function ServiceAreasPage() {
               <i className="fas fa-times"></i>
             </button>
             <img
-              src={selectedImage.src}
+              src={Website_demolition}
               alt={selectedImage.alt}
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
             />
