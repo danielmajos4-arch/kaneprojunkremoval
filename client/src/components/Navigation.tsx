@@ -1,14 +1,13 @@
-import { useState, useEffect, memo } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { throttle } from "@/utils/performance";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
 
-  const toggleMobileMenu = throttle(() => {
+  const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  }, 100);
+  };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
