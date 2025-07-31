@@ -3,8 +3,6 @@ import QuoteForm from "@/components/QuoteForm";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import LazyImage from "@/components/LazyImage";
-import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 
 import Website_demolition from "@assets/Website demolition.jpg";
 import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
@@ -106,7 +104,6 @@ export default function ServiceAreasPage() {
 
   return (
     <>
-      <PerformanceOptimizer />
       <SEO
         title="Monroe LA Junk Removal & Demolition Service Areas | Kane Pro"
         description="Kane Pro serves Monroe, West Monroe, Ruston & Northeast Louisiana with professional junk removal and demolition. Same-day service available."
@@ -264,12 +261,11 @@ export default function ServiceAreasPage() {
                 whileHover={{ scale: 1.02 }}
                 onClick={() => setSelectedImage(image)}
               >
-                <LazyImage
+                <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform hover:scale-110"
-                  width={200}
-                  height={200}
+                  className="w-full h-full object-cover transition-transform hover:scale-110 pt-[2px] pb-[2px]"
+                  loading="lazy"
                 />
               </motion.div>
             ))}

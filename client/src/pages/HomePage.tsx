@@ -2,9 +2,6 @@ import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 import { useState, useEffect } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
-import LazyImage from "@/components/LazyImage";
-import PerformanceOptimizer from "@/components/PerformanceOptimizer";
-import { preloadImages } from "@/utils/performance";
 
 // Static data moved outside component to prevent re-renders
 const serviceAreas = [
@@ -92,20 +89,9 @@ export default function HomePage() {
 
   useEffect(() => {
     setMounted(true);
-    
-    // Preload critical images for faster loading
-    const criticalImages = [
-      '/hero-background-latest.png',
-      '/portfolio-1.png',
-      '/portfolio-2.png',
-      '/portfolio-3.png'
-    ];
-    preloadImages(criticalImages).catch(() => {
-      // Silently handle preload failures
-    });
   }, []);
 
-  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToQuote = (e) => {
     e.preventDefault();
     document
       .getElementById("quote-form")
@@ -114,7 +100,6 @@ export default function HomePage() {
 
   return (
     <>
-      <PerformanceOptimizer />
       <SEO
         title="Junk Removal & Demolition Monroe LA | Same-Day Service | Kane Pro (318) 914-1201"
         description="Professional junk removal and demolition services in Monroe, West Monroe, Ruston & Northeast Louisiana. Same-day service available. Licensed, insured, family-owned. Free estimates!"
@@ -279,12 +264,13 @@ export default function HomePage() {
                 key={index}
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg"
               >
-                <LazyImage
+                <img
                   src={service.image}
                   alt={`${service.title} service in Monroe Louisiana`}
                   className="w-full h-32 sm:h-40 object-cover"
-                  width={300}
-                  height={160}
+                  loading="lazy"
+                  width="300"
+                  height="160"
                 />
                 <div className="p-3 sm:p-4">
                   <h3 className="text-base sm:text-lg font-bold text-deep-green mb-2">
