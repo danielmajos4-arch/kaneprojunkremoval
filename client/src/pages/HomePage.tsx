@@ -49,7 +49,7 @@ export default function HomePage() {
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="relative z-10 max-w-6xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             className="text-center"
             initial="hidden"
@@ -83,7 +83,7 @@ export default function HomePage() {
             >
               <motion.a
                 href="#quote-form"
-                className="btn-cta text-lg px-6 py-3"
+                className="mobile-cta-button btn-cta text-lg px-6 py-3"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -98,7 +98,7 @@ export default function HomePage() {
               </motion.a>
               <motion.a
                 href="tel:+13189141201"
-                className="btn-outline text-lg px-6 py-3"
+                className="mobile-cta-button btn-outline text-lg px-6 py-3"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -254,7 +254,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mobile-service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
                 image: "/portfolio-1.png",
@@ -307,32 +307,36 @@ export default function HomePage() {
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+                className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 mobile-service-card"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden mobile-image-container">
                   <img
                     src={service.image}
                     alt={`${service.title} service in Monroe Louisiana`}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 service-card-mobile"
                     loading="lazy"
                     width="300"
-                    height="192"
+                    height="200"
+                    style={{
+                      imageRendering: '-webkit-optimize-contrast',
+                      filter: 'brightness(1.02) contrast(1.05) saturate(1.1)'
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-deep-green mb-2 group-hover:text-vibrant-orange transition-colors duration-300">
+                <div className="p-4 sm:p-5">
+                  <h3 className="service-title text-base sm:text-lg font-bold text-deep-green mb-2 group-hover:text-vibrant-orange transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-text-dark mb-4 leading-relaxed">
+                  <p className="service-description text-sm text-text-dark mb-3 sm:mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <ul className="text-xs text-gray-600 mb-5 space-y-1.5">
+                  <ul className="service-features text-xs text-gray-600 mb-4 sm:mb-5 space-y-1.5">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <i className="fas fa-check text-vibrant-orange text-xs"></i>
@@ -342,7 +346,7 @@ export default function HomePage() {
                   </ul>
                   <Link
                     href="/services"
-                    className="text-sm btn-secondary block text-center transform transition-all duration-300 group-hover:bg-vibrant-orange group-hover:text-white"
+                    className="btn-secondary text-sm block text-center transform transition-all duration-300 group-hover:bg-vibrant-orange group-hover:text-white py-2 sm:py-3"
                   >
                     Learn More
                   </Link>

@@ -197,6 +197,97 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
       transform: translateY(-2px);
     }
+
+    /* Enhanced mobile image optimization */
+    .service-card-mobile img {
+      width: 100% !important;
+      height: 200px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      border-radius: 8px 8px 0 0 !important;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      filter: brightness(1.02) contrast(1.05) saturate(1.1);
+    }
+
+    /* Mobile card improvements */
+    .mobile-service-card {
+      border-radius: 8px !important;
+      overflow: hidden !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+      background: white !important;
+    }
+
+    .mobile-service-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* Ensure proper mobile aspect ratios */
+    .mobile-image-container {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 8px 8px 0 0;
+    }
+
+    /* Mobile text and spacing optimizations */
+    .mobile-service-card .service-title {
+      font-size: 1rem !important;
+      line-height: 1.3 !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    .mobile-service-card .service-description {
+      font-size: 0.875rem !important;
+      line-height: 1.4 !important;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .mobile-service-card .service-features {
+      font-size: 0.75rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    /* Touch-friendly buttons on mobile */
+    .mobile-service-card .btn-secondary {
+      min-height: 44px !important;
+      font-size: 0.875rem !important;
+      padding: 0.75rem 1rem !important;
+      border-radius: 6px !important;
+    }
+
+    /* Improve grid spacing on mobile */
+    .mobile-service-grid {
+      gap: 1rem !important;
+      padding: 0 1rem !important;
+    }
+
+    /* Additional mobile viewport optimizations */
+    .hero-section {
+      min-height: 100vh !important;
+      min-height: 100dvh !important; /* Dynamic viewport height */
+    }
+
+    /* Ensure proper mobile padding and margins */
+    .mobile-optimized {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    /* Mobile navigation improvements */
+    .mobile-nav-header {
+      height: 4rem !important;
+      padding: 0 1rem !important;
+    }
+
+    /* Better mobile button sizes */
+    .mobile-cta-button {
+      min-height: 48px !important;
+      font-size: 1rem !important;
+      padding: 0.875rem 1.5rem !important;
+    }
   }
 
   /* Lazy loading optimization */

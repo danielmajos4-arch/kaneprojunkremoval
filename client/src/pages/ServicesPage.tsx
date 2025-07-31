@@ -85,7 +85,7 @@ const serviceAreas = [
 ];
 
 // Optimized FAQ Component
-const FAQItem = ({ faq, isOpen, onToggle }) => (
+const FAQItem = ({ faq, isOpen, onToggle }: { faq: any, isOpen: boolean, onToggle: () => void }) => (
   <div className="bg-white rounded-lg shadow-sm border border-gray-100">
     <button
       className="w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-vibrant-orange"
@@ -110,9 +110,9 @@ const FAQItem = ({ faq, isOpen, onToggle }) => (
 );
 
 export default function ServicesPage() {
-  const [openFAQ, setOpenFAQ] = useState(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
