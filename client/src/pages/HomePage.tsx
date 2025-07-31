@@ -312,7 +312,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                whileHover={{ y: -5, transition: { duration: 0.3 } }}
               >
                 <div className="relative overflow-hidden mobile-image-container">
                   <img
@@ -329,7 +329,10 @@ export default function HomePage() {
                       display: 'block',
                       width: '100%',
                       objectFit: 'cover',
-                      objectPosition: 'center'
+                      objectPosition: 'center',
+                      borderRadius: '12px 12px 0 0',
+                      border: 'none',
+                      outline: 'none'
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

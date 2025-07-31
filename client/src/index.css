@@ -204,25 +204,41 @@
       height: 220px !important;
       object-fit: cover !important;
       object-position: center !important;
-      border-radius: 8px 8px 0 0 !important;
+      border-radius: 12px 12px 0 0 !important;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: crisp-edges;
       filter: brightness(1.02) contrast(1.05) saturate(1.1);
+      border: none !important;
+      outline: none !important;
     }
 
     /* Mobile card improvements */
     .mobile-service-card {
-      border-radius: 8px !important;
+      border-radius: 12px !important;
       overflow: hidden !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
       background: white !important;
       margin-bottom: 1.5rem !important;
-      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border: 1px solid rgba(0, 0, 0, 0.06) !important;
+      transition: all 0.3s ease !important;
     }
 
     .mobile-service-card:hover {
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
-      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+      transform: translateY(-3px) !important;
+    }
+
+    /* Add a subtle gradient overlay for professional look */
+    .mobile-image-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.1) 100%);
+      pointer-events: none;
+      border-radius: 12px 12px 0 0;
     }
 
     /* Ensure proper mobile aspect ratios */
@@ -231,7 +247,7 @@
       width: 100%;
       height: 220px;
       overflow: hidden;
-      border-radius: 8px 8px 0 0;
+      border-radius: 12px 12px 0 0;
       background: #f8f9fa;
     }
 
@@ -276,10 +292,17 @@
 
       .mobile-image-container {
         height: 200px !important;
+        border-radius: 12px 12px 0 0 !important;
       }
 
       .service-card-mobile img {
         height: 200px !important;
+        border-radius: 12px 12px 0 0 !important;
+      }
+
+      .mobile-service-card {
+        border-radius: 12px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
       }
     }
 
