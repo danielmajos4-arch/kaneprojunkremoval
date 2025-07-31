@@ -29,12 +29,12 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Junk Removal & Demolition Monroe LA | Same-Day Service | Kane Pro (318) 914-1201"
-        description="Professional junk removal and demolition services in Monroe, West Monroe, Ruston & Northeast Louisiana. Same-day service available. Licensed, insured, family-owned. Free estimates!"
-        keywords="junk removal Monroe LA, demolition Monroe LA, junk removal West Monroe LA, demolition services Louisiana, same day junk pickup Monroe, licensed junk removal Monroe"
+        title="Junk Removal, Demolition & Dumpster Rental Monroe LA | Same-Day Service | Kane Pro (318) 914-1201"
+        description="Professional junk removal, demolition & dumpster rental services in Monroe, West Monroe, Ruston & Northeast Louisiana. Same-day service available. Licensed, insured, family-owned. Free estimates!"
+        keywords="junk removal Monroe LA, demolition Monroe LA, dumpster rental Monroe LA, junk removal West Monroe LA, demolition services Louisiana, dumpster rental Louisiana, same day junk pickup Monroe, licensed junk removal Monroe, roll off dumpster Monroe"
         canonicalUrl="https://kanejunkremoval.com/"
-        ogTitle="Monroe LA Junk Removal & Demolition | Same-Day Service | Kane Pro"
-        ogDescription="Fast, reliable junk removal and demolition services serving Monroe, West Monroe, Ruston & Northeast Louisiana. Family-owned Christian business with same-day service."
+        ogTitle="Monroe LA Junk Removal, Demolition & Dumpster Rental | Same-Day Service | Kane Pro"
+        ogDescription="Fast, reliable junk removal, demolition & dumpster rental services serving Monroe, West Monroe, Ruston & Northeast Louisiana. Family-owned Christian business with same-day service."
         structuredData={generateLocalBusinessSchema("Northeast Louisiana")}
         city="Monroe"
       />
@@ -45,7 +45,7 @@ export default function HomePage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url('/hero-background-latest.png')` }}
           role="img"
-          aria-label="Monroe Louisiana junk removal and demolition service area"
+          aria-label="Monroe Louisiana junk removal, demolition and dumpster rental service area"
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
 
@@ -60,7 +60,7 @@ export default function HomePage() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
               variants={fadeInUp}
             >
-              Monroe Louisiana Junk Removal & Demolition
+              Monroe Louisiana Junk Removal, Demolition & Dumpster Rental
               <motion.span
                 className="text-vibrant-orange block text-2xl sm:text-3xl md:text-4xl mt-2"
                 variants={fadeInUp}
@@ -73,8 +73,8 @@ export default function HomePage() {
               className="text-lg sm:text-xl max-w-3xl mx-auto font-medium text-white text-center bg-black/20 rounded-lg px-4 py-3 mb-6"
               variants={fadeInUp}
             >
-              Fast, reliable junk hauling and demolition services in Monroe,
-              West Monroe, Ruston & Northeast Louisiana
+              Fast, reliable junk hauling, demolition & dumpster rental services
+              in Monroe, West Monroe, Ruston & Northeast Louisiana
             </motion.p>
 
             <motion.div
@@ -135,23 +135,24 @@ export default function HomePage() {
               viewport={{ once: true, margin: "-50px" }}
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-deep-green mb-4">
-                Monroe LA's Trusted Junk Removal & Demolition Experts
+                Monroe LA's Trusted Junk Removal, Demolition & Dumpster Rental
+                Experts
               </h2>
 
               <div className="space-y-3 text-base text-text-dark leading-relaxed">
                 <p>
                   <strong>Kane Pro Junk Removal & Demolition</strong> serves
                   Monroe and Northeast Louisiana with reliable, same-day junk
-                  hauling and demolition services. As a local, family-owned
-                  Christian business, we treat your Monroe LA property with
-                  respect and care.
+                  hauling, demolition, and dumpster rental services. As a local,
+                  family-owned Christian business, we treat your Monroe LA
+                  property with respect and care.
                 </p>
 
                 <p>
-                  From furniture and appliances to construction debris and
-                  complete demolition projects, we handle residential and
-                  commercial cleanouts throughout Monroe, West Monroe, Ruston,
-                  and surrounding Northeast Louisiana areas.
+                  From furniture and appliances to construction debris, complete
+                  demolition projects, and roll-off dumpster rentals, we handle
+                  residential and commercial cleanouts throughout Monroe, West
+                  Monroe, Ruston, and surrounding Northeast Louisiana areas.
                 </p>
 
                 <p>
@@ -160,7 +161,7 @@ export default function HomePage() {
                     satisfaction.
                   </strong>{" "}
                   We're not done until you're completely happy with our junk
-                  removal and demolition services.
+                  removal, demolition, and dumpster rental services.
                 </p>
               </div>
 
@@ -192,23 +193,23 @@ export default function HomePage() {
                   {[
                     {
                       city: "Monroe, LA",
-                      desc: "Full-service junk removal & demolition",
+                      desc: "Full-service junk removal, demolition & dumpsters",
                     },
                     {
                       city: "West Monroe, LA",
-                      desc: "Residential & commercial demolition",
+                      desc: "Residential & commercial demo + rentals",
                     },
                     {
                       city: "Ruston, LA",
-                      desc: "University area cleanouts & demo",
+                      desc: "University area cleanouts, demo & dumpsters",
                     },
                     {
                       city: "Calhoun, LA",
-                      desc: "Same-day demolition service",
+                      desc: "Same-day demolition & dumpster service",
                     },
                     {
                       city: "Farmerville, LA",
-                      desc: "Professional junk hauling & demo",
+                      desc: "Professional junk hauling, demo & rentals",
                     },
                   ].map((area, index) => (
                     <motion.div
@@ -245,15 +246,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-deep-green mb-3">
-              Our Monroe LA Junk Removal & Demolition Services
+              Our Monroe LA Junk Removal, Demolition & Dumpster Rental Services
             </h2>
             <p className="text-base text-text-dark max-w-2xl mx-auto">
-              Complete junk hauling and demolition solutions for homes and
-              businesses in Monroe and Northeast Louisiana
+              Complete junk hauling, demolition, and dumpster rental solutions
+              for homes and businesses in Monroe and Northeast Louisiana
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 image: "/portfolio-1.png",
@@ -291,39 +292,57 @@ export default function HomePage() {
                   "Contractor Ready",
                 ],
               },
+              {
+                image: "/dumpster-rental.png",
+                title: "Dumpster Rental Monroe LA",
+                description:
+                  "Roll-off dumpster rentals for Monroe LA construction, renovation & cleanout projects",
+                features: [
+                  "10-40 Yard Dumpsters",
+                  "Same-Day Delivery",
+                  "Flexible Rental Periods",
+                  "Competitive Pricing",
+                ],
+              },
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg pt-[0px] pb-[0px] mt-[0px] mb-[0px] ml-[11px] mr-[11px]"
+                className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
               >
-                <img
-                  src={service.image}
-                  alt={`${service.title} service in Monroe Louisiana`}
-                  className="w-full h-40 object-cover"
-                  loading="lazy"
-                  width="300"
-                  height="160"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-deep-green mb-2">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} service in Monroe Louisiana`}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
+                    width="300"
+                    height="192"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-deep-green mb-2 group-hover:text-vibrant-orange transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-text-dark mb-3">
+                  <p className="text-sm text-text-dark mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <ul className="text-xs text-gray-600 mb-4 space-y-1">
+                  <ul className="text-xs text-gray-600 mb-5 space-y-1.5">
                     {service.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
+                      <li key={idx} className="flex items-center gap-2">
+                        <i className="fas fa-check text-vibrant-orange text-xs"></i>
+                        {feature}
+                      </li>
                     ))}
                   </ul>
                   <Link
                     href="/services"
-                    className="text-sm btn-secondary block text-center"
+                    className="text-sm btn-secondary block text-center transform transition-all duration-300 group-hover:bg-vibrant-orange group-hover:text-white"
                   >
                     Learn More
                   </Link>
@@ -404,7 +423,7 @@ export default function HomePage() {
                 rating: 5,
               },
               {
-                text: "Fair pricing for both junk removal and demo work. They donated items that were still good. These folks understand Monroe Louisiana communities.",
+                text: "Rented a dumpster for our Monroe home renovation. Fair pricing and they delivered exactly when promised. These folks understand Monroe Louisiana communities and deliver quality service.",
                 author: "Jennifer L., Ruston LA",
                 rating: 5,
               },
