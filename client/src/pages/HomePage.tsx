@@ -14,7 +14,7 @@ const serviceAreas = [
 
 const services = [
   {
-    image: "/portfolio-1.png",
+    image: "/kane-junk-removal.jpg",
     title: "Residential Cleanouts",
     description:
       "Monroe LA home cleanouts, furniture, appliances & household items",
@@ -26,7 +26,7 @@ const services = [
     ],
   },
   {
-    image: "/portfolio-2.png",
+    image: "/kane-project-1.jpg",
     title: "Commercial Removal & Demo",
     description:
       "Monroe office cleanouts, retail spaces & commercial demolition",
@@ -38,7 +38,7 @@ const services = [
     ],
   },
   {
-    image: "/portfolio-3.png",
+    image: "/kane-demolition-1.jpg",
     title: "Construction Debris & Demolition",
     description:
       "Monroe LA renovation cleanup, building materials removal & structural demolition",
@@ -91,7 +91,7 @@ export default function HomePage() {
     setMounted(true);
   }, []);
 
-  const scrollToQuote = (e) => {
+  const scrollToQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     document
       .getElementById("quote-form")
@@ -114,10 +114,10 @@ export default function HomePage() {
       {/* Hero Section - Mobile Optimized */}
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center hero-section">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/hero-background-latest.png')` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg"
+          style={{ backgroundImage: `url('/kane-hero-bg.jpg')` }}
           role="img"
-          aria-label="Monroe Louisiana junk removal and demolition service area"
+          aria-label="Kane Pro junk removal and demolition work in Monroe Louisiana"
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
 
@@ -262,37 +262,143 @@ export default function HomePage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg"
+                className="bg-white conversion-image group"
               >
-                <img
-                  src={service.image}
-                  alt={`${service.title} service in Monroe Louisiana`}
-                  className="w-full h-32 sm:h-40 object-cover"
-                  loading="lazy"
-                  width="300"
-                  height="160"
-                />
-                <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg font-bold text-deep-green mb-2">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} service in Monroe Louisiana - Authentic Kane Pro work`}
+                    className="w-full h-48 sm:h-56 service-image object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    width="400"
+                    height="224"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-vibrant-orange text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Real Work
+                  </div>
+                </div>
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-deep-green mb-3 group-hover:text-vibrant-orange transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-text-dark mb-3">
+                  <p className="text-sm sm:text-base text-text-dark mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <ul className="text-xs text-gray-600 mb-3 sm:mb-4 space-y-1">
+                  <ul className="text-sm text-gray-700 mb-5 space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
+                      <li key={idx} className="flex items-center gap-2">
+                        <i className="fas fa-check-circle text-deep-green text-xs"></i>
+                        <span>{feature}</span>
+                      </li>
                     ))}
                   </ul>
                   <Link
                     href="/services"
-                    className="text-xs sm:text-sm btn-secondary block text-center transition-colors"
+                    className="btn-cta text-sm block text-center transition-all duration-300 group-hover:shadow-lg"
                   >
-                    Learn More
+                    <i className="fas fa-arrow-right mr-2"></i>
+                    View Details
                   </Link>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Work Quality Showcase - Conversion Focused */}
+      <section className="py-12 sm:py-16 bg-gradient-to-b from-neutral-bg to-white">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-deep-green mb-4">
+              See Our Professional Monroe LA Work
+            </h2>
+            <p className="text-base sm:text-lg text-text-dark max-w-3xl mx-auto">
+              Real projects. Real results. Every image shows actual Kane Pro work completed for Monroe area customers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="conversion-image group">
+              <img
+                src="/kane-demolition-2.jpg"
+                alt="Professional demolition work completed by Kane Pro in Monroe Louisiana"
+                className="w-full h-64 object-cover rounded-lg service-image"
+                loading="lazy"
+                width="400"
+                height="256"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold text-lg">Complete Demolition</h4>
+                  <p className="text-sm">Monroe, LA</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="conversion-image group">
+              <img
+                src="/kane-project-2.jpg"
+                alt="Large scale junk removal project by Kane Pro in West Monroe Louisiana"
+                className="w-full h-64 object-cover rounded-lg service-image"
+                loading="lazy"
+                width="400"
+                height="256"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold text-lg">Massive Cleanout</h4>
+                  <p className="text-sm">West Monroe, LA</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="conversion-image group">
+              <img
+                src="/kane-project-3.jpg"
+                alt="Professional construction debris removal by Kane Pro in Northeast Louisiana"
+                className="w-full h-64 object-cover rounded-lg service-image"
+                loading="lazy"
+                width="400"
+                height="256"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold text-lg">Site Cleanup</h4>
+                  <p className="text-sm">Northeast LA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="bg-deep-green text-white rounded-xl p-6 sm:p-8 inline-block">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-vibrant-orange">100%</div>
+                  <div className="text-sm">Customer Satisfaction</div>
+                </div>
+                <div className="w-px h-12 bg-white/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-vibrant-orange">50+</div>
+                  <div className="text-sm">Happy Customers</div>
+                </div>
+                <div className="w-px h-12 bg-white/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-vibrant-orange">Same-Day</div>
+                  <div className="text-sm">Service Available</div>
+                </div>
+              </div>
+              <p className="text-sm text-gray-200 mb-4">Licensed • Insured • Christian Family Business</p>
+              <a
+                href="tel:+13189141201"
+                className="btn-cta inline-flex items-center gap-2 text-base"
+              >
+                <i className="fas fa-phone"></i>
+                Call For Your Free Estimate
+              </a>
+            </div>
           </div>
         </div>
       </section>

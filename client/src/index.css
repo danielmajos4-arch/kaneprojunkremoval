@@ -93,6 +93,85 @@
     height: auto;
   }
 
+  /* High-quality image rendering */
+  .service-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    filter: brightness(1.02) contrast(1.05) saturate(1.1);
+    transition: all 0.3s ease;
+  }
+
+  .service-image:hover {
+    filter: brightness(1.05) contrast(1.08) saturate(1.15);
+    transform: translateZ(0) scale(1.02);
+  }
+
+  /* Hero background optimization */
+  .hero-bg {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    will-change: transform;
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg {
+      background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
+    }
+  }
+
+  /* Conversion-focused image effects */
+  .conversion-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .conversion-image:hover {
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .conversion-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Mobile optimization for conversion images */
+  @media (max-width: 768px) {
+    .conversion-image {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .conversion-image:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Lazy loading optimization */
+  img[loading="lazy"] {
+    filter: blur(0);
+    transition: filter 0.3s;
+  }
+
+  img[loading="lazy"]:not([src]) {
+    filter: blur(5px);
+  }
+
   /* Critical above-the-fold styles */
   .hero-section {
     contain: layout style paint;
