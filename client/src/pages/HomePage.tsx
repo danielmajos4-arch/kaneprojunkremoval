@@ -294,7 +294,7 @@ export default function HomePage() {
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg pt-[0px] pb-[0px] mt-[0px] mb-[0px] ml-[8px] mr-[8px]"
+                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 hover:shadow-lg pt-[0px] pb-[0px] mt-[0px] mb-[0px] ml-[11px] mr-[11px]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
