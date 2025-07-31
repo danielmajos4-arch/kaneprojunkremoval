@@ -264,11 +264,11 @@ export default function HomePage() {
                 key={index}
                 className="bg-white conversion-image group"
               >
-                <div className="relative overflow-hidden rounded-t-lg">
+                <div className="relative overflow-hidden h-48 sm:h-56">
                   <img
                     src={service.image}
                     alt={`${service.title} service in Monroe Louisiana - Authentic Kane Pro work`}
-                    className="w-full h-48 sm:h-56 service-image object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="service-card-image service-image group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     width="400"
                     height="224"
