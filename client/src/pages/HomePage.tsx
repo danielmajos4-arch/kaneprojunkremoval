@@ -243,7 +243,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section className="py-10 sm:py-12 bg-neutral-bg">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-deep-green mb-3">
               Our Monroe LA Junk Removal, Demolition & Dumpster Rental Services
@@ -321,15 +321,20 @@ export default function HomePage() {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 service-card-mobile"
                     loading="lazy"
                     width="300"
-                    height="200"
+                    height="220"
                     style={{
                       imageRendering: '-webkit-optimize-contrast',
-                      filter: 'brightness(1.02) contrast(1.05) saturate(1.1)'
+                      filter: 'brightness(1.02) contrast(1.05) saturate(1.1)',
+                      aspectRatio: '300/220',
+                      display: 'block',
+                      width: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center'
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="p-4 sm:p-5">
+                <div className="service-content p-4 sm:p-5">
                   <h3 className="service-title text-base sm:text-lg font-bold text-deep-green mb-2 group-hover:text-vibrant-orange transition-colors duration-300">
                     {service.title}
                   </h3>
