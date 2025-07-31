@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { Link, useLocation } from "wouter";
+import { throttle } from "@/utils/performance";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = throttle(() => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  }, 100);
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
@@ -49,7 +50,7 @@ export default function Navigation() {
               />
               <div className="font-military">
                 <span className="text-lg font-bold text-white tracking-wide">KANE PRO'S</span>
-                <div className="text-xs font-semibold text-vibrant-orange">Junk Removal LA</div>
+                <div className="text-xs font-semibold text-[#ffffff]">Junk Removal LA</div>
               </div>
             </Link>
             

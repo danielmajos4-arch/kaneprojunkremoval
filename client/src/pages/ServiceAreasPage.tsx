@@ -2,390 +2,386 @@ import { Link } from "wouter";
 import QuoteForm from "@/components/QuoteForm";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
-import kaneProBackground from "@assets/IMG_3900.png";
+import { useState } from "react";
+import LazyImage from "@/components/LazyImage";
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
+
+import Website_demolition from "@assets/Website demolition.jpg";
+import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
+import Website_demolition_1 from "@assets/Website demolition (1)_1753836740875.jpg";
+import Website_demolition_new from "@assets/Website demolition_1753836740879.jpg";
+import WhatsApp_Image_1_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837567906.jpeg";
+import WhatsApp_Image_2_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2)_1753837567909.jpeg";
+import Website_demolition_1_New from "@assets/Website demolition (1)_1753837579354.jpg";
+import Website_demolition_2_New from "@assets/Website demolition_1753837579366.jpg";
+import Junk_removal_Project from "@assets/Junk removal_1753837631446.jpeg";
+import WhatsApp_Image_1_Junk from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837660614.jpeg";
+import WhatsApp_Image_Storm_Project from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3)_1753837691478.jpeg";
+import Screen_Shot_Truck_Load_1 from "@assets/Screen Shot 2025-07-29 at 9.17.50 PM_1753838411149.png";
+import Screen_Shot_Truck_Load_2 from "@assets/Screen Shot 2025-07-29 at 9.18.35 PM_1753838411150.png";
+import WhatsApp_Image_Truck_Project_1 from "@assets/WhatsApp Image 2025-07-29 at 21.40.44 (2)_1753838436591.jpeg";
+import WhatsApp_Image_Truck_Project_2 from "@assets/WhatsApp Image 2025-07-29 at 22.01.08 (1)_1753838451889.jpeg";
+import WhatsApp_Image_New_1 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (1)_1753839452505.jpeg";
+import WhatsApp_Image_New_2 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (2)_1753839452506.jpeg";
+import WhatsApp_Image_New_3 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59_1753839452506.jpeg";
+import WhatsApp_Image_New_4 from "@assets/WhatsApp Image 2025-07-29 at 23.31.00 (1)_1753839452507.jpeg";
+import WhatsApp_Image_New_5 from "@assets/WhatsApp Image 2025-07-29 at 23.31.00_1753839452507.jpeg";
 
 // Animation variants
 const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: "easeOut" }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
 const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
+  visible: { transition: { staggerChildren: 0.1 } },
 };
 
 export default function ServiceAreasPage() {
+  const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string } | null>(null);
+
+  // Gallery with authentic Kane Pro demolition projects - duplicates removed
+  const galleryImages = [
+    {
+      id: 1,
+      src: Website_demolition_1,
+      alt: "Barn demolition and cleanup Monroe LA - Butter & Eggs building removal",
+    },
+    {
+      id: 2,
+      src: Website_demolition_new,
+      alt: "Residential demolition West Monroe LA - Complete structure removal and cleanup",
+    },
+    {
+      id: 3,
+      src: Website_demolition_2_New,
+      alt: "Residential patio demolition Northeast Louisiana - Complete cleanup service",
+    },
+    {
+      id: 4,
+      src: WhatsApp_Image_New_1,
+      alt: "Professional junk removal Monroe LA - Complete cleanout service",
+    },
+    {
+      id: 5,
+      src: WhatsApp_Image_New_2,
+      alt: "Construction debris removal West Monroe LA - Site cleanup",
+    },
+    {
+      id: 6,
+      src: WhatsApp_Image_New_3,
+      alt: "Residential junk hauling Northeast Louisiana - Same day pickup",
+    },
+    {
+      id: 7,
+      src: WhatsApp_Image_New_4,
+      alt: "Commercial demolition Monroe area - Professional service",
+    },
+    {
+      id: 8,
+      src: WhatsApp_Image_New_5,
+      alt: "Large scale junk removal Ruston LA - Complete property cleanup",
+    },
+    {
+      id: 9,
+      src: Junk_removal_Project,
+      alt: "Commercial junk removal Monroe Louisiana - Large scale cleanout",
+    },
+    {
+      id: 10,
+      src: Screen_Shot_Truck_Load_1,
+      alt: "Truck loaded with construction debris Monroe LA - Professional hauling service",
+    },
+    {
+      id: 11,
+      src: Screen_Shot_Truck_Load_2,
+      alt: "Full truck load junk removal West Monroe LA - Residential cleanout service",
+    },
+    {
+      id: 12,
+      src: WhatsApp_Image_Truck_Project_2,
+      alt: "Professional junk hauling Monroe area - Complete property cleanup",
+    },
+  ];
+
   return (
     <>
-      <SEO 
-        title="Junk Removal Service Areas in West Monroe, Louisiana | Kane Pro Coverage"
-        description="Kane Pro Junk Removal serves West Monroe, Monroe, Calhoun, Ruston & Farmerville LA. Check our service area coverage map. Call (318) 914-1201 for same-day service!"
-        keywords="junk removal West Monroe LA, junk removal service areas Louisiana, West Monroe junk hauling, Monroe service area, Northeast Louisiana junk removal"
-        canonicalUrl="https://kanejunkremoval.com/areas"
-        ogTitle="Service Areas: West Monroe, Monroe, Calhoun, Ruston & Farmerville LA | Kane Pro"
-        ogDescription="Complete service area coverage for junk removal in West Monroe, Monroe, and all of Northeast Louisiana. Check if we serve your area!"
-        structuredData={generateLocalBusinessSchema("West Monroe")}
-        city="West Monroe"
+      <PerformanceOptimizer />
+      <SEO
+        title="Monroe LA Junk Removal & Demolition Service Areas | Kane Pro"
+        description="Kane Pro serves Monroe, West Monroe, Ruston & Northeast Louisiana with professional junk removal and demolition. Same-day service available."
+        keywords="Monroe LA junk removal, West Monroe demolition, Ruston junk hauling, Northeast Louisiana demolition, Monroe service areas"
+        canonicalUrl="https://kaneprojunkremoval.com/service-areas"
+        ogTitle="Monroe LA Service Areas | Professional Junk Removal & Demolition"
+        ogDescription="Serving Monroe, West Monroe, Ruston & Northeast Louisiana with same-day junk removal and demolition services."
+        structuredData={generateLocalBusinessSchema("Northeast Louisiana")}
+        city="Monroe"
       />
-
-      {/* Hero Section */}
-      <section 
-        className="relative py-20 sm:py-32 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(30, 86, 49, 0.85), rgba(30, 86, 49, 0.85)), url(${kaneProBackground})`
-        }}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 30 }}
+      {/* Breadcrumbs */}
+      <nav className="bg-gray-50 py-2" aria-label="Breadcrumb">
+        <div className="max-w-6xl mx-auto px-4">
+          <ol className="flex items-center space-x-2 text-sm text-gray-600">
+            <li>
+              <Link href="/" className="hover:text-vibrant-orange">
+                Home
+              </Link>
+            </li>
+            <li><span className="mx-2">/</span></li>
+            <li className="text-charcoal font-medium">Service Areas</li>
+          </ol>
+        </div>
+      </nav>
+      {/* Header - Mobile Optimized */}
+      <section className="pt-6 pb-4 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <motion.h1
+            className="text-xl sm:text-2xl md:text-3xl font-bold text-deep-green mb-2"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5 }}
           >
-            Service Areas
+            Monroe LA Service Areas
           </motion.h1>
-          <motion.p 
-            className="text-xl sm:text-2xl text-white/90 font-medium"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.p
+            className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Proudly serving all of Northeast Louisiana
+            Professional junk removal & demolition across Northeast Louisiana
           </motion.p>
         </div>
       </section>
-
-      {/* Service Areas Overview */}
-      <section className="py-16 sm:py-24 bg-neutral-bg">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
-              Louisiana Junk Removal Service Areas
+      {/* Service Areas - Mobile Optimized */}
+      <section className="py-8 bg-neutral-bg">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-deep-green mb-2">
+              We Serve Monroe & Northeast Louisiana
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Same-day junk hauling and debris removal from our home base in Calhoun to Monroe, covering all of Northeast Louisiana with professional service.
-            </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            {/* Calhoun */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="Calhoun Louisiana junk removal service area" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-home text-vibrant-orange mr-2"></i>
-                  Calhoun Junk Removal
-                </h3>
-                <p className="text-gray-600 mb-4">Our home base! Same day service available for Calhoun residents and businesses.</p>
-                <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Residential & Commercial Cleanouts</li>
-                  <li>• Construction Debris Removal</li>
-                  <li>• Emergency Same Day Service</li>
-                </ul>
-                <a href="tel:+13189141201" className="block w-full bg-vibrant-orange text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
-                  Call for Calhoun Service
-                </a>
-              </div>
-            </motion.div>
-            
-            {/* Farmerville */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="Farmerville Louisiana junk removal service area" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-tractor text-vibrant-orange mr-2"></i>
-                  Farmerville Junk Removal
-                </h3>
-                <p className="text-gray-600 mb-4">Serving Union Parish with Louisiana pride and professional precision.</p>
-                <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Farm & Ranch Cleanouts</li>
-                  <li>• Residential Property Services</li>
-                  <li>• Agricultural Equipment Removal</li>
-                </ul>
-                <a href="tel:+13189141201" className="block w-full bg-deep-green text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                  Call for Farmerville Service
-                </a>
-              </div>
-            </motion.div>
-            
-            {/* Ruston */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="Ruston Louisiana junk removal near Louisiana Tech University" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-graduation-cap text-vibrant-orange mr-2"></i>
-                  Ruston Junk Removal
-                </h3>
-                <p className="text-gray-600 mb-4">Home of Louisiana Tech! Student housing and residential service specialists.</p>
-                <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Student Housing Cleanouts</li>
-                  <li>• University Area Services</li>
-                  <li>• Move-in/Move-out Assistance</li>
-                </ul>
-                <a href="tel:+13189141201" className="block w-full bg-vibrant-orange text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
-                  Call for Ruston Service
-                </a>
-              </div>
-            </motion.div>
-            
-            {/* West Monroe */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="West Monroe Louisiana junk removal service area" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-water text-vibrant-orange mr-2"></i>
-                  West Monroe Junk Removal
-                </h3>
-                <p className="text-gray-600 mb-4">Serving the Ouachita Parish community with trusted junk removal services.</p>
-                <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Residential Cleanout Services</li>
-                  <li>• Business Property Cleanouts</li>
-                  <li>• Storm Damage Cleanup</li>
-                </ul>
-                <a href="tel:+13189141201" className="block w-full bg-deep-green text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                  Call for West Monroe Service
-                </a>
-              </div>
-            </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                city: "Monroe, LA",
+                population: "47K+",
+                highlights: ["Downtown", "ULM Area", "Garden District"],
+                icon: "fas fa-city",
+              },
+              {
+                city: "West Monroe, LA",
+                population: "13K+",
+                highlights: ["Antique Alley", "Commercial", "Residential"],
+                icon: "fas fa-building",
+              },
+              {
+                city: "Ruston, LA",
+                population: "24K+",
+                highlights: ["Louisiana Tech", "Student Housing", "Downtown"],
+                icon: "fas fa-graduation-cap",
+              },
+              {
+                city: "Calhoun, LA",
+                population: "2K+",
+                highlights: ["Rural Properties", "Farm Cleanouts"],
+                icon: "fas fa-tractor",
+              },
+              {
+                city: "Farmerville, LA",
+                population: "3.8K+",
+                highlights: ["Lake D'Arbonne", "Estate Cleanouts"],
+                icon: "fas fa-lake",
+              },
+              {
+                city: "Grambling, LA",
+                population: "5.2K+",
+                highlights: ["Grambling State", "Community Projects"],
+                icon: "fas fa-school",
+              },
+            ].map((area, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-lg shadow-md p-4"
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInUp}
+                viewport={{ once: true, margin: "-50px" }}
+                whileHover={{ y: -3, transition: { duration: 0.2 } }}
+              >
+                <div className="flex items-center mb-3">
+                  <i className={`${area.icon} text-xl text-vibrant-orange mr-2`}></i>
+                  <div>
+                    <h3 className="text-base font-bold text-charcoal">{area.city}</h3>
+                    <p className="text-xs text-gray-500">{area.population}</p>
+                  </div>
+                </div>
 
-            {/* Monroe */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="Monroe Louisiana junk removal service area" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-city text-vibrant-orange mr-2"></i>
-                  Monroe Junk Removal
-                </h3>
-                <p className="text-gray-600 mb-4">Serving the Twin Cities with comprehensive junk removal and hauling services.</p>
-                <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Downtown Business Cleanouts</li>
-                  <li>• Residential Property Services</li>
-                  <li>• Large Item Pickup</li>
-                </ul>
-                <a href="tel:+13189141201" className="block w-full bg-vibrant-orange text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
-                  Call for Monroe Service
-                </a>
-              </div>
-            </motion.div>
+                <div className="space-y-1 mb-3">
+                  {area.highlights.map((highlight, idx) => (
+                    <div key={idx} className="flex items-center text-xs text-gray-500">
+                      <i className="fas fa-map-marker-alt text-vibrant-orange mr-2"></i>
+                      {highlight}
+                    </div>
+                  ))}
+                </div>
 
-            {/* Additional Areas */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1599362477074-15c0b4b0bb97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="Northeast Louisiana additional service areas" 
-                className="w-full h-48 object-cover" 
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-3">
-                  <i className="fas fa-map text-vibrant-orange mr-2"></i>
-                  Additional Areas
-                </h3>
-                <p className="text-gray-600 mb-4">We also serve surrounding communities throughout Northeast Louisiana.</p>
-                <ul className="text-sm text-charcoal space-y-1 mb-4">
-                  <li>• Grambling & Simsboro</li>
-                  <li>• Bernice & Dubach</li>
-                  <li>• Special Trip Arrangements</li>
-                </ul>
-                <a href="tel:+13189141201" className="block w-full bg-deep-green text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                  Call to Confirm Service
+                <a
+                  href="tel:+13189141201"
+                  className="btn-secondary text-xs px-3 py-2 w-full block text-center"
+                >
+                  Call Now
                 </a>
-              </div>
-            </motion.div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
-
-      {/* Service Area Features */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
-              What Makes Our Service Areas Special
+      {/* Project Gallery - Simplified for Visual Editor */}
+      <section className="py-8 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-deep-green mb-2">
+              Our Work in Monroe LA
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We know Northeast Louisiana because we live here. Our local expertise means better service for every community we serve.
+            <p className="text-sm text-gray-600">
+              Recent projects across Northeast Louisiana
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <motion.div 
-              className="text-center p-6"
-              variants={fadeInUp}
-            >
-              <div className="w-16 h-16 bg-vibrant-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-clock text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-bold text-charcoal mb-2">Same-Day Response</h3>
-              <p className="text-gray-600 text-sm">
-                Quick response times across all our Louisiana service areas
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center p-6"
-              variants={fadeInUp}
-            >
-              <div className="w-16 h-16 bg-deep-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-route text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-bold text-charcoal mb-2">Optimized Routes</h3>
-              <p className="text-gray-600 text-sm">
-                Efficient travel between cities keeps costs down for customers
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center p-6"
-              variants={fadeInUp}
-            >
-              <div className="w-16 h-16 bg-vibrant-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-heart text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-bold text-charcoal mb-2">Local Knowledge</h3>
-              <p className="text-gray-600 text-sm">
-                We know every neighborhood and community we serve
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center p-6"
-              variants={fadeInUp}
-            >
-              <div className="w-16 h-16 bg-deep-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-handshake text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-bold text-charcoal mb-2">Community Focus</h3>
-              <p className="text-gray-600 text-sm">
-                Supporting local charities and Louisiana families
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 sm:py-24 bg-neutral-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
-              Ready to Schedule Service?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Contact Kane Pro Junk Removal today to check availability in your area and get your free estimate.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <motion.a 
-                href="tel:+13189141201"
-                className="inline-flex items-center px-8 py-4 bg-vibrant-orange text-white font-semibold rounded-xl hover:bg-orange-600 transition-all duration-300 shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <i className="fas fa-phone mr-3"></i>
-                (318) 914-1201
-              </motion.a>
-              
-              <motion.a 
-                href="mailto:kaneprojunkremoval@gmail.com"
-                className="inline-flex items-center px-8 py-4 bg-deep-green text-white font-semibold rounded-xl hover:bg-green-700 transition-all duration-300 shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <i className="fas fa-envelope mr-3"></i>
-                Email Us
-              </motion.a>
-            </div>
-          </motion.div>
-
+          {/* Simple Gallery Grid - 10 Images */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
           >
-            <QuoteForm />
+            {galleryImages.map((image) => (
+              <motion.div
+                key={image.id}
+                className="relative cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                variants={fadeInUp}
+                whileHover={{ scale: 1.02 }}
+                onClick={() => setSelectedImage(image)}
+              >
+                <LazyImage
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform hover:scale-110"
+                  width={200}
+                  height={200}
+                />
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-4xl w-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 text-white text-2xl hover:text-vibrant-orange z-10"
+            >
+              <i className="fas fa-times"></i>
+            </button>
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
+      {/* Service Highlights - Mobile Optimized */}
+      <section className="py-8 bg-neutral-bg">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-deep-green">
+              Why Choose Kane Pro?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                icon: "fas fa-map-marked-alt",
+                title: "Local Monroe Experts",
+                description: "Northeast Louisiana specialists",
+              },
+              {
+                icon: "fas fa-hammer",
+                title: "Full Demolition",
+                description: "All demo projects covered",
+              },
+              {
+                icon: "fas fa-clock",
+                title: "Same-Day Service",
+                description: "Available across Monroe area",
+              },
+              {
+                icon: "fas fa-shield-alt",
+                title: "Licensed & Insured",
+                description: "Fully licensed in Louisiana",
+              },
+            ].map((highlight, index) => (
+              <motion.div
+                key={index}
+                className="text-center bg-white rounded-lg p-4 shadow-md"
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInUp}
+                viewport={{ once: true, margin: "-50px" }}
+              >
+                <i className={`${highlight.icon} text-2xl text-vibrant-orange mb-2`}></i>
+                <h3 className="text-sm font-bold text-charcoal mb-1">
+                  {highlight.title}
+                </h3>
+                <p className="text-xs text-gray-600">{highlight.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section - Mobile Optimized */}
+      <section className="py-8 bg-deep-green text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">
+              Ready for Service in Monroe LA?
+            </h2>
+            <p className="text-sm text-gray-300 mb-4">
+              Same-day junk removal & demolition across Northeast Louisiana
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="tel:+13189141201"
+                className="btn-cta text-sm px-5 py-3"
+              >
+                <i className="fas fa-phone mr-2"></i>
+                Call (318) 914-1201
+              </a>
+              <a href="#quote-form" className="btn-outline text-sm px-5 py-3">
+                <i className="fas fa-calculator mr-2"></i>
+                Get Free Quote
+              </a>
+            </div>
+
+            <p className="text-xs text-gray-300 mt-3">
+              Licensed & Insured • Serving All of Monroe & Northeast Louisiana
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Quote Form */}
+      <QuoteForm />
     </>
   );
 }
