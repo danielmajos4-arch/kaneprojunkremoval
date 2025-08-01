@@ -1,20 +1,17 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-  email: z.string().email("Please enter a valid email address").optional().or(z.literal("")),
-  city: z.string().min(1, "Please select a city"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
   message: z.string().min(10, "Please provide more details about your inquiry"),
 });
 
@@ -22,7 +19,6 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export default function ContactForm() {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -30,14 +26,31 @@ export default function ContactForm() {
       name: "",
       phone: "", 
       email: "",
-      city: "",
       message: "",
     },
   });
 
   const submitContactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contacts", data);
+      const formData = new FormData();
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('phone', data.phone || '');
+      formData.append('message', data.message);
+      formData.append('_source', 'Kane Pro Junk Removal website');
+
+      const response = await fetch('https://formspree.io/f/xpwllvvz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       return response.json();
     },
     onSuccess: () => {
@@ -46,7 +59,6 @@ export default function ContactForm() {
         description: "Thank you for contacting Kane Pro. We'll get back to you soon!",
       });
       form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
     },
     onError: (error: any) => {
       toast({
@@ -92,31 +104,10 @@ export default function ContactForm() {
             
             <FormField
               control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-sm font-semibold text-navy">Phone Number *</FormLabel>
-                  <FormControl>
-                    <Input 
-                      type="tel"
-                      placeholder="(318) 555-0123" 
-                      className="btn-touch focus:ring-louisiana-gold focus:border-louisiana-gold" 
-                      {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <FormField
-              control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-semibold text-navy">Email Address</FormLabel>
+                  <FormLabel className="text-sm font-semibold text-navy">Email Address *</FormLabel>
                   <FormControl>
                     <Input 
                       type="email"
@@ -129,33 +120,26 @@ export default function ContactForm() {
                 </FormItem>
               )}
             />
-            
-            <FormField
-              control={form.control}
-              name="city"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-sm font-semibold text-navy">Your City *</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger className="btn-touch focus:ring-louisiana-gold focus:border-louisiana-gold">
-                        <SelectValue placeholder="Select Your City" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value="calhoun">Calhoun, LA</SelectItem>
-                      <SelectItem value="farmerville">Farmerville, LA</SelectItem>
-                      <SelectItem value="ruston">Ruston, LA</SelectItem>
-                      <SelectItem value="west-monroe">West Monroe, LA</SelectItem>
-                      <SelectItem value="monroe">Monroe, LA</SelectItem>
-                      <SelectItem value="other">Other Louisiana City</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
           </div>
+          
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm font-semibold text-navy">Phone Number</FormLabel>
+                <FormControl>
+                  <Input 
+                    type="tel"
+                    placeholder="(318) 555-0123" 
+                    className="btn-touch focus:ring-louisiana-gold focus:border-louisiana-gold" 
+                    {...field} 
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           
           <FormField
             control={form.control}
