@@ -48,7 +48,7 @@ export default function Navigation() {
                 height="48"
               />
               <div className="font-military">
-                <span className="text-lg font-bold text-white tracking-wide">KANE PRO'S</span>
+                <span className="text-lg font-bold text-white tracking-wide">KANE PRO</span>
                 <div className="text-xs font-semibold text-[#ffffff]">Junk Removal LA</div>
               </div>
             </Link>
