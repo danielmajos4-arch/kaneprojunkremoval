@@ -11,9 +11,11 @@ export default function Footer() {
               <img 
                 src="/kane-pro-logo.png" 
                 alt="Kane's Junk Removal Louisiana Logo" 
-                className="w-12 h-12 mr-3"
+                className="w-12 h-12 mr-3 gpu-accelerated"
                 width="48"
                 height="48"
+                loading="lazy"
+                decoding="async"
                 style={{ imageRendering: 'auto', filter: 'none' }}
               />
               <div>
@@ -27,7 +29,7 @@ export default function Footer() {
             <div className="space-y-2">
               <p className="flex items-center gap-2">
                 <i className="fas fa-phone text-vibrant-orange"></i>
-                <a href="tel:+13189141201" className="hover:text-vibrant-orange transition-colors">
+                <a href="tel:+13189141201" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   (318) 914-1201
                 </a>
               </p>
@@ -41,7 +43,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <i className="fas fa-envelope text-vibrant-orange"></i>
-                <a href="mailto:kaneprojunkremoval@gmail.com" className="hover:text-vibrant-orange transition-colors">
+                <a href="mailto:kaneprojunkremoval@gmail.com" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   kaneprojunkremoval@gmail.com
                 </a>
               </p>
@@ -53,32 +55,32 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-vibrant-orange">Our Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Residential Cleanouts
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Commercial Cleanouts
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Construction Debris
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Furniture Removal
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Appliance Removal
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/services" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Emergency Cleanup
                 </Link>
               </li>
@@ -90,27 +92,27 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-vibrant-orange">Service Areas</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Calhoun, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Farmerville, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Ruston, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   West Monroe, LA
                 </Link>
               </li>
               <li>
-                <Link href="/areas" className="hover:text-vibrant-orange transition-colors">
+                <Link href="/areas" className="hover:text-vibrant-orange transition-colors gpu-accelerated smooth-animation">
                   Monroe, LA
                 </Link>
               </li>

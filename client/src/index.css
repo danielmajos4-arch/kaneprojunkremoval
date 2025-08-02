@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Critical font optimization */
+@layer base {
+  /* Preload critical fonts for faster rendering */
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: local('Inter');
+  }
+}
+
 /* Google Maps Custom Styling */
 .gm-style {
   font-family: 'Inter', system-ui, sans-serif !important;
@@ -79,6 +89,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Performance optimizations */
+    contain: layout style paint;
+    will-change: auto;
   }
 
   html {
@@ -91,16 +104,26 @@
     object-fit: cover;
     max-width: 100%;
     height: auto;
+    /* GPU acceleration and performance */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: auto;
+    /* Lazy loading support */
+    loading: lazy;
+    decoding: async;
   }
 
-  /* High-quality image rendering */
+  /* High-quality image rendering with GPU acceleration */
   .service-image {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     backface-visibility: hidden;
     transform: translateZ(0);
     filter: brightness(1.02) contrast(1.05) saturate(1.1);
-    transition: all 0.3s ease;
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                filter 0.2s ease;
+    will-change: transform, filter;
+    contain: layout style paint;
   }
 
   .service-image:hover {
@@ -108,13 +131,17 @@
     transform: translateZ(0) scale(1.02);
   }
 
-  /* Hero background optimization */
+  /* Hero background optimization with GPU acceleration */
   .hero-bg {
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     will-change: transform;
+    /* Performance optimizations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    contain: layout style paint;
   }
 
   @media (max-width: 768px) {
@@ -129,7 +156,13 @@
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s ease;
+    /* GPU acceleration for smooth performance */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform, box-shadow;
+    contain: layout style paint;
   }
 
   .conversion-image .service-card-image {
@@ -171,7 +204,7 @@
 
   .conversion-image:hover {
     box-shadow: 0 16px 64px rgba(0, 0, 0, 0.2);
-    transform: translateY(-4px);
+    transform: translateZ(0) translateY(-4px);
   }
 
   .conversion-image::before {
@@ -195,7 +228,7 @@
     
     .conversion-image:hover {
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-      transform: translateY(-2px);
+      transform: translateZ(0) translateY(-2px);
     }
 
     /* Enhanced mobile image optimization */
@@ -689,7 +722,21 @@
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+      transform: none !important;
     }
+  }
+  
+  /* Performance optimization for touch devices */
+  .mobile-optimized {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
+  }
+  
+  /* Optimize scrolling performance on mobile */
+  .mobile-scroll-optimized {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    contain: layout style paint;
   }
 }
 
@@ -707,7 +754,11 @@
     transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     background-color 0.2s ease,
     box-shadow 0.2s ease;
-  transform: scale(1);
+  /* GPU acceleration for smooth animations */
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  will-change: transform, background-color, box-shadow;
+  contain: layout style paint;
   min-height: 44px;
   min-width: 44px;
   font-family: 'Inter', system-ui, sans-serif;
@@ -734,7 +785,7 @@
 
 .btn-cta:hover {
   background-color: hsl(25, 95%, 48%); /* Slightly darker orange */
-  transform: scale(1.02) translateY(-1px);
+  transform: translateZ(0) scale(1.02) translateY(-1px);
   box-shadow: 
     0 6px 20px 0 rgba(255, 127, 17, 0.35),
     0 4px 8px 0 rgba(0, 0, 0, 0.15);
@@ -745,7 +796,7 @@
 }
 
 .btn-cta:active {
-  transform: scale(0.98) translateY(0px);
+  transform: translateZ(0) scale(0.98) translateY(0px);
   transition-duration: 0.1s;
 }
 
@@ -757,7 +808,15 @@
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease,
+              background-color 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.2s ease;
+  /* GPU acceleration for smooth animations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, background-color, color, box-shadow;
+  contain: layout style paint;
   min-height: 44px;
   min-width: 44px;
   font-family: 'Inter', system-ui, sans-serif;
@@ -771,7 +830,7 @@
 .btn-secondary:hover {
   background-color: hsl(120, 40%, 25%); /* Deep green background */
   color: hsl(0, 0%, 100%); /* White text */
-  transform: translateY(-1px);
+  transform: translateZ(0) translateY(-1px);
   box-shadow: 0 4px 8px 0 rgba(30, 86, 49, 0.2);
 }
 
@@ -782,7 +841,15 @@
   font-weight: 700;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease,
+              background-color 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.2s ease;
+  /* GPU acceleration for smooth animations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, background-color, color, box-shadow;
+  contain: layout style paint;
   min-height: 44px;
   min-width: 44px;
   font-family: 'Inter', system-ui, sans-serif;
@@ -796,6 +863,98 @@
 .btn-outline:hover {
   background-color: hsl(0, 0%, 100%); /* White background */
   color: hsl(0, 0%, 10%); /* Dark text */
-  transform: translateY(-1px);
+  transform: translateZ(0) translateY(-1px);
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Critical Performance Optimizations */
+
+/* General performance classes */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: auto;
+  contain: layout style paint;
+}
+
+.smooth-animation {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+/* Image lazy loading optimization */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* Critical resource hints for faster loading */
+.preload-critical {
+  font-display: swap;
+  contain: layout style paint;
+}
+
+/* Navigation performance optimizations */
+.nav-optimized {
+  contain: layout style paint;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Card hover optimizations */
+.card-hover-optimized {
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
+  contain: layout style paint;
+}
+
+.card-hover-optimized:hover {
+  transform: translateZ(0) translateY(-2px);
+}
+
+/* Optimized fade animations */
+.fade-in-optimized {
+  opacity: 0;
+  transform: translateZ(0) translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-optimized.visible {
+  opacity: 1;
+  transform: translateZ(0) translateY(0);
+}
+
+/* Mobile-specific performance optimizations */
+@media (max-width: 768px) {
+  /* Reduce complex animations on mobile */
+  .mobile-simple-animation {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  
+  /* Optimize mobile touch interactions */
+  .mobile-touch-optimized {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
+    user-select: none;
+  }
+  
+  /* Reduce GPU load on mobile */
+  .mobile-gpu-conservative {
+    will-change: auto;
+    contain: layout style;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-optimized {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }

@@ -35,17 +35,19 @@ export default function Navigation() {
   return (
     <>
       {/* Main Navigation Header */}
-      <nav className="sticky top-0 z-40 bg-[#1E5631] shadow-lg">
-        <div className="max-w-7xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8">
+      <nav className="sticky top-0 z-40 bg-[#1E5631] shadow-lg nav-optimized">
+        <div className="max-w-7xl mx-auto mobile-optimized mobile-touch-optimized px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mobile-nav-header h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
+            <Link href="/" className="flex items-center hover:opacity-90 transition-opacity gpu-accelerated">
               <img 
                 src="/kane-pro-logo.png" 
                 alt="Kane's Junk Removal Louisiana Logo" 
-                className="w-12 h-12 mr-3 filter drop-shadow-md"
+                className="w-12 h-12 mr-3 filter drop-shadow-md gpu-accelerated"
                 width="48"
                 height="48"
+                loading="eager"
+                decoding="async"
               />
               <div className="font-military">
                 <span className="text-lg font-bold text-white tracking-wide">KANE PRO</span>
@@ -57,7 +59,7 @@ export default function Navigation() {
             <div className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/" 
-                className={`transition-all duration-300 font-medium ${
+                className={`smooth-animation transition-all duration-300 font-medium gpu-accelerated ${
                   isActive("/") 
                     ? "text-vibrant-orange font-semibold" 
                     : "text-white hover:text-vibrant-orange hover:scale-105"
@@ -67,7 +69,7 @@ export default function Navigation() {
               </Link>
               <Link 
                 href="/services" 
-                className={`transition-all duration-300 font-medium ${
+                className={`smooth-animation transition-all duration-300 font-medium gpu-accelerated ${
                   isActive("/services") 
                     ? "text-vibrant-orange font-semibold" 
                     : "text-white hover:text-vibrant-orange hover:scale-105"
@@ -77,7 +79,7 @@ export default function Navigation() {
               </Link>
               <Link 
                 href="/about" 
-                className={`transition-all duration-300 font-medium ${
+                className={`smooth-animation transition-all duration-300 font-medium gpu-accelerated ${
                   isActive("/about") 
                     ? "text-vibrant-orange font-semibold" 
                     : "text-white hover:text-vibrant-orange hover:scale-105"
@@ -87,7 +89,7 @@ export default function Navigation() {
               </Link>
               <Link 
                 href="/areas" 
-                className={`transition-all duration-300 font-medium ${
+                className={`smooth-animation transition-all duration-300 font-medium gpu-accelerated ${
                   isActive("/areas") 
                     ? "text-vibrant-orange font-semibold" 
                     : "text-white hover:text-vibrant-orange hover:scale-105"
@@ -97,7 +99,7 @@ export default function Navigation() {
               </Link>
               <a 
                 href="tel:+13189141201" 
-                className="bg-[#FF7F11] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#E6720F] hover:scale-105 transition-all duration-300 btn-touch shadow-lg text-sm uppercase tracking-wide"
+                className="bg-[#FF7F11] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#E6720F] hover:scale-105 transition-all duration-300 btn-touch shadow-lg text-sm uppercase tracking-wide gpu-accelerated smooth-animation"
               >
                 Get Estimate
               </a>

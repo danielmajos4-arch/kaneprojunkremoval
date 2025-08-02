@@ -5,19 +5,28 @@ import { useEffect, useState } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import Dumpster_1754069233338 from "@assets/Dumpster_1754069233338.png";
 
-// Optimized animation variants
+// GPU-accelerated optimized animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 20, transform: "translateZ(0)" },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transform: "translateZ(0)",
+    transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] } 
+  },
 };
 
 const staggerContainer = {
-  visible: { transition: { staggerChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
 const scaleOnHover = {
-  rest: { scale: 1 },
-  hover: { scale: 1.02, transition: { duration: 0.2, ease: "easeOut" } },
+  rest: { scale: 1, transform: "translateZ(0)" },
+  hover: { 
+    scale: 1.02, 
+    transform: "translateZ(0) scale(1.02)",
+    transition: { duration: 0.15, ease: [0.25, 0.46, 0.45, 0.94] } 
+  },
 };
 
 export default function HomePage() {
@@ -43,7 +52,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center hero-section">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg gpu-accelerated"
           style={{ backgroundImage: `url('/hero-background-latest.png')` }}
           role="img"
           aria-label="Monroe Louisiana junk removal, demolition and dumpster rental service area"
@@ -52,7 +61,7 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-6xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
-            className="text-center"
+            className="text-center gpu-accelerated"
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={staggerContainer}
