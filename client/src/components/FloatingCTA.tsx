@@ -11,7 +11,7 @@ export default function FloatingCTA() {
         requestAnimationFrame(() => {
           const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
           const shouldShow = scrollTop > 100;
-          // Debug removed after confirming it works
+          console.log('FloatingCTA Scroll:', scrollTop, 'Visible:', shouldShow);
           setIsVisible(shouldShow);
           ticking = false;
         });
@@ -30,14 +30,16 @@ export default function FloatingCTA() {
 
   return (
     <div 
-      className={`fixed bottom-4 right-4 sm:right-6 z-50 max-w-[280px] sm:max-w-[320px]`}
+      className={`fixed bottom-4 right-4 sm:right-6 max-w-[280px] sm:max-w-[320px]`}
       style={{ 
-        transform: isVisible ? 'translateZ(0) translateY(0)' : 'translateZ(0) translateY(80px)',
-        opacity: isVisible ? 1 : 0,
+        transform: 'translateZ(0) translateY(0)', // Always visible for debugging
+        opacity: 1, // Always visible for debugging
         transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
         willChange: 'transform, opacity',
-        pointerEvents: isVisible ? 'auto' : 'none',
-        backfaceVisibility: 'hidden'
+        pointerEvents: 'auto',
+        backfaceVisibility: 'hidden',
+        zIndex: 9999,
+        border: '2px solid red' // Debug border to make it visible
       }}
     >
       <div className="text-center mb-3 px-3 py-2 bg-black/70 backdrop-blur-sm rounded-lg border border-white/20 animate-pulse">
