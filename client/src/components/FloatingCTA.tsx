@@ -4,43 +4,20 @@ export default function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    let ticking = false;
-
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          const shouldShow = scrollTop > 100;
-          console.log('FloatingCTA Scroll:', scrollTop, 'Visible:', shouldShow);
-          setIsVisible(shouldShow);
-          ticking = false;
-        });
-        ticking = true;
-      }
+      const scrollTop = window.pageYOffset;
+      setIsVisible(scrollTop > 100);
     };
 
-    // Add scroll listener with passive option for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Initialize visibility state
-    handleScroll();
-    
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div 
-      className={`fixed bottom-4 right-4 sm:right-6 max-w-[280px] sm:max-w-[320px]`}
-      style={{ 
-        transform: 'translateZ(0) translateY(0)', // Always visible for debugging
-        opacity: 1, // Always visible for debugging
-        transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
-        willChange: 'transform, opacity',
-        pointerEvents: 'auto',
-        backfaceVisibility: 'hidden',
-        zIndex: 9999,
-        border: '2px solid red' // Debug border to make it visible
-      }}
+      className={`fixed bottom-4 right-4 sm:right-6 z-50 transition-all duration-300 max-w-[280px] sm:max-w-[320px] ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+      }`}
     >
       <div className="text-center mb-3 px-3 py-2 bg-black/70 backdrop-blur-sm rounded-lg border border-white/20 animate-pulse">
         <div className="text-white font-bold sm:text-xl mb-1 text-[18px]">
