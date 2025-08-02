@@ -117,7 +117,7 @@ export default function AboutPage() {
                   aria-label="Call Kane Pro Junk Removal at (318) 914-1201"
                 >
                   <i className="fas fa-phone mr-2" aria-hidden="true"></i>
-                  Schedule Your Free Estimate
+                  (318) 914-1201
                 </motion.a>
               </div>
             </motion.div>

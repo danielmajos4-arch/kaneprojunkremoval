@@ -4,20 +4,37 @@ export default function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      setIsVisible(scrollTop > 100);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          setIsVisible(scrollTop > 100);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Add scroll listener with passive option for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initialize visibility state
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div 
-      className={`fixed bottom-4 right-4 sm:right-6 z-50 transition-all duration-300 max-w-[280px] sm:max-w-[320px] ${
+      className={`fixed bottom-4 right-4 sm:right-6 z-50 transition-all duration-300 max-w-[280px] sm:max-w-[320px] gpu-accelerated ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}
+      style={{ 
+        transform: isVisible ? 'translateZ(0) translateY(0)' : 'translateZ(0) translateY(80px)',
+        willChange: 'transform, opacity'
+      }}
     >
       <div className="text-center mb-3 px-3 py-2 bg-black/70 backdrop-blur-sm rounded-lg border border-white/20 animate-pulse">
         <div className="text-white font-bold sm:text-xl mb-1 text-[18px]">
