@@ -10,7 +10,9 @@ export default function FloatingCTA() {
       if (!ticking) {
         requestAnimationFrame(() => {
           const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          setIsVisible(scrollTop > 100);
+          const shouldShow = scrollTop > 100;
+          // Debug removed after confirming it works
+          setIsVisible(shouldShow);
           ticking = false;
         });
         ticking = true;
@@ -28,12 +30,13 @@ export default function FloatingCTA() {
 
   return (
     <div 
-      className={`fixed bottom-4 right-4 sm:right-6 z-50 transition-all duration-300 max-w-[280px] sm:max-w-[320px] gpu-accelerated ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-      }`}
+      className={`fixed bottom-4 right-4 sm:right-6 z-50 max-w-[280px] sm:max-w-[320px] gpu-accelerated`}
       style={{ 
         transform: isVisible ? 'translateZ(0) translateY(0)' : 'translateZ(0) translateY(80px)',
-        willChange: 'transform, opacity'
+        opacity: isVisible ? 1 : 0,
+        transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+        willChange: 'transform, opacity',
+        pointerEvents: isVisible ? 'auto' : 'none'
       }}
     >
       <div className="text-center mb-3 px-3 py-2 bg-black/70 backdrop-blur-sm rounded-lg border border-white/20 animate-pulse">
