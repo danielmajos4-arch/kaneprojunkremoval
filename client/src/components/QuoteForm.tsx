@@ -197,6 +197,8 @@ export default function QuoteForm() {
                         <SelectItem value="residential">Residential Cleanout</SelectItem>
                         <SelectItem value="commercial">Commercial Cleanout</SelectItem>
                         <SelectItem value="construction">Construction Debris</SelectItem>
+                        <SelectItem value="demolition">Demolition</SelectItem>
+                        <SelectItem value="dumpster-rentals">Dumpster Rentals</SelectItem>
                         <SelectItem value="furniture">Furniture Removal</SelectItem>
                         <SelectItem value="appliances">Appliance Removal</SelectItem>
                         <SelectItem value="emergency">Emergency/Storm Cleanup</SelectItem>
