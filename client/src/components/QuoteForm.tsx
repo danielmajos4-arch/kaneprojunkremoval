@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,7 +23,6 @@ type QuoteFormData = z.infer<typeof quoteFormSchema>;
 
 export default function QuoteForm() {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
 
   const form = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
@@ -40,7 +38,28 @@ export default function QuoteForm() {
 
   const submitQuoteMutation = useMutation({
     mutationFn: async (data: QuoteFormData) => {
-      const response = await apiRequest("POST", "/api/quotes", data);
+      const formData = new FormData();
+      formData.append('name', data.name);
+      formData.append('phone', data.phone);
+      formData.append('email', data.email || '');
+      formData.append('city', data.city);
+      formData.append('service', data.service);
+      formData.append('details', data.details || '');
+      formData.append('_subject', 'New Quote Request - Kane Pro Junk Removal');
+      formData.append('_source', 'Kane Pro Junk Removal website - Quote Form');
+
+      const response = await fetch('https://formspree.io/f/xpwllvvz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send quote request');
+      }
+
       return response.json();
     },
     onSuccess: () => {
@@ -49,7 +68,6 @@ export default function QuoteForm() {
         description: "We'll contact you soon with your free estimate. Thank you for choosing Kane Pro!",
       });
       form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/quotes"] });
     },
     onError: (error: any) => {
       toast({
