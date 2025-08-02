@@ -30,7 +30,8 @@ Preferred communication style: Simple, everyday language.
 - **UI Components**: FloatingCTA, responsive Navigation, Footer, and a consistent Layout wrapper.
 
 ### Data Flow
-- **Form Submission**: Client-side validation (Zod) -> Express API -> Server-side validation -> PostgreSQL (Drizzle ORM) -> User feedback (toast notifications).
+- **Form Submission**: Client-side validation (Zod) -> Formspree API (https://formspree.io/f/xpwllvvz) -> Direct email delivery -> User feedback (toast notifications).
+- **Contact Integration**: All forms across the website now use Formspree for consistent lead management and direct email delivery to client.
 
 ## External Dependencies
 
