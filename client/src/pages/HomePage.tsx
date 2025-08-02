@@ -3,6 +3,7 @@ import QuoteForm from "@/components/QuoteForm";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
+import Dumpster_1754069233338 from "@assets/Dumpster_1754069233338.png";
 
 // Optimized animation variants
 const fadeInUp = {
@@ -293,7 +294,7 @@ export default function HomePage() {
                 ],
               },
               {
-                image: "/dumpster-rental.png",
+                image: Dumpster_1754069233338,
                 title: "Dumpster Rental Monroe LA",
                 description:
                   "Roll-off dumpster rentals for Monroe LA construction, renovation & cleanout projects",
