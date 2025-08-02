@@ -466,7 +466,6 @@ export default function HomePage() {
                 features: [
                   "Office Furniture Removal",
                   "Retail Space Cleanouts",
-                  "Commercial Demolition",
                   "Scheduled Service Available",
                 ],
               },
@@ -488,7 +487,7 @@ export default function HomePage() {
                 description:
                   "Roll-off dumpster rentals for Monroe LA construction, renovation & cleanout projects",
                 features: [
-                  "10-40 Yard Dumpsters",
+                  "10-20 Yard Dumpsters",
                   "Same-Day Delivery",
                   "Flexible Rental Periods",
                   "Competitive Monroe Pricing",
