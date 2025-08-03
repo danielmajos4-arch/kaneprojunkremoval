@@ -7,7 +7,6 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
 // Import with explicit loading strategy
-import Dumpster_1754069233338 from "@assets/Dumpster_1754069233338.png";
 
 // Reduced motion for users who prefer it
 const getReducedMotion = () => {
@@ -644,7 +643,7 @@ export default function HomePage() {
                 ],
               },
               {
-                image: Dumpster_1754069233338,
+                image: "/dumpster-coming-soon.webp",
                 title: "Dumpster Rental Monroe LA",
                 description:
                   "Roll-off dumpster rentals for Monroe LA construction, renovation & cleanout projects",
