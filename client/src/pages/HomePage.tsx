@@ -643,7 +643,7 @@ export default function HomePage() {
                 ],
               },
               {
-                image: "/dumpster-coming-soon.webp",
+                image: "/dumpster-rental.webp",
                 title: "Dumpster Rental Monroe LA",
                 description:
                   "Roll-off dumpster rentals for Monroe LA construction, renovation & cleanout projects",
