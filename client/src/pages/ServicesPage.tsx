@@ -9,6 +9,8 @@ import WhatsApp_Image_2025_07_26_at_21_22_48 from "@assets/WhatsApp Image 2025-0
 
 import Website_demolition from "@assets/Website demolition.jpg";
 
+import image__2_ from "@assets/image (2).webp";
+
 // Optimized structured data - simplified for better performance
 const servicesSchema = {
   "@context": "https://schema.org",
@@ -234,7 +236,7 @@ export default function ServicesPage() {
 
               <div className="order-1 lg:order-2">
                 <img
-                  src={Website_demolition}
+                  src={image__2_}
                   alt="Residential junk removal and demolition team in Monroe Louisiana"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
