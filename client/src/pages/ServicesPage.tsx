@@ -11,6 +11,8 @@ import Website_demolition from "@assets/Website demolition.jpg";
 
 import image__2_ from "@assets/image (2).webp";
 
+import image__3_ from "@assets/image (3).webp";
+
 // Optimized structured data - simplified for better performance
 const servicesSchema = {
   "@context": "https://schema.org",
@@ -250,7 +252,7 @@ export default function ServicesPage() {
             <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 items-center">
               <div className="order-2 lg:order-1">
                 <img
-                  src={WhatsApp_Image_2025_07_26_at_21_22_48__2_}
+                  src={image__3_}
                   alt="Commercial junk removal and demolition services in Monroe Louisiana"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
