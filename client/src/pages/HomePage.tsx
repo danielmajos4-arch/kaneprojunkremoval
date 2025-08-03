@@ -89,7 +89,15 @@ const OptimizedHeroBackground = () => {
 };
 
 // Optimized Service Image Component with better error handling
-const OptimizedServiceImage = ({ src, alt, title }: { src: string | any; alt: string; title: string }) => {
+const OptimizedServiceImage = ({
+  src,
+  alt,
+  title,
+}: {
+  src: string | any;
+  alt: string;
+  title: string;
+}) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
@@ -123,7 +131,43 @@ const OptimizedServiceImage = ({ src, alt, title }: { src: string | any; alt: st
     );
   }
 
-  // For regular image paths, create optimized versions
+  // For regular image paths - handle direct paths and optimized versions
+  const isDirectPath = src.includes(".webp") || src.includes(".jpg") || src.includes(".png");
+  
+  if (isDirectPath) {
+    return (
+      <div className="relative w-full h-full">
+        <img
+          src={src}
+          alt={alt}
+          className={`w-full h-full object-cover transition-all duration-300 group-hover:scale-105 ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setImageLoaded(true)}
+          onError={() => setImageError(true)}
+          loading="lazy"
+          width="300"
+          height="220"
+          style={{
+            aspectRatio: "300/220",
+            display: "block",
+            objectFit: "cover",
+            objectPosition: "center",
+            borderRadius: "12px 12px 0 0",
+          }}
+        />
+        {!imageLoaded && !imageError && (
+          <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-t-xl" />
+        )}
+        {imageError && (
+          <div className="absolute inset-0 bg-gray-100 flex items-center justify-center rounded-t-xl">
+            <i className="fas fa-image text-gray-400 text-2xl"></i>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   const imageName = src.replace(/^\//, "").replace(/\.(png|jpg|jpeg)$/i, "");
 
   return (
@@ -643,7 +687,7 @@ export default function HomePage() {
                 ],
               },
               {
-                image: "/dumpster-rental.webp",
+                image: "attached_assets/image (1)_1754186806993.webp",
                 title: "Dumpster Rental Monroe LA",
                 description:
                   "Roll-off dumpster rentals for Monroe LA construction, renovation & cleanout projects",
