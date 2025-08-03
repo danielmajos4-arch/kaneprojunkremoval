@@ -15,12 +15,123 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-const scaleOnHover = {
-  rest: { scale: 1 },
-  hover: { scale: 1.02, transition: { duration: 0.2, ease: "easeOut" } },
+// Optimized Hero Image Component with responsive images
+const OptimizedHeroBackground = () => {
+  return (
+    <picture className="absolute inset-0">
+      {/* WebP format for modern browsers */}
+      <source
+        media="(min-width: 1024px)"
+        srcSet="/hero-background-desktop.webp 1920w, /hero-background-desktop-lg.webp 1440w"
+        sizes="100vw"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcSet="/hero-background-tablet.webp 1024w"
+        sizes="100vw"
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcSet="/hero-background-mobile.webp 768w, /hero-background-mobile-sm.webp 480w"
+        sizes="100vw"
+        type="image/webp"
+      />
+
+      {/* Fallback PNG images for older browsers */}
+      <source
+        media="(min-width: 1024px)"
+        srcSet="/hero-background-desktop.png 1920w"
+        sizes="100vw"
+        type="image/png"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcSet="/hero-background-tablet.png 1024w"
+        sizes="100vw"
+        type="image/png"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcSet="/hero-background-mobile.png 768w"
+        sizes="100vw"
+        type="image/png"
+      />
+
+      {/* Final fallback */}
+      <img
+        src="/hero-background-mobile.png"
+        alt="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
+        className="w-full h-full object-cover"
+        style={{
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
+        }}
+        fetchPriority="high"
+        decoding="async"
+      />
+    </picture>
+  );
 };
 
-// GMB Reviews Slider Component
+// Optimized Service Image Component
+const OptimizedServiceImage = ({ src, alt, title }) => {
+  // Handle imported image (like Dumpster component)
+  if (typeof src === 'object' && src.default) {
+    return (
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        loading="lazy"
+        width="300"
+        height="220"
+        style={{
+          aspectRatio: "300/220",
+          display: "block",
+          objectFit: "cover",
+          objectPosition: "center",
+          borderRadius: "12px 12px 0 0",
+        }}
+      />
+    );
+  }
+
+  // For regular image paths, create optimized versions
+  const imageName = src.replace(/^\//, '').replace(/\.(png|jpg|jpeg)$/i, '');
+
+  return (
+    <picture>
+      {/* WebP format for modern browsers */}
+      <source
+        srcSet={`/${imageName}-300w.webp 300w, /${imageName}-600w.webp 600w`}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        type="image/webp"
+      />
+
+      {/* Fallback format */}
+      <img
+        src={`/${imageName}-300w.png`}
+        alt={alt}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        loading="lazy"
+        width="300"
+        height="220"
+        style={{
+          aspectRatio: "300/220",
+          display: "block",
+          objectFit: "cover",
+          objectPosition: "center",
+          borderRadius: "12px 12px 0 0",
+        }}
+      />
+    </picture>
+  );
+};
+
+// GMB Reviews Slider Component (unchanged for brevity)
 const GMBReviewsSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -229,14 +340,9 @@ export default function HomePage() {
         city="Monroe"
       />
 
-      {/* Hero Section */}
+      {/* Hero Section - OPTIMIZED */}
       <section className="relative min-h-screen flex items-center hero-section">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/hero-background-latest.png')` }}
-          role="img"
-          aria-label="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
-        ></div>
+        <OptimizedHeroBackground />
         <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8 py-16">
@@ -282,6 +388,20 @@ export default function HomePage() {
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <i className="fab fa-google"></i>
+              Read All Reviews on Google
+            </motion.a>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Form */}
+      <QuoteForm />
+    </>
+  );
+}1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <i className="fas fa-calculator mr-2"></i>
@@ -431,7 +551,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - OPTIMIZED IMAGES */}
       <section className="py-10 sm:py-12 bg-neutral-bg">
         <div className="max-w-6xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -504,25 +624,10 @@ export default function HomePage() {
                 whileHover={{ y: -5, transition: { duration: 0.3 } }}
               >
                 <div className="relative overflow-hidden mobile-image-container">
-                  <img
+                  <OptimizedServiceImage
                     src={service.image}
                     alt={`${service.title} - Kane Pro serving Monroe Louisiana`}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 service-card-mobile"
-                    loading="lazy"
-                    width="300"
-                    height="220"
-                    style={{
-                      imageRendering: "-webkit-optimize-contrast",
-                      filter: "brightness(1.02) contrast(1.05) saturate(1.1)",
-                      aspectRatio: "300/220",
-                      display: "block",
-                      width: "100%",
-                      objectFit: "cover",
-                      objectPosition: "center",
-                      borderRadius: "12px 12px 0 0",
-                      border: "none",
-                      outline: "none",
-                    }}
+                    title={service.title}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
@@ -647,18 +752,4 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 btn-secondary hover:bg-vibrant-orange hover:text-white transition-all duration-300"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <i className="fab fa-google"></i>
-              Read All Reviews on Google
-            </motion.a>
-          </div>
-        </div>
-      </section>
-
-      {/* Quote Form */}
-      <QuoteForm />
-    </>
-  );
-}
+              whileHover={{ scale:
