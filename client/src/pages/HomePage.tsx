@@ -61,72 +61,25 @@ const preloadCriticalImages = () => {
 const OptimizedHeroBackground = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  useEffect(() => {
-    preloadCriticalImages();
-  }, []);
-
   return (
     <div className="absolute inset-0">
-      <picture>
-        {/* WebP format for modern browsers */}
-        <source
-          media="(min-width: 1024px)"
-          srcSet="/hero-background-desktop.webp 1920w, /hero-background-desktop-lg.webp 1440w"
-          sizes="100vw"
-          type="image/webp"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet="/hero-background-tablet.webp 1024w"
-          sizes="100vw"
-          type="image/webp"
-        />
-        <source
-          media="(max-width: 767px)"
-          srcSet="/hero-background-mobile.webp 768w, /hero-background-mobile-sm.webp 480w"
-          sizes="100vw"
-          type="image/webp"
-        />
-
-        {/* Fallback PNG images for older browsers */}
-        <source
-          media="(min-width: 1024px)"
-          srcSet="/hero-background-desktop.png 1920w"
-          sizes="100vw"
-          type="image/png"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet="/hero-background-tablet.png 1024w"
-          sizes="100vw"
-          type="image/png"
-        />
-        <source
-          media="(max-width: 767px)"
-          srcSet="/hero-background-mobile.png 768w"
-          sizes="100vw"
-          type="image/png"
-        />
-
-        {/* Final fallback */}
-        <img
-          src="/hero-background-mobile.webp"
-          alt="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
-          className={`w-full h-full object-cover transition-opacity duration-500 ${
-            imageLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          style={{
-            backgroundPosition: "center center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          onLoad={() => setImageLoaded(true)}
-          fetchPriority="high"
-          decoding="async"
-          width="1920"
-          height="1080"
-        />
-      </picture>
+      <img
+        src="/compressed herosection.jpg"
+        alt="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
+        className={`w-full h-full object-cover transition-opacity duration-500 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        onLoad={() => setImageLoaded(true)}
+        fetchPriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+      />
 
       {/* Loading placeholder */}
       {!imageLoaded && (
@@ -137,7 +90,7 @@ const OptimizedHeroBackground = () => {
 };
 
 // Optimized Service Image Component with better error handling
-const OptimizedServiceImage = ({ src, alt, title }) => {
+const OptimizedServiceImage = ({ src, alt, title }: { src: string | any; alt: string; title: string }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
@@ -293,7 +246,7 @@ const GMBReviewsSlider = () => {
   }, [maxIndex]);
 
   const goToSlide = useCallback(
-    (index) => {
+    (index: number) => {
       setCurrentIndex(Math.min(index, maxIndex));
     },
     [maxIndex],
@@ -359,7 +312,7 @@ const GMBReviewsSlider = () => {
         </button>
 
         <div className="flex gap-2">
-          {[...Array(maxIndex + 1)].map((_, index) => (
+          {[...Array(maxIndex + 1)].map((_, index: number) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
