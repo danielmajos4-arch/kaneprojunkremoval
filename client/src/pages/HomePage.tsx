@@ -132,8 +132,9 @@ const OptimizedServiceImage = ({
   }
 
   // For regular image paths - handle direct paths and optimized versions
-  const isDirectPath = src.includes(".webp") || src.includes(".jpg") || src.includes(".png");
-  
+  const isDirectPath =
+    src.includes(".webp") || src.includes(".jpg") || src.includes(".png");
+
   if (isDirectPath) {
     return (
       <div className="relative w-full h-full">
@@ -460,7 +461,7 @@ export default function HomePage() {
                 className="text-vibrant-orange block text-2xl sm:text-3xl md:text-4xl mt-2"
                 variants={animationVariants.fadeInUp}
               >
-                Same-Day Service • Free Estimates
+                Same-Day Service - Free Estimates
               </motion.span>
             </motion.h1>
 
@@ -662,6 +663,7 @@ export default function HomePage() {
                   "Estate Sales Cleanup",
                   "Same-Day Service",
                 ],
+                linkText: "View Residential Junk Removal Services",
               },
               {
                 image: "/portfolio-2.png",
@@ -673,6 +675,7 @@ export default function HomePage() {
                   "Retail Space Cleanouts",
                   "Scheduled Service Available",
                 ],
+                linkText: "View Commercial Demolition Services",
               },
               {
                 image: "/portfolio-3.png",
@@ -685,6 +688,7 @@ export default function HomePage() {
                   "Structure Demolition",
                   "Contractor Services",
                 ],
+                linkText: "View Construction Debris Removal Services",
               },
               {
                 image: "/dumpster-rental.webp",
@@ -697,6 +701,7 @@ export default function HomePage() {
                   "Flexible Rental Periods",
                   "Competitive Monroe Pricing",
                 ],
+                linkText: "View Dumpster Rental Options & Pricing",
               },
             ].map((service, index) => (
               <motion.div
@@ -735,7 +740,7 @@ export default function HomePage() {
                     href="/services"
                     className="btn-secondary text-sm block text-center transform transition-all duration-300 group-hover:bg-vibrant-orange group-hover:text-white py-2 sm:py-3"
                   >
-                    Learn More
+                    {service.linkText}
                   </Link>
                 </div>
               </motion.div>
