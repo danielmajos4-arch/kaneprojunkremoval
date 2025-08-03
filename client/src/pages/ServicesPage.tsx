@@ -13,6 +13,8 @@ import image__2_ from "@assets/image (2).webp";
 
 import image__3_ from "@assets/image (3).webp";
 
+import image__4_ from "@assets/image (4).webp";
+
 // Optimized structured data - simplified for better performance
 const servicesSchema = {
   "@context": "https://schema.org",
@@ -360,7 +362,7 @@ export default function ServicesPage() {
 
               <div className="order-1 lg:order-2">
                 <img
-                  src={WhatsApp_Image_2025_07_26_at_21_22_48}
+                  src={image__4_}
                   alt="Construction debris removal and demolition in Monroe Louisiana"
                   className="w-full rounded-lg shadow-md"
                   loading="lazy"
