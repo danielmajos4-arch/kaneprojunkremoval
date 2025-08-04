@@ -1,17 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://kanejunkremoval.com/sitemap.xml
-
-# Pages to prioritize
-Allow: /
-Allow: /services
-Allow: /about
-Allow: /areas
-
-# Disallow admin or sensitive paths (none currently)
-# Disallow: /admin/
-
-# Crawl delay (optional)
-Crawl-delay: 1
+Sitemap: https://kaneprojunk.com/sitemap.xml
