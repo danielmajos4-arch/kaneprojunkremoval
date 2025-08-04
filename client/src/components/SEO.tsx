@@ -33,6 +33,14 @@ export default function SEO({
       document.head.appendChild(metaDescription);
     }
     
+    // Add Google Search Console verification meta tag
+    const googleVerification = document.querySelector('meta[name="google-site-verification"]') || document.createElement('meta');
+    googleVerification.setAttribute('name', 'google-site-verification');
+    googleVerification.setAttribute('content', '7MjRON_WV3B5uHOkfFJBvtwXwypcnYyb74q63yAgio8');
+    if (!document.querySelector('meta[name="google-site-verification"]')) {
+      document.head.appendChild(googleVerification);
+    }
+    
     // Update keywords if provided
     if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]') || document.createElement('meta');
