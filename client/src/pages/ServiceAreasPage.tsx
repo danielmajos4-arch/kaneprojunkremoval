@@ -4,19 +4,7 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-// Unique project showcases - duplicates removed, organized by project type
-import Website_demolition_1 from "@assets/Website demolition (1)_1753836740875.jpg";
-import Website_demolition_2_New from "@assets/Website demolition_1753837579366.jpg";
-import WhatsApp_Image_1_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837567906.jpeg";
-import WhatsApp_Image_Storm_Project from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3)_1753837691478.jpeg";
-import Junk_removal_Project from "@assets/Junk removal_1753837631446.jpeg";
-import Screen_Shot_Truck_Load_1 from "@assets/Screen Shot 2025-07-29 at 9.17.50 PM_1753838411149.png";
-import WhatsApp_Image_Truck_Project_2 from "@assets/WhatsApp Image 2025-07-29 at 22.01.08 (1)_1753838451889.jpeg";
-import WhatsApp_Image_New_1 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (1)_1753839452505.jpeg";
-import WhatsApp_Image_New_3 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59_1753839452506.jpeg";
-
-// New project image
-import PostWebsiteProject from "@assets/post website_1754353712118.png";
+// Image imports will be added here when you upload new optimized images
 
 // Animation variants
 const fadeInUp = {
@@ -31,77 +19,9 @@ const staggerContainer = {
 export default function ServiceAreasPage() {
   const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string; category?: string } | null>(null);
 
-  // EDITABLE PROJECT GALLERY - Update descriptions below as needed
+  // EMPTY GALLERY - Ready for new optimized images
   const galleryImages = [
-    // DEMOLITION PROJECTS
-    {
-      id: 1,
-      src: Website_demolition_1,
-      alt: "Professional barn demolition Monroe LA - Complete structure removal and site cleanup",
-      category: "Demolition"
-    },
-    {
-      id: 2,
-      src: Website_demolition_2_New,
-      alt: "Residential demolition West Monroe LA - Safe and efficient structure removal",
-      category: "demolition"
-    },
-    {
-      id: 3,
-      src: WhatsApp_Image_1_Demolition,
-      alt: "Complete demolition service Monroe LA - Professional cleanup and debris removal",
-      category: "Junk removal"
-    },
-
-    // STORM & DISASTER CLEANUP
-    {
-      id: 4,
-      src: WhatsApp_Image_Storm_Project,
-      alt: "Emergency storm cleanup West Monroe LA - Fast response disaster recovery",
-      category: "storm cleanup"
-    },
-
-    // LARGE SCALE JUNK REMOVAL
-    {
-      id: 5,
-      src: Junk_removal_Project,
-      alt: "Commercial property cleanout Monroe LA - Large scale junk removal service",
-      category: "Commercial Junk Removal"
-    },
-    {
-      id: 6,
-      src: WhatsApp_Image_New_1,
-      alt: "Residential junk removal Monroe LA - Same day pickup and hauling service",
-      category: "Residential Junk Removal"
-    },
-    {
-      id: 7,
-      src: WhatsApp_Image_New_3,
-      alt: "Home cleanout service Northeast Louisiana - Professional junk hauling",
-      category: "Residential Junk Removal"
-    },
-
-    // TRUCK LOADS & HAULING
-    {
-      id: 8,
-      src: Screen_Shot_Truck_Load_1,
-      alt: "Construction debris hauling Monroe LA - Full truck load removal service",
-      category: "Hauling Service"
-    },
-    {
-      id: 9,
-      src: WhatsApp_Image_Truck_Project_2,
-      alt: "Professional hauling service Monroe area - Efficient junk and debris removal",
-      category: "Hauling Service"
-    },
-
-    // NEW DEMOLITION PROJECT
-    {
-      id: 10,
-      src: PostWebsiteProject,
-      alt: "Before and after demolition Monroe LA - Complete site transformation and cleanup",
-      category: "Hauling service"
-    }
+    // Add your new optimized images here
   ];
 
   return (
