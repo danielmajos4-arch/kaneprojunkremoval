@@ -43,8 +43,7 @@ const preloadCriticalImages = () => {
   if (typeof window === "undefined") return;
 
   const criticalImages = [
-    "/hero-background-mobile.webp",
-    "/hero-background-desktop.webp",
+    "/compressed herosection.jpg",
   ];
 
   criticalImages.forEach((src) => {
@@ -65,24 +64,25 @@ const OptimizedHeroBackground = () => {
       <img
         src="/compressed herosection.jpg"
         alt="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
-        className={`w-full h-full object-cover transition-opacity duration-500 ${
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
           imageLoaded ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          backgroundPosition: "center center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
+          objectFit: "cover",
+          objectPosition: "center",
         }}
         onLoad={() => setImageLoaded(true)}
-        fetchPriority="high"
         decoding="async"
+        loading="eager"
         width="1920"
         height="1080"
       />
 
-      {/* Loading placeholder */}
+      {/* Optimized loading placeholder */}
       {!imageLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-green to-vibrant-orange animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-green via-deep-green to-vibrant-orange">
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
       )}
     </div>
   );
@@ -114,6 +114,7 @@ const OptimizedServiceImage = ({
           onLoad={() => setImageLoaded(true)}
           onError={() => setImageError(true)}
           loading="lazy"
+          decoding="async"
           width="300"
           height="220"
           style={{
@@ -147,6 +148,7 @@ const OptimizedServiceImage = ({
           onLoad={() => setImageLoaded(true)}
           onError={() => setImageError(true)}
           loading="lazy"
+          decoding="async"
           width="300"
           height="220"
           style={{
@@ -191,6 +193,7 @@ const OptimizedServiceImage = ({
           onLoad={() => setImageLoaded(true)}
           onError={() => setImageError(true)}
           loading="lazy"
+          decoding="async"
           width="300"
           height="220"
           style={{
@@ -386,6 +389,7 @@ export default function HomePage() {
 
   useEffect(() => {
     setIsVisible(true);
+    preloadCriticalImages();
   }, []);
 
   return (
