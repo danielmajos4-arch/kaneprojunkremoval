@@ -320,21 +320,7 @@ export default function ServiceAreasPage() {
             ))}
           </motion.div>
 
-          {/* Upload Instructions */}
-          <div className="mt-8 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
-            <div className="flex items-start">
-              <i className="fas fa-info-circle text-blue-400 mt-0.5 mr-3"></i>
-              <div>
-                <h3 className="text-sm font-semibold text-blue-900 mb-2">Ready to Add New Projects?</h3>
-                <div className="text-xs text-blue-800 space-y-1">
-                  <p><strong>Step 1:</strong> Upload your new project images to the <code>attached_assets/</code> folder</p>
-                  <p><strong>Step 2:</strong> Import them at the top of this file using: <code>import NewProject1 from "@assets/your-image.jpg";</code></p>
-                  <p><strong>Step 3:</strong> Add to the gallery array where the commented placeholders are located</p>
-                  <p><strong>Tip:</strong> Use descriptive filenames and ALT text for better SEO</p>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
       {/* Enhanced Image Modal */}
