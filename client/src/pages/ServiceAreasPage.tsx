@@ -244,11 +244,10 @@ export default function ServiceAreasPage() {
               Our Work in Monroe LA
             </h2>
             <p className="text-sm text-gray-600 mb-4">
-              10 unique project showcases across Northeast Louisiana - No duplicates
+              10+ unique project showcases across Northeast Louisiana
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-xs">
               <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full">Demolition (4)</span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Storm Cleanup (1)</span>
               <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal (3)</span>
               <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Hauling (2)</span>
             </div>
@@ -282,10 +281,21 @@ export default function ServiceAreasPage() {
                     {image.category}
                   </span>
                 </div>
-                {/* Project number indicator */}
-                <div className="absolute bottom-2 right-2 w-6 h-6 bg-vibrant-orange text-white text-xs rounded-full flex items-center justify-center font-bold">
-                  {image.id}
-                </div>
+              </motion.div>
+            ))}
+            
+            {/* Empty image slots for future projects */}
+            {[11, 12, 13].map((placeholderId) => (
+              <motion.div
+                key={`placeholder-${placeholderId}`}
+                className="relative aspect-square border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer"
+                variants={fadeInUp}
+                data-testid={`upload-slot-${placeholderId}`}
+              >
+                <i className="fas fa-plus text-2xl text-gray-400 mb-2"></i>
+                <p className="text-xs text-gray-500 text-center px-2">
+                  Add New<br/>Project
+                </p>
               </motion.div>
             ))}
           </motion.div>
