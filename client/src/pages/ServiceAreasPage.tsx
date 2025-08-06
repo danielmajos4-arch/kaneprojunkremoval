@@ -15,10 +15,8 @@ import WhatsApp_Image_Truck_Project_2 from "@assets/WhatsApp Image 2025-07-29 at
 import WhatsApp_Image_New_1 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (1)_1753839452505.jpeg";
 import WhatsApp_Image_New_3 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59_1753839452506.jpeg";
 
-// Space reserved for new project images - add your uploads here:
-// import NewProject1 from "@assets/your-new-image-1.jpg";
-// import NewProject2 from "@assets/your-new-image-2.jpg";
-// import NewProject3 from "@assets/your-new-image-3.jpg";
+// New project image
+import PostWebsiteProject from "@assets/post website_1754353712118.png";
 
 // Animation variants
 const fadeInUp = {
@@ -95,27 +93,15 @@ export default function ServiceAreasPage() {
       src: WhatsApp_Image_Truck_Project_2,
       alt: "Professional junk hauling Monroe area - Complete truck load service",
       category: "Hauling Service"
-    }
+    },
 
-    // SPACE FOR NEW PROJECTS - Add your new images below:
-    // {
-    //   id: 10,
-    //   src: NewProject1,
-    //   alt: "Your new project description",
-    //   category: "Project Category"
-    // },
-    // {
-    //   id: 11,
-    //   src: NewProject2,
-    //   alt: "Your new project description",
-    //   category: "Project Category"
-    // },
-    // {
-    //   id: 12,
-    //   src: NewProject3,
-    //   alt: "Your new project description",
-    //   category: "Project Category"
-    // }
+    // NEW DEMOLITION PROJECT
+    {
+      id: 10,
+      src: PostWebsiteProject,
+      alt: "Complete demolition and cleanup project Monroe LA - Before and after transformation",
+      category: "Demolition"
+    }
   ];
 
   return (
@@ -258,14 +244,13 @@ export default function ServiceAreasPage() {
               Our Work in Monroe LA
             </h2>
             <p className="text-sm text-gray-600 mb-4">
-              Unique project showcases across Northeast Louisiana - No duplicates
+              10 unique project showcases across Northeast Louisiana - No duplicates
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-xs">
-              <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full">Demolition</span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Storm Cleanup</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal</span>
-              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Hauling</span>
-              <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full border-2 border-dashed">Space for New Projects</span>
+              <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full">Demolition (4)</span>
+              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Storm Cleanup (1)</span>
+              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal (3)</span>
+              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Hauling (2)</span>
             </div>
           </div>
 
@@ -301,21 +286,6 @@ export default function ServiceAreasPage() {
                 <div className="absolute bottom-2 right-2 w-6 h-6 bg-vibrant-orange text-white text-xs rounded-full flex items-center justify-center font-bold">
                   {image.id}
                 </div>
-              </motion.div>
-            ))}
-            
-            {/* Placeholder for new project uploads */}
-            {[10, 11, 12].map((placeholderId) => (
-              <motion.div
-                key={`placeholder-${placeholderId}`}
-                className="relative aspect-square border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer"
-                variants={fadeInUp}
-                data-testid={`upload-slot-${placeholderId}`}
-              >
-                <i className="fas fa-plus text-2xl text-gray-400 mb-2"></i>
-                <p className="text-xs text-gray-500 text-center px-2">
-                  Add New<br/>Project #{placeholderId}
-                </p>
               </motion.div>
             ))}
           </motion.div>
