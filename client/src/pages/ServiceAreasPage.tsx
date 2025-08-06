@@ -31,25 +31,25 @@ const staggerContainer = {
 export default function ServiceAreasPage() {
   const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string; category?: string } | null>(null);
 
-  // Organized gallery with unique project showcases - grouped by project type
+  // EDITABLE PROJECT GALLERY - Update descriptions below as needed
   const galleryImages = [
     // DEMOLITION PROJECTS
     {
       id: 1,
       src: Website_demolition_1,
-      alt: "Barn demolition and cleanup Monroe LA - Butter & Eggs building removal",
+      alt: "Professional barn demolition Monroe LA - Complete structure removal and site cleanup",
       category: "Demolition"
     },
     {
       id: 2,
       src: Website_demolition_2_New,
-      alt: "Residential patio demolition Northeast Louisiana - Complete cleanup service",
+      alt: "Residential demolition West Monroe LA - Safe and efficient structure removal",
       category: "Demolition"
     },
     {
       id: 3,
       src: WhatsApp_Image_1_Demolition,
-      alt: "Professional demolition service Monroe LA - Before and after cleanup",
+      alt: "Complete demolition service Monroe LA - Professional cleanup and debris removal",
       category: "Demolition"
     },
 
@@ -57,7 +57,7 @@ export default function ServiceAreasPage() {
     {
       id: 4,
       src: WhatsApp_Image_Storm_Project,
-      alt: "Storm damage cleanup West Monroe LA - Emergency junk removal service",
+      alt: "Emergency storm cleanup West Monroe LA - Fast response disaster recovery",
       category: "Storm Cleanup"
     },
 
@@ -65,19 +65,19 @@ export default function ServiceAreasPage() {
     {
       id: 5,
       src: Junk_removal_Project,
-      alt: "Commercial junk removal Monroe Louisiana - Large scale cleanout",
+      alt: "Commercial property cleanout Monroe LA - Large scale junk removal service",
       category: "Commercial Junk Removal"
     },
     {
       id: 6,
       src: WhatsApp_Image_New_1,
-      alt: "Professional junk removal Monroe LA - Complete property cleanout",
+      alt: "Residential junk removal Monroe LA - Same day pickup and hauling service",
       category: "Residential Junk Removal"
     },
     {
       id: 7,
       src: WhatsApp_Image_New_3,
-      alt: "Residential junk hauling Northeast Louisiana - Same day pickup service",
+      alt: "Home cleanout service Northeast Louisiana - Professional junk hauling",
       category: "Residential Junk Removal"
     },
 
@@ -85,13 +85,13 @@ export default function ServiceAreasPage() {
     {
       id: 8,
       src: Screen_Shot_Truck_Load_1,
-      alt: "Full truck load construction debris Monroe LA - Professional hauling service",
+      alt: "Construction debris hauling Monroe LA - Full truck load removal service",
       category: "Hauling Service"
     },
     {
       id: 9,
       src: WhatsApp_Image_Truck_Project_2,
-      alt: "Professional junk hauling Monroe area - Complete truck load service",
+      alt: "Professional hauling service Monroe area - Efficient junk and debris removal",
       category: "Hauling Service"
     },
 
@@ -99,7 +99,7 @@ export default function ServiceAreasPage() {
     {
       id: 10,
       src: PostWebsiteProject,
-      alt: "Complete demolition and cleanup project Monroe LA - Before and after transformation",
+      alt: "Before and after demolition Monroe LA - Complete site transformation and cleanup",
       category: "Demolition"
     }
   ];
