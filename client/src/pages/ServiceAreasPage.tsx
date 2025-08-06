@@ -4,26 +4,21 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import Website_demolition from "@assets/Website demolition.jpg";
-import WhatsApp_Image_2025_07_27_at_21_55_20 from "@assets/WhatsApp Image 2025-07-27 at 21.55.20.jpeg";
+// Unique project showcases - duplicates removed, organized by project type
 import Website_demolition_1 from "@assets/Website demolition (1)_1753836740875.jpg";
-import Website_demolition_new from "@assets/Website demolition_1753836740879.jpg";
-import WhatsApp_Image_1_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837567906.jpeg";
-import WhatsApp_Image_2_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (2)_1753837567909.jpeg";
-import Website_demolition_1_New from "@assets/Website demolition (1)_1753837579354.jpg";
 import Website_demolition_2_New from "@assets/Website demolition_1753837579366.jpg";
-import Junk_removal_Project from "@assets/Junk removal_1753837631446.jpeg";
-import WhatsApp_Image_1_Junk from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837660614.jpeg";
+import WhatsApp_Image_1_Demolition from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (1)_1753837567906.jpeg";
 import WhatsApp_Image_Storm_Project from "@assets/WhatsApp Image 2025-07-27 at 21.55.19 (3)_1753837691478.jpeg";
+import Junk_removal_Project from "@assets/Junk removal_1753837631446.jpeg";
 import Screen_Shot_Truck_Load_1 from "@assets/Screen Shot 2025-07-29 at 9.17.50 PM_1753838411149.png";
-import Screen_Shot_Truck_Load_2 from "@assets/Screen Shot 2025-07-29 at 9.18.35 PM_1753838411150.png";
-import WhatsApp_Image_Truck_Project_1 from "@assets/WhatsApp Image 2025-07-29 at 21.40.44 (2)_1753838436591.jpeg";
 import WhatsApp_Image_Truck_Project_2 from "@assets/WhatsApp Image 2025-07-29 at 22.01.08 (1)_1753838451889.jpeg";
 import WhatsApp_Image_New_1 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (1)_1753839452505.jpeg";
-import WhatsApp_Image_New_2 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59 (2)_1753839452506.jpeg";
 import WhatsApp_Image_New_3 from "@assets/WhatsApp Image 2025-07-29 at 23.30.59_1753839452506.jpeg";
-import WhatsApp_Image_New_4 from "@assets/WhatsApp Image 2025-07-29 at 23.31.00 (1)_1753839452507.jpeg";
-import WhatsApp_Image_New_5 from "@assets/WhatsApp Image 2025-07-29 at 23.31.00_1753839452507.jpeg";
+
+// Space reserved for new project images - add your uploads here:
+// import NewProject1 from "@assets/your-new-image-1.jpg";
+// import NewProject2 from "@assets/your-new-image-2.jpg";
+// import NewProject3 from "@assets/your-new-image-3.jpg";
 
 // Animation variants
 const fadeInUp = {
@@ -36,70 +31,91 @@ const staggerContainer = {
 };
 
 export default function ServiceAreasPage() {
-  const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string } | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string; category?: string } | null>(null);
 
-  // Gallery with authentic Kane Pro demolition projects - duplicates removed
+  // Organized gallery with unique project showcases - grouped by project type
   const galleryImages = [
+    // DEMOLITION PROJECTS
     {
       id: 1,
       src: Website_demolition_1,
       alt: "Barn demolition and cleanup Monroe LA - Butter & Eggs building removal",
+      category: "Demolition"
     },
     {
       id: 2,
-      src: Website_demolition_new,
-      alt: "Residential demolition West Monroe LA - Complete structure removal and cleanup",
+      src: Website_demolition_2_New,
+      alt: "Residential patio demolition Northeast Louisiana - Complete cleanup service",
+      category: "Demolition"
     },
     {
       id: 3,
-      src: Website_demolition_2_New,
-      alt: "Residential patio demolition Northeast Louisiana - Complete cleanup service",
+      src: WhatsApp_Image_1_Demolition,
+      alt: "Professional demolition service Monroe LA - Before and after cleanup",
+      category: "Demolition"
     },
+
+    // STORM & DISASTER CLEANUP
     {
       id: 4,
-      src: WhatsApp_Image_New_1,
-      alt: "Professional junk removal Monroe LA - Complete cleanout service",
+      src: WhatsApp_Image_Storm_Project,
+      alt: "Storm damage cleanup West Monroe LA - Emergency junk removal service",
+      category: "Storm Cleanup"
     },
+
+    // LARGE SCALE JUNK REMOVAL
     {
       id: 5,
-      src: WhatsApp_Image_New_2,
-      alt: "Construction debris removal West Monroe LA - Site cleanup",
+      src: Junk_removal_Project,
+      alt: "Commercial junk removal Monroe Louisiana - Large scale cleanout",
+      category: "Commercial Junk Removal"
     },
     {
       id: 6,
-      src: WhatsApp_Image_New_3,
-      alt: "Residential junk hauling Northeast Louisiana - Same day pickup",
+      src: WhatsApp_Image_New_1,
+      alt: "Professional junk removal Monroe LA - Complete property cleanout",
+      category: "Residential Junk Removal"
     },
     {
       id: 7,
-      src: WhatsApp_Image_New_4,
-      alt: "Commercial demolition Monroe area - Professional service",
+      src: WhatsApp_Image_New_3,
+      alt: "Residential junk hauling Northeast Louisiana - Same day pickup service",
+      category: "Residential Junk Removal"
     },
+
+    // TRUCK LOADS & HAULING
     {
       id: 8,
-      src: WhatsApp_Image_New_5,
-      alt: "Large scale junk removal Ruston LA - Complete property cleanup",
+      src: Screen_Shot_Truck_Load_1,
+      alt: "Full truck load construction debris Monroe LA - Professional hauling service",
+      category: "Hauling Service"
     },
     {
       id: 9,
-      src: Junk_removal_Project,
-      alt: "Commercial junk removal Monroe Louisiana - Large scale cleanout",
-    },
-    {
-      id: 10,
-      src: Screen_Shot_Truck_Load_1,
-      alt: "Truck loaded with construction debris Monroe LA - Professional hauling service",
-    },
-    {
-      id: 11,
-      src: Screen_Shot_Truck_Load_2,
-      alt: "Full truck load junk removal West Monroe LA - Residential cleanout service",
-    },
-    {
-      id: 12,
       src: WhatsApp_Image_Truck_Project_2,
-      alt: "Professional junk hauling Monroe area - Complete property cleanup",
-    },
+      alt: "Professional junk hauling Monroe area - Complete truck load service",
+      category: "Hauling Service"
+    }
+
+    // SPACE FOR NEW PROJECTS - Add your new images below:
+    // {
+    //   id: 10,
+    //   src: NewProject1,
+    //   alt: "Your new project description",
+    //   category: "Project Category"
+    // },
+    // {
+    //   id: 11,
+    //   src: NewProject2,
+    //   alt: "Your new project description",
+    //   category: "Project Category"
+    // },
+    // {
+    //   id: 12,
+    //   src: NewProject3,
+    //   alt: "Your new project description",
+    //   category: "Project Category"
+    // }
   ];
 
   return (
@@ -234,21 +250,28 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       </section>
-      {/* Project Gallery - Simplified for Visual Editor */}
+      {/* Project Gallery - Organized Showcase */}
       <section className="py-8 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-6">
+          <div className="text-center mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-deep-green mb-2">
               Our Work in Monroe LA
             </h2>
-            <p className="text-sm text-gray-600">
-              Recent projects across Northeast Louisiana
+            <p className="text-sm text-gray-600 mb-4">
+              Unique project showcases across Northeast Louisiana - No duplicates
             </p>
+            <div className="flex flex-wrap justify-center gap-2 text-xs">
+              <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full">Demolition</span>
+              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Storm Cleanup</span>
+              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal</span>
+              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Hauling</span>
+              <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full border-2 border-dashed">Space for New Projects</span>
+            </div>
           </div>
 
-          {/* Simple Gallery Grid - 10 Images */}
+          {/* Organized Gallery Grid - Improved Layout */}
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
@@ -256,37 +279,95 @@ export default function ServiceAreasPage() {
             {galleryImages.map((image) => (
               <motion.div
                 key={image.id}
-                className="relative cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                className="relative cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square group"
                 variants={fadeInUp}
                 whileHover={{ scale: 1.02 }}
                 onClick={() => setSelectedImage(image)}
+                data-testid={`gallery-image-${image.id}`}
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform hover:scale-110 pt-[2px] pb-[2px]"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   loading="lazy"
                 />
+                {/* Category overlay */}
+                <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-xs px-2 py-1 bg-black bg-opacity-75 text-white rounded">
+                    {image.category}
+                  </span>
+                </div>
+                {/* Project number indicator */}
+                <div className="absolute bottom-2 right-2 w-6 h-6 bg-vibrant-orange text-white text-xs rounded-full flex items-center justify-center font-bold">
+                  {image.id}
+                </div>
+              </motion.div>
+            ))}
+            
+            {/* Placeholder for new project uploads */}
+            {[10, 11, 12].map((placeholderId) => (
+              <motion.div
+                key={`placeholder-${placeholderId}`}
+                className="relative aspect-square border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer"
+                variants={fadeInUp}
+                data-testid={`upload-slot-${placeholderId}`}
+              >
+                <i className="fas fa-plus text-2xl text-gray-400 mb-2"></i>
+                <p className="text-xs text-gray-500 text-center px-2">
+                  Add New<br/>Project #{placeholderId}
+                </p>
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Upload Instructions */}
+          <div className="mt-8 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+            <div className="flex items-start">
+              <i className="fas fa-info-circle text-blue-400 mt-0.5 mr-3"></i>
+              <div>
+                <h3 className="text-sm font-semibold text-blue-900 mb-2">Ready to Add New Projects?</h3>
+                <div className="text-xs text-blue-800 space-y-1">
+                  <p><strong>Step 1:</strong> Upload your new project images to the <code>attached_assets/</code> folder</p>
+                  <p><strong>Step 2:</strong> Import them at the top of this file using: <code>import NewProject1 from "@assets/your-image.jpg";</code></p>
+                  <p><strong>Step 3:</strong> Add to the gallery array where the commented placeholders are located</p>
+                  <p><strong>Tip:</strong> Use descriptive filenames and ALT text for better SEO</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      {/* Image Modal */}
+      {/* Enhanced Image Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl w-full">
+        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-5xl w-full">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white text-2xl hover:text-vibrant-orange z-10"
+              className="absolute top-4 right-4 text-white text-2xl hover:text-vibrant-orange z-10 w-10 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded-full"
+              data-testid="close-modal"
             >
               <i className="fas fa-times"></i>
             </button>
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
-            />
+            <div className="bg-white rounded-lg overflow-hidden">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="w-full h-auto max-h-[70vh] object-contain"
+              />
+              <div className="p-4 bg-gray-50">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-semibold text-vibrant-orange">
+                    Project #{selectedImage.id}
+                  </span>
+                  {selectedImage.category && (
+                    <span className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
+                      {selectedImage.category}
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm text-gray-700">{selectedImage.alt}</p>
+              </div>
+            </div>
           </div>
         </div>
       )}

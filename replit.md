@@ -16,6 +16,7 @@ Preferred communication style: Simple, everyday language.
 - **Forms**: React Hook Form with Zod validation
 - **Build Tool**: Vite
 - **Design System**: Radix UI primitives, professional typography, mobile-first responsive design, Font Awesome icons, faith-driven professional branding.
+- **Gallery System**: Organized project showcase with categorized images, no duplicates, responsive grid layout with hover effects and modal viewing.
 
 ### Backend
 - **Framework**: Express.js with TypeScript
@@ -28,6 +29,12 @@ Preferred communication style: Simple, everyday language.
 - **Core Pages**: HomePage, ServicesPage, AboutPage, ServiceAreasPage.
 - **Form Components**: QuoteForm and ContactForm, utilizing React Hook Form, Zod, and TanStack Query.
 - **UI Components**: FloatingCTA, responsive Navigation, Footer, and a consistent Layout wrapper.
+- **Gallery System**: ServiceAreasPage features an organized project gallery with:
+  - 9 unique project images (duplicates removed)
+  - Categorized by project type (Demolition, Storm Cleanup, Junk Removal, Hauling)
+  - Responsive grid layout with hover effects and category indicators
+  - Enhanced modal viewing with project details
+  - 3 placeholder slots for new project uploads with clear instructions
 
 ### Data Flow
 - **Form Submission**: Client-side validation (Zod) -> Formspree API (https://formspree.io/f/xpwllvvz) -> Direct email delivery -> User feedback (toast notifications).
