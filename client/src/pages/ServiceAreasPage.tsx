@@ -44,13 +44,13 @@ export default function ServiceAreasPage() {
       id: 2,
       src: Website_demolition_2_New,
       alt: "Residential demolition West Monroe LA - Safe and efficient structure removal",
-      category: "Demolition"
+      category: "demolition"
     },
     {
       id: 3,
       src: WhatsApp_Image_1_Demolition,
       alt: "Complete demolition service Monroe LA - Professional cleanup and debris removal",
-      category: "Demolition"
+      category: "Junk removal"
     },
 
     // STORM & DISASTER CLEANUP
@@ -58,7 +58,7 @@ export default function ServiceAreasPage() {
       id: 4,
       src: WhatsApp_Image_Storm_Project,
       alt: "Emergency storm cleanup West Monroe LA - Fast response disaster recovery",
-      category: "Storm Cleanup"
+      category: "storm cleanup"
     },
 
     // LARGE SCALE JUNK REMOVAL
@@ -100,7 +100,7 @@ export default function ServiceAreasPage() {
       id: 10,
       src: PostWebsiteProject,
       alt: "Before and after demolition Monroe LA - Complete site transformation and cleanup",
-      category: "Demolition"
+      category: "Hauling service"
     }
   ];
 
