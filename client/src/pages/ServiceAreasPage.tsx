@@ -4,7 +4,17 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-// Image imports will be added here when you upload new optimized images
+// New optimized WebP project images
+import PostWebsite11 from "@assets/post website (11)_1754379618784.webp";
+import PostWebsite9 from "@assets/post website (9)_1754379623649.webp";
+import PostWebsite8 from "@assets/post website (8)_1754379628199.webp";
+import PostWebsite7 from "@assets/post website (7)_1754379635869.webp";
+import PostWebsite6 from "@assets/post website (6)_1754379640101.webp";
+import PostWebsite5 from "@assets/post website (5)_1754379644451.webp";
+import PostWebsite4 from "@assets/post website (4)_1754379649504.webp";
+import PostWebsite3 from "@assets/post website (3)_1754379653952.webp";
+import PostWebsite2 from "@assets/post website (2)_1754379658466.webp";
+import PostWebsite1 from "@assets/post website (1)_1754379663016.webp";
 
 // Animation variants
 const fadeInUp = {
@@ -19,9 +29,68 @@ const staggerContainer = {
 export default function ServiceAreasPage() {
   const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string; category?: string } | null>(null);
 
-  // EMPTY GALLERY - Ready for new optimized images
+  // OPTIMIZED GALLERY - New WebP project images
   const galleryImages = [
-    // Add your new optimized images here
+    {
+      id: 1,
+      src: PostWebsite11,
+      alt: "Pool removal and site cleanup Monroe LA - Before and after backyard transformation",
+      category: "Junk Removal"
+    },
+    {
+      id: 2,
+      src: PostWebsite9,
+      alt: "Interior cleanout service Monroe LA - Cabinet and storage removal project",
+      category: "Junk Removal"
+    },
+    {
+      id: 3,
+      src: PostWebsite8,
+      alt: "Construction debris removal West Monroe LA - Structural demolition cleanup",
+      category: "Demolition"
+    },
+    {
+      id: 4,
+      src: PostWebsite7,
+      alt: "Residential junk removal before and after Monroe LA - Complete room cleanout",
+      category: "Junk Removal"
+    },
+    {
+      id: 5,
+      src: PostWebsite6,
+      alt: "Construction site cleanup Northeast Louisiana - Debris removal and hauling",
+      category: "Hauling"
+    },
+    {
+      id: 6,
+      src: PostWebsite5,
+      alt: "Structure demolition Monroe LA - Complete building removal before and after",
+      category: "Demolition"
+    },
+    {
+      id: 7,
+      src: PostWebsite4,
+      alt: "Debris pile cleanup West Monroe LA - Same location before and after service",
+      category: "Hauling"
+    },
+    {
+      id: 8,
+      src: PostWebsite3,
+      alt: "Deck junk removal Monroe LA - Furniture and debris cleanup service",
+      category: "Junk Removal"
+    },
+    {
+      id: 9,
+      src: PostWebsite2,
+      alt: "Commercial building demolition Northeast Louisiana - Butter & Eggs structure removal",
+      category: "Demolition"
+    },
+    {
+      id: 10,
+      src: PostWebsite1,
+      alt: "Residential demolition project Monroe LA - Complete structure removal and site cleanup",
+      category: "Demolition"
+    }
   ];
 
   return (
@@ -168,7 +237,7 @@ export default function ServiceAreasPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-xs">
               <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full">Demolition (4)</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal (3)</span>
+              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal (4)</span>
               <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Hauling (2)</span>
             </div>
           </div>
