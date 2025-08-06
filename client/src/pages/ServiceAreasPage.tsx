@@ -15,6 +15,9 @@ import PostWebsite4 from "@assets/post website (4)_1754379649504.webp";
 import PostWebsite3 from "@assets/post website (3)_1754379653952.webp";
 import PostWebsite2 from "@assets/post website (2)_1754379658466.webp";
 import PostWebsite1 from "@assets/post website (1)_1754379663016.webp";
+import WhatsAppImage5 from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (5)_1754380459294.webp";
+import WhatsAppImage4 from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (4) (1)_1754380463861.webp";
+import Image4 from "@assets/image (4) (1)_1754380480667.webp";
 
 // Animation variants
 const fadeInUp = {
@@ -90,6 +93,24 @@ export default function ServiceAreasPage() {
       src: PostWebsite1,
       alt: "Residential demolition project Monroe LA - Complete structure removal and site cleanup",
       category: "Demolition"
+    },
+    {
+      id: 11,
+      src: WhatsAppImage5,
+      alt: "Kane Pro Junk Removal team and equipment Monroe LA - Professional hauling trailer and service crew",
+      category: "Hauling"
+    },
+    {
+      id: 12,
+      src: WhatsAppImage4,
+      alt: "Furniture and household junk removal Monroe LA - Chair, cabinet and appliance pickup service",
+      category: "Junk Removal"
+    },
+    {
+      id: 13,
+      src: Image4,
+      alt: "Construction debris and lumber removal Northeast Louisiana - Wood frame and building material hauling",
+      category: "Hauling"
     }
   ];
 
@@ -233,12 +254,12 @@ export default function ServiceAreasPage() {
               Our Work in Monroe LA
             </h2>
             <p className="text-sm text-gray-600 mb-4">
-              10+ unique project showcases across Northeast Louisiana
+              13 unique project showcases across Northeast Louisiana
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-xs">
               <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full">Demolition (4)</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal (4)</span>
-              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Hauling (2)</span>
+              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">Junk Removal (5)</span>
+              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Hauling (4)</span>
             </div>
           </div>
 
@@ -273,20 +294,7 @@ export default function ServiceAreasPage() {
               </motion.div>
             ))}
             
-            {/* Empty image slots for future projects */}
-            {[11, 12, 13].map((placeholderId) => (
-              <motion.div
-                key={`placeholder-${placeholderId}`}
-                className="relative aspect-square border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer"
-                variants={fadeInUp}
-                data-testid={`upload-slot-${placeholderId}`}
-              >
-                <i className="fas fa-plus text-2xl text-gray-400 mb-2"></i>
-                <p className="text-xs text-gray-500 text-center px-2">
-                  Add New<br/>Project
-                </p>
-              </motion.div>
-            ))}
+
           </motion.div>
 
 
