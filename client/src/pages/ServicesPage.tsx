@@ -304,7 +304,6 @@ export default function ServicesPage() {
         structuredData={servicesSchema}
         city="Monroe"
       />
-
       {/* Breadcrumbs - Enhanced for SEO */}
       <nav className="bg-gray-50 py-2 sm:py-3" aria-label="Breadcrumb">
         <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -329,7 +328,6 @@ export default function ServicesPage() {
           </ol>
         </div>
       </nav>
-
       {/* Header - Enhanced SEO */}
       <section className="pt-4 sm:pt-8 pb-4 sm:pb-6 bg-white">
         <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
@@ -349,7 +347,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Service Areas - Enhanced */}
       <section className="py-3 sm:py-6 bg-neutral-bg">
         <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -370,7 +367,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services - Performance optimized */}
       <section className="py-6 sm:py-10 lg:py-12 bg-white">
         <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -552,7 +548,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Dumpster Rental Services Section */}
       <section className="py-8 sm:py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -577,7 +572,7 @@ export default function ServicesPage() {
                     <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
                       <li>• 10-yard residential cleanouts</li>
                       <li>• 20-yard home renovations</li>
-                      <li>• 30-yard construction projects</li>
+                      <li>• 20-yard construction projects</li>
                       <li>• Roll-off containers</li>
                     </ul>
                   </div>
@@ -617,10 +612,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Real GMB Reviews Section */}
       <GMBReviewsSection />
-
       {/* FAQ Section - Enhanced */}
       <section className="py-6 sm:py-10 lg:py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -650,7 +643,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section - Enhanced */}
       <section className="py-8 sm:py-12 lg:py-16 bg-deep-green text-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
@@ -689,7 +681,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Quote Form */}
       <QuoteForm />
     </>
