@@ -682,7 +682,7 @@ export default function HomePage() {
                 linkText: "View Commercial Demolition Services",
               },
               {
-                image: "/portfolio-3.png",
+                image: "/portfolio-3-optimized.webp",
                 title: "Construction Debris & Demo",
                 description:
                   "Monroe LA renovation cleanup, building materials removal & structural demolition",
