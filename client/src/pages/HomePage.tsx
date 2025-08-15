@@ -695,7 +695,7 @@ export default function HomePage() {
                 linkText: "View Construction Debris Removal Services",
               },
               {
-                image: "/dumpster-rental.webp",
+                image: "/dumpster-rental-new.webp",
                 title: "Dumpster Rental Monroe LA",
                 description:
                   "Roll-off dumpster rentals for Monroe LA construction, renovation & cleanout projects",
