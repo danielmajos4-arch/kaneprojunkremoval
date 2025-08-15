@@ -63,6 +63,14 @@ const servicesSchema = {
           name: "Construction Debris Removal Monroe LA",
           description: "Construction cleanup, demolition debris removal in Monroe Louisiana"
         }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Dumpster Rental Monroe LA",
+          description: "Residential and commercial dumpster rental services for cleanouts, renovations, and construction projects in Monroe Louisiana"
+        }
       }
     ]
   },
@@ -534,6 +542,71 @@ export default function ServicesPage() {
                 <img
                   src={WhatsApp_Image_2025_07_26_at_21_22_48}
                   alt="Construction debris removal and demolition services in Monroe Louisiana"
+                  className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dumpster Rental Services Section */}
+      <section className="py-8 sm:py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
+            {/* Dumpster Rental Services */}
+            <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-charcoal mb-3 sm:mb-4 flex items-center">
+                  <i className="fas fa-dumpster text-vibrant-orange mr-2 text-sm sm:text-base"></i>
+                  Dumpster Rental Monroe LA
+                </h2>
+
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
+                  Convenient dumpster rental services for residential and commercial projects in Monroe Louisiana. Perfect for home cleanouts, construction projects, and renovation debris throughout Northeast Louisiana.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <div>
+                    <h3 className="font-semibold text-xs sm:text-sm text-charcoal mb-2">
+                      🗑️ Dumpster Sizes & Uses
+                    </h3>
+                    <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
+                      <li>• 10-yard residential cleanouts</li>
+                      <li>• 20-yard home renovations</li>
+                      <li>• 30-yard construction projects</li>
+                      <li>• Roll-off containers</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-xs sm:text-sm text-charcoal mb-2">
+                      ⭐ Monroe LA Benefits
+                    </h3>
+                    <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
+                      <li>• Same-day delivery available</li>
+                      <li>• Flexible rental periods</li>
+                      <li>• Competitive pricing</li>
+                      <li>• Proper waste disposal</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a
+                  href="tel:+13189141201"
+                  className="btn-cta inline-block text-xs sm:text-sm px-3 sm:px-4 py-2 transition-all duration-200 hover:scale-105"
+                >
+                  <i className="fas fa-truck mr-1"></i>
+                  Get Dumpster Rental Quote
+                </a>
+              </div>
+
+              <div className="order-1 lg:order-2">
+                <img
+                  src="/dumpster-rental-monroe.webp"
+                  alt="Dumpster rental services for residential and commercial projects in Monroe Louisiana"
                   className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                   loading="lazy"
                   width="400"
