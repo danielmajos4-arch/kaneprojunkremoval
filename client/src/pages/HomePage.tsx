@@ -657,7 +657,7 @@ export default function HomePage() {
           <div className="mobile-service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
-                image: "/portfolio-1.png",
+                image: "/portfolio-1-optimized.webp",
                 title: "Monroe LA Residential Junk Removal",
                 description:
                   "Home cleanouts, furniture removal, appliances & household items in Monroe Louisiana",
