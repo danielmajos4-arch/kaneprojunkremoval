@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { useEffect, useState, useCallback, lazy, Suspense } from "react";
+import { useEffect, useState, useCallback, useRef, lazy, Suspense } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { useImagePreloader, useCriticalImageLoader } from "@/hooks/useImagePreloader";
 import { usePageLoadOptimization, useCriticalCSS, useServiceWorkerCache } from "@/hooks/usePerformanceOptimization";
@@ -41,7 +41,7 @@ const createAnimationVariants = () => {
   };
 };
 
-// Preload critical images
+// Immediate critical image preloading for FCP optimization
 const preloadCriticalImages = () => {
   if (typeof window === "undefined") return;
 
@@ -50,75 +50,78 @@ const preloadCriticalImages = () => {
   ];
 
   criticalImages.forEach((src) => {
+    // High priority preload
     const link = document.createElement("link");
     link.rel = "preload";
     link.as = "image";
     link.href = src;
-    document.head.appendChild(link);
+    link.setAttribute("fetchpriority", "high");
+    document.head.insertBefore(link, document.head.firstChild);
+    
+    // Immediate prefetch as well
+    const img = new Image();
+    img.decoding = "sync"; // Synchronous decoding for immediate display
+    img.loading = "eager";
+    img.fetchPriority = "high";
+    img.src = src;
   });
 };
 
-// Super-optimized Hero Background with advanced loading
+// Execute immediately when module loads (before component renders)
+if (typeof window !== "undefined") {
+  preloadCriticalImages();
+}
+
+// FCP-optimized Hero Background - Image First Strategy
 const OptimizedHeroBackground = () => {
-  const { loaded, error } = useCriticalImageLoader("/compressed herosection.jpg", 1500);
-  const [showImage, setShowImage] = useState(false);
+  const [imageReady, setImageReady] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (loaded) {
-      // Small delay for smooth transition
-      const timer = setTimeout(() => setShowImage(true), 100);
-      return () => clearTimeout(timer);
+    // Check if image is already cached/loaded
+    const img = new Image();
+    img.onload = () => setImageReady(true);
+    img.onerror = () => setImageReady(true); // Still show something
+    img.src = "/compressed herosection.jpg";
+    
+    // If already cached, it loads immediately
+    if (img.complete) {
+      setImageReady(true);
     }
-  }, [loaded]);
+  }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Optimized background image */}
-      <motion.img
+      {/* Hero image with highest priority loading */}
+      <img
+        ref={imgRef}
         src="/compressed herosection.jpg"
         alt="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
-        className="w-full h-full object-cover animate-smooth"
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          imageReady ? "opacity-100" : "opacity-0"
+        }`}
         style={{
           objectFit: "cover",
           objectPosition: "center",
+          display: "block", // Ensure it's always rendered for FCP
         }}
-        initial={{ opacity: 0, scale: 1.05 }}
-        animate={{ 
-          opacity: showImage ? 1 : 0,
-          scale: showImage ? 1 : 1.05
-        }}
-        transition={{ 
-          duration: 0.8,
-          ease: [0.4, 0, 0.2, 1]
-        }}
-        decoding="async"
+        decoding="sync" // Synchronous decoding for immediate display
         loading="eager"
+        fetchPriority="high"
         width="1920"
         height="1080"
+        onLoad={() => setImageReady(true)}
+        onError={() => setImageReady(true)}
       />
 
-      {/* Enhanced loading placeholder with shimmer */}
-      {!showImage && (
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-deep-green via-deep-green to-vibrant-orange"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: showImage ? 0 : 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="absolute inset-0 loading-shimmer opacity-20"></div>
-          {/* Floating elements during loading */}
+      {/* Minimal transparent overlay only while image loads */}
+      {!imageReady && (
+        <div className="absolute inset-0 bg-gray-100">
+          {/* Minimal loading indicator - no dark colors */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <motion.div
-              className="text-white text-center"
-              animate={{ y: [-5, 5, -5] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="text-2xl font-bold mb-2">Kane Pro Junk Removal</div>
-              <div className="text-sm opacity-80">Loading your experience...</div>
-            </motion.div>
+            <div className="w-8 h-8 border-2 border-vibrant-orange border-t-transparent rounded-full animate-spin"></div>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   );

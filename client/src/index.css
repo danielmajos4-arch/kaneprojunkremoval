@@ -414,7 +414,7 @@
     src: local('Inter');
   }
 
-  /* High-performance image optimization */
+  /* FCP-optimized image loading */
   img {
     image-rendering: auto;
     -webkit-backface-visibility: hidden;
@@ -422,6 +422,18 @@
     transform: translateZ(0);
     will-change: auto;
     content-visibility: auto;
+  }
+  
+  /* Priority loading for hero image */
+  img[src*="herosection"] {
+    display: block !important;
+    position: relative;
+    z-index: 1;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: opacity;
   }
 
   /* WebP support with fallback */
