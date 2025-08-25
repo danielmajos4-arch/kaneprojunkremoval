@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 interface Review {
@@ -12,67 +12,35 @@ interface ScrollingReviewsProps {
   reviews: Review[];
   speed?: number;
   pauseOnHover?: boolean;
-  showControls?: boolean;
 }
 
 export default function ScrollingReviews({ 
   reviews, 
   speed = 1, 
-  pauseOnHover = true,
-  showControls = true 
+  pauseOnHover = true 
 }: ScrollingReviewsProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentOffset, setCurrentOffset] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(0);
-  const [contentWidth, setContentWidth] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number>();
 
-  // Handle reduced motion preference
-  const prefersReducedMotion = typeof window !== "undefined" && 
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  // Measure container and content dimensions
-  const measureDimensions = useCallback(() => {
-    if (containerRef.current && contentRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
-      setContentWidth(contentRef.current.scrollWidth);
-    }
-  }, []);
-
-  // Resize handler with debouncing
+  // Start animation after 3 seconds
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    const handleResize = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(measureDimensions, 100);
-    };
-
-    window.addEventListener("resize", handleResize);
-    measureDimensions();
-
-    // Start scrolling after 3 seconds
     const startTimeout = setTimeout(() => {
       setIsPlaying(true);
     }, 3000);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      clearTimeout(timeoutId);
-      clearTimeout(startTimeout);
-    };
-  }, [measureDimensions]);
+    return () => clearTimeout(startTimeout);
+  }, []);
 
   // Continuous scrolling animation
   useEffect(() => {
-    if (!isPlaying || prefersReducedMotion || contentWidth <= containerWidth) return;
+    if (!isPlaying) return;
 
     const animate = () => {
       setCurrentOffset(prev => {
-        const newOffset = prev + speed * 0.5; // Make it even smoother
-        // Reset when we've scrolled past the original content
-        return newOffset >= contentWidth / 2 ? 0 : newOffset;
+        const newOffset = prev + speed;
+        // Reset to 0 when we've moved far enough (roughly half the content width)
+        return newOffset >= 2000 ? 0 : newOffset;
       });
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -84,11 +52,10 @@ export default function ScrollingReviews({
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isPlaying, speed, contentWidth, containerWidth, prefersReducedMotion]);
+  }, [isPlaying, speed]);
 
-
-  // Double the reviews for seamless loop
-  const duplicatedReviews = [...reviews, ...reviews];
+  // Triple the reviews for seamless infinite loop
+  const tripleReviews = [...reviews, ...reviews, ...reviews];
 
   if (reviews.length === 0) return null;
 
@@ -104,10 +71,8 @@ export default function ScrollingReviews({
           </p>
         </div>
 
-
         {/* Main scrolling container */}
         <div
-          ref={containerRef}
           className="relative overflow-hidden rounded-lg bg-white shadow-sm border border-gray-200"
           onMouseEnter={pauseOnHover ? () => setIsPlaying(false) : undefined}
           onMouseLeave={pauseOnHover ? () => setIsPlaying(true) : undefined}
@@ -115,23 +80,20 @@ export default function ScrollingReviews({
           aria-label="Customer reviews ticker"
         >
           <div
-            ref={contentRef}
             className="flex gap-8 py-6"
             style={{
               transform: `translateX(-${currentOffset}px)`,
               width: "max-content",
               willChange: "transform",
-              backfaceVisibility: "hidden",
-              perspective: "1000px",
             }}
           >
-            {duplicatedReviews.map((review, index) => (
+            {tripleReviews.map((review, index) => (
               <motion.div
                 key={`${review.name}-${index}`}
-                className="flex-shrink-0 w-80 sm:w-96 bg-white rounded-lg p-6 shadow-lg border-l-4 border-vibrant-orange mx-3"
+                className="flex-shrink-0 w-80 sm:w-96 bg-white rounded-lg p-6 shadow-lg border-l-4 border-vibrant-orange"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: Math.min(index * 0.05, 1) }}
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-vibrant-orange rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -162,13 +124,10 @@ export default function ScrollingReviews({
           </div>
 
           {/* Gradient overlays for smooth edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
         </div>
-
-
       </div>
     </div>
   );
 }
-
