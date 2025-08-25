@@ -1,17 +1,7 @@
-import { useState, useEffect } from "react";
+import { useScrollPosition } from "../hooks/useScrollOptimization";
 
 export default function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      setIsVisible(scrollTop > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const { isScrolled: isVisible } = useScrollPosition(100);
 
   return (
     <div 

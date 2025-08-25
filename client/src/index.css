@@ -85,6 +85,19 @@
     scroll-behavior: smooth;
   }
 
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   /* Performance optimizations - ensure crisp images */
   img {
     image-rendering: auto;
@@ -115,6 +128,34 @@
     background-repeat: no-repeat;
     background-size: cover;
     will-change: transform;
+  }
+
+  /* Performance optimizations for scrolling elements */
+  .scroll-optimized {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Smooth scrolling container optimization */
+  .smooth-scroll-container {
+    will-change: scroll-position;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  /* Performance hint for frequently animated elements */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  .will-change-scroll {
+    will-change: scroll-position;
   }
 
   @media (max-width: 768px) {
