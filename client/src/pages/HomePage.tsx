@@ -5,12 +5,14 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { useImagePreloader, useCriticalImageLoader } from "@/hooks/useImagePreloader";
 import { usePageLoadOptimization, useCriticalCSS, useServiceWorkerCache } from "@/hooks/usePerformanceOptimization";
 import { useMobileOptimization, useTouchOptimization, useMobileNavigation } from "@/hooks/useMobileOptimization";
+import { useLeadCapturePopup } from "@/hooks/useLeadCapturePopup";
 
 // Lazy load components that aren't immediately needed
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 const ScrollingReviews = lazy(() => import("@/components/ScrollingReviews"));
 const MobileOptimizedScrollingReviews = lazy(() => import("@/components/MobileOptimizedScrollingReviews"));
 const MobileCallButton = lazy(() => import("@/components/MobileCallButton"));
+const LeadCapturePopup = lazy(() => import("@/components/LeadCapturePopup"));
 
 // Import with explicit loading strategy
 
@@ -275,6 +277,13 @@ export default function HomePage() {
   const { isMobile, networkSpeed, isLowPowerMode } = useMobileOptimization();
   useTouchOptimization();
   const { isScrolled, scrollDirection } = useMobileNavigation();
+  
+  // Lead capture popup
+  const { isOpen: isPopupOpen, closePopup, openPopup } = useLeadCapturePopup({
+    delay: isMobile ? 20000 : 15000, // Show later on mobile (20s vs 15s)
+    scrollThreshold: 40, // Show after 40% scroll
+    exitIntent: !isMobile // Only use exit intent on desktop
+  });
 
   useEffect(() => {
     setIsVisible(true);
@@ -408,15 +417,9 @@ export default function HomePage() {
               className="flex flex-col sm:flex-row gap-3 justify-center mb-6"
               variants={animationVariants.fadeInUp}
             >
-              <motion.a
-                href="#quote-form"
+              <motion.button
                 className="mobile-cta-button btn-cta text-lg px-6 py-3 sweet-hover float-animation"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("quote-form")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={openPopup}
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0 10px 30px rgba(255, 165, 0, 0.3)"
@@ -425,13 +428,40 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
+                data-testid="button-hero-popup-quote"
+              >
+                <motion.i 
+                  className="fas fa-bolt mr-2"
+                  animate={{ rotate: [0, 10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 3 }}
+                />
+                QUICK QUOTE
+              </motion.button>
+              <motion.a
+                href="#quote-form"
+                className="mobile-cta-button btn-outline text-lg px-6 py-3 sweet-hover"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("quote-form")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                whileHover={{ 
+                  scale: 1.05,
+                  backgroundColor: "rgba(255, 165, 0, 0.1)"
+                }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                data-testid="link-hero-full-form"
               >
                 <motion.i 
                   className="fas fa-calculator mr-2"
                   animate={{ rotate: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 3 }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 4 }}
                 />
-                FREE ESTIMATE
+                FULL FORM
               </motion.a>
               <motion.a
                 href="tel:+13189141201"
@@ -444,6 +474,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.9 }}
+                data-testid="link-hero-phone"
               >
                 <motion.i 
                   className="fas fa-phone mr-2"
@@ -935,6 +966,11 @@ export default function HomePage() {
       {/* Mobile-only floating call button */}
       <Suspense fallback={null}>
         <MobileCallButton />
+      </Suspense>
+
+      {/* Lead capture popup */}
+      <Suspense fallback={null}>
+        <LeadCapturePopup isOpen={isPopupOpen} onClose={closePopup} />
       </Suspense>
     </>
   );
