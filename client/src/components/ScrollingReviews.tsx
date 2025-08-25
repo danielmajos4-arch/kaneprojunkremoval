@@ -70,7 +70,7 @@ export default function ScrollingReviews({
 
     const animate = () => {
       setCurrentOffset(prev => {
-        const newOffset = prev + speed;
+        const newOffset = prev + speed * 0.5; // Make it even smoother
         // Reset when we've scrolled past the original content
         return newOffset >= contentWidth / 2 ? 0 : newOffset;
       });
@@ -116,11 +116,13 @@ export default function ScrollingReviews({
         >
           <div
             ref={contentRef}
-            className="flex gap-6 py-6"
+            className="flex gap-8 py-6"
             style={{
               transform: `translateX(-${currentOffset}px)`,
               width: "max-content",
-              transition: prefersReducedMotion ? "transform 0.3s ease" : "none",
+              willChange: "transform",
+              backfaceVisibility: "hidden",
+              perspective: "1000px",
             }}
           >
             {duplicatedReviews.map((review, index) => (
