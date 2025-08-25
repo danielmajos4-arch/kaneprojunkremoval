@@ -4,10 +4,13 @@ import { useEffect, useState, useCallback, useRef, lazy, Suspense } from "react"
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 import { useImagePreloader, useCriticalImageLoader } from "@/hooks/useImagePreloader";
 import { usePageLoadOptimization, useCriticalCSS, useServiceWorkerCache } from "@/hooks/usePerformanceOptimization";
+import { useMobileOptimization, useTouchOptimization, useMobileNavigation } from "@/hooks/useMobileOptimization";
 
 // Lazy load components that aren't immediately needed
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 const ScrollingReviews = lazy(() => import("@/components/ScrollingReviews"));
+const MobileOptimizedScrollingReviews = lazy(() => import("@/components/MobileOptimizedScrollingReviews"));
+const MobileCallButton = lazy(() => import("@/components/MobileCallButton"));
 
 // Import with explicit loading strategy
 
@@ -62,7 +65,7 @@ const preloadCriticalImages = () => {
     const img = new Image();
     img.decoding = "sync"; // Synchronous decoding for immediate display
     img.loading = "eager";
-    img.fetchPriority = "high";
+    (img as any).fetchPriority = "high";
     img.src = src;
   });
 };
@@ -107,7 +110,7 @@ const OptimizedHeroBackground = () => {
         }}
         decoding="sync" // Synchronous decoding for immediate display
         loading="eager"
-        fetchPriority="high"
+        {...({fetchpriority: "high"} as any)}
         width="1920"
         height="1080"
         onLoad={() => setImageReady(true)}
@@ -267,6 +270,11 @@ export default function HomePage() {
   const { isOptimized, loadTime } = usePageLoadOptimization();
   useCriticalCSS();
   useServiceWorkerCache();
+  
+  // Mobile-specific optimizations
+  const { isMobile, networkSpeed, isLowPowerMode } = useMobileOptimization();
+  useTouchOptimization();
+  const { isScrolled, scrollDirection } = useMobileNavigation();
 
   useEffect(() => {
     setIsVisible(true);
@@ -795,14 +803,14 @@ export default function HomePage() {
 
           <Suspense
             fallback={
-              <div className="w-full overflow-hidden bg-gray-50 py-8">
+              <div className="w-full overflow-hidden bg-gray-50 py-6 sm:py-8">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="animate-pulse">
-                    <div className="h-8 bg-gray-200 rounded mb-2 max-w-md mx-auto"></div>
-                    <div className="h-4 bg-gray-200 rounded mb-8 max-w-lg mx-auto"></div>
-                    <div className="flex gap-6 overflow-hidden">
-                      {[...Array(3)].map((_, i) => (
-                        <div key={i} className="flex-shrink-0 w-80 bg-gray-200 rounded-lg h-40"></div>
+                    <div className="h-6 sm:h-8 bg-gray-200 rounded mb-2 max-w-sm sm:max-w-md mx-auto"></div>
+                    <div className="h-3 sm:h-4 bg-gray-200 rounded mb-6 sm:mb-8 max-w-md sm:max-w-lg mx-auto"></div>
+                    <div className="flex gap-4 sm:gap-6 overflow-hidden">
+                      {[...Array(isMobile ? 2 : 3)].map((_, i) => (
+                        <div key={i} className={`flex-shrink-0 ${isMobile ? 'w-72' : 'w-80'} bg-gray-200 rounded-lg h-32 sm:h-40`}></div>
                       ))}
                     </div>
                   </div>
@@ -810,42 +818,80 @@ export default function HomePage() {
               </div>
             }
           >
-            <ScrollingReviews 
-              reviews={[
-                {
-                  name: "Debbie Wedgeworth",
-                  rating: 5,
-                  text: "I had Kaleb and his crew move my household belongings from Farmerville to West Monroe. They have to be the best movers that I have ever used. So respectful, and careful with my stuff. I would love to say that they are a 5 star company.",
-                  location: "Farmerville to West Monroe",
-                },
-                {
-                  name: "Leslie Parker",
-                  rating: 5,
-                  text: "Kane Pro Junk Removal & Hauling! They're known for their reliable and efficient service. If you're considering decluttering, they come highly recommended in the community. Give them a try for your next clean-up!",
-                  location: "Monroe LA",
-                },
-                {
-                  name: "Jim Wolfe",
-                  rating: 5,
-                  text: "Great job! Thanks Kaleb.",
-                  location: "Monroe LA",
-                },
-                {
-                  name: "Robert Emory",
-                  rating: 5,
-                  text: "This young man did an awesome job. If you need anything hauled away this is the man. His prices are well below what it would cost you in time and gas to do it yourself. 5 stars.",
-                  location: "Monroe LA",
-                },
-                {
-                  name: "Brian H.",
-                  rating: 5,
-                  text: "Kane Pro Junk Removal & Hauling are simply the best. Owner is extremely knowledgeable, friendly and a man of his word. If he says he's going to get something done for you he does; no surprises, no hidden charges.",
-                  location: "Monroe LA",
-                },
-              ]}
-              speed={0.8}
-              pauseOnHover={true}
-            />
+            {isMobile ? (
+              <MobileOptimizedScrollingReviews 
+                reviews={[
+                  {
+                    name: "Debbie Wedgeworth",
+                    rating: 5,
+                    text: "I had Kaleb and his crew move my household belongings from Farmerville to West Monroe. They have to be the best movers that I have ever used. So respectful, and careful with my stuff. I would love to say that they are a 5 star company.",
+                    location: "Farmerville to West Monroe",
+                  },
+                  {
+                    name: "Leslie Parker",
+                    rating: 5,
+                    text: "Kane Pro Junk Removal & Hauling! They're known for their reliable and efficient service. If you're considering decluttering, they come highly recommended in the community. Give them a try for your next clean-up!",
+                    location: "Monroe LA",
+                  },
+                  {
+                    name: "Jim Wolfe",
+                    rating: 5,
+                    text: "Great job! Thanks Kaleb.",
+                    location: "Monroe LA",
+                  },
+                  {
+                    name: "Robert Emory",
+                    rating: 5,
+                    text: "This young man did an awesome job. If you need anything hauled away this is the man. His prices are well below what it would cost you in time and gas to do it yourself. 5 stars.",
+                    location: "Monroe LA",
+                  },
+                  {
+                    name: "Brian H.",
+                    rating: 5,
+                    text: "Kane Pro Junk Removal & Hauling are simply the best. Owner is extremely knowledgeable, friendly and a man of his word. If he says he's going to get something done for you he does; no surprises, no hidden charges.",
+                    location: "Monroe LA",
+                  },
+                ]}
+                speed={networkSpeed === 'slow' ? 0.3 : 0.5}
+              />
+            ) : (
+              <ScrollingReviews 
+                reviews={[
+                  {
+                    name: "Debbie Wedgeworth",
+                    rating: 5,
+                    text: "I had Kaleb and his crew move my household belongings from Farmerville to West Monroe. They have to be the best movers that I have ever used. So respectful, and careful with my stuff. I would love to say that they are a 5 star company.",
+                    location: "Farmerville to West Monroe",
+                  },
+                  {
+                    name: "Leslie Parker",
+                    rating: 5,
+                    text: "Kane Pro Junk Removal & Hauling! They're known for their reliable and efficient service. If you're considering decluttering, they come highly recommended in the community. Give them a try for your next clean-up!",
+                    location: "Monroe LA",
+                  },
+                  {
+                    name: "Jim Wolfe",
+                    rating: 5,
+                    text: "Great job! Thanks Kaleb.",
+                    location: "Monroe LA",
+                  },
+                  {
+                    name: "Robert Emory",
+                    rating: 5,
+                    text: "This young man did an awesome job. If you need anything hauled away this is the man. His prices are well below what it would cost you in time and gas to do it yourself. 5 stars.",
+                    location: "Monroe LA",
+                  },
+                  {
+                    name: "Brian H.",
+                    rating: 5,
+                    text: "Kane Pro Junk Removal & Hauling are simply the best. Owner is extremely knowledgeable, friendly and a man of his word. If he says he's going to get something done for you he does; no surprises, no hidden charges.",
+                    location: "Monroe LA",
+                  },
+                ]}
+                speed={0.8}
+                pauseOnHover={true}
+              />
+            )}
           </Suspense>
 
           <div className="text-center mt-8">
@@ -884,6 +930,11 @@ export default function HomePage() {
         }
       >
         <QuoteForm />
+      </Suspense>
+
+      {/* Mobile-only floating call button */}
+      <Suspense fallback={null}>
+        <MobileCallButton />
       </Suspense>
     </>
   );

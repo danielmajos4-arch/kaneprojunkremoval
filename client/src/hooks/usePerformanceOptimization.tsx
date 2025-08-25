@@ -8,33 +8,43 @@ export const usePageLoadOptimization = () => {
   useEffect(() => {
     const startTime = performance.now();
 
-    // Optimize critical resources
+    // Optimize critical resources for mobile
     const optimizeResources = () => {
       // Preconnect to external domains
       const preconnectDomains = [
         'https://fonts.googleapis.com',
-        'https://cdnjs.cloudflare.com'
+        'https://cdnjs.cloudflare.com',
+        'https://formspree.io'
       ];
 
       preconnectDomains.forEach(domain => {
         const link = document.createElement('link');
         link.rel = 'preconnect';
         link.href = domain;
+        link.crossOrigin = 'anonymous';
         document.head.appendChild(link);
       });
 
-      // Add resource hints for better loading
+      // Mobile-specific optimizations
+      const isMobile = window.innerWidth < 768;
       const resourceHints = [
         { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-        { rel: 'prefetch', href: '/compressed herosection.jpg' }
+        { rel: isMobile ? 'preload' : 'prefetch', href: '/compressed herosection.jpg', as: 'image' }
       ];
 
       resourceHints.forEach(hint => {
         const link = document.createElement('link');
         link.rel = hint.rel;
         link.href = hint.href;
+        if (hint.as) link.as = hint.as;
         document.head.appendChild(link);
       });
+
+      // Enable hardware acceleration for mobile
+      if (isMobile) {
+        document.documentElement.style.transform = 'translate3d(0,0,0)';
+        document.documentElement.style.webkitTransform = 'translate3d(0,0,0)';
+      }
     };
 
     // Intersection Observer for lazy loading optimization
