@@ -21,7 +21,7 @@ export default function ScrollingReviews({
   pauseOnHover = true,
   showControls = true 
 }: ScrollingReviewsProps) {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [currentOffset, setCurrentOffset] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const [contentWidth, setContentWidth] = useState(0);
@@ -52,9 +52,15 @@ export default function ScrollingReviews({
     window.addEventListener("resize", handleResize);
     measureDimensions();
 
+    // Start scrolling after 3 seconds
+    const startTimeout = setTimeout(() => {
+      setIsPlaying(true);
+    }, 3000);
+
     return () => {
       window.removeEventListener("resize", handleResize);
       clearTimeout(timeoutId);
+      clearTimeout(startTimeout);
     };
   }, [measureDimensions]);
 
@@ -80,19 +86,6 @@ export default function ScrollingReviews({
     };
   }, [isPlaying, speed, contentWidth, containerWidth, prefersReducedMotion]);
 
-  // Keyboard event handlers
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    switch (e.key) {
-      case " ":
-      case "Enter":
-        e.preventDefault();
-        setIsPlaying(!isPlaying);
-        break;
-      case "Escape":
-        setIsPlaying(false);
-        break;
-    }
-  }, [isPlaying]);
 
   // Double the reviews for seamless loop
   const duplicatedReviews = [...reviews, ...reviews];
@@ -111,10 +104,6 @@ export default function ScrollingReviews({
           </p>
         </div>
 
-        {/* Accessibility announcement */}
-        <div className="sr-only" aria-live="polite" aria-atomic="true">
-          {isPlaying ? "Reviews are scrolling automatically" : "Reviews scrolling is paused"}
-        </div>
 
         {/* Main scrolling container */}
         <div
@@ -122,12 +111,8 @@ export default function ScrollingReviews({
           className="relative overflow-hidden rounded-lg bg-white shadow-sm border border-gray-200"
           onMouseEnter={pauseOnHover ? () => setIsPlaying(false) : undefined}
           onMouseLeave={pauseOnHover ? () => setIsPlaying(true) : undefined}
-          onFocus={() => setIsPlaying(false)}
-          onBlur={() => setIsPlaying(true)}
-          tabIndex={0}
           role="region"
           aria-label="Customer reviews ticker"
-          onKeyDown={handleKeyDown}
         >
           <div
             ref={contentRef}
@@ -179,45 +164,9 @@ export default function ScrollingReviews({
           <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
         </div>
 
-        {/* Controls */}
-        {showControls && (
-          <div className="flex justify-center items-center gap-4 mt-6">
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="flex items-center gap-2 px-4 py-2 bg-vibrant-orange text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-vibrant-orange focus:ring-offset-2"
-              aria-label={isPlaying ? "Pause scrolling reviews" : "Resume scrolling reviews"}
-              data-testid="button-toggle-scrolling"
-            >
-              <i className={`fas ${isPlaying ? "fa-pause" : "fa-play"}`} aria-hidden="true"></i>
-              {isPlaying ? "Pause" : "Play"}
-            </button>
 
-            <div className="text-sm text-gray-600 hidden sm:block">
-              {pauseOnHover ? "Hover to pause • " : ""}Press spacebar to toggle • ESC to stop
-            </div>
-          </div>
-        )}
-
-        {/* Performance notice for reduced motion users */}
-        {prefersReducedMotion && (
-          <div className="text-center mt-4 text-sm text-gray-600">
-            <i className="fas fa-info-circle mr-2"></i>
-            Scrolling animation is reduced based on your system preferences
-          </div>
-        )}
       </div>
     </div>
   );
 }
 
-// Hook for managing scroll speed based on user preference
-export const useScrollSpeed = (baseSpeed = 1) => {
-  const [speed, setSpeed] = useState(baseSpeed);
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setSpeed(prefersReducedMotion ? baseSpeed * 0.5 : baseSpeed);
-  }, [baseSpeed]);
-
-  return speed;
-};

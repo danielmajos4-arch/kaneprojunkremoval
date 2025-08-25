@@ -725,9 +725,8 @@ export default function HomePage() {
                   location: "Monroe LA",
                 },
               ]}
-              speed={0.5}
+              speed={0.3}
               pauseOnHover={true}
-              showControls={true}
             />
           </Suspense>
 
