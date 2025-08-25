@@ -2,8 +2,6 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useEffect, useState, useCallback, lazy, Suspense } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
-import { useScrollAnimation, smoothScrollToElement } from "@/hooks/useScrollOptimization";
-import OptimizedImage from "@/components/OptimizedImage";
 
 // Lazy load components that aren't immediately needed
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
@@ -59,24 +57,33 @@ const preloadCriticalImages = () => {
 
 // Optimized Hero Background with better loading strategy
 const OptimizedHeroBackground = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
-    <div className="absolute inset-0 scroll-optimized">
-      <OptimizedImage
+    <div className="absolute inset-0">
+      <img
         src="/compressed herosection.jpg"
         alt="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
-        className="w-full h-full"
-        loading="eager"
-        width={1920}
-        height={1080}
-        placeholder="/compressed herosection.jpg"
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
         style={{
           objectFit: "cover",
           objectPosition: "center",
         }}
+        onLoad={() => setImageLoaded(true)}
+        decoding="async"
+        loading="eager"
+        width="1920"
+        height="1080"
       />
-      
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Optimized loading placeholder */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-green via-deep-green to-vibrant-orange">
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+      )}
     </div>
   );
 };
@@ -379,9 +386,6 @@ const GMBReviewsSlider = () => {
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const animationVariants = createAnimationVariants();
-  const { elementRef: servicesRef, isVisible: servicesVisible } = useScrollAnimation(0.2);
-  const { elementRef: reviewsRef, isVisible: reviewsVisible } = useScrollAnimation(0.2);
-  const { elementRef: whyChooseRef, isVisible: whyChooseVisible } = useScrollAnimation(0.2);
 
   useEffect(() => {
     setIsVisible(true);
@@ -441,8 +445,9 @@ export default function HomePage() {
       />
 
       {/* Hero Section - HIGHLY OPTIMIZED */}
-      <section className="relative min-h-screen flex items-center hero-section scroll-optimized">
+      <section className="relative min-h-screen flex items-center hero-section">
         <OptimizedHeroBackground />
+        <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
@@ -482,7 +487,9 @@ export default function HomePage() {
                 className="mobile-cta-button btn-cta text-lg px-6 py-3"
                 onClick={(e) => {
                   e.preventDefault();
-                  smoothScrollToElement("quote-form");
+                  document
+                    .getElementById("quote-form")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -635,14 +642,9 @@ export default function HomePage() {
       </section>
 
       {/* Services Section - HIGHLY OPTIMIZED */}
-      <section ref={servicesRef} className="py-10 sm:py-12 bg-neutral-bg scroll-optimized">
+      <section className="py-10 sm:py-12 bg-neutral-bg">
         <div className="max-w-6xl mx-auto mobile-optimized px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={servicesVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
+          <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-deep-green mb-3">
               Monroe LA Junk Removal, Demolition & Dumpster Rental Services
             </h2>
@@ -650,7 +652,7 @@ export default function HomePage() {
               Complete junk hauling, demolition, and dumpster rental solutions
               for homes and businesses in Monroe and Northeast Louisiana
             </p>
-          </motion.div>
+          </div>
 
           <div className="mobile-service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
@@ -804,13 +806,14 @@ export default function HomePage() {
       </section>
 
       {/* Real GMB Reviews Section - Optimized */}
-      <section ref={reviewsRef} className="py-12 sm:py-16 bg-neutral-bg scroll-optimized">
+      <section className="py-12 sm:py-16 bg-neutral-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-10"
             initial={{ opacity: 0, y: 30 }}
-            animate={reviewsVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-deep-green mb-3">
               Real Customer Reviews from Monroe Louisiana
@@ -836,8 +839,9 @@ export default function HomePage() {
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            animate={reviewsVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
             <GMBReviewsSlider />
           </motion.div>
