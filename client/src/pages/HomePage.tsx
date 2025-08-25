@@ -5,6 +5,7 @@ import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
 
 // Lazy load components that aren't immediately needed
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
+const ScrollingReviews = lazy(() => import("@/components/ScrollingReviews"));
 
 // Import with explicit loading strategy
 
@@ -219,169 +220,6 @@ const OptimizedServiceImage = ({
   );
 };
 
-// Optimized Reviews Slider with better performance
-const GMBReviewsSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [slidesToShow, setSlidesToShow] = useState(3);
-
-  const reviews = [
-    {
-      name: "Debbie Wedgeworth",
-      rating: 5,
-      text: "I had Kaleb and his crew move my household belongings from Farmerville to West Monroe. They have to be the best movers that I have ever used. So respectful, and careful with my stuff. I would love to say that they are a 5 star company.",
-      location: "Farmerville to West Monroe",
-    },
-    {
-      name: "Leslie Parker",
-      rating: 5,
-      text: "Kane Pro Junk Removal & Hauling! They're known for their reliable and efficient service. If you're considering decluttering, they come highly recommended in the community. Give them a try for your next clean-up!",
-      location: "Monroe LA",
-    },
-    {
-      name: "Jim Wolfe",
-      rating: 5,
-      text: "Great job! Thanks Kaleb.",
-      location: "Monroe LA",
-    },
-    {
-      name: "Robert Emory",
-      rating: 5,
-      text: "This young man did an awesome job. If you need anything hauled away this is the man. His prices are well below what it would cost you in time and gas to do it yourself. 5 stars.",
-      location: "Monroe LA",
-    },
-    {
-      name: "Brian H.",
-      rating: 5,
-      text: "Kane Pro Junk Removal & Hauling are simply the best. Owner is extremely knowledgeable, friendly and a man of his word. If he says he's going to get something done for you he does; no surprises, no hidden charges.",
-      location: "Monroe LA",
-    },
-  ];
-
-  // Optimized resize handler with debouncing
-  const handleResize = useCallback(() => {
-    const width = window.innerWidth;
-    if (width <= 768) setSlidesToShow(1);
-    else if (width <= 1024) setSlidesToShow(2);
-    else setSlidesToShow(3);
-  }, []);
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [handleResize]);
-
-  const maxIndex = Math.max(0, reviews.length - slidesToShow);
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, maxIndex]);
-
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  }, [maxIndex]);
-
-  const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  }, [maxIndex]);
-
-  const goToSlide = useCallback(
-    (index: number) => {
-      setCurrentIndex(Math.min(index, maxIndex));
-    },
-    [maxIndex],
-  );
-
-  return (
-    <div
-      className="relative"
-      onMouseEnter={() => setIsAutoPlaying(false)}
-      onMouseLeave={() => setIsAutoPlaying(true)}
-    >
-      <div className="overflow-hidden rounded-lg">
-        <motion.div
-          className="flex gap-6"
-          animate={{
-            x: `${-currentIndex * (100 / slidesToShow)}%`,
-          }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-        >
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 bg-white rounded-lg p-6 shadow-lg border-l-4 border-vibrant-orange"
-              style={{ width: `${100 / slidesToShow}%` }}
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-vibrant-orange rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                  {review.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-semibold text-deep-green">
-                    {review.name}
-                  </h4>
-                  <div
-                    className="flex text-yellow-400 text-sm"
-                    aria-label={`${review.rating} star rating`}
-                  >
-                    {[...Array(review.rating)].map((_, i) => (
-                      <i key={i} className="fas fa-star" aria-hidden="true"></i>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm italic leading-relaxed mb-3">
-                "{review.text}"
-              </p>
-              <p className="text-xs text-vibrant-orange font-medium">
-                {review.location}
-              </p>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Navigation Controls */}
-      <div className="flex justify-center items-center gap-4 mt-6">
-        <button
-          onClick={prevSlide}
-          className="w-10 h-10 bg-vibrant-orange text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-vibrant-orange focus:ring-offset-2"
-          aria-label="Previous review"
-        >
-          <i className="fas fa-chevron-left" aria-hidden="true"></i>
-        </button>
-
-        <div className="flex gap-2">
-          {[...Array(maxIndex + 1)].map((_, index: number) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-vibrant-orange focus:ring-offset-2 ${
-                index === currentIndex ? "bg-vibrant-orange" : "bg-gray-300"
-              }`}
-              aria-label={`Go to review ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={nextSlide}
-          className="w-10 h-10 bg-vibrant-orange text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-vibrant-orange focus:ring-offset-2"
-          aria-label="Next review"
-        >
-          <i className="fas fa-chevron-right" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div>
-  );
-};
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -837,14 +675,61 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <Suspense
+            fallback={
+              <div className="w-full overflow-hidden bg-gray-50 py-8">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="animate-pulse">
+                    <div className="h-8 bg-gray-200 rounded mb-2 max-w-md mx-auto"></div>
+                    <div className="h-4 bg-gray-200 rounded mb-8 max-w-lg mx-auto"></div>
+                    <div className="flex gap-6 overflow-hidden">
+                      {[...Array(3)].map((_, i) => (
+                        <div key={i} className="flex-shrink-0 w-80 bg-gray-200 rounded-lg h-40"></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
           >
-            <GMBReviewsSlider />
-          </motion.div>
+            <ScrollingReviews 
+              reviews={[
+                {
+                  name: "Debbie Wedgeworth",
+                  rating: 5,
+                  text: "I had Kaleb and his crew move my household belongings from Farmerville to West Monroe. They have to be the best movers that I have ever used. So respectful, and careful with my stuff. I would love to say that they are a 5 star company.",
+                  location: "Farmerville to West Monroe",
+                },
+                {
+                  name: "Leslie Parker",
+                  rating: 5,
+                  text: "Kane Pro Junk Removal & Hauling! They're known for their reliable and efficient service. If you're considering decluttering, they come highly recommended in the community. Give them a try for your next clean-up!",
+                  location: "Monroe LA",
+                },
+                {
+                  name: "Jim Wolfe",
+                  rating: 5,
+                  text: "Great job! Thanks Kaleb.",
+                  location: "Monroe LA",
+                },
+                {
+                  name: "Robert Emory",
+                  rating: 5,
+                  text: "This young man did an awesome job. If you need anything hauled away this is the man. His prices are well below what it would cost you in time and gas to do it yourself. 5 stars.",
+                  location: "Monroe LA",
+                },
+                {
+                  name: "Brian H.",
+                  rating: 5,
+                  text: "Kane Pro Junk Removal & Hauling are simply the best. Owner is extremely knowledgeable, friendly and a man of his word. If he says he's going to get something done for you he does; no surprises, no hidden charges.",
+                  location: "Monroe LA",
+                },
+              ]}
+              speed={0.5}
+              pauseOnHover={true}
+              showControls={true}
+            />
+          </Suspense>
 
           <div className="text-center mt-8">
             <motion.a
