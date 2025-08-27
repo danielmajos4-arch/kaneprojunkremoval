@@ -1,17 +1,11 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { useEffect, useState, useCallback, useRef, lazy, Suspense } from "react";
+import { useEffect, useState, useCallback, lazy, Suspense } from "react";
 import SEO, { generateLocalBusinessSchema } from "@/components/SEO";
-import { useImagePreloader, useCriticalImageLoader } from "@/hooks/useImagePreloader";
-import { usePageLoadOptimization, useCriticalCSS, useServiceWorkerCache } from "@/hooks/usePerformanceOptimization";
-import { useMobileOptimization, useTouchOptimization, useMobileNavigation } from "@/hooks/useMobileOptimization";
-import { useLeadCapturePopup } from "@/hooks/useLeadCapturePopup";
 
 // Lazy load components that aren't immediately needed
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 const ScrollingReviews = lazy(() => import("@/components/ScrollingReviews"));
-const MobileCallButton = lazy(() => import("@/components/MobileCallButton"));
-const LeadCapturePopup = lazy(() => import("@/components/LeadCapturePopup"));
 
 // Import with explicit loading strategy
 
@@ -45,7 +39,7 @@ const createAnimationVariants = () => {
   };
 };
 
-// Immediate critical image preloading for FCP optimization
+// Preload critical images
 const preloadCriticalImages = () => {
   if (typeof window === "undefined") return;
 
@@ -54,77 +48,41 @@ const preloadCriticalImages = () => {
   ];
 
   criticalImages.forEach((src) => {
-    // High priority preload
     const link = document.createElement("link");
     link.rel = "preload";
     link.as = "image";
     link.href = src;
-    link.setAttribute("fetchpriority", "high");
-    document.head.insertBefore(link, document.head.firstChild);
-    
-    // Immediate prefetch as well
-    const img = new Image();
-    img.decoding = "sync"; // Synchronous decoding for immediate display
-    img.loading = "eager";
-    (img as any).fetchPriority = "high";
-    img.src = src;
+    document.head.appendChild(link);
   });
 };
 
-// Execute immediately when module loads (before component renders)
-if (typeof window !== "undefined") {
-  preloadCriticalImages();
-}
-
-// FCP-optimized Hero Background - Image First Strategy
+// Optimized Hero Background with better loading strategy
 const OptimizedHeroBackground = () => {
-  const [imageReady, setImageReady] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    // Check if image is already cached/loaded
-    const img = new Image();
-    img.onload = () => setImageReady(true);
-    img.onerror = () => setImageReady(true); // Still show something
-    img.src = "/compressed herosection.jpg";
-    
-    // If already cached, it loads immediately
-    if (img.complete) {
-      setImageReady(true);
-    }
-  }, []);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
-      {/* Hero image with highest priority loading */}
+    <div className="absolute inset-0">
       <img
-        ref={imgRef}
         src="/compressed herosection.jpg"
         alt="Kane Pro Junk Removal serving Monroe Louisiana - professional junk removal, demolition and dumpster rental services"
         className={`w-full h-full object-cover transition-opacity duration-300 ${
-          imageReady ? "opacity-100" : "opacity-0"
+          imageLoaded ? "opacity-100" : "opacity-0"
         }`}
         style={{
           objectFit: "cover",
           objectPosition: "center",
-          display: "block", // Ensure it's always rendered for FCP
         }}
-        decoding="sync" // Synchronous decoding for immediate display
+        onLoad={() => setImageLoaded(true)}
+        decoding="async"
         loading="eager"
-        {...({fetchpriority: "high"} as any)}
         width="1920"
         height="1080"
-        onLoad={() => setImageReady(true)}
-        onError={() => setImageReady(true)}
       />
 
-      {/* Minimal transparent overlay only while image loads */}
-      {!imageReady && (
-        <div className="absolute inset-0 bg-gray-100">
-          {/* Minimal loading indicator - no dark colors */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="w-8 h-8 border-2 border-vibrant-orange border-t-transparent rounded-full animate-spin"></div>
-          </div>
+      {/* Optimized loading placeholder */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-green via-deep-green to-vibrant-orange">
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
       )}
     </div>
@@ -266,23 +224,6 @@ const OptimizedServiceImage = ({
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const animationVariants = createAnimationVariants();
-  
-  // Performance optimizations
-  const { isOptimized, loadTime } = usePageLoadOptimization();
-  useCriticalCSS();
-  useServiceWorkerCache();
-  
-  // Mobile-specific optimizations
-  const { isMobile, networkSpeed, isLowPowerMode } = useMobileOptimization();
-  useTouchOptimization();
-  const { isScrolled, scrollDirection } = useMobileNavigation();
-  
-  // Lead capture popup
-  const { isOpen: isPopupOpen, closePopup, openPopup } = useLeadCapturePopup({
-    delay: isMobile ? 20000 : 15000, // Show later on mobile (20s vs 15s)
-    scrollThreshold: 40, // Show after 40% scroll
-    exitIntent: !isMobile // Only use exit intent on desktop
-  });
 
   useEffect(() => {
     setIsVisible(true);
@@ -353,51 +294,14 @@ export default function HomePage() {
             animate={isVisible ? "visible" : "hidden"}
             variants={animationVariants.staggerContainer}
           >
-            {/* Floating background elements */}
-            <motion.div
-              className="absolute -top-10 -left-10 w-20 h-20 bg-vibrant-orange/10 rounded-full blur-xl"
-              animate={{ 
-                x: [0, 30, 0],
-                y: [0, -20, 0],
-                scale: [1, 1.2, 1]
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <motion.div
-              className="absolute -bottom-10 -right-10 w-32 h-32 bg-deep-green/10 rounded-full blur-xl"
-              animate={{ 
-                x: [0, -20, 0],
-                y: [0, 15, 0],
-                scale: [1, 0.8, 1]
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 2
-              }}
-            />
             <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
               variants={animationVariants.fadeInUp}
             >
+              #1 Monroe LA Junk Removal & Demolition
               <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-block"
-              >
-                #1 Monroe LA Junk Removal & Demolition
-              </motion.span>
-              <motion.span
-                className="text-vibrant-orange block text-2xl sm:text-3xl md:text-4xl mt-2 pulse-glow"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-vibrant-orange block text-2xl sm:text-3xl md:text-4xl mt-2"
+                variants={animationVariants.fadeInUp}
               >
                 Same-Day Service - Free Estimates
               </motion.span>
@@ -416,70 +320,28 @@ export default function HomePage() {
               className="flex flex-col sm:flex-row gap-3 justify-center mb-6"
               variants={animationVariants.fadeInUp}
             >
-              <motion.button
-                className="mobile-cta-button btn-cta text-lg px-6 py-3 sweet-hover float-animation"
-                onClick={openPopup}
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 30px rgba(255, 165, 0, 0.3)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                data-testid="button-hero-popup-quote"
-              >
-                <motion.i 
-                  className="fas fa-bolt mr-2"
-                  animate={{ rotate: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 3 }}
-                />
-                QUICK QUOTE
-              </motion.button>
               <motion.a
                 href="#quote-form"
-                className="mobile-cta-button btn-outline text-lg px-6 py-3 sweet-hover"
+                className="mobile-cta-button btn-cta text-lg px-6 py-3"
                 onClick={(e) => {
                   e.preventDefault();
                   document
                     .getElementById("quote-form")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  backgroundColor: "rgba(255, 165, 0, 0.1)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, x: 0 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                data-testid="link-hero-full-form"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <motion.i 
-                  className="fas fa-calculator mr-2"
-                  animate={{ rotate: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 4 }}
-                />
-                FULL FORM
+                <i className="fas fa-calculator mr-2"></i>
+                FREE ESTIMATE
               </motion.a>
               <motion.a
                 href="tel:+13189141201"
-                className="mobile-cta-button btn-outline text-lg px-6 py-3 sweet-hover"
-                whileHover={{ 
-                  scale: 1.05,
-                  backgroundColor: "rgba(255, 165, 0, 0.1)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                data-testid="link-hero-phone"
+                className="mobile-cta-button btn-outline text-lg px-6 py-3"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <motion.i 
-                  className="fas fa-phone mr-2"
-                  animate={{ rotate: [0, -10, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, delay: 5 }}
-                />
+                <i className="fas fa-phone mr-2"></i>
                 (318) 914-1201
               </motion.a>
             </motion.div>
@@ -499,24 +361,6 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
         </div>
-        
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-        >
-          <motion.div
-            className="text-white text-center cursor-pointer"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
-          >
-            <div className="text-sm mb-2">Scroll to explore</div>
-            <i className="fas fa-chevron-down text-xl"></i>
-          </motion.div>
-        </motion.div>
       </section>
 
       {/* About Section - Optimized */}
@@ -838,9 +682,9 @@ export default function HomePage() {
                   <div className="animate-pulse">
                     <div className="h-8 bg-gray-200 rounded mb-2 max-w-md mx-auto"></div>
                     <div className="h-4 bg-gray-200 rounded mb-8 max-w-lg mx-auto"></div>
-                    <div className="flex gap-8 overflow-hidden">
+                    <div className="flex gap-6 overflow-hidden">
                       {[...Array(3)].map((_, i) => (
-                        <div key={i} className="flex-shrink-0 w-80 sm:w-96 bg-gray-200 rounded-lg h-40"></div>
+                        <div key={i} className="flex-shrink-0 w-80 bg-gray-200 rounded-lg h-40"></div>
                       ))}
                     </div>
                   </div>
@@ -881,7 +725,7 @@ export default function HomePage() {
                   location: "Monroe LA",
                 },
               ]}
-              speed={1}
+              speed={0.8}
               pauseOnHover={true}
             />
           </Suspense>
@@ -922,16 +766,6 @@ export default function HomePage() {
         }
       >
         <QuoteForm />
-      </Suspense>
-
-      {/* Mobile-only floating call button */}
-      <Suspense fallback={null}>
-        <MobileCallButton />
-      </Suspense>
-
-      {/* Lead capture popup */}
-      <Suspense fallback={null}>
-        <LeadCapturePopup isOpen={isPopupOpen} onClose={closePopup} />
       </Suspense>
     </>
   );

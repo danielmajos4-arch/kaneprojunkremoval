@@ -384,75 +384,11 @@
       padding: 0 1rem !important;
     }
 
-    /* Optimized mobile button sizes for touch */
+    /* Better mobile button sizes */
     .mobile-cta-button {
       min-height: 48px !important;
-      min-width: 48px !important;
       font-size: 1rem !important;
       padding: 0.875rem 1.5rem !important;
-      position: relative;
-      touch-action: manipulation;
-    }
-    
-    /* Expand touch area for better UX */
-    .mobile-cta-button::before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: -8px;
-      right: -8px;
-      bottom: -8px;
-      z-index: -1;
-    }
-    
-    /* Mobile-specific animations */
-    .sweet-hover:active {
-      transform: scale(0.95);
-      transition: transform 0.1s ease;
-    }
-    
-    /* Reduce animations for better performance */
-    *, *::before, *::after {
-      animation-duration: 0.3s !important;
-      transition-duration: 0.3s !important;
-    }
-    
-    /* Optimize scrolling */
-    html {
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior: none;
-    }
-    
-    /* Improve tap response */
-    button, a, [role="button"] {
-      -webkit-tap-highlight-color: rgba(255, 165, 0, 0.3);
-      tap-highlight-color: rgba(255, 165, 0, 0.3);
-    }
-
-    /* Mobile popup optimizations */
-    [data-testid="lead-capture-popup"] {
-      max-height: 90vh !important;
-      margin: 1rem !important;
-      width: calc(100vw - 2rem) !important;
-      max-width: 400px !important;
-    }
-
-    /* Mobile form inputs */
-    [data-testid="lead-capture-popup"] input,
-    [data-testid="lead-capture-popup"] select,
-    [data-testid="lead-capture-popup"] textarea {
-      font-size: 16px !important; /* Prevents zoom on iOS */
-      min-height: 44px !important;
-    }
-
-    /* Adjust button layout for small screens */
-    .flex.flex-col.sm\\:flex-row.gap-3 {
-      gap: 0.75rem !important;
-    }
-
-    .flex.flex-col.sm\\:flex-row.gap-3 > * {
-      min-width: auto !important;
-      flex: 1 1 auto !important;
     }
   }
 
@@ -478,106 +414,12 @@
     src: local('Inter');
   }
 
-  /* FCP-optimized image loading */
+  /* Ensure crisp images */
   img {
     image-rendering: auto;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    will-change: auto;
-    content-visibility: auto;
-  }
-  
-  /* Priority loading for hero image */
-  img[src*="herosection"] {
-    display: block !important;
-    position: relative;
-    z-index: 1;
-    image-rendering: crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    -webkit-backface-visibility: hidden;
-    transform: translateZ(0);
-    will-change: opacity;
-  }
-
-  /* WebP support with fallback */
-  .webp img {
-    image-rendering: crisp-edges;
-  }
-
-  /* Smooth scroll behavior */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Hardware acceleration for animations */
-  .animate-smooth {
-    transform: translateZ(0);
-    will-change: transform, opacity;
-    backface-visibility: hidden;
-  }
-
-  /* Enhanced loading states */
-  .loading-shimmer {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.2) 20%,
-      rgba(255, 255, 255, 0.5) 60%,
-      rgba(255, 255, 255, 0)
-    );
-    animation: shimmer 2s infinite;
-  }
-
-  @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-
-  /* Optimized animations */
-  .smooth-entrance {
-    animation: smoothEntrance 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-
-  @keyframes smoothEntrance {
-    from {
-      opacity: 0;
-      transform: translateY(20px) scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-
-  /* Sweet hover effects */
-  .sweet-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .sweet-hover:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Floating animation */
-  .float-animation {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-
-  /* Pulse effect */
-  .pulse-glow {
-    animation: pulseGlow 2s infinite;
-  }
-
-  @keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); }
-    50% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.8), 0 0 30px rgba(255, 165, 0, 0.6); }
   }
 
 @layer components {
