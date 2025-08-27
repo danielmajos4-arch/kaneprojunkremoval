@@ -76,9 +76,21 @@ export default function ContactForm() {
   return (
     <div className="bg-white rounded-xl shadow-xl overflow-hidden">
       <div className="bg-navy text-white p-6 text-center">
-        <h3 className="text-xl md:text-2xl font-military mb-2 text-[#265a26]">
+        <h3 className="text-xl md:text-2xl font-military mb-4 text-[#265a26]">
           Contact Kane Pro Today
         </h3>
+        
+        {/* Prominent Phone CTA */}
+        <div className="mb-4">
+          <a 
+            href="tel:+13189141201" 
+            className="inline-flex items-center justify-center px-8 py-4 bg-vibrant-orange text-white font-bold text-lg rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg transform hover:scale-105 border-2 border-white"
+          >
+            <i className="fas fa-phone mr-3 text-xl animate-pulse"></i>
+            CALL (318) 914-1201
+          </a>
+        </div>
+        
         <p className="bg-[#265a26] text-[#e6eaf0] text-[16px] pt-[-1px] pb-[-1px]">Get in touch with Louisiana's trusted Christian junk removal experts</p>
       </div>
       <Form {...form}>
@@ -180,9 +192,9 @@ export default function ContactForm() {
             </Button>
             <a 
               href="tel:+13189141201" 
-              className="flex-1 btn-outline flex items-center justify-center bg-[#f07439] text-white hover:bg-orange-600 transition-colors duration-200 pt-[10px] pb-[10px]"
+              className="flex-1 btn-outline flex items-center justify-center bg-vibrant-orange text-white hover:bg-orange-600 transition-all duration-300 pt-[12px] pb-[12px] font-bold text-lg shadow-lg transform hover:scale-105 border-2 border-vibrant-orange hover:border-orange-600"
             >
-              <i className="fas fa-phone mr-2"></i>
+              <i className="fas fa-phone mr-3 text-lg animate-pulse"></i>
               CALL (318) 914-1201
             </a>
           </div>
