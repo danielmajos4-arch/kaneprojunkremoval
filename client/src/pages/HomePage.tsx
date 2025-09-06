@@ -356,7 +356,7 @@ export default function HomePage() {
               </p>
               <p className="flex items-center justify-center gap-2 text-sm">
                 <i className="fas fa-star text-yellow-400"></i>
-                5.0 Stars on Google • 8 Real Customer Reviews
+                5.0 Stars on Google • Real Customer Reviews
               </p>
             </motion.div>
           </motion.div>
@@ -670,7 +670,7 @@ export default function HomePage() {
                 ))}
               </div>
               <span className="text-deep-green font-semibold ml-2">
-                5.0 Stars • 8 Google Reviews
+                5.0 Stars • Google Reviews
               </span>
             </div>
           </motion.div>

@@ -235,7 +235,7 @@ const GMBReviewsSection = () => {
                 <i key={i} className="fas fa-star"></i>
               ))}
             </div>
-            <span className="text-deep-green font-semibold ml-2">5.0 Stars • 8 Google Reviews</span>
+            <span className="text-deep-green font-semibold ml-2">5.0 Stars • Google Reviews</span>
           </div>
         </div>
 
