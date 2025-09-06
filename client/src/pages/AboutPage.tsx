@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import kaneProBackground from "@assets/IMG_3900.png";
 import WhatsApp_Image_2025_07_26_at_21_22_48__3_ from "@assets/WhatsApp Image 2025-07-26 at 21.22.48 (3).jpeg";
 
+import GMB_UPLOADS__4_ from "@assets/GMB UPLOADS (4).webp";
+
 export default function AboutPage() {
   // Optimized animation variants
   const fadeInUp = {
@@ -32,7 +34,6 @@ export default function AboutPage() {
         structuredData={generateLocalBusinessSchema("Monroe")}
         city="Monroe"
       />
-
       {/* Hero Section */}
       <section
         className="relative py-16 sm:py-24 bg-cover bg-center bg-no-repeat"
@@ -60,7 +61,6 @@ export default function AboutPage() {
           </motion.p>
         </div>
       </section>
-
       {/* Our Story Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,7 +131,7 @@ export default function AboutPage() {
             >
               <div className="bg-gray-100 rounded-xl p-6 shadow-lg">
                 <img
-                  src={WhatsApp_Image_2025_07_26_at_21_22_48__3_}
+                  src={GMB_UPLOADS__4_}
                   alt="Kane Pro Junk Removal team working in Monroe, Louisiana"
                   className="w-full rounded-lg shadow-md mb-4"
                   loading="lazy"
@@ -158,7 +158,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us Section */}
       <section className="py-12 sm:py-16 bg-neutral-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -253,7 +252,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
