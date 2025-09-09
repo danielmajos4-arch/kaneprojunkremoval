@@ -63,9 +63,14 @@ export default function QuoteForm() {
       return response.json();
     },
     onSuccess: () => {
+      // Google Ads Conversion Tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion', {'send_to': 'AW-17539949584/F_JaCPai-pVEOJOZxtB'});
+      }
+
       toast({
-        title: "Quote Request Submitted!",
-        description: "We'll contact you soon with your free estimate. Thank you for choosing Kane Pro!",
+        title: "Quote Request Sent!",
+        description: "Thank you! We'll contact you soon with your free estimate.",
       });
       form.reset();
     },
@@ -92,7 +97,7 @@ export default function QuoteForm() {
             </h2>
             <p className="bg-[#00000000] text-[#152959]">Your trusted Kane pro against junk problems - Christian values, Louisiana heart</p>
           </div>
-          
+
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -113,7 +118,7 @@ export default function QuoteForm() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="phone"
@@ -133,7 +138,7 @@ export default function QuoteForm() {
                   )}
                 />
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
@@ -153,7 +158,7 @@ export default function QuoteForm() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="city"
@@ -180,7 +185,7 @@ export default function QuoteForm() {
                   )}
                 />
               </div>
-              
+
               <FormField
                 control={form.control}
                 name="service"
@@ -209,7 +214,7 @@ export default function QuoteForm() {
                   </FormItem>
                 )}
               />
-              
+
               <FormField
                 control={form.control}
                 name="details"
@@ -228,7 +233,7 @@ export default function QuoteForm() {
                   </FormItem>
                 )}
               />
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   type="submit" 
@@ -255,7 +260,7 @@ export default function QuoteForm() {
                   CALL (318) 914-1201
                 </a>
               </div>
-              
+
               <div className="text-center text-sm text-gray-500">
                 <p>* Required fields. We respect your privacy and will never share your information.</p>
                 <p className="mt-2">

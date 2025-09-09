@@ -1,5 +1,9 @@
 /// <reference types="vite/client" />
 
+declare global {
+  function gtag(command: string, action: string, parameters?: any): void;
+}
+
 declare module "*.png" {
   const src: string;
   export default src;

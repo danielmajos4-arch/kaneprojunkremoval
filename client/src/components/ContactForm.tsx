@@ -54,6 +54,11 @@ export default function ContactForm() {
       return response.json();
     },
     onSuccess: () => {
+      // Google Ads Conversion Tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion', {'send_to': 'AW-17539949584/F_JaCPai-pVEOJOZxtB'});
+      }
+      
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting Kane Pro. We'll get back to you soon!",
