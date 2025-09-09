@@ -60,12 +60,12 @@ export default function ContactPage() {
               <div className="mb-6">
                 <motion.a
                   href="tel:+13189141201"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-vibrant-orange text-white font-bold text-xl rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg border-2 border-white"
-                  whileHover={{ scale: 1.05 }}
+                  className="btn-cta text-xl px-8 py-4 shadow-2xl"
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   data-testid="hero-phone-cta"
                 >
-                  <i className="fas fa-phone mr-3 text-xl animate-pulse"></i>
+                  <i className="fas fa-phone mr-3 animate-pulse"></i>
                   CALL (318) 914-1201
                 </motion.a>
               </div>
