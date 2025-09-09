@@ -95,6 +95,16 @@ export default function Navigation() {
               >
                 Service Areas
               </Link>
+              <Link 
+                href="/contact" 
+                className={`transition-all duration-300 font-medium ${
+                  isActive("/contact") 
+                    ? "text-vibrant-orange font-semibold" 
+                    : "text-white hover:text-vibrant-orange hover:scale-105"
+                }`}
+              >
+                Contact
+              </Link>
               <a 
                 href="tel:+13189141201" 
                 className="bg-[#FF7F11] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#E6720F] hover:scale-105 transition-all duration-300 btn-touch shadow-lg text-sm uppercase tracking-wide"
@@ -187,6 +197,18 @@ export default function Navigation() {
             onClick={closeMobileMenu}
           >
             Service Areas
+          </Link>
+          
+          <Link 
+            href="/contact" 
+            className={`block py-4 px-4 text-lg font-medium rounded-lg transition-all duration-200 ${
+              isActive("/contact") 
+                ? "text-vibrant-orange bg-orange-50" 
+                : "text-deep-green hover:text-vibrant-orange hover:bg-gray-50"
+            }`}
+            onClick={closeMobileMenu}
+          >
+            Contact
           </Link>
 
           {/* CTA Button */}
