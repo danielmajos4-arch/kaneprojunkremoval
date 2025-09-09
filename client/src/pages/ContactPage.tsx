@@ -50,10 +50,10 @@ export default function ContactPage() {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Get Your Free Estimate Today!
+                Need That Junk Gone? We'll Haul It Off Today!
               </h1>
               <p className="text-lg sm:text-xl text-white/90 mb-6 font-medium">
-                Same-Day Junk Removal • Licensed & Insured • Christian Values
+                Call Now - We'll Come Out & Give You A Price Over The Phone
               </p>
               
               {/* Primary CTA */}
@@ -94,40 +94,39 @@ export default function ContactPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             >
-              <h2 className="text-xl font-bold text-white mb-4">Contact Information</h2>
+              <h2 className="text-xl font-bold text-white mb-4">Here's What You Get:</h2>
               
               <div className="space-y-4 text-white">
                 <div className="flex items-center gap-3">
                   <i className="fas fa-phone text-vibrant-orange text-lg"></i>
                   <div>
                     <p className="font-semibold">(318) 914-1201</p>
-                    <p className="text-sm text-white/80">Call for instant quote</p>
+                    <p className="text-sm text-white/80">Text or call - we answer fast</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <i className="fas fa-envelope text-vibrant-orange text-lg"></i>
+                  <i className="fas fa-truck text-vibrant-orange text-lg"></i>
                   <div>
-                    <p className="font-semibold">kaneprojunkremoval@gmail.com</p>
-                    <p className="text-sm text-white/80">Email us anytime</p>
+                    <p className="font-semibold">Same Day Pickup</p>
+                    <p className="text-sm text-white/80">Call before noon, gone by evening</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <i className="fas fa-dollar-sign text-vibrant-orange text-lg mt-1"></i>
+                  <div>
+                    <p className="font-semibold">Fair Pricing</p>
+                    <p className="text-sm text-white/80">No hidden fees, no surprises</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <i className="fas fa-map-marker-alt text-vibrant-orange text-lg mt-1"></i>
                   <div>
-                    <p className="font-semibold">Service Areas</p>
-                    <p className="text-sm text-white/80">Monroe • West Monroe • Ruston<br />
-                    Calhoun • Farmerville • Northeast LA</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <i className="fas fa-clock text-vibrant-orange text-lg mt-1"></i>
-                  <div>
-                    <p className="font-semibold">Business Hours</p>
-                    <p className="text-sm text-white/80">Mon-Sat: 7:00 AM - 6:00 PM<br />
-                    Sunday: Emergency calls only</p>
+                    <p className="font-semibold">All Around Monroe</p>
+                    <p className="text-sm text-white/80">Monroe, West Monroe, Ruston<br />
+                    & all Northeast Louisiana</p>
                   </div>
                 </div>
               </div>
@@ -147,10 +146,10 @@ export default function ContactPage() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-3">
-              Multiple Ways to Reach Us
+              How to Get Started
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the contact method that works best for you. We respond quickly to all inquiries!
+              Got junk? Here's the fastest ways to get it gone today.
             </p>
           </motion.div>
 
@@ -164,28 +163,28 @@ export default function ContactPage() {
             {[
               {
                 icon: "fas fa-phone",
-                title: "Call Us Now",
-                description: "Get instant quotes and schedule same-day service",
+                title: "Call Right Now",
+                description: "We'll pick up and give you a price on the spot",
                 action: "tel:+13189141201",
                 actionText: "(318) 914-1201",
                 bgColor: "bg-vibrant-orange",
                 testId: "contact-phone-method"
               },
               {
-                icon: "fas fa-envelope",
-                title: "Email Us",
-                description: "Send detailed information about your project",
-                action: "mailto:kaneprojunkremoval@gmail.com",
-                actionText: "Send Email",
+                icon: "fas fa-truck",
+                title: "Text Your Address",
+                description: "Send us pics of your junk, get a quick quote back",
+                action: "sms:+13189141201",
+                actionText: "Text Us",
                 bgColor: "bg-deep-green",
-                testId: "contact-email-method"
+                testId: "contact-text-method"
               },
               {
-                icon: "fas fa-calculator",
-                title: "Get Free Quote",
-                description: "Fill out our form for a detailed estimate",
+                icon: "fas fa-calendar",
+                title: "Schedule Online",
+                description: "Fill out the form below and we'll call you back",
                 action: "#contact-form",
-                actionText: "Request Quote",
+                actionText: "Get Quote",
                 bgColor: "bg-vibrant-orange",
                 testId: "contact-form-method"
               },
@@ -239,10 +238,10 @@ export default function ContactPage() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-3">
-              Why Choose Kane Pro?
+              Why Folks Choose Us
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Louisiana's most trusted junk removal company with Christian values and professional excellence.
+              We show up on time, work hard, charge fair prices, and treat your property right.
             </p>
           </motion.div>
 
@@ -255,27 +254,27 @@ export default function ContactPage() {
           >
             {[
               {
-                icon: "fas fa-clock",
-                title: "Same-Day Service",
-                description: "Need it gone today? We can help!",
+                icon: "fas fa-truck",
+                title: "Same Day Pickup",
+                description: "Call before lunch, gone by dinner",
                 bgColor: "bg-vibrant-orange",
               },
               {
-                icon: "fas fa-shield-alt",
-                title: "Licensed & Insured",
-                description: "Fully protected for your peace of mind",
+                icon: "fas fa-dollar-sign",
+                title: "Fair Prices",
+                description: "No surprise fees or upcharges",
                 bgColor: "bg-deep-green",
               },
               {
-                icon: "fas fa-star",
-                title: "5.0 Star Rating",
-                description: "Google Reviews from real customers",
+                icon: "fas fa-handshake",
+                title: "Local & Trusted",
+                description: "Your neighbors recommend us",
                 bgColor: "bg-vibrant-orange",
               },
               {
-                icon: "fas fa-cross",
-                title: "Christian Values",
-                description: "Honest, reliable, and respectful service",
+                icon: "fas fa-broom",
+                title: "We Clean Up",
+                description: "Leave your place spotless",
                 bgColor: "bg-deep-green",
               },
             ].map((item, index) => (
@@ -315,10 +314,10 @@ export default function ContactPage() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-3">
-              Get Your Free Estimate
+              Get Your Quote
             </h2>
             <p className="text-lg text-gray-600">
-              Fill out the form below and we'll get back to you with a detailed quote for your junk removal needs.
+              Tell us what you need hauled off and we'll call you back with a price.
             </p>
           </motion.div>
 
@@ -337,10 +336,10 @@ export default function ContactPage() {
       <section className="py-12 sm:py-16 bg-deep-green text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Ready to Clear Out Your Space?
+            Ready to Get That Junk Gone?
           </h2>
           <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
-            Don't wait! Contact Kane Pro Junk Removal today for fast, professional service across Northeast Louisiana.
+            Stop looking at that pile of junk. Call us and we'll haul it off today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
